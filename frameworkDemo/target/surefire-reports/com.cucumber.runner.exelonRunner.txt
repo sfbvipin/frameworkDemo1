@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.cucumber.runner.exelonRunner
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 170.052 sec <<< FAILURE! - in com.cucumber.runner.exelonRunner
+runScenario(com.cucumber.runner.exelonRunner)  Time elapsed: 30.799 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at StepsDefine.EmersonAndroidFuctions.user_will_enter_the_login_id(EmersonAndroidFuctions.java:45)
+	at ?.user will enter the login id(classpath:features/emersonAndroid.feature:12)
+
