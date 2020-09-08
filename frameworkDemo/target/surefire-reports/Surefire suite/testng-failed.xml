@@ -3,13 +3,13 @@
 <suite thread-count="2" parallel="classes" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="2" parallel="classes" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.cucumber.runner.exelonRunner">
+      <class name="com.cucumber.runner.sharpRunner">
         <methods>
-          <include name="runScenario" invocation-numbers="0 4 1 3 2"/>
+          <include name="runScenario" invocation-numbers="1 0"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.cucumber.runner.exelonRunner -->
+      </class> <!-- com.cucumber.runner.sharpRunner -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

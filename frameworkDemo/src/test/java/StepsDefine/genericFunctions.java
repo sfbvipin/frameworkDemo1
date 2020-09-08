@@ -71,7 +71,7 @@ public class genericFunctions extends AllVariables {
       System.out.println("Inside Step:-chatbot opens up");
       WebElement status=getDriver().findElement(By.xpath(ChatbotConnected));
       System.out.println(status.isDisplayed());
-       Thread.sleep(5000);
+       Thread.sleep(7000);
    }
 
    @And("user click on menu icon")
@@ -132,20 +132,20 @@ public class genericFunctions extends AllVariables {
    @And("user click no thanks i will continue")
    public void  user_click_no_thanks_i_will_continue() throws InterruptedException
    {
-	   driver.findElement(By.xpath("//div[contains(text(),'No, Thanks. I will continue without signing in')]")).click();
+	   driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
 	   Thread.sleep(4000);
    }
    @Then("select and click on  bill and paymenets")
    public void select_and_click_on_bill_and_paymenets() throws InterruptedException
    {
-	   driver.findElement(By.xpath("//div[contains(text(),'Billing and Payment')]")).click();
+	   driver.findElement(By.xpath(MenuOptionBillingandPayment)).click();
 	   Thread.sleep(3000);
 	  
    }
    @And("click on paying your bill")
    public void click_on_paying_your_bill() throws InterruptedException
    {
-	   driver.findElement(By.xpath("//div[contains(text(),'Paying Your Bill')]")).click();
+	   driver.findElement(By.xpath(MenuOptionPayingYourBills)).click();
 	   Thread.sleep(3000);
    }
    @Then("select and click pay via virtual assistance")

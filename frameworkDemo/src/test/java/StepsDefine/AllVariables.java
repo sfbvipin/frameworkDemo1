@@ -17,17 +17,20 @@ public class AllVariables {
     public static String ChatbotIcon = "//img[@class='oda-chat-button-icon']";
     public static String ChatbotConnected = "//div[@class='oda-chat-connection-status oda-chat-connected']";
     public static String MenuOption = "//a[contains(text(),'Menu')]";
-    public static String MenuOptionBillingandPayment = "//a[contains(text(),'Billing and Payment')]";
-    public static String MenuOptionOutage = "//a[contains(text(),'Outage')]";
-    public static String MenuOptionDownedPowerLine = "//a[contains(text(),'Downed Power Line')]";
-    public static String MenuOptionFindAccountNumber = "//a[contains(text(),'Find Account Number')]";
-    public static String MenuOptionStartStopOrMoveService = "//a[contains(text(),'Start, Stop or Move Service')]";
-    public static String MenuOptionWaystoSave = "//a[contains(text(),'Ways to Save')]";
+    public static String MainOptionBillingandPayment = "//a[contains(text(),'Billing and Payment')]";
+    public static String MainOptionOutage = "//a[contains(text(),'Outage')]";
+    public static String MainOptionDownedPowerLine = "//a[contains(text(),'Downed Power Line')]";
+    public static String MainOptionFindAccountNumber = "//a[contains(text(),'Find Account Number')]";
+    public static String MainOptionStartStopOrMoveService = "//a[contains(text(),'Start, Stop or Move Service')]";
+    public static String MainOptionWaystoSave = "//a[contains(text(),'Ways to Save')]";
     public static String MenuOptionMore = "//a[contains(text(),'More')]";
     public static String MenuOptionSolar = "//div[contains(text(),'Solar')]";
     public static String MenuOptionHomeBusiness = "//div[contains(text(),'Home and Business')]";
     public static String MenuOptionPrivateSolar = "//div[contains(text(),'Private Solar')]";
     public static String MenuOptionNoThanks = "//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
+    public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
+    public static String MenuOptionPayingYourBills = "//div[contains(text(),'Paying Your Bill')]";
+    public static String MenuOptionBillingandPayment = "//div[contains(text(),'Billing and Payment')]";
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
     
     
