@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cucumber.runner.exelonRunner">
+      <class name="com.cucumber.runner.sharpRunner">
         <methods>
           <include name="feature" invocation-numbers="0 2"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.cucumber.runner.exelonRunner -->
+      </class> <!-- com.cucumber.runner.sharpRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

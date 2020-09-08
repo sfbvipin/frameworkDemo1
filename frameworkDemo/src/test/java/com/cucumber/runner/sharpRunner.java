@@ -12,8 +12,6 @@ import org.testng.annotations.Test;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 
-
-
 //@RunWith(Cucumber.class)
 @io.cucumber.testng.CucumberOptions(
       features={"classpath:features"}
@@ -23,7 +21,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
       ,plugin = {"cucumberHooks.customReportListener"})
 
 @Test
-public class exelonRunner extends AbstractTestNGCucumberTests{
+public class sharpRunner extends AbstractTestNGCucumberTests{
 	
 		
 	@Override

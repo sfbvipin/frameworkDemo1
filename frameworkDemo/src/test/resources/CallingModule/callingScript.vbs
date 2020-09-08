@@ -12,9 +12,9 @@ Dim intExelonCount
 Dim intEmersonCount
 Dim strTestCaseName 
 
-strExcelPath = "E:\eclipse-workspace\frameworkDemo\src\test\resources\CallingModule\RegressionTestSuite.xlsx"
-strRunnerPath = "E:\eclipse-workspace\frameworkDemo\src\test\java\com\cucumber\runner\exelonRunner.java"
-strbatPath = "E:\eclipse-workspace\frameworkDemo\src\test\resources\CallingModule\mvnCommand.bat"
+strExcelPath = "C:\Users\Sohail Abbas\Desktop\QA\Automation\frameworkDemo\src\test\resources\CallingModule\RegressionTestSuite.xlsx"
+strRunnerPath = "C:\Users\Sohail Abbas\Desktop\QA\Automation\frameworkDemo\src\test\java\com\cucumber\runner\exelonRunner.java"
+strbatPath = "C:\Users\Sohail Abbas\Desktop\QA\Automation\frameworkDemo\src\test\resources\CallingModule\mvnCommand.bat"
 strSheetName = "TestSuite"
 strRegression = "@Regression"
 strRunnerCompare = "monochrome=true"

@@ -104,7 +104,12 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.exelonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if can open install and run emerson apk&quot;, &quot;Optional[feature to test emerson android apk]&quot;)">runScenario("Check if can open install and run emerson apk", "Optional[feature to test emerson android apk]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.exelonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Open chat bot and pay bill via virtual payment method&quot;, &quot;Optional[feature to test exelon h...)">runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.exelonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Open exelon web application, load chatbot and navigate through menu&quot;, &quot;Optional[feature to...)">runScenario("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -114,12 +119,7 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.exelonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Open chat bot and pay bill via virtual payment method&quot;, &quot;Optional[feature to test exelon h...)">runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.exelonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Open exelon web application, load chatbot and navigate through menu&quot;, &quot;Optional[feature to...)">runScenario("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.exelonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if can open install and run emerson apk&quot;, &quot;Optional[feature to test emerson android apk]&quot;)">runScenario("Check if can open install and run emerson apk", "Optional[feature to test emerson android apk]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -145,6 +145,100 @@
               <span class="class-name">com.cucumber.runner.exelonRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Open chat bot and pay bill via virtual payment method&quot;, &quot;Optional[feature to test exelon h...)">
+                  </a> <!-- runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 11588, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b61460be-5532-4956-933d-7de208cf5ccb
+*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
+	at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:72)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Open exelon web application, load chatbot and navigate through menu&quot;, &quot;Optional[feature to...)">
+                  </a> <!-- runScenario("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 26612, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6fdd9d2b-0810-4e88-a086-62176efe0bf1
+*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
+	at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:13)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Open exelon web application, load chatbot and navigate through menus&quot;, &quot;Optional[feature to...)">
+                  </a> <!-- runScenario("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=84.0.4147.135)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b4e5a114454dceee34b083bc70fcef51
+*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
+	at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:29)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Check if can open install and run emerson apk&quot;, &quot;Optional[feature to test emerson android apk]&quot;)">
@@ -244,86 +338,6 @@ Caused by: java.net.ConnectException: Connection refused: connect
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Chrome: Open exelon web application, load chatbot and navigate through menus&quot;, &quot;Optional[feature to...)">
-                  </a> <!-- runScenario("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to...) -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to test exelon homepage in firefox]")</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=84.0.4147.135)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54986}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 6a449e175d96591baaf3e0be1e51725b
-*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
-	at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:29)
-... Removed 4 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Firefox: Open chat bot and pay bill via virtual payment method&quot;, &quot;Optional[feature to test exelon h...)">
-                  </a> <!-- runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...) -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon homepage in firefox]")</span>
-                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\resources\Drivers\geckodriver.exe
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
-	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at StepsDefine.genericFunctions.firefox_browser_is_open(genericFunctions.java:31)
-	at ✽.firefox browser is open(classpath:features/exelonChatbot.feature:69)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Firefox: Open exelon web application, load chatbot and navigate through menu&quot;, &quot;Optional[feature to...)">
-                  </a> <!-- runScenario("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to...) -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to test exelon homepage in firefox]")</span>
-                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\resources\Drivers\geckodriver.exe
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
-	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at StepsDefine.genericFunctions.firefox_browser_is_open(genericFunctions.java:31)
-	at ✽.firefox browser is open(classpath:features/exelonChatbot.feature:10)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="runScenario(&quot;Chrome: Open chat bot and pay bill via virtual payment method&quot;, &quot;Optional[feature to test exelon ho...)">
                   </a> <!-- runScenario("Chrome: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon ho...) -->
                   <span class="method-name">runScenario</span>
@@ -333,8 +347,8 @@ Session ID: 6a449e175d96591baaf3e0be1e51725b
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54985}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 9fc35330bbb1426422bcf5bbbbb57ba8
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55148}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e1b6f37a0ca450a479d956780e5eed3c
 *** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -419,28 +433,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.cucumber.runner.exelonRunner')
-data.setCell(0, 3, 43733);
+data.setCell(0, 3, 46871);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.cucumber.runner.exelonRunner')
-data.setCell(1, 3, 43589);
+data.setCell(1, 3, 41252);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.cucumber.runner.exelonRunner')
-data.setCell(2, 3, 4892);
+data.setCell(2, 3, 33926);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'com.cucumber.runner.exelonRunner')
-data.setCell(3, 3, 387);
+data.setCell(3, 3, 33201);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'com.cucumber.runner.exelonRunner')
-data.setCell(4, 3, 387);
+data.setCell(4, 3, 4648);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -474,36 +488,36 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Check if can open install and run emerson apk", "Optional[feature to test emerson android apk]")</span>
-                <span class="method-start">462 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to...)</span>
-                <span class="method-start">462 ms</span>
+                <span class="method-start">320 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Chrome: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon ho...)</span>
-                <span class="method-start">462 ms</span>
+                <span class="method-start">320 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if can open install and run emerson apk", "Optional[feature to test emerson android apk]")</span>
+                <span class="method-start">320 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...)</span>
-                <span class="method-start">462 ms</span>
+                <span class="method-start">320 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to...)</span>
-                <span class="method-start">462 ms</span>
+                <span class="method-start">320 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">44197 ms</span>
+                <span class="method-start">47195 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
