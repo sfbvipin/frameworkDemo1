@@ -118,10 +118,6 @@ public class customReportListener implements EventListener {
         } else {
         	
             step.log(Status.FAIL, "This step failed");
-            
-            
-            
-            
         }
 
         Date endTime = scenario.getExtent().getReport().getEndTime();
