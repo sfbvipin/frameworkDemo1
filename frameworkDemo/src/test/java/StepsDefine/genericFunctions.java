@@ -57,22 +57,36 @@ public class genericFunctions extends AllVariables {
    @When("user will locate the chatbot icon")
    public void user_will_locate_the_chatbot_icon() throws InterruptedException {
       System.out.println("Inside Step:-user able to locate chat bot");
+<<<<<<< HEAD
       Thread.sleep(15000);
+=======
+      Thread.sleep(8000);
+>>>>>>> parent of 6c004aa... Commiting changes for variables
    }
 
    @And("click on exelon chatbot icon")
    public void click_on_exelon_chatbot_icon() throws InterruptedException {
       System.out.println("Inside Step:-user clicked on chatbot icon");
+<<<<<<< HEAD
       driver.findElement(By.xpath(ChatbotIcon)).click();
+=======
+      getDriver().findElement(By.xpath(ChatbotIcon)).click();
+>>>>>>> parent of 6c004aa... Commiting changes for variables
       Thread.sleep(5000);
    }
 
    @Then("chatbot will be open")
    public void chatbot_will_be_open() throws InterruptedException {
       System.out.println("Inside Step:-chatbot opens up");
+<<<<<<< HEAD
       WebElement status=driver.findElement(By.xpath(ChatbotConnected));
       System.out.println(status.isDisplayed());
        Thread.sleep(5000);
+=======
+      WebElement status=getDriver().findElement(By.xpath(ChatbotConnected));
+      System.out.println(status.isDisplayed());
+       Thread.sleep(7000);
+>>>>>>> parent of 6c004aa... Commiting changes for variables
    }
 
    @And("user click on menu icon")

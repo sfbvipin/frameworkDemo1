@@ -280,6 +280,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
                   </a> <!-- runScenario("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to test exelon homepage in firefox]")</span>
+<<<<<<< HEAD
                   <div class="stack-trace">org.openqa.selenium.JavascriptException: javascript error: Failed to execute &apos;elementsFromPoint&apos; on &apos;Document&apos;: The provided double value is non-finite.
   (Session info: chrome=85.0.4183.83)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
@@ -298,6 +299,20 @@ Session ID: d209199bf9d1a89702e42b00fe2585c6
 	at StepsDefine.genericFunctions.user_click_on_menu_icon(genericFunctions.java:82)
 	at ✽.user click on menu icon(classpath:features/exelonChatbot.feature:31)
 ... Removed 4 stack frames
+=======
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//div[contains(text(),&apos;Solar&apos;)]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.select_solar_and_click_in_bot(genericFunctions.java:96)
+	at ✽.select solar and click in bot(classpath:features/exelonChatbot.feature:33)
+
+>>>>>>> parent of 6c004aa... Commiting changes for variables
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
@@ -309,10 +324,16 @@ Session ID: d209199bf9d1a89702e42b00fe2585c6
                   </a> <!-- runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon homepage in firefox]")</span>
+<<<<<<< HEAD
                   <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+=======
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),&apos;No, Thanks. I will continue without signing in&apos;)]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+>>>>>>> parent of 6c004aa... Commiting changes for variables
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-SMT2NNL&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 80.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200831163820, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 11148, moz:profile: C:\Users\Vipin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
 Session ID: 0d31f221-a3bb-4ec9-baff-fa6d17cf4cae
 *** Element info: {Using=name, value=username}
@@ -348,6 +369,10 @@ System info: host: &apos;DESKTOP-SMT2NNL&apos;, ip: &apos;192.168.1.12&apos;, os
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\Vipin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57658}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 1c25f82cf6c3d64d299c6cdb741c2db9
+=======
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 20740, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8ec69934-b6e5-4323-ad07-a61b613544b2
+>>>>>>> parent of 6c004aa... Commiting changes for variables
 *** Element info: {Using=xpath, value=//div[contains(text(),&apos;No, Thanks. I will continue without signing in&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -359,8 +384,13 @@ Session ID: 1c25f82cf6c3d64d299c6cdb741c2db9
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 	at StepsDefine.genericFunctions.user_click_no_thanks_i_will_continue(genericFunctions.java:136)
 	at ✽.user click no thanks i will continue(classpath:features/exelonChatbot.feature:48)
+=======
+	at StepsDefine.genericFunctions.user_click_no_thanks_i_will_continue(genericFunctions.java:135)
+	at ✽.user click no thanks i will continue(classpath:features/exelonChatbot.feature:74)
+>>>>>>> parent of 6c004aa... Commiting changes for variables
 ... Removed 4 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -431,6 +461,7 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
+<<<<<<< HEAD
 data.setCell(0, 2, 'com.cucumber.runner.exelonRunner')
 data.setCell(0, 3, 114643);
 data.setCell(1, 0, 1)
@@ -449,11 +480,23 @@ data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'com.cucumber.runner.exelonRunner')
 data.setCell(4, 3, 5346);
+=======
+data.setCell(0, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(0, 3, 61349);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(1, 3, 60077);
+>>>>>>> parent of 6c004aa... Commiting changes for variables
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
+<<<<<<< HEAD
               <span class="suite-total-time">Total running time: 6 minutes</span>
+=======
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+>>>>>>> parent of 6c004aa... Commiting changes for variables
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -487,6 +530,7 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
+<<<<<<< HEAD
                 <span class="method-name">runScenario("Chrome: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon ho...)</span>
                 <span class="method-start">470 ms</span>
               </div> <!-- test-method -->
@@ -507,16 +551,29 @@ return data;
                 </img>
                 <span class="method-name">runScenario("Firefox: Open exelon web application, load chatbot and navigate through menu", "Optional[feature to...)</span>
                 <span class="method-start">470 ms</span>
+=======
+                <span class="method-name">runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...)</span>
+                <span class="method-start">289 ms</span>
+>>>>>>> parent of 6c004aa... Commiting changes for variables
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
+<<<<<<< HEAD
                 <span class="method-name">runScenario("Firefox: Open chat bot and pay bill via virtual payment method", "Optional[feature to test exelon h...)</span>
                 <span class="method-start">470 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
                 <span class="method-start">115114 ms</span>
+=======
+                <span class="method-name">runScenario("Chrome: Open exelon web application, load chatbot and navigate through menus", "Optional[feature to...)</span>
+                <span class="method-start">289 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">61643 ms</span>
+>>>>>>> parent of 6c004aa... Commiting changes for variables
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

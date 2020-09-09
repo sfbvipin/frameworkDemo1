@@ -5,7 +5,11 @@
     <classes>
       <class name="com.cucumber.runner.exelonRunner">
         <methods>
+<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="0 2 3 4 1"/>
+=======
+          <include name="runScenario" invocation-numbers="1 0"/>
+>>>>>>> parent of 6c004aa... Commiting changes for variables
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
