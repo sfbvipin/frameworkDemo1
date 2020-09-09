@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.model.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,23 +56,27 @@ public class genericFunctions extends AllVariables {
 
    @When("user will locate the chatbot icon")
    public void user_will_locate_the_chatbot_icon() throws InterruptedException {
-      System.out.println("Inside Step:-user able to locate chat bot");
-      Thread.sleep(8000);
+       Thread.sleep(5000);
+       System.out.println("Inside Step:-user able to locate chat bot");
+      WebElement status=getDriver().findElement(By.xpath(ChatbotIcon));
+       System.out.println("Chatbot Icon is displayed :  " + status.isDisplayed());
+      Thread.sleep(10000);
    }
 
    @And("click on exelon chatbot icon")
    public void click_on_exelon_chatbot_icon() throws InterruptedException {
       System.out.println("Inside Step:-user clicked on chatbot icon");
       getDriver().findElement(By.xpath(ChatbotIcon)).click();
-      Thread.sleep(5000);
+      Thread.sleep(7000);
    }
 
    @Then("chatbot will be open")
    public void chatbot_will_be_open() throws InterruptedException {
       System.out.println("Inside Step:-chatbot opens up");
       WebElement status=getDriver().findElement(By.xpath(ChatbotConnected));
-      System.out.println(status.isDisplayed());
-       Thread.sleep(7000);
+       System.out.println("Chatbot is connected :  " + status.isDisplayed());
+
+       Thread.sleep(6000);
    }
 
    @And("user click on menu icon")

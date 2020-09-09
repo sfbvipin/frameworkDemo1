@@ -13,7 +13,6 @@ public class AllVariables {
 
     public static String browserOpenMessage = "Browser Launched: Proceeding to internal steps";
     public static String browserHomePageMessage = "Home Page Launched";
-
     public static String ChatbotIcon = "//img[@class='oda-chat-button-icon']";
     public static String ChatbotConnected = "//div[@class='oda-chat-connection-status oda-chat-connected']";
     public static String MenuOption = "//a[contains(text(),'Menu')]";
