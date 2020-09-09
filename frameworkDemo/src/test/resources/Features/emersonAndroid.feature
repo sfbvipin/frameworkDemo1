@@ -6,7 +6,7 @@ Feature: feature to test emerson android apk
 
 
  
-@Regression1 @Emerson @TC_Emer_I_001
+@Regression @Emerson @TC_Emer_I_001
   Scenario: Check if can open install and run emerson apk
     Given application is invoked
     And user will enter the login id

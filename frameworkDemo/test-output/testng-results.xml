@@ -5,16 +5,16 @@
   <suite name="Default suite" duration-ms="72816" started-at="2020-09-02T16:24:34 IST" finished-at="2020-09-02T16:25:47 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@a74868d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@a74868d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
     <test name="Default test" duration-ms="72816" started-at="2020-09-02T16:24:34 IST" finished-at="2020-09-02T16:25:47 IST">
-      <class name="com.cucumber.runner.sharpRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@a74868d]" name="setUpClass" is-config="true" duration-ms="253" started-at="2020-09-02T16:24:34 IST" finished-at="2020-09-02T16:24:34 IST">
+      <class name="com.cucumber.runner.exelonRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.cucumber.runner.exelonRunner@a74868d]" name="setUpClass" is-config="true" duration-ms="253" started-at="2020-09-02T16:24:34 IST" finished-at="2020-09-02T16:24:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper, java.lang.Object)[pri:0, instance:com.cucumber.runner.sharpRunner@a74868d]" name="feature" duration-ms="15890" started-at="2020-09-02T16:24:34 IST" data-provider="features" finished-at="2020-09-02T16:24:50 IST">
+        <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper, java.lang.Object)[pri:0, instance:com.cucumber.runner.exelonRunner@a74868d]" name="feature" duration-ms="15890" started-at="2020-09-02T16:24:34 IST" data-provider="features" finished-at="2020-09-02T16:24:50 IST">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@ at ✽.user will enter the login id(classpath:features/emersonAndroid.feature:12
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper, java.lang.Object)[pri:0, instance:com.cucumber.runner.sharpRunner@a74868d]" name="feature" duration-ms="54866" started-at="2020-09-02T16:24:34 IST" data-provider="features" finished-at="2020-09-02T16:25:29 IST">
+        <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper, java.lang.Object)[pri:0, instance:com.cucumber.runner.exelonRunner@a74868d]" name="feature" duration-ms="54866" started-at="2020-09-02T16:24:34 IST" data-provider="features" finished-at="2020-09-02T16:25:29 IST">
           <params>
             <param index="0">
               <value>
@@ -89,7 +89,7 @@ at ✽.select no Thanks to close chat(classpath:features/exelonChatbot.feature:3
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper, java.lang.Object)[pri:0, instance:com.cucumber.runner.sharpRunner@a74868d]" name="feature" duration-ms="71730" started-at="2020-09-02T16:24:34 IST" data-provider="features" finished-at="2020-09-02T16:25:46 IST">
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper, java.lang.Object)[pri:0, instance:com.cucumber.runner.exelonRunner@a74868d]" name="feature" duration-ms="71730" started-at="2020-09-02T16:24:34 IST" data-provider="features" finished-at="2020-09-02T16:25:46 IST">
           <params>
             <param index="0">
               <value>
@@ -105,11 +105,11 @@ at ✽.select no Thanks to close chat(classpath:features/exelonChatbot.feature:3
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@a74868d]" name="tearDownClass" is-config="true" duration-ms="792" started-at="2020-09-02T16:25:46 IST" finished-at="2020-09-02T16:25:47 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.exelonRunner@a74868d]" name="tearDownClass" is-config="true" duration-ms="792" started-at="2020-09-02T16:25:46 IST" finished-at="2020-09-02T16:25:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.cucumber.runner.sharpRunner -->
+      </class> <!-- com.cucumber.runner.exelonRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

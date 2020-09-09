@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import com.aventstack.extentreports.model.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,10 +28,11 @@ public class genericFunctions extends AllVariables {
       System.out.println(browserOpenMessage);
       System.setProperty(geckoDriverinfo , firfoxPath);
       
-      setDriver(new FirefoxDriver());
+     driver= new FirefoxDriver();
       
-      getDriver().manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
       //driver.manage().window().maximize();
+      
    }
    
    @Given("chrome browser is open")
@@ -40,95 +40,91 @@ public class genericFunctions extends AllVariables {
       System.out.println(browserOpenMessage);
       System.setProperty(chromeDriverinfo,chromePath);
       
-      setDriver(new ChromeDriver());
+     driver= new ChromeDriver();
       
-      getDriver().manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-      //driver.manage().window().maximize();
+     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      driver.manage().window().maximize();
    }
    
 
    @And("user will be on exelon homepage")
    public void user_will_be_on_exelon_homepage() throws InterruptedException {
       System.out.println(browserHomePageMessage);
-      getDriver().navigate().to(exelonUrl);
-      Thread.sleep(10000);
+      driver.navigate().to(exelonUrl);
+      Thread.sleep(30000);
    }
 
    @When("user will locate the chatbot icon")
    public void user_will_locate_the_chatbot_icon() throws InterruptedException {
-       Thread.sleep(5000);
-       System.out.println("Inside Step:-user able to locate chat bot");
-      WebElement status=getDriver().findElement(By.xpath(ChatbotIcon));
-       System.out.println("Chatbot Icon is displayed :  " + status.isDisplayed());
-      Thread.sleep(10000);
+      System.out.println("Inside Step:-user able to locate chat bot");
+      Thread.sleep(15000);
    }
 
    @And("click on exelon chatbot icon")
    public void click_on_exelon_chatbot_icon() throws InterruptedException {
       System.out.println("Inside Step:-user clicked on chatbot icon");
-      getDriver().findElement(By.xpath(ChatbotIcon)).click();
-      Thread.sleep(7000);
+      driver.findElement(By.xpath(ChatbotIcon)).click();
+      Thread.sleep(5000);
    }
 
    @Then("chatbot will be open")
    public void chatbot_will_be_open() throws InterruptedException {
       System.out.println("Inside Step:-chatbot opens up");
-      WebElement status=getDriver().findElement(By.xpath(ChatbotConnected));
-       System.out.println("Chatbot is connected :  " + status.isDisplayed());
-
-       Thread.sleep(6000);
+      WebElement status=driver.findElement(By.xpath(ChatbotConnected));
+      System.out.println(status.isDisplayed());
+       Thread.sleep(5000);
    }
 
    @And("user click on menu icon")
    public void user_click_on_menu_icon() throws InterruptedException {
-      WebElement menu=getDriver().findElement(By.xpath(MenuOption));
-       Actions a =new Actions(getDriver());
+      WebElement menu=driver.findElement(By.xpath(MenuOption));
+       Actions a =new Actions(driver);
        a.moveToElement(menu).build().perform();
        Thread.sleep(5000);
    }
 
    @Then("click on more button in bot")
    public void click_on_more_button_in_bot() throws InterruptedException {
-      getDriver().findElement(By.xpath(MenuOptionMore)).click();
-         WebElement move=getDriver().findElement(By.xpath("//i[@class='fa fa-minus']"));
-         Actions a =new Actions(getDriver());
+      driver.findElement(By.xpath(MenuOptionMore)).click();
+         WebElement move=driver.findElement(By.xpath("//i[@class='fa fa-minus']"));
+         Actions a =new Actions(driver);
           a.moveToElement(move).build().perform();
           Thread.sleep(5000);
    }
 
    @And("select solar and click in bot")
    public void select_solar_and_click_in_bot() throws InterruptedException {
-      getDriver().findElement(By.xpath(MenuOptionSolar)).click();
+      driver.findElement(By.xpath(MenuOptionSolar)).click();
         Thread.sleep(5000);
    }
 
    @Then("click on home and business in bot")
    public void click_on_home_and_business_in_bot() throws InterruptedException {
-      getDriver().findElement(By.xpath(MenuOptionHomeBusiness)).click();
+      driver.findElement(By.xpath(MenuOptionHomeBusiness)).click();
          Thread.sleep(5000);
    }
 
    @And("click on private solar option")
    public void click_on_private_solar_option() throws InterruptedException {
-      getDriver().findElement(By.xpath(MenuOptionPrivateSolar)).click();
+     driver.findElement(By.xpath(MenuOptionPrivateSolar)).click();
       Thread.sleep(7000);
    }
 
    @Then("select yes for confirmation")
    public void select_yes_for_confirmation() throws InterruptedException {
-      getDriver().findElement(By.xpath(PopUpYes)).click();
+      driver.findElement(By.xpath(PopUpYes)).click();
       Thread.sleep(2000);
    }
 
    @And("select no Thanks to close chat")
    public void select_no_thanks_to_close_chat() throws InterruptedException {
-      getDriver().findElement(By.xpath(MenuOptionNoThanks)).click();
+     driver.findElement(By.xpath(MenuOptionNoThanks)).click();
        Thread.sleep(3000);
    }
 
    @Then("close the bot finally")
    public void close_the_bot_finally() throws InterruptedException {
-      getDriver().findElement(By.xpath("//i[@class='fa fa-times']")).click();
+      driver.findElement(By.xpath("//i[@class='fa fa-times']")).click();
        Thread.sleep(4000);
        driver.findElement(By.xpath("//button[@id='yesButton']")).click();
        driver.close();
@@ -137,20 +133,20 @@ public class genericFunctions extends AllVariables {
    @And("user click no thanks i will continue")
    public void  user_click_no_thanks_i_will_continue() throws InterruptedException
    {
-	   driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
+	   driver.findElement(By.xpath("//div[contains(text(),'No, Thanks. I will continue without signing in')]")).click();
 	   Thread.sleep(4000);
    }
    @Then("select and click on  bill and paymenets")
    public void select_and_click_on_bill_and_paymenets() throws InterruptedException
    {
-	   driver.findElement(By.xpath(MenuOptionBillingandPayment)).click();
+	   driver.findElement(By.xpath("//div[contains(text(),'Billing and Payment')]")).click();
 	   Thread.sleep(3000);
 	  
    }
    @And("click on paying your bill")
    public void click_on_paying_your_bill() throws InterruptedException
    {
-	   driver.findElement(By.xpath(MenuOptionPayingYourBills)).click();
+	   driver.findElement(By.xpath("//div[contains(text(),'Paying Your Bill')]")).click();
 	   Thread.sleep(3000);
    }
    @Then("select and click pay via virtual assistance")
@@ -227,23 +223,23 @@ public class genericFunctions extends AllVariables {
 	   driver.findElement(By.xpath("//div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]")).click();
 	   Thread.sleep(15000);
    }
-   @When("user click yes for confirmation")
-   public void user_click_yes_for_confirmation() throws InterruptedException {
-	   driver.findElement(By.xpath("//div[contains(text(),'Yes')]")).click();
-	   Thread.sleep(10000);
-	   
-   }
+//   @When("user click yes for confirmation")
+//   public void user_click_yes_for_confirmation() throws InterruptedException {
+//	   driver.findElement(By.xpath("//div[contains(text(),'Yes')]")).click();
+//	   Thread.sleep(10000);
+//	   
+//   }
    @Then("Select no thanks to terminate chat")
    public void Select_no_thanks_to_terminate_chat() throws InterruptedException
    {
-	   driver.findElement(By.xpath("//div[15]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]")).click();
+	   driver.findElement(By.xpath("//div[13]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]")).click();
 	   Thread.sleep(8000);
    }
    @And("click yes")
    public void click_yes() throws InterruptedException
    {
 	   
-	  WebElement ele= driver.findElement(By.xpath("//div[17]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]"));
+	  WebElement ele= driver.findElement(By.xpath("//div[contains(text(),'Yes')]"));
 	   Thread.sleep(8000);
 	   ele.click();
 	   Thread.sleep(5000);
@@ -253,7 +249,7 @@ public class genericFunctions extends AllVariables {
    
    @Then("select no thanks to close the chat")
    public void select_no_thanks_to_close_the_chat() throws InterruptedException {
-	   driver.findElement(By.xpath("//div[19]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]")).click();
+	   driver.findElement(By.xpath("//div[17]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]")).click();
 	   Thread.sleep(8000);
    }
    @And("click on close chat icon")
@@ -268,12 +264,8 @@ public class genericFunctions extends AllVariables {
 	   driver.close();
    }
 
-public WebDriver getDriver() {
-	return driver;
-}
 
-public void setDriver(WebDriver driver) {
-	this.driver = driver;
-}
+
+
 }
 

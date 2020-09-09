@@ -5,7 +5,7 @@
 Feature: feature to test exelon homepage in firefox
 
 
-@Regression1 @Exelon @TC_Exel_001
+@Regression @Exelon @TC_Exel_001
   Scenario: Firefox: Open exelon web application, load chatbot and navigate through menu
     Given firefox browser is open
     And user will be on exelon homepage
@@ -38,7 +38,7 @@ Feature: feature to test exelon homepage in firefox
     Then close the bot finally
     
     
- @Regression1 @Exelon @Sanity @TC_Exel_003
+ @Regression @Exelon @Sanity @TC_Exel_003
   Scenario: Chrome: Open chat bot and pay bill via virtual payment method
     Given chrome browser is open
     And user will be on exelon homepage
@@ -57,7 +57,6 @@ Feature: feature to test exelon homepage in firefox
     And user accept the authorization request
     Then navigate back to chat bot
     And select any of the registered address for payment
-    When user click yes for confirmation
     Then Select no thanks to terminate chat
     And click yes
     Then select no thanks to close the chat
@@ -83,7 +82,6 @@ Feature: feature to test exelon homepage in firefox
     And user accept the authorization request
     Then navigate back to chat bot
     And select any of the registered address for payment
-    When user click yes for confirmation
     Then Select no thanks to terminate chat
     And click yes
     Then select no thanks to close the chat

@@ -11,6 +11,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.cucumber.plugin.EventListener;
 import io.cucumber.plugin.event.EventPublisher;
 import io.cucumber.plugin.event.PickleStepTestStep;
+import io.cucumber.plugin.event.TestCaseEvent;
 import io.cucumber.plugin.event.TestCaseStarted;
 import io.cucumber.plugin.event.TestCaseFinished;
 import io.cucumber.plugin.event.TestRunFinished;
@@ -20,9 +21,16 @@ import io.cucumber.plugin.event.TestStepFinished;
 import io.cucumber.plugin.event.TestStepStarted;
 import io.cucumber.plugin.event.HookTestStep;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 
 
@@ -30,6 +38,7 @@ import java.util.Map;
 public class customReportListener implements EventListener {
     private ExtentSparkReporter spark;
     private ExtentReports extent;
+    private TakesScreenshot scrSht;
     Map<String, ExtentTest> feature = new HashMap<String, ExtentTest>();
     ExtentTest scenario;
     ExtentTest step;
@@ -45,7 +54,9 @@ public class customReportListener implements EventListener {
         publisher.registerHandlerFor(TestStepStarted.class, this::stepStarted);
         publisher.registerHandlerFor(TestStepFinished.class, this::stepFinished);
         publisher.registerHandlerFor(TestRunFinished.class, this::runFinished);
-    };
+        
+    }
+        
 
     private void runStarted(TestRunStarted event) {
         spark = new ExtentSparkReporter("./ExtentReportResults.html");
@@ -53,6 +64,7 @@ public class customReportListener implements EventListener {
         //spark.config().setTheme(Theme.DARK);
 
         extent.attachReporter(spark);
+       
     };
 
 
@@ -93,7 +105,20 @@ public class customReportListener implements EventListener {
         Date startTime = scenario.getExtent().getReport().getEndTime();
         step.log(Status.INFO, "Test Case execution started at " + startTime.toString());
     };
-
+    private  String getScreenhot(WebDriver driver) throws Exception {
+        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+                        //after execution, you could see a folder "FailedTestsScreenshots" under src folder
+        String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
+        File finalDestination = new File(destination);
+        FileUtils.copyFile(source, finalDestination);
+        step.addScreenCaptureFromBase64String(destination);
+        
+       
+        }
+    
+	
 
     private void stepFinished(TestStepFinished event) {
         if (event.getResult().getStatus().toString() == "PASSED") {
@@ -102,11 +127,20 @@ public class customReportListener implements EventListener {
         {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
+        	
             step.log(Status.FAIL, "This step failed");
+            
+            
+            
+            
         }
 
         Date endTime = scenario.getExtent().getReport().getEndTime();
         step.log(Status.INFO, "Test Case execution started at " + endTime.toString());
-    };
+    }
+  //This method is to capture the screenshot and return the path of the screenshot.
+   
+   
+    
 }
 
