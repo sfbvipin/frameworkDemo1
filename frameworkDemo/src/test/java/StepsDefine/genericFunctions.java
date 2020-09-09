@@ -85,8 +85,12 @@ public class genericFunctions extends AllVariables {
 =======
       WebElement status=getDriver().findElement(By.xpath(ChatbotConnected));
       System.out.println(status.isDisplayed());
+<<<<<<< HEAD
        Thread.sleep(7000);
 >>>>>>> parent of 6c004aa... Commiting changes for variables
+=======
+       Thread.sleep(5000);
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
    }
 
    @And("user click on menu icon")

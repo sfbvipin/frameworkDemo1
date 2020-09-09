@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="5" ignored="0" total="5" passed="0">
   <reporter-output>
   </reporter-output>
@@ -212,10 +213,28 @@ at java.lang.Thread.run(Thread.java:748)
         </test-method> <!-- setUpClass -->
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@4fb0f2b9]" started-at="2020-09-08T20:27:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-08T20:28:52 IST" duration-ms="61349" status="FAIL">
 >>>>>>> parent of 6c004aa... Commiting changes for variables
+=======
+<testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-09-08T14:41:15 IST" name="Surefire suite" finished-at="2020-09-08T14:42:03 IST" duration-ms="47759">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2020-09-08T14:41:15 IST" name="Surefire test" finished-at="2020-09-08T14:42:03 IST" duration-ms="47759">
+      <class name="com.cucumber.runner.exelonRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" started-at="2020-09-08T14:41:15 IST" name="setUpClass" finished-at="2020-09-08T14:41:15 IST" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" started-at="2020-09-08T14:41:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-08T14:41:48 IST" duration-ms="33201" status="FAIL">
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
           <params>
             <param index="0">
               <value>
-                <![CDATA["Chrome: Open exelon web application, load chatbot and navigate through menus"]]>
+                <![CDATA["Firefox: Open chat bot and pay bill via virtual payment method"]]>
               </value>
             </param>
             <param index="1">
@@ -224,8 +243,9 @@ at java.lang.Thread.run(Thread.java:748)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <![CDATA[javascript error: Failed to execute 'elementsFromPoint' on 'Document': The provided double value is non-finite.
   (Session info: chrome=85.0.4183.83)
@@ -260,38 +280,65 @@ at ✽.user click on menu icon(classpath:features/exelonChatbot.feature:31)
 =======
               <![CDATA[Cannot locate an element using xpath=//div[contains(text(),'Solar')]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+=======
+              <![CDATA[Failed to decode response from marionette
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: driver.version: RemoteWebDriver]]>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 11588, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b61460be-5532-4956-933d-7de208cf5ccb
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//div[contains(text(),'Solar')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 11588, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b61460be-5532-4956-933d-7de208cf5ccb
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
 at StepsDefine.genericFunctions.select_solar_and_click_in_bot(genericFunctions.java:96)
 at ✽.select solar and click in bot(classpath:features/exelonChatbot.feature:33)
 >>>>>>> parent of 6c004aa... Commiting changes for variables
+=======
+at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
+at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:72)
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@6ddf90b0]" name="runScenario" duration-ms="109234" started-at="2020-09-09T11:47:05 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-09T11:48:54 IST">
 =======
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@4fb0f2b9]" started-at="2020-09-08T20:27:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-08T20:28:50 IST" duration-ms="60077" status="FAIL">
 >>>>>>> parent of 6c004aa... Commiting changes for variables
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" started-at="2020-09-08T14:41:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-08T14:41:49 IST" duration-ms="33926" status="FAIL">
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
           <params>
             <param index="0">
               <value>
-                <![CDATA["Firefox: Open chat bot and pay bill via virtual payment method"]]>
+                <![CDATA["Firefox: Open exelon web application, load chatbot and navigate through menu"]]>
               </value>
             </param>
             <param index="1">
@@ -301,6 +348,7 @@ at ✽.select solar and click in bot(classpath:features/exelonChatbot.feature:33
             </param>
           </params>
           <exception class="org.openqa.selenium.WebDriverException">
+<<<<<<< HEAD
             <message>
               <![CDATA[Failed to decode response from marionette
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
@@ -383,22 +431,264 @@ at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 =======
               <![CDATA[Unable to locate element: //div[contains(text(),'No, Thanks. I will continue without signing in')]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+=======
+            <message>
+              <![CDATA[Failed to decode response from marionette
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 20740, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8ec69934-b6e5-4323-ad07-a61b613544b2
-*** Element info: {Using=xpath, value=//div[contains(text(),'No, Thanks. I will continue without signing in')]}]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 26612, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6fdd9d2b-0810-4e88-a086-62176efe0bf1
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),'No, Thanks. I will continue without signing in')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 20740, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8ec69934-b6e5-4323-ad07-a61b613544b2
-*** Element info: {Using=xpath, value=//div[contains(text(),'No, Thanks. I will continue without signing in')]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 26612, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6fdd9d2b-0810-4e88-a086-62176efe0bf1
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
+at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" started-at="2020-09-08T14:41:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-08T14:42:02 IST" duration-ms="46871" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Chrome: Open exelon web application, load chatbot and navigate through menus"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[feature to test exelon homepage in firefox]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[chrome not reachable
+  (Session info: chrome=84.0.4147.135)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b4e5a114454dceee34b083bc70fcef51
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=84.0.4147.135)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b4e5a114454dceee34b083bc70fcef51
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
+at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" started-at="2020-09-08T14:41:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-08T14:41:20 IST" duration-ms="4648" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if can open install and run emerson apk"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[feature to test emerson android apk]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
+at java.base/java.util.Optional.orElseGet(Optional.java:369)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
+at StepsDefine.EmersonAndroidFuctions.application_is_invoked(EmersonAndroidFuctions.java:35)
+at ✽.application is invoked(classpath:features/emersonAndroid.feature:11)
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+at java.base/java.net.Socket.connect(Socket.java:608)
+at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
+at StepsDefine.EmersonAndroidFuctions.application_is_invoked(EmersonAndroidFuctions.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:63)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:49)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:99)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:115)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:112)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" started-at="2020-09-08T14:41:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-08T14:41:57 IST" duration-ms="41252" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Chrome: Open chat bot and pay bill via virtual payment method"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[feature to test exelon homepage in firefox]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[chrome not reachable
+  (Session info: chrome=84.0.4147.135)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55148}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e1b6f37a0ca450a479d956780e5eed3c
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=84.0.4147.135)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55148}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e1b6f37a0ca450a479d956780e5eed3c
+*** Element info: {Using=xpath, value=//img[@class='oda-chat-button-icon']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -415,23 +705,32 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 <<<<<<< HEAD
+<<<<<<< HEAD
 at StepsDefine.genericFunctions.user_click_no_thanks_i_will_continue(genericFunctions.java:136)
 at ✽.user click no thanks i will continue(classpath:features/exelonChatbot.feature:48)
 =======
 at StepsDefine.genericFunctions.user_click_no_thanks_i_will_continue(genericFunctions.java:135)
 at ✽.user click no thanks i will continue(classpath:features/exelonChatbot.feature:74)
 >>>>>>> parent of 6c004aa... Commiting changes for variables
+=======
+at StepsDefine.genericFunctions.click_on_exelon_chatbot_icon(genericFunctions.java:65)
+at ✽.click on exelon chatbot icon(classpath:features/exelonChatbot.feature:46)
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.exelonRunner@6ddf90b0]" name="tearDownClass" is-config="true" duration-ms="958" started-at="2020-09-09T11:49:00 IST" finished-at="2020-09-09T11:49:01 IST">
 =======
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@4fb0f2b9]" started-at="2020-09-08T20:28:52 IST" name="tearDownClass" finished-at="2020-09-08T20:28:52 IST" duration-ms="517" status="PASS">
 >>>>>>> parent of 6c004aa... Commiting changes for variables
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.exelonRunner@4fb0f2b9]" started-at="2020-09-08T14:42:02 IST" name="tearDownClass" finished-at="2020-09-08T14:42:03 IST" duration-ms="545" status="PASS">
+>>>>>>> parent of 47819b3... Modification for Chrome & firefox execution
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
