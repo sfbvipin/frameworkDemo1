@@ -19,7 +19,8 @@ Feature: feature to test exelon homepage in firefox
     And click on private solar option
     Then select yes for confirmation
     And select no Thanks to close chat
-    Then close the bot finally
+    And click on close chat icon
+    Then select yes to close chat
     
 @Regression1 @Exelon  @TC_Exel_002
   Scenario: Chrome: Open exelon web application, load chatbot and navigate through menus
@@ -35,7 +36,8 @@ Feature: feature to test exelon homepage in firefox
     And click on private solar option
     Then select yes for confirmation
     And select no Thanks to close chat
-    Then close the bot finally
+    And click on close chat icon
+    Then select yes to close chat
     
     
  @Regression1 @Exelon @Sanity @TC_Exel_003

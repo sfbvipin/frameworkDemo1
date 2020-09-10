@@ -122,12 +122,6 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
-    @Then("close the bot finally")
-    public void close_the_bot_finally() throws InterruptedException {
-        driver.findElement(By.xpath("//i[@class='fa fa-times']")).click();
-        Thread.sleep(3000);
-        driver.close();
-    }
 
     @And("user click no thanks i will continue")
     public void  user_click_no_thanks_i_will_continue() throws InterruptedException
@@ -245,12 +239,12 @@ public class genericFunctions extends AllVariables {
 
     @And("click on close chat icon")
     public void click_on_close_chat_icon() throws InterruptedException {
-        driver.findElement(By.xpath("//i[@class='fa fa-times']")).click();
+        driver.findElement(By.xpath(closechatbot)).click();
         Thread.sleep(5000);
     }
     @Then("select yes to close chat")
     public void select_yes_to_close_chat() throws InterruptedException {
-        driver.findElement(By.xpath("//button[@id='yesButton']")).click();
+        driver.findElement(By.xpath(yesbutton)).click();
         Thread.sleep(3000);
         driver.close();
     }
