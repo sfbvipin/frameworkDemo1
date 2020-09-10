@@ -116,14 +116,15 @@ public class customReportListener implements EventListener {
         {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
-        	
-            step.log(Status.FAIL, "This step failed");
+
+            step.log(Status.FAIL, "This step failed").addScreenCaptureFromPath("./FailedScreenShot.jpeg","title");
+
+            
         }
 
         Date endTime = scenario.getExtent().getReport().getEndTime();
         step.log(Status.INFO, "Test Case execution started at " + endTime.toString());
     }
-  //This method is to capture the screenshot and return the path of the screenshot.
    
    
     
