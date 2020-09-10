@@ -35,12 +35,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 
-
-
 public class customReportListener implements EventListener {
     private ExtentSparkReporter spark;
     private ExtentReports extent;
-    private TakesScreenshot scrSht;
     Map<String, ExtentTest> feature = new HashMap<String, ExtentTest>();
     ExtentTest scenario;
     ExtentTest step;
@@ -112,26 +109,16 @@ public class customReportListener implements EventListener {
 	
 
     private void stepFinished(TestStepFinished event) {
+
+
         if (event.getResult().getStatus().toString() == "PASSED") {
+
             step.log(Status.PASS, "This step passed");
         } else if (event.getResult().getStatus().toString() == "SKIPPED")
         {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
-            String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-            WebDriver driver = null;
-            TakesScreenshot ts = (TakesScreenshot) driver;
-            File source = ts.getScreenshotAs(OutputType.FILE);
-            String destination = "FailedStep"+dateName+".png";
-            File finalDestination = new File(destination);
-            try {
-                FileUtils.copyFile(source,finalDestination);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            step.log(Status.FAIL, "This step failed",MediaEntityBuilder.createScreenCaptureFromBase64String("base64String").build());
-
-
+            step.log(Status.FAIL, "This step failed");
         }
 
         Date endTime = scenario.getExtent().getReport().getEndTime();

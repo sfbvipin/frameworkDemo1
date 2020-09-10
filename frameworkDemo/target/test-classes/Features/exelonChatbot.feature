@@ -63,7 +63,7 @@ Feature: feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
     
-   @Regression  @Exelon @Sanity @TC_Exel_004
+   @Regression1  @Exelon @Sanity @TC_Exel_004
   Scenario: Firefox: Open chat bot and pay bill via virtual payment method
     Given firefox browser is open
     And user will be on exelon homepage
