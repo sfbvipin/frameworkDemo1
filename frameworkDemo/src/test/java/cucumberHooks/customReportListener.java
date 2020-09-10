@@ -2,6 +2,7 @@ package cucumberHooks;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Given;
@@ -22,6 +23,7 @@ import io.cucumber.plugin.event.TestStepStarted;
 import io.cucumber.plugin.event.HookTestStep;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -116,10 +118,20 @@ public class customReportListener implements EventListener {
         {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
+            String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+            WebDriver driver = null;
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File source = ts.getScreenshotAs(OutputType.FILE);
+            String destination = "FailedStep"+dateName+".png";
+            File finalDestination = new File(destination);
+            try {
+                FileUtils.copyFile(source,finalDestination);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            step.log(Status.FAIL, "This step failed",MediaEntityBuilder.createScreenCaptureFromBase64String("base64String").build());
 
-            step.log(Status.FAIL, "This step failed").addScreenCaptureFromPath("./FailedScreenShot.jpeg","title");
 
-            
         }
 
         Date endTime = scenario.getExtent().getReport().getEndTime();

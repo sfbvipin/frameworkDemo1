@@ -30,6 +30,7 @@ public class AllVariables {
     public static String MenuOptionCommunitySolar = "//div[contains(text(),'Community Solar')]";
     public static String MenuOptionNoThanks = "//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
+    public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String closechatbot = "//i[@class='fa fa-times']";
     public static String yesbutton="//button[@id='yesButton']";
     
@@ -38,7 +39,7 @@ public class AllVariables {
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";
     public static String payviavirtual="//div[contains(text(),'Pay Via Virtual Assistant')]";
     public static String signin="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'Sign In')]";
-    public static String siginfoauth="//button[contains(text(),'Sign In')]";
+    public static String signinforauth="//button[contains(text(),'Sign In')]";
     public static String acceptauth="//button[contains(text(),'Accept')]";
     public static String registeredadd1="//div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]";
     public static String nothanks2="//div[13]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";

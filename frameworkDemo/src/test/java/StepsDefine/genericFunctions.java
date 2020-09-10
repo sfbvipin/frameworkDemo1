@@ -1,5 +1,7 @@
 package StepsDefine;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -31,7 +33,7 @@ public class genericFunctions extends AllVariables {
     @Given("chrome browser is open")
     public void chrome_browser_is_open() {
         System.out.println(browserOpenMessage);
-        System.setProperty(chromeDriverinfo,chromePath);
+        System.setProperty(chromeDriverinfo, chromePath);
 
         driver =new ChromeDriver();
 
@@ -126,4 +128,131 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
         driver.close();
     }
+
+    @And("user click no thanks i will continue")
+    public void  user_click_no_thanks_i_will_continue() throws InterruptedException
+    {
+        driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
+        Thread.sleep(4000);
+    }
+
+    @Then("select and click on  bill and paymenets")
+    public void select_and_click_on_bill_and_paymenets() throws InterruptedException
+    {
+        driver.findElement(By.xpath(billingandpayment)).click();
+        Thread.sleep(3000);
+    }
+
+    @And("click on paying your bill")
+    public void click_on_paying_your_bill() throws InterruptedException
+    {
+        driver.findElement(By.xpath(payingyourbill)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("select and click pay via virtual assistance")
+    public void select_and_click_pay_via_virtual_assistance() throws InterruptedException
+    {
+        driver.findElement(By.xpath(payviavirtual)).click();
+        Thread.sleep(3000);
+    }
+
+    @And("click on sign in")
+    public void click_on_sign_in() throws InterruptedException
+    {
+        driver.findElement(By.xpath(signin)).click();
+        Thread.sleep(5000);
+    }
+
+    @Then("user will redirect to login page")
+    public void user_will_redirect_to_login_page() throws InterruptedException {
+        // driver.navigate().to(AllVariables.signurl);
+        Set<String> handle=driver.getWindowHandles();
+        Iterator<String> it= handle.iterator();
+        String parantwindow=it.next();
+        System.out.println(parantwindow);
+        String childwindow=it.next();
+        System.out.println(childwindow);
+        driver.switchTo().window(childwindow);
+        Thread.sleep(5000);
+    }
+
+    @When("user enters login id")
+    public void user_enters_login_id() throws InterruptedException
+    {
+        driver.findElement(By.name("username")).sendKeys("PATTI@47");
+        Thread.sleep(2000);
+    }
+
+    @And("user enters password")
+    public void user_enters_password() throws InterruptedException
+    {
+        driver.findElement(By.name("password")).sendKeys("Password1");
+        Thread.sleep(2000);
+    }
+
+    @Then("click on sign in for Authentication")
+    public void click_on_sign_in_for_Authentication() throws InterruptedException {
+
+        driver.findElement(By.xpath(signinforauth)).click();
+        Thread.sleep(3000);
+        driver.switchTo().activeElement().click();
+    }
+    @And("user accept the authorization request")
+    public void user_accept_the_authorization_request() throws InterruptedException {
+
+        driver.findElement(By.xpath(acceptauth)).click();
+        Thread.sleep(3000);
+
+    }
+
+    @Then("navigate back to chat bot")
+    public void navigate_back_to_chat_bot() throws InterruptedException {
+        driver.close();
+        System.out.println("user is back on home page");
+        Thread.sleep(2000);
+        Set<String> handle=driver.getWindowHandles();
+        Iterator<String> it= handle.iterator();
+        String parantwindow=it.next();
+        driver.switchTo().window(parantwindow);
+    }
+
+    @And("select any of the registered address for payment")
+    public void select_any_of_the_registered_address_for_payment() throws InterruptedException {
+        driver.findElement(By.xpath(registeredadd1)).click();
+        Thread.sleep(15000);
+    }
+
+    @Then("Select no thanks to terminate chat")
+    public void Select_no_thanks_to_terminate_chat() throws InterruptedException{
+        driver.findElement(By.xpath(nothanks2)).click();
+        Thread.sleep(8000);
+    }
+
+    @And("click yes")
+    public void click_yes() throws InterruptedException{
+        WebElement ele= driver.findElement(By.xpath(clickyes));
+        Thread.sleep(8000);
+        ele.click();
+        Thread.sleep(5000);
+    }
+
+    @Then("select no thanks to close the chat")
+    public void select_no_thanks_to_close_the_chat() throws InterruptedException {
+        driver.findElement(By.xpath(nothanks3)).click();
+        Thread.sleep(8000);
+    }
+
+    @And("click on close chat icon")
+    public void click_on_close_chat_icon() throws InterruptedException {
+        driver.findElement(By.xpath("//i[@class='fa fa-times']")).click();
+        Thread.sleep(5000);
+    }
+    @Then("select yes to close chat")
+    public void select_yes_to_close_chat() throws InterruptedException {
+        driver.findElement(By.xpath("//button[@id='yesButton']")).click();
+        Thread.sleep(3000);
+        driver.close();
+    }
+
 }
