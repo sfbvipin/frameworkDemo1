@@ -219,7 +219,7 @@ public class genericFunctions extends AllVariables {
 
     @Then("Select no thanks to terminate chat")
     public void Select_no_thanks_to_terminate_chat() throws InterruptedException{
-        driver.findElement(By.xpath(nothanks2)).click();
+        driver.findElement(By.xpath(MenuOptionNoThanks)).click();
         Thread.sleep(8000);
     }
 
@@ -249,4 +249,34 @@ public class genericFunctions extends AllVariables {
         driver.close();
     }
 
+    @Then("click on Start Stop or Move Service")
+    public void click_on_start_stop_or_move_Service() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionStartStopOrMoveService)).click();
+        Thread.sleep(3000);
+    }
+
+    @And("user select Start Service")
+    public void user_select_start_service() throws InterruptedException {
+        driver.findElement(By.xpath(startService)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("user select Move Service")
+    public void user_select_move_service() throws InterruptedException {
+        driver.findElement(By.xpath(moveService)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("click on Covid-19 Assistance")
+    public void click_on_covid19_assistance() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionCovid19Assistance)).click();
+        Thread.sleep(3000);
+    }
+
+
+    @Then("click on find account number")
+    public void click_on_find_account_number() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionFindAccountNumber)).click();
+        Thread.sleep(3000);
+    }
 }

@@ -1,75 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-10T17:05:57 IST" name="Surefire suite" finished-at="2020-09-10T17:06:55 IST" duration-ms="58607">
+  <suite started-at="2020-09-11T13:07:21 IST" name="Surefire suite" finished-at="2020-09-11T13:08:28 IST" duration-ms="66727">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-09-10T17:05:57 IST" name="Surefire test" finished-at="2020-09-10T17:06:55 IST" duration-ms="58607">
+    <test started-at="2020-09-11T13:07:21 IST" name="Surefire test" finished-at="2020-09-11T13:08:28 IST" duration-ms="66727">
       <class name="com.cucumber.runner.sharpRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" started-at="2020-09-10T17:05:57 IST" name="setUpClass" finished-at="2020-09-10T17:05:57 IST" duration-ms="266" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" started-at="2020-09-11T13:07:21 IST" name="setUpClass" finished-at="2020-09-11T13:07:22 IST" duration-ms="286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" started-at="2020-09-10T17:05:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-10T17:06:55 IST" duration-ms="57821" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" started-at="2020-09-11T13:07:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-11T13:08:27 IST" duration-ms="65832" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Firefox: Open exelon web application, load chatbot and navigate through menu"]]>
+                <![CDATA["Firefox: Open chat bot and navigate for Covid-19 assistance"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[feature to test exelon homepage in firefox]"]]>
+                <![CDATA["Optional[Feature to test exelon homepage in firefox]"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //div[contains(text(),'1Private Solar')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 25684, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c2446122-0876-4637-8226-338d36a9c05d
-*** Element info: {Using=xpath, value=//div[contains(text(),'1Private Solar')]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),'1Private Solar')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.43.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 25684, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c2446122-0876-4637-8226-338d36a9c05d
-*** Element info: {Using=xpath, value=//div[contains(text(),'1Private Solar')]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at StepsDefine.genericFunctions.click_on_private_solar_option(genericFunctions.java:103)
-at ✽.click on private solar option(classpath:features/exelonChatbot.feature:19)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" started-at="2020-09-10T17:06:55 IST" name="tearDownClass" finished-at="2020-09-10T17:06:55 IST" duration-ms="479" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" started-at="2020-09-11T13:07:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-11T13:08:28 IST" duration-ms="65905" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Firefox: Open chat bot and find account number"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test exelon homepage in firefox]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1aa7ecca]" started-at="2020-09-11T13:08:28 IST" name="tearDownClass" finished-at="2020-09-11T13:08:28 IST" duration-ms="498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
