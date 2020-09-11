@@ -272,4 +272,11 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(MenuOptionCovid19Assistance)).click();
         Thread.sleep(3000);
     }
+
+
+    @Then("click on find account number")
+    public void click_on_find_account_number() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionFindAccountNumber)).click();
+        Thread.sleep(3000);
+    }
 }

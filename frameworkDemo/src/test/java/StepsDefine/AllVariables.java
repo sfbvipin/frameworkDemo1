@@ -22,6 +22,7 @@ public class AllVariables {
     public static String MenuOptionDownedPowerLine = "//a[contains(text(),'Downed Power Line')]";
     public static String MenuOptionFindAccountNumber = "//a[contains(text(),'Find Account Number')]";
     public static String MenuOptionStartStopOrMoveService = "//a[contains(text(),'Start, Stop or Move Service')]";
+    public static String MenuOptionCovid19Assistance = "//a[contains(text(),'Covid-19 Assistance')]";
     public static String MenuOptionWaystoSave = "//a[contains(text(),'Ways to Save')]";
     public static String MenuOptionMore = "//a[contains(text(),'More')]";
     public static String MenuOptionSolar = "//div[contains(text(),'Solar')]";
@@ -46,5 +47,5 @@ public class AllVariables {
     public static String nothanks3="//div[17]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String startService="//div[contains(text(),'Start Service')]";
     public static String moveService="//div[contains(text(),'Move Service')]";
-    public static String MenuOptionCovid19Assistance = "//a[contains(text(),'Covid-19 Assistance')]";
+
 }
