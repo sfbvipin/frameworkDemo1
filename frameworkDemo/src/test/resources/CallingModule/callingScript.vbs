@@ -12,9 +12,10 @@ Dim intExelonCount
 Dim intEmersonCount
 Dim strTestCaseName 
 
-strExcelPath = "E:\eclipse-workspace\frameworkDemo\src\test\resources\CallingModule\RegressionTestSuite.xlsx"
-strRunnerPath = "E:\eclipse-workspace\frameworkDemo\src\test\java\com\cucumber\runner\exelonRunner.java"
-strbatPath = "E:\eclipse-workspace\frameworkDemo\src\test\resources\CallingModule\mvnCommand.bat"
+
+strExcelPath = "C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\resources\CallingModule\RegressionTestSuite.xlsx"
+strRunnerPath = "C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\java\com\cucumber\runner\exelonRunner.java"
+strbatPath = "C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\resources\CallingModule\mvnCommand.bat"
 strSheetName = "TestSuite"
 strRegression = "@Regression"
 strRunnerCompare = "monochrome=true"
@@ -214,7 +215,7 @@ end function
 function fnRunBatchFile(strbatPath)
 	Dim shell
 	Set shell = CreateObject("WScript.Shell")
-	shell.CurrentDirectory = "E:\eclipse-workspace\frameworkDemo\src\test\resources\CallingModule"
+	shell.CurrentDirectory = "C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\resources\CallingModule"
 	shell.Run "cmd /k mvnCommand.bat", 1, True
 end function 
 
