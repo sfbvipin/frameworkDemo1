@@ -5,7 +5,7 @@
 Feature: Feature to test exelon homepage in firefox
 
 
-@Regression1 @Exelon @TC_Exel_001
+@Regression @Exelon @TC_Exel_001
   Scenario: Firefox: Open exelon web application, load chatbot and navigate through menu
     Given firefox browser is open
     And user will be on exelon homepage
@@ -66,7 +66,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
     
-   @Regression1 @Exelon @Sanity @TC_Exel_004
+   @Regression @Exelon @Sanity @TC_Exel_004
     Scenario: Firefox: Open chat bot and pay bill via virtual payment method
       Given firefox browser is open
       And user will be on exelon homepage
@@ -91,7 +91,7 @@ Feature: Feature to test exelon homepage in firefox
       And click on close chat icon
       Then select yes to close chat
 
-  @Regression1 @Exelon @TC_Exel_005
+  @Regression @Exelon @TC_Exel_005
   Scenario: Firefox: Open chat bot and start service
     Given firefox browser is open
     And user will be on exelon homepage
@@ -105,7 +105,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Exelon @TC_Exel_006
+  @Regression @Exelon @TC_Exel_006
   Scenario: Firefox: Open chat bot and move service
     Given firefox browser is open
     And user will be on exelon homepage

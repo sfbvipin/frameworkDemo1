@@ -1,5 +1,8 @@
-cd "E:\eclipse-workspace\frameworkDemo"
-mvn clean
+cd "C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo"
+mvn test
+
+
+
 
 
 

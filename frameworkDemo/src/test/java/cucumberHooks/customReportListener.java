@@ -35,6 +35,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 
+
 public class customReportListener implements EventListener {
     private ExtentSparkReporter spark;
     private ExtentReports extent;
@@ -63,7 +64,8 @@ public class customReportListener implements EventListener {
         //spark.config().setTheme(Theme.DARK);
 
         extent.attachReporter(spark);
-       
+        extent.setSystemInfo("OS", "Windows");
+        extent.setSystemInfo("Environment", "QA");
     };
 
 
