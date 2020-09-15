@@ -1,12 +1,13 @@
 package StepsDefine;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -19,6 +20,10 @@ import io.cucumber.java.en.When;
 public class genericFunctions extends AllVariables {
     AllVariables alv= new AllVariables();
     WebDriver driver =null;
+
+
+
+
     @Given("firefox browser is open")
     public void firefox_browser_is_open() {
         System.out.println(browserOpenMessage);
@@ -40,6 +45,15 @@ public class genericFunctions extends AllVariables {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         //driver.manage().window().maximize();
     }
+
+/*    public String capture() throws IOException {
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File Dest = new File("src/test/resources/FailedCaseImages/" + System.currentTimeMillis()
+                + ".png");
+        String filepath = Dest.getAbsolutePath();
+        FileUtils.copyFile(scrFile, Dest);
+        return filepath;
+    }*/
 
     @And("user will be on exelon homepage")
     public void user_will_be_on_exelon_homepage() throws InterruptedException {
@@ -277,6 +291,13 @@ public class genericFunctions extends AllVariables {
     @Then("click on find account number")
     public void click_on_find_account_number() throws InterruptedException {
         driver.findElement(By.xpath(MenuOptionFindAccountNumber)).click();
+        Thread.sleep(3000);
+    }
+
+
+    @Then("click on Outage")
+    public void click_on_Outage() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionOutage)).click();
         Thread.sleep(3000);
     }
 }

@@ -1,5 +1,6 @@
 package cucumberHooks;
 
+import StepsDefine.AllVariables;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -28,12 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
 
 
 public class customReportListener implements EventListener {
@@ -106,13 +101,11 @@ public class customReportListener implements EventListener {
         Date startTime = scenario.getExtent().getReport().getEndTime();
         step.log(Status.INFO, "Test Case execution started at " + startTime.toString());
     };
-    
-    
+
+
 	
 
-    private void stepFinished(TestStepFinished event) {
-
-
+    private void stepFinished(TestStepFinished event)  {
         if (event.getResult().getStatus().toString() == "PASSED") {
 
             step.log(Status.PASS, "This step passed");
@@ -120,7 +113,9 @@ public class customReportListener implements EventListener {
         {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
-            step.log(Status.FAIL, "This step failed");
+                step.log(Status.FAIL, "This step failed");
+
+            //step.log(Status.INFO,"Screenshot").addScreenCaptureFromBase64String(capture(driver));
         }
 
         Date endTime = scenario.getExtent().getReport().getEndTime();

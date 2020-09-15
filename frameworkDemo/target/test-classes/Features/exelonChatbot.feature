@@ -144,3 +144,16 @@ Feature: Feature to test exelon homepage in firefox
     And click yes
     And click on close chat icon
     Then select yes to close chat
+
+  @Regression @Exelon @TC_Exel_009
+  Scenario: Firefox: Open chat bot and click on Outage
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on Outage
+    And click on close chat icon
+    Then select yes to close chat
+
