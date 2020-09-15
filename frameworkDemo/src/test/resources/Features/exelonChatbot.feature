@@ -23,7 +23,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
 
-@Regression1 @Exelon @TC_Exel_002
+@Regression @Exelon @TC_Exel_002
   Scenario: Chrome: Open exelon web application, load chatbot and navigate through menus
     Given chrome browser is open
     And user will be on exelon homepage
@@ -41,7 +41,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
     
     
- @Regression1 @Exelon @Sanity @TC_Exel_003
+ @Regression @Exelon @Sanity @TC_Exel_003
   Scenario: Chrome: Open chat bot and pay bill via virtual payment method
     Given chrome browser is open
     And user will be on exelon homepage
@@ -144,3 +144,16 @@ Feature: Feature to test exelon homepage in firefox
     And click yes
     And click on close chat icon
     Then select yes to close chat
+
+  @Regression @Exelon @TC_Exel_009
+  Scenario: Firefox: Open chat bot and click on Outage
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on Outage
+    And click on close chat icon
+    Then select yes to close chat
+
