@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.tools.ant.types.selectors.SelectSelector;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -64,13 +65,13 @@ public class genericFunctions extends AllVariables {
 
     @When("user will locate the chatbot icon")
     public void user_will_locate_the_chatbot_icon() throws InterruptedException {
-        System.out.println("Inside Step:-user able to locate chat bot");
+        System.out.println("Inside Step: Automation able to locate chat bot");
         Thread.sleep(3000);
     }
 
     @And("click on exelon chatbot icon")
     public void click_on_exelon_chatbot_icon() throws InterruptedException {
-        System.out.println("Inside Step:-user clicked on chatbot icon");
+        System.out.println("Inside Step: Automation clicked on chatbot icon");
         driver.findElement(By.xpath(ChatbotIcon)).click();
         Thread.sleep(3000);
     }
@@ -79,7 +80,15 @@ public class genericFunctions extends AllVariables {
     public void chatbot_will_be_open() throws InterruptedException {
         System.out.println("Inside Step:-chatbot opens up");
         WebElement status=driver.findElement(By.xpath(ChatbotConnected));
-        System.out.println(status.isDisplayed());
+        if (status.isDisplayed()){
+            System.out.println("Inside Step: Chatbot is Ready to proceed");
+        } else {
+            System.out.println("Inside Step: Chatbot is not Ready, clicking again");
+            driver.findElement(By.xpath(ChatbotIcon)).click();
+        }
+        if (status.isDisplayed()){
+            System.out.println("Inside Step: Chatbot is Ready after second click, now proceeding");
+        }
         Thread.sleep(3000);
     }
 
