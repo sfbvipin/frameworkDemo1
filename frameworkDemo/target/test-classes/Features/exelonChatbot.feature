@@ -41,7 +41,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
   @Regression @Firefox @Exelon @Sanity @TC_Exel_003
-  Scenario: Firefox: Open chat bot and pay bill via virtual payment method
+  Scenario: Firefox: Open chat bot and pay bill via chat
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -50,7 +50,7 @@ Feature: Feature to test exelon homepage in firefox
     And user click no thanks i will continue
     Then select and click on  bill and paymenets
     And click on paying your bill
-    Then select and click pay via virtual assistance
+    Then select and click pay via chat
     And click on sign in
     Then user will redirect to login page
     When user enters login id
@@ -66,7 +66,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
  @Regression1 @Chrome @Exelon @Sanity @TC_Exel_004
-  Scenario: Chrome: Open chat bot and pay bill via virtual payment method
+  Scenario: Chrome: Open chat bot and pay bill via chat
     Given chrome browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -75,7 +75,7 @@ Feature: Feature to test exelon homepage in firefox
     And user click no thanks i will continue
     Then select and click on  bill and paymenets
     And click on paying your bill
-    Then select and click pay via virtual assistance
+   Then select and click pay via chat
     And click on sign in
     Then user will redirect to login page
     When user enters login id
@@ -208,8 +208,7 @@ Feature: Feature to test exelon homepage in firefox
     Then chatbot will be open
     And user click on menu icon
     Then click on Outage
-    And click on close chat icon
-    Then select yes to close chat
+    Then close the browser
 
   @Regression1 @Chrome @Exelon @TC_Exel_014
   Scenario: Chrome: Open chat bot and click on Outage
@@ -220,8 +219,7 @@ Feature: Feature to test exelon homepage in firefox
     Then chatbot will be open
     And user click on menu icon
     Then click on Outage
-    And click on close chat icon
-    Then select yes to close chat
+    Then close the browser
 
   @Regression @Firefox @Exelon @TC_Exel_015
   Scenario: Firefox:initiating bot without login and click on Pay bill

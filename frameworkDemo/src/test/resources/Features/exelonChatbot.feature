@@ -41,7 +41,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
   @Regression @Firefox @Exelon @Sanity @TC_Exel_003
-  Scenario: Firefox: Open chat bot and pay bill via virtual payment method
+  Scenario: Firefox: Open chat bot and pay bill via chat
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -66,7 +66,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
  @Regression1 @Chrome @Exelon @Sanity @TC_Exel_004
-  Scenario: Chrome: Open chat bot and pay bill via virtual payment method
+  Scenario: Chrome: Open chat bot and pay bill via chat
     Given chrome browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
