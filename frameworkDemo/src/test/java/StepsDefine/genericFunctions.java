@@ -46,13 +46,13 @@ public class genericFunctions extends AllVariables {
         //driver.manage().window().maximize();
     }
 
-/*    public String capture() throws IOException {
+   /* public void capture() throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File Dest = new File("src/test/resources/FailedCaseImages/" + System.currentTimeMillis()
-                + ".png");
+                + ".jpg");
         String filepath = Dest.getAbsolutePath();
         FileUtils.copyFile(scrFile, Dest);
-        return filepath;
+        FailedScreenShotPath = filepath;
     }*/
 
     @And("user will be on exelon homepage")
@@ -298,6 +298,67 @@ public class genericFunctions extends AllVariables {
     @Then("click on Outage")
     public void click_on_Outage() throws InterruptedException {
         driver.findElement(By.xpath(MenuOptionOutage)).click();
+        Thread.sleep(3000);
+    }
+
+    @And ("Click on Budget Billing")
+    public void Click_on_Budget_Billing() throws InterruptedException {
+        driver.findElement(By.xpath(budgetbilling)).click();
+        Thread.sleep(5000);
+    }
+
+    @Then ("click on learn more about budget billing")
+    public void click_on_learn_more_about_budget_billing() throws InterruptedException{
+        driver.findElement(By.xpath(learnmoreaboutbudgetbilling)).click();
+        Thread.sleep(4000);
+    }
+    @And("user will type account")
+    public void user_will_type_account() throws InterruptedException {
+        driver.findElement(By.xpath(accounttype)).sendKeys("account");
+        Thread.sleep(5000);
+    }
+
+    @Then("click on send")
+    public void click_on_send() throws InterruptedException {
+        driver.findElement(By.xpath(sendbutton)).click();
+        Thread.sleep(5000);
+    }
+
+    @Then("user click on signup for autopay")
+    public void user_click_on_signup_for_autopay()throws InterruptedException {
+        driver.findElement(By.xpath(autopay)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("user click on other payment")
+    public void user_click_on_other_payment()throws InterruptedException {
+        driver.findElement(By.xpath(otherpay)).click();
+        Thread.sleep(3000);
+    }
+    @And("user click on pay by mail")
+    public void user_click_on_pay_by_mail()throws InterruptedException {
+        driver.findElement(By.xpath(paybymail)).click();
+        Thread.sleep(3000);
+    }
+    @And("user click on pay by phone")
+    public void user_click_on_pay_by_phone()throws InterruptedException {
+        driver.findElement(By.xpath(paybyphone)).click();
+        Thread.sleep(3000);
+    }
+    @And("user click on pay in person")
+    public void user_click_on_pay_in_person()throws InterruptedException {
+        driver.findElement(By.xpath(payinperson)).click();
+        Thread.sleep(3000);
+    }
+    @Then("click learn about budget")
+    public void click_learn_about_budget()throws InterruptedException {
+        driver.findElement(By.xpath(learnbudget)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("user click No")
+    public void user_click_No()throws InterruptedException {
+        driver.findElement(By.xpath(no)).click();
         Thread.sleep(3000);
     }
 }
