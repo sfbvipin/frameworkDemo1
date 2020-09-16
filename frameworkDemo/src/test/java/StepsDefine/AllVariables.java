@@ -51,13 +51,14 @@ public class AllVariables {
     public static String findaccountnum="//div[contains(text(),'Find Account Number')]";
     public static String moreafternothanks="//div[contains(text(),'More')]";
     public static String budgetbilling="//div[contains(text(),'Budget Billing')]";
-    public static String learnmoreaboutbudgetbilling="//div[contains(text(),'Learn more about Budget Billing')]"; public static String accounttype="/html/body/div[3]/div/div[3]/textarea";
+    public static String learnmoreaboutbudgetbilling="//div[contains(text(),'Learn more about Budget Billing')]";
+    public static String accounttype="/html/body/div[3]/div/div[3]/textarea";
     public static String sendbutton="/html/body/div[3]/div/div[3]/button";
     public static String autopay="/html/body/div[3]/div/div[2]/div/div[2]/div[7]/div/div[2]/div/div[2]/a[2]/div";
     public static String otherpay="//div[contains(text(),'Learn about Other Payment Methods')]";
     public static String paybymail="//div[contains(text(),'Pay by Mail')]";
     public static String paybyphone="//div[contains(text(),'Pay by Phone')]";
-    public static String payinperson="/html/body/div[3]/div/div[2]/div/div[2]/div[9]/div/div[2]/div/div[2]/a[3]/div";
-    public static String learnbudget="/html/body/div[3]/div/div[2]/div/div[2]/div[12]/div/div[2]/div/div[2]/a[1]";
-    public static String no="/html/body/div[3]/div/div[2]/div/div[2]/div[12]/div/div[2]/div/div[2]/a[2]/div";
+    public static String payinperson="//div[contains(text(),'Pay in Person')]";
+    public static String learnbudget="//div[contains(text(),'Learn about Budget Billing.')]";
+    public static String no="//div[contains(text(),'No, Thanks. I'm not interested in this program.')]";
 }
