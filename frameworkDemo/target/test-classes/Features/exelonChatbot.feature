@@ -457,7 +457,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
   @Regression @Firefox @Exelon @TC_Exel_031     @Khushboo
-  Scenario: Firefox:Initiate bot without login and click learn about budget billing under pay by phone
+  Scenario: Firefox: Initiate bot without login and click learn about budget billing under pay by phone
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -473,7 +473,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
   @Regression1 @Chrome @Exelon @TC_Exel_032     @Khushboo
-  Scenario: Chrome :Initiate bot without login and click learn about budget billing under pay by phone
+  Scenario: Chrome: Initiate bot without login and click learn about budget billing under pay by phone
     Given chrome browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
