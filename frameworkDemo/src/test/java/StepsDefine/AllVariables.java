@@ -37,7 +37,7 @@ public class AllVariables {
 
     public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";
-    public static String payviavirtual="//div[contains(text(),'Pay Via Virtual Assistant')]";
+    public static String payviachat="//div[contains(text(),'Pay Via Chat')]";
     public static String signin="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'Sign In')]";
     public static String signinforauth="//button[contains(text(),'Sign In')]";
     public static String acceptauth="//button[contains(text(),'Accept')]";

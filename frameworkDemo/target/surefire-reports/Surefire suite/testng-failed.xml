@@ -5,7 +5,7 @@
     <classes>
       <class name="com.cucumber.runner.sharpRunner">
         <methods>
-          <include name="runScenario" invocation-numbers="1 0 8 6 11 10 15 14 16"/>
+          <include name="runScenario" invocation-numbers="3 8 1 6 10 13 11 15 14 16 12"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
