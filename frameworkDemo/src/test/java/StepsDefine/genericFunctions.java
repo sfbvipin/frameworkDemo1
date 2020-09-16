@@ -158,10 +158,10 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
-    @Then("select and click pay via virtual assistance")
-    public void select_and_click_pay_via_virtual_assistance() throws InterruptedException
+    @Then("select and click pay via chat")
+    public void select_and_click_pay_via_chat() throws InterruptedException
     {
-        driver.findElement(By.xpath(payviavirtual)).click();
+        driver.findElement(By.xpath(payviachat)).click();
         Thread.sleep(3000);
     }
 
@@ -259,6 +259,12 @@ public class genericFunctions extends AllVariables {
     @Then("select yes to close chat")
     public void select_yes_to_close_chat() throws InterruptedException {
         driver.findElement(By.xpath(yesbutton)).click();
+        Thread.sleep(3000);
+        driver.close();
+    }
+
+    @Then("close the browser")
+    public void close_the_browser() throws InterruptedException {
         Thread.sleep(3000);
         driver.close();
     }
