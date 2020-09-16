@@ -1,6 +1,7 @@
 package cucumberHooks;
 
 import StepsDefine.AllVariables;
+import StepsDefine.genericFunctions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -22,6 +23,10 @@ import io.cucumber.plugin.event.TestSourceRead;
 import io.cucumber.plugin.event.TestStepFinished;
 import io.cucumber.plugin.event.TestStepStarted;
 import io.cucumber.plugin.event.HookTestStep;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 import java.io.IOException;
@@ -114,15 +119,14 @@ public class customReportListener implements EventListener {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
                 step.log(Status.FAIL, "This step failed");
-
-            //step.log(Status.INFO,"Screenshot").addScreenCaptureFromBase64String(capture(driver));
+           // step.addScreenCaptureFromBase64String(genericFunctions.capture());
         }
 
         Date endTime = scenario.getExtent().getReport().getEndTime();
         step.log(Status.INFO, "Test Case execution started at " + endTime.toString());
     }
-   
-   
+
+
     
 }
 
