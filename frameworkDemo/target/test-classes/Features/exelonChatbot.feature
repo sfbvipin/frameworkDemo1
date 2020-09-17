@@ -65,7 +65,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
- @Regression1 @Chrome @Exelon @Sanity @TC_Exel_004
+ @Regression @Chrome @Exelon @Sanity @TC_Exel_004
   Scenario: Chrome: Open chat bot and pay bill via chat
     Given chrome browser is open
     And user will be on exelon homepage
@@ -105,7 +105,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_006
+  @Regression @Chrome @Exelon @TC_Exel_006
   Scenario: Chrome: Open chat bot and start service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -133,7 +133,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_008
+  @Regression @Chrome @Exelon @TC_Exel_008
   Scenario: Chrome: Open chat bot and move service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -160,7 +160,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_010
+  @Regression @Chrome @Exelon @TC_Exel_010
   Scenario: Chrome: Open chat bot and navigate for Covid-19 assistance
     Given chrome browser is open
     And user will be on exelon homepage
@@ -210,7 +210,7 @@ Feature: Feature to test exelon homepage in firefox
     Then click on Outage
     Then close the browser
 
-  @Regression1 @Chrome @Exelon @TC_Exel_014
+  @Regression @Chrome @Exelon @TC_Exel_014
   Scenario: Chrome: Open chat bot and click on Outage
     Given chrome browser is open
     And user will be on exelon homepage
@@ -234,7 +234,7 @@ Feature: Feature to test exelon homepage in firefox
     Then click on close chat icon
     And select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_016
+  @Regression @Chrome @Exelon @TC_Exel_016
   Scenario: Chrome:initiating bot without login and click on Pay bill
     Given chrome browser is open
     And user will be on exelon homepage
@@ -266,7 +266,7 @@ Feature: Feature to test exelon homepage in firefox
     And user accept the authorization request
     Then navigate back to chat bot
 
-  @Regression1 @Chrome @Exelon @TC_Exel_018
+  @Regression @Chrome @Exelon @TC_Exel_018
   Scenario: Chrome: Initiating the Chat-Bot and user eligible for budget billing and already enrolled
     Given chrome browser is open
     And user will be on exelon homepage
@@ -297,7 +297,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_020 @Khushboo
+  @Regression @Chrome @Exelon @TC_Exel_020 @Khushboo
   Scenario: Chrome: Initiating bot without login and click on Pay bill
     Given chrome browser is open
     And user will be on exelon homepage
@@ -324,7 +324,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_022      @Khushboo
+  @Regression @Chrome @Exelon @TC_Exel_022      @Khushboo
   Scenario: Chrome: Click on Bot and type keywords related to billing and payment
     Given chrome browser is open
     And user will be on exelon homepage
@@ -352,7 +352,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon  @TC_Exel_024  @Khushboo
+  @Regression @Chrome @Exelon  @TC_Exel_024  @Khushboo
   Scenario: Chrome: Initiate bot without login and click Sign up for Autopay
     Given chrome browser is open
     And user will be on exelon homepage
@@ -381,7 +381,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_026        @Khushboo
+  @Regression @Chrome @Exelon @TC_Exel_026        @Khushboo
   Scenario: Chrome: Initiate bot without login and click Pay by mail under Other Payment Options
     Given chrome browser is open
     And user will be on exelon homepage
@@ -411,7 +411,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_028     @Khushboo
+  @Regression @Chrome @Exelon @TC_Exel_028     @Khushboo
   Scenario: Chrome: Initiate bot without login and click Pay by phone under Other Payment Options
     Given chrome browser is open
     And user will be on exelon homepage
@@ -441,7 +441,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_030      @Khushboo
+  @Regression @Chrome @Exelon @TC_Exel_030      @Khushboo
   Scenario: Chrome: Initiate bot without login and click Pay in person under Other Payment Options
     Given chrome browser is open
     And user will be on exelon homepage
@@ -472,7 +472,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_032     @Khushboo
+  @Regression @Chrome @Exelon @TC_Exel_032     @Khushboo
   Scenario: Chrome: Initiate bot without login and click learn about budget billing under pay by phone
     Given chrome browser is open
     And user will be on exelon homepage
@@ -504,7 +504,7 @@ Feature: Feature to test exelon homepage in firefox
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @TC_Exel_034     @Khushboo
+  @Regression @Chrome @Exelon @TC_Exel_034     @Khushboo
   Scenario: Chrome: Initiate bot without login and click no thanks under pay by mail
     Given chrome browser is open
     And user will be on exelon homepage
@@ -517,5 +517,350 @@ Feature: Feature to test exelon homepage in firefox
     Then user click on other payment
     And user click on pay by mail
     Then user click No
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_035     @Parul
+  Scenario: Firefox: Initiate bot without login and click Download my Current bill
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_036     @Parul
+  Scenario: Chrome: Initiate bot without login and click Download my Current bill
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_037     @Parul
+  Scenario: Firefox: Initiate bot without login and click Download a previous bill
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download a previous bill
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_038     @Parul
+  Scenario: Chrome: Initiate bot without login and click Download a previous bill
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download a previous bill
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_039     @Parul
+  Scenario: Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_040     @Parul
+  Scenario: Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_041     @Parul @Issue
+  Scenario: Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_042     @Parul @Issue
+  Scenario: Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    #And user accept the authorization request : this step is required in firefox but not in chrome
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_042a     @Parul @Issue
+  Scenario: Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_043     @Aashish
+  Scenario: Firefox: Initiating th e Chat-Bot and select No Thanks
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then click on close chat icon
+    And select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_044     @Aashish
+  Scenario: Chrome: Initiating th e Chat-Bot and select No Thanks
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then click on close chat icon
+    And select yes to close chat
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_045     @Aashish
+  Scenario: Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    Then click on close chat icon
+    And select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_046     @Aashish
+  Scenario: Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    Then click on close chat icon
+    And select yes to close chat
+
+#      ---- wait to be added for checking the verbiage------
+#  (Hello! I’m Atlantic City Electric's virtual assistant.
+#  Before we get started, sign in to your online account for the optimal experience. Simply start another
+#  chat after you sign in, and I can help you from there. You can also continue without signing in.
+#  [Following as buttons]Sign InNo, Thanks. I will continue without signing in)
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_047     @Aashish
+  Scenario: Firefox: Initiating the Chat-Bot and select SignIn
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_048     @Aashish
+  Scenario: Chrome: Initiating the Chat-Bot and select SignIn
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  #------  Wait to be added for checking the verbiage --------
+  #(Hello! I’m Atlantic City Electric's virtual assistant.
+  #What can I help you with today? You can choose a topic to get started, or type in a direct question.)
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_049     @Aashish
+  Scenario: Firefox: Initiating the Chat-Bot, navigate to account balance without sign in
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And Account balance
+    Then click on close chat icon
+    And select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_050     @Aashish
+  Scenario: Chrome: Initiating the Chat-Bot, navigate to account balance without sign in
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And Account balance
+    Then click on close chat icon
+    And select yes to close chat
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_051     @Aashish
+  Scenario: Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And Account balance
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_052     @Aashish
+  Scenario: Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And Account balance
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+
+  @Regression @Firefox @Exelon @Sanity @TC_Exel_053     @Vipin
+  Scenario: Firefox: Click on bot and select multiple option under flow end message
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on more button in bot
+    And select solar and click in bot
+    Then click on home and business in bot
+    And click on private solar option
+    And check the given content
+    Then select yes for confirmation
+    Then good bye content
+    And select no Thanks to close chat
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Sanity @TC_Exel_054     @Vipin
+  Scenario: Chrome: Click on bot and select multiple option under flow end message
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on more button in bot
+    And select solar and click in bot
+    Then click on home and business in bot
+    And click on private solar option
+    And check the given content
+    Then select yes for confirmation
+    Then good bye content
+    And select no Thanks to close chat
     And click on close chat icon
     Then select yes to close chat

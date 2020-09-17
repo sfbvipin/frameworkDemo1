@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.types.selectors.SelectSelector;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -78,16 +79,15 @@ public class genericFunctions extends AllVariables {
 
     @Then("chatbot will be open")
     public void chatbot_will_be_open() throws InterruptedException {
-        System.out.println("Inside Step:-chatbot opens up");
         WebElement status=driver.findElement(By.xpath(ChatbotConnected));
         if (status.isDisplayed()){
             System.out.println("Inside Step: Chatbot is Ready to proceed");
         } else {
             System.out.println("Inside Step: Chatbot is not Ready, clicking again");
             driver.findElement(By.xpath(ChatbotIcon)).click();
-        }
-        if (status.isDisplayed()){
-            System.out.println("Inside Step: Chatbot is Ready after second click, now proceeding");
+            if (status.isDisplayed()){
+                System.out.println("Inside Step: Chatbot is Ready after second click, now proceeding");
+            }
         }
         Thread.sleep(3000);
     }
@@ -149,8 +149,14 @@ public class genericFunctions extends AllVariables {
     @And("user click no thanks i will continue")
     public void  user_click_no_thanks_i_will_continue() throws InterruptedException
     {
-        driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
-        Thread.sleep(4000);
+        WebElement nothanks=driver.findElement(By.xpath(MenuOptionNoThanksContinue));
+        if (nothanks.isDisplayed()){
+            driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
+            Thread.sleep(4000);
+        } else {
+            driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
+            Thread.sleep(4000);
+        }
     }
 
     @Then("select and click on  bill and paymenets")
@@ -183,13 +189,12 @@ public class genericFunctions extends AllVariables {
 
     @Then("user will redirect to login page")
     public void user_will_redirect_to_login_page() throws InterruptedException {
-        // driver.navigate().to(AllVariables.signurl);
         Set<String> handle=driver.getWindowHandles();
         Iterator<String> it= handle.iterator();
         String parantwindow=it.next();
-        System.out.println(parantwindow);
+        System.out.println("Inside Step: Parent Window handler is" + parantwindow);
         String childwindow=it.next();
-        System.out.println(childwindow);
+        System.out.println("Inside Step: Child Window handler is" + childwindow);
         driver.switchTo().window(childwindow);
         Thread.sleep(5000);
     }
@@ -375,5 +380,52 @@ public class genericFunctions extends AllVariables {
     public void user_click_No()throws InterruptedException {
         driver.findElement(By.xpath(no)).click();
         Thread.sleep(3000);
+    }
+
+    @Then("select and click download my current bill")
+    public void select_and_click_download_my_current_bill() throws InterruptedException
+    {
+        driver.findElement(By.xpath(downloadmycurrentbill)).click();
+        Thread.sleep(3000);
+    }
+
+
+    @And("click on Getting your Bill")
+    public void click_on_Getting_your_Bill() throws InterruptedException
+    {
+        driver.findElement(By.xpath(gettingyourbill)).click();
+        Thread.sleep(3000);
+    }
+
+
+    @Then("select and click download a previous bill")
+    public void select_and_click_download_a_previous_bill() throws InterruptedException
+    {
+        driver.findElement(By.xpath(downloadapreviousbill)).click();
+        Thread.sleep(3000);
+    }
+
+    @And("Account balance")
+    public void Account_balance() throws InterruptedException {
+        driver.findElement(By.xpath(Accountbalancebutton)).click();
+        Thread.sleep(5000);
+    }
+
+    @Then("No thanks continue without sign")
+    public void No_thanks_continue_without_sign() throws InterruptedException {
+        driver.findElement(By.xpath(nothanksafteraccountbalance)).click();
+        Thread.sleep(3000);
+        driver.close();
+    }
+
+    @And("check the given content")
+    public void check_the_given_content()
+    {
+        Assert.assertEquals(endflowtext, endflowtext);
+    }
+
+    @Then ("good bye content")
+    public void  good_bye_content() {
+        Assert.assertEquals(chatclosingtext, chatclosingtext);
     }
 }

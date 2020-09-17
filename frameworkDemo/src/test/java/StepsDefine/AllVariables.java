@@ -61,4 +61,12 @@ public class AllVariables {
     public static String payinperson="//div[contains(text(),'Pay in Person')]";
     public static String learnbudget="//div[contains(text(),'Learn about Budget Billing.')]";
     public static String no="//div[contains(text(),'No, Thanks. I'm not interested in this program.')]";
+
+    public static String downloadmycurrentbill="//div[contains(text(),'Download My Current Bill')]";
+    public static String downloadapreviousbill="//div[contains(text(),'Download A Previous Bill')]";
+    public static String gettingyourbill="//div[contains(text(),'Getting Your Bill')]";
+    public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
+    public static String nothanksafteraccountbalance="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'No, Thanks. I will continue without signing in')]";
+    public static String endflowtext="Did you find the answer(s) you needed today?";
+    public static String chatclosingtext="//span[contains(text(),'m glad you were able to get the help you')]";
 }
