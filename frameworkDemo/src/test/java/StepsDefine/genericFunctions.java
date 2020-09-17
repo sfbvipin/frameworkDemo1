@@ -45,7 +45,6 @@ public class genericFunctions extends AllVariables {
         driver =new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-        //driver.manage().window().maximize();
     }
 
    /* public void capture() throws IOException {
@@ -66,13 +65,18 @@ public class genericFunctions extends AllVariables {
 
     @When("user will locate the chatbot icon")
     public void user_will_locate_the_chatbot_icon() throws InterruptedException {
-        System.out.println("Inside Step: Automation able to locate chat bot");
+        WebElement chatbotIcon=driver.findElement(By.xpath(ChatbotIcon));
+        if (chatbotIcon.isDisplayed()){
+            System.out.println("Inside Step: SHARP is able to locate chat bot");
+        } else {
+            System.out.println("Inside Step: SHARP is not able to locate chat bot");
+        }
         Thread.sleep(3000);
     }
 
     @And("click on exelon chatbot icon")
     public void click_on_exelon_chatbot_icon() throws InterruptedException {
-        System.out.println("Inside Step: Automation clicked on chatbot icon");
+        System.out.println("Inside Step: SHARP clicked on chatbot icon");
         driver.findElement(By.xpath(ChatbotIcon)).click();
         Thread.sleep(3000);
     }
@@ -81,12 +85,12 @@ public class genericFunctions extends AllVariables {
     public void chatbot_will_be_open() throws InterruptedException {
         WebElement status=driver.findElement(By.xpath(ChatbotConnected));
         if (status.isDisplayed()){
-            System.out.println("Inside Step: Chatbot is Ready to proceed");
+            System.out.println("Inside Step: Chatbot is ready to proceed");
         } else {
-            System.out.println("Inside Step: Chatbot is not Ready, clicking again");
+            System.out.println("Inside Step: Chatbot is not ready, clicking again");
             driver.findElement(By.xpath(ChatbotIcon)).click();
             if (status.isDisplayed()){
-                System.out.println("Inside Step: Chatbot is Ready after second click, now proceeding");
+                System.out.println("Inside Step: Chatbot is ready after second click, now proceeding");
             }
         }
         Thread.sleep(3000);
@@ -152,11 +156,10 @@ public class genericFunctions extends AllVariables {
         WebElement nothanks=driver.findElement(By.xpath(MenuOptionNoThanksContinue));
         if (nothanks.isDisplayed()){
             driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
-            Thread.sleep(4000);
         } else {
             driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
-            Thread.sleep(4000);
         }
+        Thread.sleep(4000);
     }
 
     @Then("select and click on  bill and paymenets")
