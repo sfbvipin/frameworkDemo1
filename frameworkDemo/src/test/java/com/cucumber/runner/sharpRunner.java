@@ -19,14 +19,14 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         features={"classpath:features"}
         ,glue= {"StepsDefine","cucumberHooks"}
         ,monochrome=true
-        ,tags= "@Firefox"
+        ,tags = "@Day2"
         ,plugin = {"cucumberHooks.customReportListener"})
 
 @Test
 public class sharpRunner extends AbstractTestNGCucumberTests{
 
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }

@@ -192,9 +192,9 @@ public class genericFunctions extends AllVariables {
         Set<String> handle=driver.getWindowHandles();
         Iterator<String> it= handle.iterator();
         String parantwindow=it.next();
-        System.out.println("Inside Step: Parent Window handler is" + parantwindow);
+        System.out.println("Inside Step: Parent Window handler is " + parantwindow);
         String childwindow=it.next();
-        System.out.println("Inside Step: Child Window handler is" + childwindow);
+        System.out.println("Inside Step: Child Window handler is " + childwindow);
         driver.switchTo().window(childwindow);
         Thread.sleep(5000);
     }

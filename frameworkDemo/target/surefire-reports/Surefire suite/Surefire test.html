@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 17 14:50:02 IST 2020</td>
+<td>Started on:</td><td>Thu Sep 17 17:03:17 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>316 seconds (316385 ms)</td>
+<tr><td>Total time:</td><td>1270 seconds (1270185 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,322 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56137}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: bef339336e6fc1436d3c070ab9a93dce
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ?.user accept the authorization request(classpath:features/exelonChatbot.feature:616)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1706407716", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1706407716'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56137}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: bef339336e6fc1436d3c070ab9a93dce
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ?.user accept the authorization request(classpath:features/exelonChatbot.feature:616)
+</pre></div></td>
+<td>74</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56444}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a77d8b0102e515e35e70b3e12e04ebc0
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ?.user accept the authorization request(classpath:features/exelonChatbot.feature:658)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1102222561", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1102222561'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56444}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a77d8b0102e515e35e70b3e12e04ebc0
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ?.user accept the authorization request(classpath:features/exelonChatbot.feature:658)
+</pre></div></td>
+<td>74</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 13592, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 76f035de-bfd8-4e84-aa69-c9e284e6d4c1
+*** Element info: {Using=xpath, value=//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_sign_in(genericFunctions.java:186)
+	at ?.click on sign in(classpath:features/exelonChatbot.feature:717)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace912920727", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace912920727'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 13592, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 76f035de-bfd8-4e84-aa69-c9e284e6d4c1
+*** Element info: {Using=xpath, value=//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_sign_in(genericFunctions.java:186)
+	at ?.click on sign in(classpath:features/exelonChatbot.feature:717)
+</pre></div></td>
+<td>43</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57189}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 08e64c37b9c613e8262f893bc634153d
+*** Element info: {Using=xpath, value=//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_sign_in(genericFunctions.java:186)
+	at ?.click on sign in(classpath:features/exelonChatbot.feature:734)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace123897371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace123897371'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57189}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 08e64c37b9c613e8262f893bc634153d
+*** Element info: {Using=xpath, value=//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_sign_in(genericFunctions.java:186)
+	at ?.click on sign in(classpath:features/exelonChatbot.feature:734)
+</pre></div></td>
+<td>36</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57641}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b0820f1fc793697113b5aa2dd4bc5247
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ?.user accept the authorization request(classpath:features/exelonChatbot.feature:806)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1016307660", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1016307660'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57641}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b0820f1fc793697113b5aa2dd4bc5247
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ?.user accept the authorization request(classpath:features/exelonChatbot.feature:806)
+</pre></div></td>
+<td>73</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Click on bot and select multiple option under flow end message", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c562cc528ec65dcaab412223f7e44035
+*** Element info: {Using=xpath, value=//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.select_no_thanks_to_close_chat(genericFunctions.java:144)
+	at ?.select no Thanks to close chat(classpath:features/exelonChatbot.feature:843)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace636687212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace636687212'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c562cc528ec65dcaab412223f7e44035
+*** Element info: {Using=xpath, value=//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.select_no_thanks_to_close_chat(genericFunctions.java:144)
+	at ?.select no Thanks to close chat(classpath:features/exelonChatbot.feature:843)
+</pre></div></td>
+<td>59</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,19 +391,74 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot without login and click Download my Current bill", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>63</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiate bot without login and click Download my Current bill", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>56</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot without login and click Download a previous bill", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>62</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiate bot without login and click Download a previous bill", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>55</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>88</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
 <td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "Optional[Feature to test exelon homepage in firefox]"</td>
 <td></td>
-<td>122</td>
+<td>90</td>
 <td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage in firefox]"</td>
 <td></td>
-<td>292</td>
+<td>59</td>
 <td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage in firefox]"</td>
 <td></td>
-<td>315</td>
+<td>43</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>63</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>45</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>63</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Chrome: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>65</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>77</td>
+<td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Click on bot and select multiple option under flow end message", "Optional[Feature to test exelon homepage in firefox]"</td>
+<td></td>
+<td>71</td>
 <td>com.cucumber.runner.sharpRunner@1aa7ecca</td></tr>
 </table><p>
 </body>
