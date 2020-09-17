@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,46 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">20 methods, 6 failed,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current b...)">runScenario("Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current b...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;O...)">runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiating the Chat-Bot and select SignIn&quot;, &quot;Optional[Feature to test exelon homepage in fi...)">runScenario("Chrome: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in fi...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiating the Chat-Bot and select SignIn&quot;, &quot;Optional[Feature to test exelon homepage in f...)">runScenario("Firefox: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in f...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts&quot;, &quot;Optio...)">runScenario("Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Optio...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Click on bot and select multiple option under flow end message&quot;, &quot;Optional[Feature to test ...)">runScenario("Chrome: Click on bot and select multiple option under flow end message", "Optional[Feature to test ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +143,72 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiate bot without login and click Download my Current bill&quot;, &quot;Optional[Feature to test ...)">runScenario("Firefox: Initiate bot without login and click Download my Current bill", "Optional[Feature to test ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test&quot;, ...)">runScenario("Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test", ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts&quot;, &quot;Opti...)">runScenario("Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Opti...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiating th e Chat-Bot and select No Thanks&quot;, &quot;Optional[Feature to test exelon homepage ...)">runScenario("Firefox: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiating the Chat-Bot, navigate to account balance without sign in&quot;, &quot;Optional[Feature t...)">runScenario("Firefox: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiating th e Chat-Bot and select No Thanks&quot;, &quot;Optional[Feature to test exelon homepage i...)">runScenario("Chrome: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage i...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test&quot;,...)">runScenario("Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test",...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;...)">runScenario("Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;O...)">runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiate bot without login and click Download a previous bill&quot;, &quot;Optional[Feature to test e...)">runScenario("Chrome: Initiate bot without login and click Download a previous bill", "Optional[Feature to test e...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;O...)">runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiate bot without login and click Download a previous bill&quot;, &quot;Optional[Feature to test ...)">runScenario("Firefox: Initiate bot without login and click Download a previous bill", "Optional[Feature to test ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current ...)">runScenario("Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: Click on bot and select multiple option under flow end message&quot;, &quot;Optional[Feature to test...)">runScenario("Firefox: Click on bot and select multiple option under flow end message", "Optional[Feature to test...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiating the Chat-Bot, navigate to account balance without sign in&quot;, &quot;Optional[Feature to...)">runScenario("Chrome: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature to...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Chrome: Initiate bot without login and click Download my Current bill&quot;, &quot;Optional[Feature to test e...)">runScenario("Chrome: Initiate bot without login and click Download my Current bill", "Optional[Feature to test e...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -129,12 +223,286 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.cucumber.runner.sharpRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current b...)">
+                  </a> <!-- runScenario("Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current b...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56137}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: bef339336e6fc1436d3c070ab9a93dce
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ✽.user accept the authorization request(classpath:features/exelonChatbot.feature:616)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;O...)">
+                  </a> <!-- runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56444}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a77d8b0102e515e35e70b3e12e04ebc0
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ✽.user accept the authorization request(classpath:features/exelonChatbot.feature:658)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiating the Chat-Bot and select SignIn&quot;, &quot;Optional[Feature to test exelon homepage in fi...)">
+                  </a> <!-- runScenario("Chrome: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in fi...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57189}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 08e64c37b9c613e8262f893bc634153d
+*** Element info: {Using=xpath, value=//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_sign_in(genericFunctions.java:186)
+	at ✽.click on sign in(classpath:features/exelonChatbot.feature:734)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Initiating the Chat-Bot and select SignIn&quot;, &quot;Optional[Feature to test exelon homepage in f...)">
+                  </a> <!-- runScenario("Firefox: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in f...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 13592, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 76f035de-bfd8-4e84-aa69-c9e284e6d4c1
+*** Element info: {Using=xpath, value=//div[@class=&apos;oda-chat-card-actions&apos;]//div[@class=&apos;oda-chat-action-label&apos;][contains(text(),&apos;Sign In&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.click_on_sign_in(genericFunctions.java:186)
+	at ✽.click on sign in(classpath:features/exelonChatbot.feature:717)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts&quot;, &quot;Optio...)">
+                  </a> <!-- runScenario("Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Optio...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Accept&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57641}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b0820f1fc793697113b5aa2dd4bc5247
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Accept&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.user_accept_the_authorization_request(genericFunctions.java:226)
+	at ✽.user accept the authorization request(classpath:features/exelonChatbot.feature:806)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Click on bot and select multiple option under flow end message&quot;, &quot;Optional[Feature to test ...)">
+                  </a> <!-- runScenario("Chrome: Click on bot and select multiple option under flow end message", "Optional[Feature to test ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Click on bot and select multiple option under flow end message", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=85.0.4183.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.43.71&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\SOHAIL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c562cc528ec65dcaab412223f7e44035
+*** Element info: {Using=xpath, value=//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepsDefine.genericFunctions.select_no_thanks_to_close_chat(genericFunctions.java:144)
+	at ✽.select no Thanks to close chat(classpath:features/exelonChatbot.feature:843)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.cucumber.runner.sharpRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Initiate bot without login and click Download my Current bill&quot;, &quot;Optional[Feature to test ...)">
+                  </a> <!-- runScenario("Firefox: Initiate bot without login and click Download my Current bill", "Optional[Feature to test ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Initiate bot without login and click Download my Current bill", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test&quot;, ...)">
+                  </a> <!-- runScenario("Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test", ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts&quot;, &quot;Opti...)">
+                  </a> <!-- runScenario("Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Opti...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Initiating th e Chat-Bot and select No Thanks&quot;, &quot;Optional[Feature to test exelon homepage ...)">
+                  </a> <!-- runScenario("Firefox: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Initiating the Chat-Bot, navigate to account balance without sign in&quot;, &quot;Optional[Feature t...)">
+                  </a> <!-- runScenario("Firefox: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature t...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiating th e Chat-Bot and select No Thanks&quot;, &quot;Optional[Feature to test exelon homepage i...)">
+                  </a> <!-- runScenario("Chrome: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage i...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test&quot;,...)">
+                  </a> <!-- runScenario("Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test",...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;...)">
@@ -147,20 +515,60 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;O...)">
-                  </a> <!-- runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...) -->
+                  <a name="runScenario(&quot;Chrome: Initiate bot without login and click Download a previous bill&quot;, &quot;Optional[Feature to test e...)">
+                  </a> <!-- runScenario("Chrome: Initiate bot without login and click Download a previous bill", "Optional[Feature to test e...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <span class="parameters">("Chrome: Initiate bot without login and click Download a previous bill", "Optional[Feature to test exelon homepage in firefox]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)&quot;, &quot;O...)">
-                  </a> <!-- runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...) -->
+                  <a name="runScenario(&quot;Firefox: Initiate bot without login and click Download a previous bill&quot;, &quot;Optional[Feature to test ...)">
+                  </a> <!-- runScenario("Firefox: Initiate bot without login and click Download a previous bill", "Optional[Feature to test ...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <span class="parameters">("Firefox: Initiate bot without login and click Download a previous bill", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current ...)">
+                  </a> <!-- runScenario("Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Firefox: Click on bot and select multiple option under flow end message&quot;, &quot;Optional[Feature to test...)">
+                  </a> <!-- runScenario("Firefox: Click on bot and select multiple option under flow end message", "Optional[Feature to test...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Firefox: Click on bot and select multiple option under flow end message", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiating the Chat-Bot, navigate to account balance without sign in&quot;, &quot;Optional[Feature to...)">
+                  </a> <!-- runScenario("Chrome: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature to...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature to test exelon homepage in firefox]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Chrome: Initiate bot without login and click Download my Current bill&quot;, &quot;Optional[Feature to test e...)">
+                  </a> <!-- runScenario("Chrome: Initiate bot without login and click Download my Current bill", "Optional[Feature to test e...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Chrome: Initiate bot without login and click Download my Current bill", "Optional[Feature to test exelon homepage in firefox]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -226,24 +634,92 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(20);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(0, 3, 315416);
+data.setCell(0, 3, 90981);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(1, 3, 292432);
+data.setCell(1, 3, 88722);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(2, 3, 122416);
+data.setCell(2, 3, 77695);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(3, 3, 74757);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(4, 3, 74402);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(5, 3, 73112);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(6, 3, 71910);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(7, 3, 65059);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(8, 3, 63744);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(9, 3, 63439);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(10, 3, 63321);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(11, 3, 62054);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(12, 3, 59882);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(13, 3, 59740);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(14, 3, 56107);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(15, 3, 55427);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(16, 3, 45002);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(17, 3, 43959);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(18, 3, 43101);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'com.cucumber.runner.sharpRunner')
+data.setCell(19, 3, 36703);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 minutes</span>
+              <span class="suite-total-time">Total running time: 21 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -275,20 +751,100 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">runScenario("Firefox: Initiate bot without login and click Download my Current bill", "Optional[Feature to test ...)</span>
+                <span class="method-start">391 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Chrome: Initiate bot without login and click Download my Current bill", "Optional[Feature to test e...)</span>
+                <span class="method-start">63714 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Firefox: Initiate bot without login and click Download a previous bill", "Optional[Feature to test ...)</span>
+                <span class="method-start">119822 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Chrome: Initiate bot without login and click Download a previous bill", "Optional[Feature to test e...)</span>
+                <span class="method-start">181876 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current ...)</span>
+                <span class="method-start">237304 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current b...)</span>
+                <span class="method-start">326026 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">runScenario("Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "...)</span>
-                <span class="method-start">383 ms</span>
+                <span class="method-start">400433 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...)</span>
-                <span class="method-start">383 ms</span>
+                <span class="method-start">491415 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)", "O...)</span>
-                <span class="method-start">383 ms</span>
+                <span class="method-name">runScenario("Firefox: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage ...)</span>
+                <span class="method-start">566173 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Chrome: Initiating th e Chat-Bot and select No Thanks", "Optional[Feature to test exelon homepage i...)</span>
+                <span class="method-start">625913 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Firefox: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test",...)</span>
+                <span class="method-start">669872 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test", ...)</span>
+                <span class="method-start">733312 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Firefox: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in f...)</span>
+                <span class="method-start">778315 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Chrome: Initiating the Chat-Bot and select SignIn", "Optional[Feature to test exelon homepage in fi...)</span>
+                <span class="method-start">821417 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Firefox: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature t...)</span>
+                <span class="method-start">858121 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Chrome: Initiating the Chat-Bot, navigate to account balance without sign in", "Optional[Feature to...)</span>
+                <span class="method-start">921865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Opti...)</span>
+                <span class="method-start">986925 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts", "Optio...)</span>
+                <span class="method-start">1064621 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Firefox: Click on bot and select multiple option under flow end message", "Optional[Feature to test...)</span>
+                <span class="method-start">1137734 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Chrome: Click on bot and select multiple option under flow end message", "Optional[Feature to test ...)</span>
+                <span class="method-start">1209645 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">315801 ms</span>
+                <span class="method-start">1269529 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
