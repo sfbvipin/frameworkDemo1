@@ -1,8 +1,8 @@
+#Owner        : SHARP
+#Author       : QA Team
+#Description  : This is feature file for Exelon Chatbot application
 
-#Author=Vipin
-#Date=14/08/2020
-#Description=Creating the automation demo POC
-Feature: Feature to test exelon homepage in firefox
+Feature: Feature to test exelon chatbot application test cases
 
 
 @Regression @Firefox @Exelon @Day0 @TC_Exel_001

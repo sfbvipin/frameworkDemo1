@@ -22,7 +22,6 @@ public class genericFunctions extends AllVariables {
     AllVariables alv= new AllVariables();
     public static WebDriver driver =null;
 
-
     @Given("firefox browser is open")
     public void firefox_browser_is_open() {
         System.setProperty(geckoDriverinfo , firfoxPath);
