@@ -1,22 +1,15 @@
 package cucumberHooks;
 
-import StepsDefine.AllVariables;
 import StepsDefine.genericFunctions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Given;
-import com.aventstack.extentreports.gherkin.model.Scenario;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.cucumber.plugin.EventListener;
 import io.cucumber.plugin.event.EventPublisher;
 import io.cucumber.plugin.event.PickleStepTestStep;
-import io.cucumber.plugin.event.TestCaseEvent;
 import io.cucumber.plugin.event.TestCaseStarted;
-import io.cucumber.plugin.event.TestCaseFinished;
 import io.cucumber.plugin.event.TestRunFinished;
 import io.cucumber.plugin.event.TestRunStarted;
 import io.cucumber.plugin.event.TestSourceRead;
@@ -34,6 +27,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import static StepsDefine.genericFunctions.*;
 
 
 public class customReportListener implements EventListener {
@@ -54,11 +49,11 @@ public class customReportListener implements EventListener {
         publisher.registerHandlerFor(TestStepStarted.class, this::stepStarted);
         publisher.registerHandlerFor(TestStepFinished.class, this::stepFinished);
         publisher.registerHandlerFor(TestRunFinished.class, this::runFinished);
-        
     }
         
 
     private void runStarted(TestRunStarted event) {
+        System.out.println("SHARP: Extent Report is initialized");
         spark = new ExtentSparkReporter("./ExtentReportResults.html");
         extent = new ExtentReports();
         //spark.config().setTheme(Theme.DARK);
@@ -66,25 +61,25 @@ public class customReportListener implements EventListener {
         extent.attachReporter(spark);
         extent.setSystemInfo("OS", "Windows");
         extent.setSystemInfo("Environment", "QA");
+        //deleteFolder(new File("src/test/resources/FailedCaseImages"));
     };
-
 
     private void runFinished(TestRunFinished event) {
-
         extent.flush();
     };
-
 
     private void featureRead(TestSourceRead event) {
         String featureSource = event.getUri().toString();
         String featureName = featureSource.split(".*/")[1];
-
+        System.out.println("SHARP: Extent Report is reading feature files");
         if (feature.get(featureSource) == null) {
             feature.putIfAbsent(featureSource, extent.createTest(featureName).assignAuthor("SHARP"));
         }
     };
 
+
     private void ScenarioStarted(TestCaseStarted event) {
+        System.out.println("SHARP: Extent Report is getting Scenarios from feature");
         String featureName = event.getTestCase().getUri().toString();
         scenario = feature.get(featureName).createNode(event.getTestCase().getName());
     };
@@ -108,25 +103,50 @@ public class customReportListener implements EventListener {
     };
 
 
-	
-
     private void stepFinished(TestStepFinished event)  {
         if (event.getResult().getStatus().toString() == "PASSED") {
-
             step.log(Status.PASS, "This step passed");
         } else if (event.getResult().getStatus().toString() == "SKIPPED")
         {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
-                step.log(Status.FAIL, "This step failed");
-           // step.addScreenCaptureFromBase64String(genericFunctions.capture());
+            try {
+                step.log(Status.FAIL, "This step failed").addScreenCaptureFromPath(capture(driver));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-
         Date endTime = scenario.getExtent().getReport().getEndTime();
-        step.log(Status.INFO, "Test Case execution started at " + endTime.toString());
+        step.log(Status.INFO, "Test Case execution ended at " + endTime.toString());
     }
 
+    public static String capture(WebDriver driver) throws IOException {
+        System.out.println("SHARP: Extent Report is capturing screenshot");
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_hhmmssMs");
+        String formattedDate = sdf.format(date);
+        System.out.println("SHARP is saving screen shot for failed step with name :" + formattedDate);
+        //System.currentTimeMillis()
+        File Dest = new File("src/test/resources/FailedCaseImages/" + formattedDate
+                + ".jpg");
+        String filepath = Dest.getAbsolutePath();
+        FileUtils.copyFile(scrFile, Dest);
+        return filepath;
+    }
 
-    
+//    public static void deleteFolder(File folder) {
+//        File[] files = folder.listFiles();
+//        if(files!=null) { //some JVMs return null for empty dirs
+//            for(File f: files) {
+//                if(f.isDirectory()) {
+//                    deleteFolder(f);
+//                } else {
+//                    f.delete();
+//                }
+//            }
+//        }
+//        folder.delete();
+//    }
 }
 
