@@ -7,7 +7,6 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.tools.ant.types.selectors.SelectSelector;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,40 +20,29 @@ import io.cucumber.java.en.When;
 
 public class genericFunctions extends AllVariables {
     AllVariables alv= new AllVariables();
-    WebDriver driver =null;
-
-
+    public static WebDriver driver =null;
 
 
     @Given("firefox browser is open")
     public void firefox_browser_is_open() {
-        System.out.println(browserOpenMessage);
         System.setProperty(geckoDriverinfo , firfoxPath);
-
         driver =new FirefoxDriver();
-
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         //driver.manage().window().maximize();
+
+        System.out.println(browserOpenMessage);
     }
 
     @Given("chrome browser is open")
     public void chrome_browser_is_open() {
-        System.out.println(browserOpenMessage);
         System.setProperty(chromeDriverinfo, chromePath);
-
         driver =new ChromeDriver();
-
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+
+        System.out.println(browserOpenMessage);
     }
 
-   /* public void capture() throws IOException {
-        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File Dest = new File("src/test/resources/FailedCaseImages/" + System.currentTimeMillis()
-                + ".jpg");
-        String filepath = Dest.getAbsolutePath();
-        FileUtils.copyFile(scrFile, Dest);
-        FailedScreenShotPath = filepath;
-    }*/
+
 
     @And("user will be on exelon homepage")
     public void user_will_be_on_exelon_homepage() throws InterruptedException {
@@ -234,7 +222,7 @@ public class genericFunctions extends AllVariables {
     @Then("navigate back to chat bot")
     public void navigate_back_to_chat_bot() throws InterruptedException {
         driver.close();
-        System.out.println("user is back on home page");
+        System.out.println("SHARP: Automation Script is back on home page");
         Thread.sleep(2000);
         Set<String> handle=driver.getWindowHandles();
         Iterator<String> it= handle.iterator();

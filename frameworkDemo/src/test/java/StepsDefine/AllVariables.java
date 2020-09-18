@@ -1,5 +1,7 @@
 package StepsDefine;
 
+import org.openqa.selenium.WebDriver;
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -12,7 +14,7 @@ public class AllVariables {
     public static String chromeDriverinfo = "webdriver.chrome.driver";
 
     public static String browserOpenMessage = "Browser Launched: Proceeding to internal steps";
-    public static String browserHomePageMessage = "Home Page Launched";
+    public static String browserHomePageMessage = "SHARP launched home page";
 
     public static String ChatbotIcon = "//img[@class='oda-chat-button-icon']";
     public static String ChatbotConnected = "//div[@class='oda-chat-connection-status oda-chat-connected']";
@@ -69,4 +71,5 @@ public class AllVariables {
     public static String nothanksafteraccountbalance="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String endflowtext="Did you find the answer(s) you needed today?";
     public static String chatclosingtext="//span[contains(text(),'m glad you were able to get the help you')]";
+
 }
