@@ -1261,3 +1261,249 @@ Feature: Feature to test exelon chatbot application test cases
     Then navigate back to chat bot
     And click on close chat icon
     Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_081     @Vipin
+  Scenario: Firefox: Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on any option
+    And check the given content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_082     @Vipin
+  Scenario: Chrome: Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on any option
+    And check the given content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_083     @Vipin
+  Scenario: Firefox: Initiating the Chat-Bot and select link in Move content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on move service
+    Then click on the link in the move service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_084     @Vipin
+  Scenario: Chrome: Initiating the Chat-Bot and select link in Move content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on move service
+    Then click on the link in the move service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_085     @Vipin
+  Scenario: Firefox: Initiating the Chat-Bot and select link in Stop content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on stop service
+    Then click on the link in the stop service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_086     @Vipin
+  Scenario: Chrome: Initiating the Chat-Bot and select link in Stop content
+    Given chrome browser is open
+    And user will be on exel homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on stop service
+    Then click on the link in the stop service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515750 @TC_Exel_087     @Parul
+  Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Start content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start stop or move service
+    Then click start service
+    And click on start link
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515750 @TC_Exel_088     @Parul
+  Scenario: Chrome: BOT : Initiating the Chat-Bot and select link in Start content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start stop or move service
+    Then click start service
+    And click on start link
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515751 @TC_Exel_089     @Parul
+  Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Stop content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click Stop service
+    And click on stop link
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515751 @TC_Exel_090     @Parul
+  Scenario: Chrome: BOT : Initiating the Chat-Bot and select link in Stop content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click Stop service
+    And click on stop link
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515752 @TC_Exel_091     @Parul
+  Scenario: Firefox: BOT : Initiating the ChatBot and select link in Move content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click move service
+    And click on move link
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515752 @TC_Exel_092     @Parul
+  Scenario: Chrome: BOT : Initiating the ChatBot and select link in Move content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click move service
+    And click on move link
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515753 @TC_Exel_093     @Khushboo
+  Scenario: Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user click on start/stop/move
+    And user click start service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515753 @TC_Exel_094     @Khushboo
+  Scenario: Chrome:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user click on start/stop/move
+    And user click start service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515759 @TC_Exel_095     @Khushboo
+  Scenario: Firefox:Initiating the Chat-Bot and type start service
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type start service
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515759 @TC_Exel_096     @Khushboo
+  Scenario: Chrome:Initiating the Chat-Bot and type start service
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type start service
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515763 @TC_Exel_097     @Khushboo
+  Scenario: Firefox: Initiating the ChatBot and opt stopping a service from user input (utterances) option
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type stop service
+    Then click on send
+    And user click on stop service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515763 @TC_Exel_098     @Khushboo
+  Scenario: Chrome: Initiating the ChatBot and opt stopping a service from user input (utterances) option
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type stop service
+    Then click on send
+    And user click on stop service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
+    And click on close chat icon
+    Then select yes to close chat
