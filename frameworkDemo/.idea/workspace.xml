@@ -24,21 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="346a2ca5-3944-4e54-872b-3b9df53dce52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_010352952.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_011421921.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_011422922.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_011423923.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_011424924.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_011425925.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_011426926.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_014242942.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_014243943.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_014244944.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_014245945.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_025259959.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_02530090.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FailedCaseImages/21092020_02530191.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/exelonChatbot.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/exelonChatbot.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/runner/sharpRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/runner/sharpRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
