@@ -1,8 +1,8 @@
+#Owner        : SHARP
+#Author       : QA Team
+#Description  : This is feature file for Exelon Chatbot application
 
-#Author=Vipin
-#Date=14/08/2020
-#Description=Creating the automation demo POC
-Feature: Feature to test exelon homepage in firefox
+Feature: Feature to test exelon chatbot application test cases
 
 
 @Regression @Firefox @Exelon @Day0 @TC_Exel_001
@@ -807,7 +807,7 @@ Feature: Feature to test exelon homepage in firefox
     Then navigate back to chat bot
 
   @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_053     @Vipin
-  Scenario: Firefox: Click on bot and select multiple option under flow end message
+  Scenario: Firefox: Click on bot and select Yes under flow end message
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -826,7 +826,7 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes to close chat
 
   @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_054     @Vipin
-  Scenario: Chrome: Click on bot and select multiple option under flow end message
+  Scenario: Chrome: Click on bot and select Yes under flow end message
     Given chrome browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -841,5 +841,669 @@ Feature: Feature to test exelon homepage in firefox
     Then select yes for confirmation
     Then good bye content
     And select no Thanks to close chat
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_529183 @TC_Exel_055     @Parul
+  Scenario: Firefox: Click on Bot and type keywords related to billing and payment
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on downed power lines
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_529183 @TC_Exel_056     @Parul
+  Scenario: Chrome: Click on Bot and type keywords related to billing and payment
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on downed power lines
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_529543 @TC_Exel_057     @Parul
+  Scenario: Firefox: BOT : Click on Bot and after web login opt Account balance from billing and payment options(MERRILLDEMIAN)
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the web sign In button
+    Then user enters login id for web
+    And user enters password for web
+    Then user click on web sign in
+    And user will be on exelon web homepage
+    Then user will click on contact us
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And User click on account Balance
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_529543 @TC_Exel_058     @Parul
+  Scenario: Chrome: BOT : Click on Bot and after web login opt Account balance from billing and payment options(MERRILLDEMIAN)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the web sign In button
+    Then user enters login id for web
+    And user enters password for web
+    Then user click on web sign in
+    And user will be on exelon web homepage
+    Then user will click on contact us
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And User click on account Balance
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515813 @TC_Exel_059     @Parul
+  Scenario: Firefox: MENU : Initiate bot and click Downed power line
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then select and click on downed power lines
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515813 @TC_Exel_060     @Parul
+  Scenario: Chrome: MENU : Initiate bot and click Downed power line
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then select and click on downed power lines
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515815 @TC_Exel_061     @Parul
+  Scenario: Firefox: BOT : Initiating the Chat-Bot and select Downed Power line and check End flow
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on downed power lines
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515815 @TC_Exel_062     @Parul
+  Scenario: Chrome: BOT : Initiating the Chat-Bot and select Downed Power line and check End flow
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on downed power lines
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515836 @TC_Exel_063     @Parul
+  Scenario: Firefox: BOT : Initiate bot and type Downed power line keywords
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515836 @TC_Exel_064     @Parul
+  Scenario: Chrome: BOT : Initiate bot and type Downed power line keywords
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528233 @TC_Exel_065     @Parul
+  Scenario: Firefox: Initiate bot without login and opt Oauth login with accounts more than 5 (2000.201)
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_528233 @TC_Exel_066     @Parul
+  Scenario: Chrome: Initiate bot without login and opt Oauth login with accounts more than 5 (2000.201)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_067     @Parul
+  Scenario: Firefox: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the web sign In button
+    Then user enters login id for web
+    And user enters password for web
+    Then user click on web sign in
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_528234 @TC_Exel_068     @Parul
+  Scenario: Chrome: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the web sign In button
+    Then user enters login id for web
+    And user enters password for web
+    Then user click on web sign in
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_529556 @TC_Exel_069     @Parul
+  Scenario: Firefox: Click on Bot and type keywords related to billing and payment
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_529556 @TC_Exel_070     @Parul
+  Scenario: Chrome: Click on Bot and type keywords related to billing and payment
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524350 @TC_Exel_071     @Parul
+  Scenario: Firefox: Click on Bot and type keywords related to billing and payment
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524350 @TC_Exel_072     @Parul
+  Scenario: Chrome: Click on Bot and type keywords related to billing and payment
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And type utterance
+    Then click on send icon
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524836 @TC_Exel_073     @Parul
+  Scenario: Firefox: MENU : Click on Bot and opt no for login from billing and payment options
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then select and click on  bill and paymenets from menu
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524836 @TC_Exel_074     @Parul
+  Scenario: Chrome: MENU : Click on Bot and opt no for login from billing and payment options
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then select and click on  bill and paymenets from menu
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524897 @TC_Exel_075     @Parul
+  Scenario: Firefox: MENU : Click on Bot and opt Deny after Sign In  on OAuth page  for login in billing and payment
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user deny the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524897 @TC_Exel_076     @Parul
+  Scenario: Chrome: MENU : Click on Bot and opt Deny after Sign In  on OAuth page  for login in billing and payment
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And click on Getting your Bill
+    Then select and click download my current bill
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user deny the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524898 @TC_Exel_077     @Parul
+  Scenario: Firefox: MENU : Click on Bot and check balance after successful Sign on OAuth page (SPARKINSON)
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then select and click on  bill and paymenets from menu
+    And User click on account Balance
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524898 @TC_Exel_078     @Parul
+  Scenario: Chrome: MENU : Click on Bot and check balance after successful Sign on OAuth page (SPARKINSON)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then select and click on  bill and paymenets from menu
+    And User click on account Balance
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_079     @Parul
+  Scenario: Firefox: BOT : Click on Bot and check balance after successful Sign In on OAuth page (SPARKINSON)
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And User click on account Balance
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_080     @Parul
+  Scenario: Chrome: BOT : Click on Bot and check balance after successful Sign In on OAuth page (SPARKINSON)
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And User click on account Balance
+    And click on sign in
+    Then user will redirect to login page
+    When user enters login id
+    And user enters password
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_081     @Vipin
+  Scenario: Firefox: Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on any option
+    And check the given content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_082     @Vipin
+  Scenario: Chrome: Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on any option
+    And check the given content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_083     @Vipin
+  Scenario: Firefox: Initiating the Chat-Bot and select link in Move content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on move service
+    Then click on the link in the move service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_084     @Vipin
+  Scenario: Chrome: Initiating the Chat-Bot and select link in Move content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on move service
+    Then click on the link in the move service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_085     @Vipin
+  Scenario: Firefox: Initiating the Chat-Bot and select link in Stop content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on stop service
+    Then click on the link in the stop service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_086     @Vipin
+  Scenario: Chrome: Initiating the Chat-Bot and select link in Stop content
+    Given chrome browser is open
+    And user will be on exel homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on start stop move
+    And click on stop service
+    Then click on the link in the stop service content
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515750 @TC_Exel_087     @Parul
+  Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Start content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start stop or move service
+    Then click start service
+    And click on start link
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515750 @TC_Exel_088     @Parul
+  Scenario: Chrome: BOT : Initiating the Chat-Bot and select link in Start content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start stop or move service
+    Then click start service
+    And click on start link
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515751 @TC_Exel_089     @Parul
+  Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Stop content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click Stop service
+    And click on stop link
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515751 @TC_Exel_090     @Parul
+  Scenario: Chrome: BOT : Initiating the Chat-Bot and select link in Stop content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click Stop service
+    And click on stop link
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515752 @TC_Exel_091     @Parul
+  Scenario: Firefox: BOT : Initiating the ChatBot and select link in Move content
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click move service
+    And click on move link
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515752 @TC_Exel_092     @Parul
+  Scenario: Chrome: BOT : Initiating the ChatBot and select link in Move content
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    When select and click start,stop or move service
+    Then click move service
+    And click on move link
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515753 @TC_Exel_093     @Khushboo
+  Scenario: Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user click on start/stop/move
+    And user click start service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515753 @TC_Exel_094     @Khushboo
+  Scenario: Chrome:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user click on start/stop/move
+    And user click start service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515759 @TC_Exel_095     @Khushboo
+  Scenario: Firefox:Initiating the Chat-Bot and type start service
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type start service
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515759 @TC_Exel_096     @Khushboo
+  Scenario: Chrome:Initiating the Chat-Bot and type start service
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type start service
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515763 @TC_Exel_097     @Khushboo
+  Scenario: Firefox: Initiating the ChatBot and opt stopping a service from user input (utterances) option
+    Given firefox browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type stop service
+    Then click on send
+    And user click on stop service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
+    And click on close chat icon
+    Then select yes to close chat
+
+  @Regression @Chrome @Exelon @Day4 @TC_Exel_515763 @TC_Exel_098     @Khushboo
+  Scenario: Chrome: Initiating the ChatBot and opt stopping a service from user input (utterances) option
+    Given chrome browser is open
+    And user will be on exelon homepage
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then user will type stop service
+    Then click on send
+    And user click on stop service
+    Then user click move service
+    And user click yes
+    Then user click no thanks
     And click on close chat icon
     Then select yes to close chat

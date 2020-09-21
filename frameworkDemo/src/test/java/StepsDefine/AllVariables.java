@@ -16,6 +16,9 @@ public class AllVariables {
     public static String browserOpenMessage = "Browser Launched: Proceeding to internal steps";
     public static String browserHomePageMessage = "SHARP launched home page";
 
+    public static String strUserName = "PATTI@47";
+    public static String strPassword = "Password1";
+
     public static String ChatbotIcon = "//img[@class='oda-chat-button-icon']";
     public static String ChatbotConnected = "//div[@class='oda-chat-connection-status oda-chat-connected']";
     public static String MenuOption = "//a[contains(text(),'Menu')]";
@@ -72,4 +75,19 @@ public class AllVariables {
     public static String endflowtext="Did you find the answer(s) you needed today?";
     public static String chatclosingtext="//span[contains(text(),'m glad you were able to get the help you')]";
 
+    public static String downedpowerlines="//div[contains(text(),'Downed Power Line')]";
+    public static String downedpowerlinesfrommenu="//a[contains(text(),'Downed Power Line')]";
+    public static String websignin="//button[@class='btn btn-accent exc-sign-in-btn']";
+    public static String websigninusername="//input[@id='Username']";
+    public static String passwordforweb="//input[@id='Password']";
+    public static String websignbutton="//button[@class='btn btn btn-accent']";
+    public static String contactus="//a[@id='ctl00_ctl00_contactLink']";
+    public static String accountbal="//div[contains(text(),'Account Balance')]";
+    public static String inputtext="//textarea[@placeholder='Type a message....']";
+    public static String sendicon="//button[@class='oda-chat-footer-button oda-chat-button-send']";
+    public static String denybutton="//button[contains(text(),'Deny')]";
+    //public static String billandpaymentfrommenu="//a[contains(text(),'Billing and Payment')]";
+    //public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
+    //public static String moveservice= "//div[contains(text(),'Move Service')]";
+    //public static String startservice="//div[6]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
 }

@@ -50,8 +50,12 @@ public class customReportListener implements EventListener {
         publisher.registerHandlerFor(TestStepFinished.class, this::stepFinished);
         publisher.registerHandlerFor(TestRunFinished.class, this::runFinished);
     }
-        
 
+    /*------------------------------------------------------------
+    Function Name 	:	runStarted
+    Variables		:	event
+    Description	    :	This function is to start the run
+    -------------------------------------------------------------*/
     private void runStarted(TestRunStarted event) {
         System.out.println("SHARP: Extent Report is initialized");
         spark = new ExtentSparkReporter("./ExtentReportResults.html");
@@ -64,10 +68,20 @@ public class customReportListener implements EventListener {
         //deleteFolder(new File("src/test/resources/FailedCaseImages"));
     };
 
+    /*------------------------------------------------------------
+    Function Name 	:	runFinished
+    Variables		:	event
+    Description	    :	This function is to finish the run
+    -------------------------------------------------------------*/
     private void runFinished(TestRunFinished event) {
         extent.flush();
     };
 
+    /*------------------------------------------------------------
+    Function Name 	:	featureRead
+    Variables		:	event
+    Description	    :	This function is to read the feature file
+    -------------------------------------------------------------*/
     private void featureRead(TestSourceRead event) {
         String featureSource = event.getUri().toString();
         String featureName = featureSource.split(".*/")[1];
@@ -78,13 +92,22 @@ public class customReportListener implements EventListener {
     };
 
 
+    /*------------------------------------------------------------
+    Function Name 	:	ScenarioStarted
+    Variables		:	event
+    Description	    :	This function is to get scenarios
+    -------------------------------------------------------------*/
     private void ScenarioStarted(TestCaseStarted event) {
         System.out.println("SHARP: Extent Report is getting Scenarios from feature");
         String featureName = event.getTestCase().getUri().toString();
         scenario = feature.get(featureName).createNode(event.getTestCase().getName());
     };
 
-
+    /*------------------------------------------------------------
+    Function Name 	:	stepStarted
+    Variables		:	event
+    Description	    :	This function is to start the steps
+    -------------------------------------------------------------*/
     private void stepStarted(TestStepStarted event) {
         String stepName = " ";
         String keyword = "Triggered the hook :";
@@ -102,7 +125,11 @@ public class customReportListener implements EventListener {
         step.log(Status.INFO, "Test Case execution started at " + startTime.toString());
     };
 
-
+    /*------------------------------------------------------------
+    Function Name 	:	stepFinished
+    Variables		:	event
+    Description	    :	This function is to finish step and add result
+    -------------------------------------------------------------*/
     private void stepFinished(TestStepFinished event)  {
         if (event.getResult().getStatus().toString() == "PASSED") {
             step.log(Status.PASS, "This step passed");
@@ -120,6 +147,11 @@ public class customReportListener implements EventListener {
         step.log(Status.INFO, "Test Case execution ended at " + endTime.toString());
     }
 
+    /*------------------------------------------------------------
+    Function Name 	:	capture
+    Variables		:	driver
+    Description	    :	This function is to capture screen shot
+    -------------------------------------------------------------*/
     public static String capture(WebDriver driver) throws IOException {
         System.out.println("SHARP: Extent Report is capturing screenshot");
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -135,6 +167,11 @@ public class customReportListener implements EventListener {
         return filepath;
     }
 
+    /*------------------------------------------------------------
+    Function Name 	:	deleteFolder
+    Variables		:	folder
+    Description	    :	This function is to delete folder
+    -------------------------------------------------------------*/
 //    public static void deleteFolder(File folder) {
 //        File[] files = folder.listFiles();
 //        if(files!=null) { //some JVMs return null for empty dirs
