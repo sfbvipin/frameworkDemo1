@@ -19,7 +19,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         features={"classpath:features"}
         ,glue= {"StepsDefine","cucumberHooks"}
         ,monochrome=true
-        ,tags = "@Issue"
+        ,tags = "@Day4"
         ,plugin = {"cucumberHooks.customReportListener"})
 
 @Test

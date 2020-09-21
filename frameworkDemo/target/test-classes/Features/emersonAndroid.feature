@@ -1,9 +1,8 @@
-#Author=Vipin
-#Date=17/08/2020
-#Description=Creating the automation demo POC
-Feature: feature to test emerson android apk
+#Owner        : SHARP
+#Author       : QA Team
+#Description  : This is feature file for Emerson Android application
 
-
+Feature: Feature to test emerson android application scenarios
 
  
 @Regression1 @Emerson @TC_Emer_I_001

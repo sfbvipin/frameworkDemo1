@@ -192,14 +192,14 @@ public class genericFunctions extends AllVariables {
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
-        driver.findElement(By.name("username")).sendKeys("PATTI@47");
+        driver.findElement(By.name("username")).sendKeys(strUserName);
         Thread.sleep(2000);
     }
 
     @And("user enters password")
     public void user_enters_password() throws InterruptedException
     {
-        driver.findElement(By.name("password")).sendKeys("Password1");
+        driver.findElement(By.name("password")).sendKeys(strPassword);
         Thread.sleep(2000);
     }
 
@@ -417,5 +417,93 @@ public class genericFunctions extends AllVariables {
     @Then ("good bye content")
     public void  good_bye_content() {
         Assert.assertEquals(chatclosingtext, chatclosingtext);
+    }
+
+    @Then("select and click on downed power lines")
+    public void select_and_click_on_downed_power_lines() throws InterruptedException {
+        driver.findElement(By.xpath(downedpowerlinesfrommenu)).click();
+        Thread.sleep(3000);
+    }
+
+    @And("type utterance")
+    public void type_utterance() throws InterruptedException
+    {
+        driver.findElement(By.xpath(inputtext)).sendKeys("start service");
+    }
+
+    @When ("user will locate the web sign In button")
+    public void user_will_locate_the_web_sign_In_button() throws InterruptedException {
+        driver.findElement(By.xpath(websignin)).click();
+        Thread.sleep(5000);
+    }
+
+    @Then ("user enters login id for web")
+    public void user_enters_login_id_for_web() throws InterruptedException {
+        driver.findElement(By.xpath(websigninusername)).sendKeys(strUserName);
+        Thread.sleep(4000);
+    }
+
+    @And ("user enters password for web")
+
+    public void user_enters_password_for_web() throws InterruptedException{
+        driver.findElement(By.xpath(passwordforweb)).sendKeys(strPassword);
+        Thread.sleep(3000);
+    }
+
+    @Then ("user click on web sign in")
+    public void user_click_on_web_sign_in() throws InterruptedException {
+        driver.findElement(By.xpath(websignbutton)).click();
+        Thread.sleep(3000);
+    }
+
+    @ And ("user will be on exelon web homepage")
+    public void  user_will_be_on_exelon_web_homepage()
+    {
+        driver.switchTo().activeElement().click();
+    }
+
+    @Then ("user will click on contact us")
+    public void user_will_click_on_contact_us() throws InterruptedException {
+        driver.findElement(By.xpath(contactus)).click();
+        Thread.sleep(3000);
+    }
+
+    @And ("User click on account Balance")
+    public void User_click_on_account_Balance() throws InterruptedException {
+        driver.findElement(By.xpath(accountbal)).click();
+        Thread.sleep(2000);
+    }
+
+    @Then ("click on send icon")
+    public void click_on_send_icon() throws InterruptedException {
+        driver.findElement(By.xpath(sendicon)).click();
+        Thread.sleep(3000);
+    }
+    @And ("user deny the authorization request")
+    public void user_deny_the_authorization_request() {
+        driver.findElement(By.xpath(denybutton)).click();
+    }
+
+    @Then ("select and click on  bill and paymenets from menu")
+    public void select_and_click_on_bill_and_payments_from_Menu() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionBillingandPayment)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then ("click on start stop move")
+    public void click_on_start_stop_move() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionStartStopOrMoveService)).click();
+        Thread.sleep(3000);
+    }
+    @And ("click on any option")
+    public void click_on_any_option() throws InterruptedException {
+        driver.findElement(By.xpath(moveService)).click();
+        Thread.sleep(2000);
+    }
+    @Then("click start service")
+    public void click_start_service() throws InterruptedException
+    {
+        driver.findElement(By.xpath(startService)).click();
+        Thread.sleep(3000);
     }
 }
