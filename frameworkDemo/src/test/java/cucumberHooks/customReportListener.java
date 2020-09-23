@@ -145,6 +145,7 @@ public class customReportListener implements EventListener {
         }
         Date endTime = scenario.getExtent().getReport().getEndTime();
         step.log(Status.INFO, "Test Case execution ended at " + endTime.toString());
+        addonFunctions.SendMail();
     }
 
     /*------------------------------------------------------------

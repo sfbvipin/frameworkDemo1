@@ -3,3 +3,4 @@ StepsDefine\genericFunctions.class
 com\cucumber\runner\sharpRunner.class
 StepsDefine\EmersonAndroidFuctions.class
 cucumberHooks\customReportListener.class
+cucumberHooks\addonFunctions.class

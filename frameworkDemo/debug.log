@@ -5,3 +5,8 @@
 [0916/182718.392:ERROR:http_transport_win.cc(363)] WinHttpReceiveResponse: The operation completed successfully. (0x0)
 [0916/182722.888:ERROR:http_transport_win.cc(363)] WinHttpReceiveResponse: The operation completed successfully. (0x0)
 [0921/131530.304:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: The operation completed successfully. (0x0)
+[0922/002831.148:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: The operation completed successfully. (0x0)
+[0922/130112.816:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0922/130112.843:ERROR:exception_snapshot_win.cc(99)] thread ID 17112 not found in process
+[0922/130115.572:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0922/130115.572:ERROR:exception_snapshot_win.cc(99)] thread ID 28340 not found in process

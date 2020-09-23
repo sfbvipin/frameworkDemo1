@@ -73,7 +73,8 @@ public class AllVariables {
     public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
     public static String nothanksafteraccountbalance="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String endflowtext="Did you find the answer(s) you needed today?";
-    public static String chatclosingtext="//span[contains(text(),'m glad you were able to get the help you')]";
+    public static String chatclosingtext1="//span[contains(text(),'m glad you were able to get the help you')]";
+    public static String chatclosingtext="Great! I'm glad you were able to get the help you were looking for. Is there anything else I can help you with?";
 
     public static String downedpowerlines="//div[contains(text(),'Downed Power Line')]";
     public static String downedpowerlinesfrommenu="//a[contains(text(),'Downed Power Line')]";
@@ -86,8 +87,5 @@ public class AllVariables {
     public static String inputtext="//textarea[@placeholder='Type a message....']";
     public static String sendicon="//button[@class='oda-chat-footer-button oda-chat-button-send']";
     public static String denybutton="//button[contains(text(),'Deny')]";
-    //public static String billandpaymentfrommenu="//a[contains(text(),'Billing and Payment')]";
-    //public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
-    //public static String moveservice= "//div[contains(text(),'Move Service')]";
-    //public static String startservice="//div[6]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
+
 }
