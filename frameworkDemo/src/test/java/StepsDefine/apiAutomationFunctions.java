@@ -51,7 +51,8 @@ public class apiAutomationFunctions extends AllVariables {
         String[] strKeys = strKeyValuePair[0].split(";");
         String[] strValues = strKeyValuePair[1].split(";");
         Integer intCount = strKeyValuePair[0].split(";").length;
-        for(j=0;j<=intCount;j++) {
+        System.out.println(intCount);
+        for(j=0;j<=intCount-1;j++) {
             cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
         }
 
@@ -67,7 +68,8 @@ public class apiAutomationFunctions extends AllVariables {
         String[] strKeys = strKeyValuePair[0].split(";");
         String[] strValues = strKeyValuePair[1].split(";");
         Integer intCount = strKeyValuePair[0].split(";").length;
-        for(j=0;j<=intCount;j++) {
+        System.out.println(intCount);
+        for(j=0;j<=intCount-1;j++) {
             cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
         }
 

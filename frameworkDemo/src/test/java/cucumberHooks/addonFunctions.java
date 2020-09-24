@@ -57,25 +57,24 @@ public class addonFunctions {
         String value=sheet.getRow(rowNum).getCell(ColNum).getStringCellValue();
         DataFormatter formatter=new DataFormatter();
         formatter.formatCellValue(sheet.getRow(rowNum).getCell(ColNum));
-        System.out.println(value);
         return value;
     }
 
     public static Integer getRowCount() throws IOException {
         int rowCount=sheet.getPhysicalNumberOfRows();
-        System.out.println("No. of rows are :"+rowCount);
+        System.out.println("SHARP detected total "+rowCount+" rows");
         return rowCount;
     }
 
     public static void compareString(String expectedValue, String actualValue) throws IOException {
         if (actualValue.equalsIgnoreCase(expectedValue)){
+            System.out.println("Expected Value is :" + expectedValue);
+            System.out.println("Actual Value is :" + actualValue);
             System.out.println("Expected Value and Actual Value is same");
-            System.out.println("Expected Value is :" + expectedValue);
-            System.out.println("Actual Value is :" + actualValue);
         } else {
-            System.out.println("Expected Value and Actual Value is different");
             System.out.println("Expected Value is :" + expectedValue);
             System.out.println("Actual Value is :" + actualValue);
+            System.out.println("Expected Value and Actual Value is different");
         }
         assert actualValue.equalsIgnoreCase(expectedValue);
     }
@@ -85,10 +84,11 @@ public class addonFunctions {
         Integer intRowCount = addonFunctions.getRowCount();
         String strKeyMap = null;
         String strValueMap = null;
+        String testCaseName = null;
         Integer i = 0;
         for(i=0;i<=intRowCount;i++) {
-            strTestCaseName = cucumberHooks.addonFunctions.getCellData(i, 1);
-            if (strTestCaseName.equalsIgnoreCase(strTestCaseName))
+            testCaseName = cucumberHooks.addonFunctions.getCellData(i, 1);
+            if (testCaseName.equalsIgnoreCase(strTestCaseName))
             {
                 strKeyMap = cucumberHooks.addonFunctions.getCellData(i, 5);
                 strValueMap = cucumberHooks.addonFunctions.getCellData(i, 6);
