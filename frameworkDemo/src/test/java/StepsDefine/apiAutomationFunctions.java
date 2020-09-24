@@ -15,13 +15,12 @@ import java.util.Arrays;
 public class apiAutomationFunctions extends AllVariables {
     public Response resp=null;
 
-    public String strTestCaseName = null;
-
     @Given("Send getAPI Request for account")
     public void Send_getAPI_Request_for_account() {
         resp=(Response) RestAssured.given()
+                .baseUri(hellosignUrl)
                 .auth().oauth2(OauthToken)
-                .get(hellosignUrl+"/v3/account");
+                .get("/v3/account");
     }
 
 
@@ -59,22 +58,22 @@ public class apiAutomationFunctions extends AllVariables {
                 .auth().oauth2(OauthToken)
                 .when()
                 .post("/v3/account/verify");
-
-        System.out.println("Response Body: "  + resp.prettyPrint());
     }
 
     @Given ("Send get API Request for wrong user")
     public void Send_get_API_Request_for_wrong_user() {
         resp=(Response) RestAssured.given()
+                .baseUri(hellosignUrl)
                 .auth().oauth2(OauthTokenw)
-                .get(hellosignUrl+"/v3/account");
+                .get("/v3/account");
     }
 
     @Given ("Send get API Request to verify team details")
     public void Send_get_API_Request_to_verify_team_details() {
         resp=(Response) RestAssured.given()
+                .baseUri(hellosignUrl)
                 .auth().oauth2(OauthToken)
-                .get(hellosignUrl+"/v3/team");
+                .get("/v3/team");
     }
 
 
