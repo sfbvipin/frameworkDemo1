@@ -37,6 +37,8 @@ public class customReportListener implements EventListener {
     Map<String, ExtentTest> feature = new HashMap<String, ExtentTest>();
     ExtentTest scenario;
     ExtentTest step;
+    public String featureName = null;
+    public String featureSource = null;
 
     public customReportListener() {
     };
@@ -83,8 +85,8 @@ public class customReportListener implements EventListener {
     Description	    :	This function is to read the feature file
     -------------------------------------------------------------*/
     private void featureRead(TestSourceRead event) {
-        String featureSource = event.getUri().toString();
-        String featureName = featureSource.split(".*/")[1];
+        featureSource = event.getUri().toString();
+        featureName = featureSource.split(".*/")[1];
         System.out.println("SHARP: Extent Report is reading feature files");
         if (feature.get(featureSource) == null) {
             feature.putIfAbsent(featureSource, extent.createTest(featureName).assignAuthor("SHARP"));
@@ -138,14 +140,19 @@ public class customReportListener implements EventListener {
             step.log(Status.SKIP, "This step was skipped ");
         } else {
             try {
-                step.log(Status.FAIL, "This step failed").addScreenCaptureFromPath(capture(driver));
+                if (featureName.contains("API")){
+                    step.log(Status.FAIL, "This step failed");
+                } else {
+                    step.log(Status.FAIL, "This step failed").addScreenCaptureFromPath(capture(driver));
+                }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         Date endTime = scenario.getExtent().getReport().getEndTime();
         step.log(Status.INFO, "Test Case execution ended at " + endTime.toString());
-        addonFunctions.SendMail();
+        //addonFunctions.SendMail();
     }
 
     /*------------------------------------------------------------

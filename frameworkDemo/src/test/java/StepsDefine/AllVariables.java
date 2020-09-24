@@ -88,4 +88,9 @@ public class AllVariables {
     public static String sendicon="//button[@class='oda-chat-footer-button oda-chat-button-send']";
     public static String denybutton="//button[contains(text(),'Deny')]";
 
+
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY4MDkyMzAzZjY3ZGNhNmRiNDZmMWE3MDY2ZTEyNmZlMjE0ZmVmNDg0OTc4OWI3NGJkNmU1OTYyYmMyOGZlMmE1ZTBmNjFkZDc=";
+    public static String hellosignUrl="https://api.hellosign.com";
+    public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
+
 }

@@ -3,7 +3,6 @@ package cucumberHooks;
 import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
-import javax.activation.*;
 
 public class addonFunctions {
     public static void SendMail()  {
@@ -35,4 +34,7 @@ public class addonFunctions {
         }
 
     }
+
+
+
 }

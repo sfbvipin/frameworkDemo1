@@ -1,3 +1,4 @@
+StepsDefine\apiAutomationFunctions.class
 StepsDefine\AllVariables.class
 StepsDefine\genericFunctions.class
 com\cucumber\runner\sharpRunner.class
