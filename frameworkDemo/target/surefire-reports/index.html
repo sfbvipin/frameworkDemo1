@@ -104,12 +104,12 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: verify user account&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">runScenario("API: verify user account", "Optional[Feature to test Hello Sign API cases]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: send get request for user account wrong credentials&quot;, &quot;Optional[Feature to test Hello Sign API...)">runScenario("API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: send get request for user account wrong credentials&quot;, &quot;Optional[Feature to test Hello Sign API...)">runScenario("API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: verify user account&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">runScenario("API: verify user account", "Optional[Feature to test Hello Sign API cases]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -123,12 +123,12 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: Verify team details&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">runScenario("API: Verify team details", "Optional[Feature to test Hello Sign API cases]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: send get request for user account&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">runScenario("API: send get request for user account", "Optional[Feature to test Hello Sign API cases]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: send get request for user account&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">runScenario("API: send get request for user account", "Optional[Feature to test Hello Sign API cases]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;API: Verify team details&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">runScenario("API: Verify team details", "Optional[Feature to test Hello Sign API cases]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -149,6 +149,42 @@
               <span class="class-name">com.cucumber.runner.sharpRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;API: send get request for user account wrong credentials&quot;, &quot;Optional[Feature to test Hello Sign API...)">
+                  </a> <!-- runScenario("API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API cases]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;401&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at StepsDefine.apiAutomationFunctions.validate_response_code(apiAutomationFunctions.java:34)
+	at ✽.validate response code(classpath:features/helloSignAPI.feature:25)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;API: verify user account&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">
@@ -195,42 +231,6 @@ Expected status code &lt;200&gt; but was &lt;400&gt;.
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;API: send get request for user account wrong credentials&quot;, &quot;Optional[Feature to test Hello Sign API...)">
-                  </a> <!-- runScenario("API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API...) -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API cases]")</span>
-                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;401&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-	at StepsDefine.apiAutomationFunctions.validate_response_code(apiAutomationFunctions.java:34)
-	at ✽.validate response code(classpath:features/helloSignAPI.feature:25)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
@@ -241,20 +241,20 @@ Expected status code &lt;200&gt; but was &lt;401&gt;.
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;API: Verify team details&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">
-                  </a> <!-- runScenario("API: Verify team details", "Optional[Feature to test Hello Sign API cases]") -->
+                  <a name="runScenario(&quot;API: send get request for user account&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">
+                  </a> <!-- runScenario("API: send get request for user account", "Optional[Feature to test Hello Sign API cases]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("API: Verify team details", "Optional[Feature to test Hello Sign API cases]")</span>
+                  <span class="parameters">("API: send get request for user account", "Optional[Feature to test Hello Sign API cases]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;API: send get request for user account&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">
-                  </a> <!-- runScenario("API: send get request for user account", "Optional[Feature to test Hello Sign API cases]") -->
+                  <a name="runScenario(&quot;API: Verify team details&quot;, &quot;Optional[Feature to test Hello Sign API cases]&quot;)">
+                  </a> <!-- runScenario("API: Verify team details", "Optional[Feature to test Hello Sign API cases]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("API: send get request for user account", "Optional[Feature to test Hello Sign API cases]")</span>
+                  <span class="parameters">("API: Verify team details", "Optional[Feature to test Hello Sign API cases]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -324,19 +324,19 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(0, 3, 4060);
+data.setCell(0, 3, 3713);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(1, 3, 2029);
+data.setCell(1, 3, 1932);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(2, 3, 1922);
+data.setCell(2, 3, 1842);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(3, 3, 1641);
+data.setCell(3, 3, 1604);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -374,27 +374,27 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("API: send get request for user account", "Optional[Feature to test Hello Sign API cases]")</span>
-                <span class="method-start">563 ms</span>
+                <span class="method-start">479 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("API: verify user account", "Optional[Feature to test Hello Sign API cases]")</span>
-                <span class="method-start">4627 ms</span>
+                <span class="method-start">4195 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API...)</span>
-                <span class="method-start">6556 ms</span>
+                <span class="method-start">6044 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("API: Verify team details", "Optional[Feature to test Hello Sign API cases]")</span>
-                <span class="method-start">8198 ms</span>
+                <span class="method-start">7649 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">10228 ms</span>
+                <span class="method-start">9582 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

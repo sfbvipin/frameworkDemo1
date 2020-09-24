@@ -72,7 +72,8 @@ public class AllVariables {
     public static String gettingyourbill="//div[contains(text(),'Getting Your Bill')]";
     public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
     public static String nothanksafteraccountbalance="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'No, Thanks. I will continue without signing in')]";
-    public static String endflowtext="Did you find the answer(s) you needed today?";
+    public static String endflowtext="Did you find the answer(s) you needed todays?";
+    public static String endflowxpath="//span[contains(text(),'Did you find the answer')]";
     public static String chatclosingtext1="//span[contains(text(),'m glad you were able to get the help you')]";
     public static String chatclosingtext="Great! I'm glad you were able to get the help you were looking for. Is there anything else I can help you with?";
 
@@ -89,7 +90,7 @@ public class AllVariables {
     public static String denybutton="//button[contains(text(),'Deny')]";
 
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY4MDkyMzAzZjY3ZGNhNmRiNDZmMWE3MDY2ZTEyNmZlMjE0ZmVmNDg0OTc4OWI3NGJkNmU1OTYyYmMyOGZlMmE1ZTBmNjFkZDc=";
+    public static String OauthToken="Njg0MjU1YzRlNjI4YTAwMmE5MzQwNTdkZDY3ODQ1YTAyNTRlYjdmNzAzYjJlYTJlOTJkNTVkZjkyMzI2MzVmYzVmYTY4ODk0ODNkM2M5Y2M5MDI0OGE3ZGE2Zjg4NzY4MjA3NTViODE=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
