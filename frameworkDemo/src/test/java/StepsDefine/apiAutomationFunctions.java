@@ -17,18 +17,13 @@ public class apiAutomationFunctions extends AllVariables {
 
     public String strTestCaseName = null;
 
-    @Given("Create getAPI Request for account")
-    public void Create_getAPI_Request_for_account() {
+    @Given("Send getAPI Request for account")
+    public void Send_getAPI_Request_for_account() {
         resp=(Response) RestAssured.given()
                 .auth().oauth2(OauthToken)
                 .get(hellosignUrl+"/v3/account");
     }
 
-
-    @And ("send get request for useraccount")
-    public void send_get_request_for_useraccount() {
-
-    }
 
     @Then ("validate response code")
     public void validate_response_code() {
@@ -43,48 +38,24 @@ public class apiAutomationFunctions extends AllVariables {
 
     @And("verify response body for Get Account")
     public void verify_response_body_for_Get_Account() throws IOException{
-        System.out.println("SHARP got Response Body: "  + resp.prettyPrint());
-        Integer j = 0;
-        String strMainValues = null;
-        strMainValues = cucumberHooks.addonFunctions.validateResponse("Get User Account");
-        String[] strKeyValuePair = strMainValues.split(":");
-        String[] strKeys = strKeyValuePair[0].split(";");
-        String[] strValues = strKeyValuePair[1].split(";");
-        Integer intCount = strKeyValuePair[0].split(";").length;
-        System.out.println(intCount);
-        for(j=0;j<=intCount-1;j++) {
-            cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
-        }
+        verify_body("Get User Account");
+    }
 
+    @And("verify response body for verify account")
+    public void verify_response_body_for_verify_account() throws IOException{
+        verify_body("Verify User Account");
     }
 
     @And("verify response body for Get Team")
     public void verify_response_body_for_Get_Team() throws IOException{
-        System.out.println("SHARP got Response Body: "  + resp.prettyPrint());
-        Integer j = 0;
-        String strMainValues = null;
-        strMainValues = cucumberHooks.addonFunctions.validateResponse("Get Team");
-        String[] strKeyValuePair = strMainValues.split(":");
-        String[] strKeys = strKeyValuePair[0].split(";");
-        String[] strValues = strKeyValuePair[1].split(";");
-        Integer intCount = strKeyValuePair[0].split(";").length;
-        System.out.println(intCount);
-        for(j=0;j<=intCount-1;j++) {
-            cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
-        }
-
+        verify_body("Get Team");
     }
 
-    @Given ("Create post API Request to verify account")
-    public void Create_post_API_Request_to_verify_account() throws JSONException {
-        String payload = "{\n" +
-                "    \"email_address\": \"aashish.kumar@sofbang.com\"\n" +
-                "}";
-
-        System.out.println("Payload: "  + payload);
+    @Given ("Send post API Request to verify account")
+    public void Send_post_API_Request_to_verify_account() throws JSONException {
         resp=(Response) RestAssured.given()
                 .baseUri(hellosignUrl)
-                .body(payload)
+                .multiPart("email_address","aashish.kumar@sofbang.com")
                 .auth().oauth2(OauthToken)
                 .when()
                 .post("/v3/account/verify");
@@ -92,18 +63,34 @@ public class apiAutomationFunctions extends AllVariables {
         System.out.println("Response Body: "  + resp.prettyPrint());
     }
 
-    @Given ("Create get API Request for wrong user")
-    public void Create_get_API_Request_for_wrong_user() {
+    @Given ("Send get API Request for wrong user")
+    public void Send_get_API_Request_for_wrong_user() {
         resp=(Response) RestAssured.given()
                 .auth().oauth2(OauthTokenw)
                 .get(hellosignUrl+"/v3/account");
     }
 
-    @Given ("Create get API Request to verify team details")
-    public void Create_get_API_Request_to_verify_team_details() {
+    @Given ("Send get API Request to verify team details")
+    public void Send_get_API_Request_to_verify_team_details() {
         resp=(Response) RestAssured.given()
                 .auth().oauth2(OauthToken)
                 .get(hellosignUrl+"/v3/team");
+    }
+
+
+    public void verify_body(String strTestCase)  throws IOException{
+        System.out.println("SHARP got Response Body: "  + resp.prettyPrint());
+        Integer j = 0;
+        String strMainValues = null;
+        strMainValues = cucumberHooks.addonFunctions.validateResponse(strTestCase);
+        String[] strKeyValuePair = strMainValues.split(":");
+        String[] strKeys = strKeyValuePair[0].split(";");
+        String[] strValues = strKeyValuePair[1].split(";");
+        Integer intCount = strKeyValuePair[0].split(";").length;
+        System.out.println(intCount);
+        for(j=0;j<=intCount-1;j++) {
+            cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
+        }
     }
 }
 

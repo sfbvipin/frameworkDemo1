@@ -6,28 +6,24 @@ Feature: Feature to test Hello Sign API cases
 
   @Regression @API @HelloSIgn @TC_HCM_001
   Scenario: API: send get request for user account
-    Given Create getAPI Request for account
-    #And send get request for useraccount
+    Given Send getAPI Request for account
     Then validate response code
     And verify response body for Get Account
 
   @Regression @API @HelloSIgn @TC_HCM_002
   Scenario: API: verify user account
-    Given Create post API Request to verify account
-   # And send post request to verifyaccount
+    Given Send post API Request to verify account
     Then validate response code
-    And verify response body
+    And verify response body for verify account
 
   @Regression @API @HelloSIgn @TC_HCM_003
   Scenario: API: send get request for user account wrong credentials
-    Given Create get API Request for wrong user
-  #  And send get request for useraccount
+    Given Send get API Request for wrong user
     Then validate response code
-    And verify response body
+    And verify response body for Get Account
 
   @Regression @API @HelloSIgn @TC_HCM_004
   Scenario: API: Verify team details
-    Given Create get API Request to verify team details
-   # And send get request for team details
+    Given Send get API Request to verify team details
     Then validate response code
     And verify response body for Get Team
