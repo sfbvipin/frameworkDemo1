@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -17,6 +19,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 
 public class genericFunctions extends AllVariables {
     AllVariables alv= new AllVariables();
@@ -40,7 +43,6 @@ public class genericFunctions extends AllVariables {
 
         System.out.println(browserOpenMessage);
     }
-
 
 
     @And("user will be on exelon homepage")
@@ -210,6 +212,7 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
         driver.switchTo().activeElement().click();
     }
+
     @And("user accept the authorization request")
     public void user_accept_the_authorization_request() throws InterruptedException {
 
@@ -345,21 +348,25 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(otherpay)).click();
         Thread.sleep(3000);
     }
+
     @And("user click on pay by mail")
     public void user_click_on_pay_by_mail()throws InterruptedException {
         driver.findElement(By.xpath(paybymail)).click();
         Thread.sleep(3000);
     }
+
     @And("user click on pay by phone")
     public void user_click_on_pay_by_phone()throws InterruptedException {
         driver.findElement(By.xpath(paybyphone)).click();
         Thread.sleep(3000);
     }
+
     @And("user click on pay in person")
     public void user_click_on_pay_in_person()throws InterruptedException {
         driver.findElement(By.xpath(payinperson)).click();
         Thread.sleep(3000);
     }
+
     @Then("click learn about budget")
     public void click_learn_about_budget()throws InterruptedException {
         driver.findElement(By.xpath(learnbudget)).click();
@@ -411,12 +418,16 @@ public class genericFunctions extends AllVariables {
     @And("check the given content")
     public void check_the_given_content()
     {
-        Assert.assertEquals(endflowtext, endflowtext);
+        String strendflowtext = driver.findElement(By.xpath(endflowtext)).getText();
+        Assert.assertEquals(endflowtext, strendflowtext);
     }
 
     @Then ("good bye content")
     public void  good_bye_content() {
-        Assert.assertEquals(chatclosingtext, chatclosingtext);
+        String strChatclosingText = driver.findElement(By.xpath(chatclosingtext)).getText();
+        Assert.assertEquals(chatclosingtext, strChatclosingText);
+        ExtentTest step = null;
+        step.log(Status.INFO,"Assertion Passed");
     }
 
     @Then("select and click on downed power lines")
@@ -444,7 +455,6 @@ public class genericFunctions extends AllVariables {
     }
 
     @And ("user enters password for web")
-
     public void user_enters_password_for_web() throws InterruptedException{
         driver.findElement(By.xpath(passwordforweb)).sendKeys(strPassword);
         Thread.sleep(3000);
@@ -495,11 +505,13 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(MenuOptionStartStopOrMoveService)).click();
         Thread.sleep(3000);
     }
+
     @And ("click on any option")
     public void click_on_any_option() throws InterruptedException {
         driver.findElement(By.xpath(moveService)).click();
         Thread.sleep(2000);
     }
+
     @Then("click start service")
     public void click_start_service() throws InterruptedException
     {
