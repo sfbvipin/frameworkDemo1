@@ -19,7 +19,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         features={"classpath:features"}
         ,glue= {"StepsDefine","cucumberHooks"}
         ,monochrome=true
-        ,tags = "@Firefox"
+        ,tags = "@TC_HCM_004"
         ,plugin = {"cucumberHooks.customReportListener"})
 
 @Test
