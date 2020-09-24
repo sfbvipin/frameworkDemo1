@@ -9,7 +9,7 @@ Feature: Feature to test Hello Sign API cases
     Given Create getAPI Request for account
     #And send get request for useraccount
     Then validate response code
-    And verify response body
+    And verify response body for Get Account
 
   @Regression @API @HelloSIgn @TC_HCM_002
   Scenario: API: verify user account
@@ -30,4 +30,4 @@ Feature: Feature to test Hello Sign API cases
     Given Create get API Request to verify team details
    # And send get request for team details
     Then validate response code
-    And verify response body
+    And verify response body for Get Team

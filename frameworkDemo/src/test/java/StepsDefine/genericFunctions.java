@@ -19,6 +19,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.asserts.Assertion;
 
 
 public class genericFunctions extends AllVariables {
@@ -418,8 +419,9 @@ public class genericFunctions extends AllVariables {
     @And("check the given content")
     public void check_the_given_content()
     {
-        String strendflowtext = driver.findElement(By.xpath(endflowtext)).getText();
+        String strendflowtext = driver.findElement(By.xpath(endflowxpath)).getText();
         Assert.assertEquals(endflowtext, strendflowtext);
+        assert strendflowtext.equalsIgnoreCase(endflowtext);
     }
 
     @Then ("good bye content")

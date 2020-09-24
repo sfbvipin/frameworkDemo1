@@ -1,5 +1,6 @@
 package StepsDefine;
 
+import cucumberHooks.addonFunctions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,10 +9,13 @@ import io.restassured.response.Response;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 
 public class apiAutomationFunctions extends AllVariables {
     public Response resp=null;
+
+    public String strTestCaseName = null;
 
     @Given("Create getAPI Request for account")
     public void Create_getAPI_Request_for_account() {
@@ -37,21 +41,36 @@ public class apiAutomationFunctions extends AllVariables {
         }
     }
 
-    @And ("verify response body")
-    public void verify_response_body() throws IOException {
-        System.out.println("Response Body: "  + resp.prettyPrint());
+    @And("verify response body for Get Account")
+    public void verify_response_body_for_Get_Account() throws IOException{
+        System.out.println("SHARP got Response Body: "  + resp.prettyPrint());
+        Integer j = 0;
+        String strMainValues = null;
+        strMainValues = cucumberHooks.addonFunctions.validateResponse("Get User Account");
+        String[] strKeyValuePair = strMainValues.split(":");
+        String[] strKeys = strKeyValuePair[0].split(";");
+        String[] strValues = strKeyValuePair[1].split(";");
+        Integer intCount = strKeyValuePair[0].split(";").length;
+        for(j=0;j<=intCount;j++) {
+            cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
+        }
 
-//        String is_locked = resp.jsonPath().get("account.is_locked").toString();
-//        System.out.println("is_locked :" + is_locked);
-//
-//        String locale = resp.jsonPath().get("account.locale").toString();
-//        System.out.println("locale :" + locale);
-//
-//        String email_Address = resp.jsonPath().get("account.email_address").toString();
-//        System.out.println("email_Address :" + email_Address);
-//
-//        String api_signature = resp.jsonPath().get("account.quotas.api_signature_requests_left").toString();
-//        System.out.println("api_signature_requests_left :" + api_signature);
+    }
+
+    @And("verify response body for Get Team")
+    public void verify_response_body_for_Get_Team() throws IOException{
+        System.out.println("SHARP got Response Body: "  + resp.prettyPrint());
+        Integer j = 0;
+        String strMainValues = null;
+        strMainValues = cucumberHooks.addonFunctions.validateResponse("Get Team");
+        String[] strKeyValuePair = strMainValues.split(":");
+        String[] strKeys = strKeyValuePair[0].split(";");
+        String[] strValues = strKeyValuePair[1].split(";");
+        Integer intCount = strKeyValuePair[0].split(";").length;
+        for(j=0;j<=intCount;j++) {
+            cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
+        }
+
     }
 
     @Given ("Create post API Request to verify account")

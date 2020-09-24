@@ -422,9 +422,6 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on home and business in bot
     And click on private solar option
     And check the given content
-    Then select yes for confirmation
-    Then good bye content
-    And select no Thanks to close chat
     And click on close chat icon
     Then select yes to close chat
 

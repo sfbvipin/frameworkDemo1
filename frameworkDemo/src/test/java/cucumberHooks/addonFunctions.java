@@ -1,10 +1,20 @@
 package cucumberHooks;
 
+import java.io.IOException;
 import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
 public class addonFunctions {
+    static XSSFWorkbook workbook;
+    static XSSFSheet sheet;
+
+
     public static void SendMail()  {
         String to = "sohail.abbas@sofbang.com";
         String from = "sohail.abbas@sofbang.com";
@@ -36,5 +46,57 @@ public class addonFunctions {
     }
 
 
+    public static void ExcelUtils(String sheetName) throws IOException {
+        String excelPath="src\\test\\resources\\TestData\\TestData.xlsx";
+        workbook= new XSSFWorkbook(excelPath);
+        sheet=workbook.getSheet(sheetName);
+    }
+
+
+    public static String getCellData(int rowNum, int ColNum) throws IOException {
+        String value=sheet.getRow(rowNum).getCell(ColNum).getStringCellValue();
+        DataFormatter formatter=new DataFormatter();
+        formatter.formatCellValue(sheet.getRow(rowNum).getCell(ColNum));
+        System.out.println(value);
+        return value;
+    }
+
+    public static Integer getRowCount() throws IOException {
+        int rowCount=sheet.getPhysicalNumberOfRows();
+        System.out.println("No. of rows are :"+rowCount);
+        return rowCount;
+    }
+
+    public static void compareString(String expectedValue, String actualValue) throws IOException {
+        if (actualValue.equalsIgnoreCase(expectedValue)){
+            System.out.println("Expected Value and Actual Value is same");
+            System.out.println("Expected Value is :" + expectedValue);
+            System.out.println("Actual Value is :" + actualValue);
+        } else {
+            System.out.println("Expected Value and Actual Value is different");
+            System.out.println("Expected Value is :" + expectedValue);
+            System.out.println("Actual Value is :" + actualValue);
+        }
+        assert actualValue.equalsIgnoreCase(expectedValue);
+    }
+
+    public static String validateResponse(String strTestCaseName) throws IOException {
+        ExcelUtils("TestData");
+        Integer intRowCount = addonFunctions.getRowCount();
+        String strKeyMap = null;
+        String strValueMap = null;
+        Integer i = 0;
+        for(i=0;i<=intRowCount;i++) {
+            strTestCaseName = cucumberHooks.addonFunctions.getCellData(i, 1);
+            if (strTestCaseName.equalsIgnoreCase(strTestCaseName))
+            {
+                strKeyMap = cucumberHooks.addonFunctions.getCellData(i, 5);
+                strValueMap = cucumberHooks.addonFunctions.getCellData(i, 6);
+                break;
+            }
+        }
+        String strValue = strKeyMap+":"+strValueMap;
+        return strValue;
+    }
 
 }
