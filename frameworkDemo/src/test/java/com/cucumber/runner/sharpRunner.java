@@ -20,7 +20,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @Test
 public class sharpRunner extends AbstractTestNGCucumberTests{
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }
