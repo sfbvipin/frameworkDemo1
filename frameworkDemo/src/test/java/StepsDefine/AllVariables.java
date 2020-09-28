@@ -39,6 +39,7 @@ public class AllVariables {
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String closechatbot = "//i[@class='fa fa-times']";
     public static String yesbutton="//button[@id='yesButton']";
+    public static String selectacoount="//tr[1]//td[8]//span[1]//span[1]//button[1]//span[1]";
 
     public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";
@@ -52,7 +53,7 @@ public class AllVariables {
     public static String nothanks3="//div[17]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String startService="//div[contains(text(),'Start Service')]";
     public static String moveService="//div[contains(text(),'Move Service')]";
-    
+    public static String stopService="//div[contains(text(),'Stop Service')]";
 
     public static String findaccountnum="//div[contains(text(),'Find Account Number')]";
     public static String moreafternothanks="//div[contains(text(),'More')]";
@@ -68,6 +69,7 @@ public class AllVariables {
     public static String learnbudget="//div[contains(text(),'Learn about Budget Billing.')]";
     public static String no="//div[contains(text(),\"No, Thanks. I'm not interested in this program.\")]";
     public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
+    public static String startstopMove2="//div[contains(text(),'Start, Stop or Move Service')]";
     public static String username="//input[@name='username']";
     public static  String password="//input[@name='password']";
     public static String webusername="//div[contains(@class,'form-group')]//input[@id='Username']";
