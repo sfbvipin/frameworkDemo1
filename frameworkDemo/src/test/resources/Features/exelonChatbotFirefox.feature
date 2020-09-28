@@ -137,6 +137,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on more button in bot
     And Click on Budget Billing
     Then click on learn more about budget billing
+    And click on sign in
     Then user will redirect to login page
     When user enters login id
     And user enters password
@@ -367,9 +368,9 @@ Feature: Feature to test exelon chatbot application test cases
     Then chatbot will be open
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
-    Then click on sign in for Authentication
+    When user enters web login id
+    And user enters web password
+    Then click on sign in for web Authentication
     And user accept the authorization request
     Then navigate back to chat bot
     And click on close chat icon
@@ -665,7 +666,7 @@ Feature: Feature to test exelon chatbot application test cases
   @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_043     @Vipin
   Scenario: Firefox: Initiating the Chat-Bot and select link in Stop content
     Given firefox browser is open
-    And user will be on exel homepage
+    And user will be on exelon homepage
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
