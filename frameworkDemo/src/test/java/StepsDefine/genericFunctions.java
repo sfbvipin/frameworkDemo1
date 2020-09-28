@@ -235,6 +235,7 @@ public class genericFunctions extends AllVariables {
         Iterator<String> it= handle.iterator();
         String parantwindow=it.next();
         driver.switchTo().window(parantwindow);
+
     }
 
     @And("select any of the registered address for payment")

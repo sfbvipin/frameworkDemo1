@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 import org.json.JSONException;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 
 public class apiAutomationFunctions extends AllVariables {
@@ -75,7 +74,6 @@ public class apiAutomationFunctions extends AllVariables {
                 .auth().oauth2(OauthToken)
                 .get("/v3/team");
     }
-
 
     public void verify_body(String strTestCase)  throws IOException{
         System.out.println("SHARP got Response Body: "  + resp.prettyPrint());
