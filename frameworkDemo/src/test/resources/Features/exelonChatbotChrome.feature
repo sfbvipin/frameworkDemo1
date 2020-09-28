@@ -5,7 +5,7 @@
 Feature: Feature to test exelon chatbot application test cases
 
 
-@Regression @Chrome @Exelon @Day0 @TC_Exel_001
+@Regression @Basic @Chrome @Exelon @Day0 @TC_Exel_001
   Scenario: Chrome: Open exelon web application, load chatbot and navigate through menus
     Given chrome browser is open
     And user will be on exelon homepage
@@ -22,7 +22,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
- @Regression @Chrome @Exelon @Day0 @Sanity @TC_Exel_002
+ @Regression @Basic @Chrome @Exelon @Day0 @Sanity @TC_Exel_002
   Scenario: Chrome: Open chat bot and pay bill via chat
     Given chrome browser is open
     And user will be on exelon homepage
@@ -47,7 +47,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day0 @TC_Exel_003
+  @Regression @Basic @Chrome @Exelon @Day0 @TC_Exel_003
   Scenario: Chrome: Open chat bot and start service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -61,7 +61,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day0 @TC_Exel_004
+  @Regression @Basic @Chrome @Exelon @Day0 @TC_Exel_004
   Scenario: Chrome: Open chat bot and move service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -75,7 +75,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day0 @TC_Exel_005
+  @Regression @Basic @Chrome @Exelon @Day0 @TC_Exel_005
   Scenario: Chrome: Open chat bot and navigate for Covid-19 assistance
     Given chrome browser is open
     And user will be on exelon homepage
