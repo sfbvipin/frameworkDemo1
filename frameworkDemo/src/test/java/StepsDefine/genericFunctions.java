@@ -196,14 +196,14 @@ public class genericFunctions extends AllVariables {
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
-        driver.findElement(By.name("username")).sendKeys(strUserName);
+        driver.findElement(By.xpath(username)).sendKeys(strUserName);
         Thread.sleep(2000);
     }
 
     @And("user enters password")
     public void user_enters_password() throws InterruptedException
     {
-        driver.findElement(By.name("password")).sendKeys(strPassword);
+        driver.findElement(By.xpath(password)).sendKeys(strPassword);
         Thread.sleep(2000);
     }
 
@@ -222,7 +222,10 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
 
     }
-
+    @Then ("click on sign in for web Authentication")
+    public void click_on_sign_in_for_web_Authentication() {
+    	driver.findElement(By.xpath(signinweb)).click();
+    }
     @Then("navigate back to chat bot")
     public void navigate_back_to_chat_bot() throws InterruptedException {
         driver.close();
@@ -374,7 +377,12 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(learnbudget)).click();
         Thread.sleep(3000);
     }
-
+    @And ("click on move service")
+    public void click_on_move_service() throws InterruptedException {
+    	driver.findElement(By.xpath(moveService)).click();
+    	Thread.sleep(3000);
+    	
+    }
     @Then("user click No")
     public void user_click_No()throws InterruptedException {
         driver.findElement(By.xpath(no)).click();
@@ -439,10 +447,14 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
+   
+    
+    
     @And("type utterance")
     public void type_utterance() throws InterruptedException
     {
         driver.findElement(By.xpath(inputtext)).sendKeys("start service");
+        Thread.sleep(3000);
     }
 
     @When ("user will locate the web sign In button")
@@ -514,11 +526,25 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(moveService)).click();
         Thread.sleep(2000);
     }
-
+    @When("select and click start stop or move service")
+    public void select_and_click_start_stop_or_move_service() throws InterruptedException {
+    driver.findElement(By.xpath(startstopmove)).click();
+    Thread.sleep(3000);
+    }
     @Then("click start service")
     public void click_start_service() throws InterruptedException
     {
         driver.findElement(By.xpath(startService)).click();
         Thread.sleep(3000);
+    }
+    @When ("user enters web login id")
+    public void user_enters_web_login_id() throws InterruptedException {
+    	driver.findElement(By.xpath(webusername)).sendKeys(strUserName);
+    	Thread.sleep(3000);
+    }
+    @And ("user enters web password")
+    public void user_enters_web_password() throws InterruptedException {
+    	driver.findElement(By.xpath(webpassword)).sendKeys(strPassword);
+    	Thread.sleep(2000);
     }
 }
