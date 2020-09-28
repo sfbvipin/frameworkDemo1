@@ -102,7 +102,11 @@ public class genericFunctions extends AllVariables {
         a.moveToElement(move).build().perform();
         Thread.sleep(3000);
     }
-
+    @Then ("user selects account")
+    public void user_selects_account() throws InterruptedException {
+    	driver.findElement(By.xpath(selectacoount)).click();
+    	Thread.sleep(3000);
+    }
     @And("select solar and click in bot")
     public void select_solar_and_click_in_bot() throws InterruptedException {
         driver.findElement(By.xpath(MenuOptionSolar)).click();
@@ -196,14 +200,14 @@ public class genericFunctions extends AllVariables {
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
-        driver.findElement(By.xpath(username)).sendKeys(strUserName);
+        driver.findElement(By.name("username")).sendKeys(strUserName);
         Thread.sleep(2000);
     }
 
     @And("user enters password")
     public void user_enters_password() throws InterruptedException
     {
-        driver.findElement(By.xpath(password)).sendKeys(strPassword);
+        driver.findElement(By.name("password")).sendKeys(strPassword);
         Thread.sleep(2000);
     }
 
@@ -235,7 +239,6 @@ public class genericFunctions extends AllVariables {
         Iterator<String> it= handle.iterator();
         String parantwindow=it.next();
         driver.switchTo().window(parantwindow);
-
     }
 
     @And("select any of the registered address for payment")
@@ -529,7 +532,7 @@ public class genericFunctions extends AllVariables {
     }
     @When("select and click start stop or move service")
     public void select_and_click_start_stop_or_move_service() throws InterruptedException {
-    driver.findElement(By.xpath(startstopmove)).click();
+    driver.findElement(By.xpath(startstopMove2)).click();
     Thread.sleep(3000);
     }
     @Then("click start service")
@@ -537,6 +540,19 @@ public class genericFunctions extends AllVariables {
     {
         driver.findElement(By.xpath(startService)).click();
         Thread.sleep(3000);
+    }
+    @Then ("click Stop service")
+    public void click_Stop_service() throws InterruptedException {
+    	driver.findElement(By.xpath(stopService)).click();
+    	Thread.sleep(3000);
+    }
+    @And ("click on stop link")
+    public void click_on_stop_link() {
+    	JavascriptExecutor jse = (JavascriptExecutor)driver;
+    	jse.executeScript("window.scrollBy(0,-250)");
+    	driver.findElement(By.xpath("//a[contains(text(),'online')]")).click();
+    	
+    	driver.quit();
     }
     @When ("user enters web login id")
     public void user_enters_web_login_id() throws InterruptedException {
