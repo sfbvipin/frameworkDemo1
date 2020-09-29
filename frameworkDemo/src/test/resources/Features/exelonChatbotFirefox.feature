@@ -665,7 +665,7 @@ Feature: Feature to test exelon chatbot application test cases
   @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_043     @Vipin
   Scenario: Firefox: Initiating the Chat-Bot and select link in Stop content
     Given firefox browser is open
-    And user will be on exel homepage
+    And user will be on exelon homepage
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
