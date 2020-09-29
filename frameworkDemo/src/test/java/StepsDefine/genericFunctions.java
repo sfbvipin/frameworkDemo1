@@ -115,7 +115,18 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(MenuOptionHomeBusiness)).click();
         Thread.sleep(3000);
     }
-
+@When("select and click start stop or move service")
+    public void select_and_click_start_stop_or_move_service() throws InterruptedException {
+    driver.findElement(By.xpath(startstopMove2)).click();
+    Thread.sleep(3000);
+    }
+    
+    @And ("click on move service")
+    public void click_on_move_service() throws InterruptedException {
+    	driver.findElement(By.xpath(moveService)).click();
+    	Thread.sleep(3000);
+    	
+    }
     @And("click on private solar option")
     public void click_on_private_solar_option() throws InterruptedException {
         driver.findElement(By.xpath(MenuOptionPrivateSolar)).click();
