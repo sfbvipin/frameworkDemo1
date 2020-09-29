@@ -57,9 +57,9 @@ public class AllVariables {
     public static String moreafternothanks="//div[contains(text(),'More')]";
     public static String budgetbilling="//div[contains(text(),'Budget Billing')]";
     public static String learnmoreaboutbudgetbilling="//div[contains(text(),'Learn more about Budget Billing')]";
-    public static String accounttype="/html/body/div[3]/div/div[3]/textarea";
-    public static String sendbutton="/html/body/div[3]/div/div[3]/button";
-    public static String autopay="/html/body/div[3]/div/div[2]/div/div[2]/div[7]/div/div[2]/div/div[2]/a[2]/div";
+    public static String accounttype="//textarea[@placeholder='Type a message....']";
+    public static String sendbutton="//button[@class='oda-chat-footer-button oda-chat-button-send']";
+    public static String autopay="//div[contains(text(),'Sign up for AutoPay')]";
     public static String otherpay="//div[contains(text(),'Learn about Other Payment Methods')]";
     public static String paybymail="//div[contains(text(),'Pay by Mail')]";
     public static String paybyphone="//div[contains(text(),'Pay by Phone')]";
