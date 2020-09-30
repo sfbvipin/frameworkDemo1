@@ -73,8 +73,6 @@ public class AllVariables {
     public static String accounttype="//textarea[@placeholder='Type a message....']";
     public static String sendbutton="//button[@class='oda-chat-footer-button oda-chat-button-send']";
 
-    public static String accounttype="/html/body/div[3]/div/div[3]/textarea";
-    public static String sendbutton="/html/body/div[3]/div/div[3]/button";
 
     public static String autopay="//div[contains(text(),'Sign up for AutoPay')]";
     public static String otherpay="//div[contains(text(),'Learn about Other Payment Methods')]";
@@ -85,7 +83,7 @@ public class AllVariables {
     public static String no="//div[contains(text(),\"No, Thanks. I'm not interested in this program.\")]";
 
     public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
-    public static String startstopMove2="//div[contains(text(),'Start, Stop or Move Service')]";
+
     public static String username="//input[@name='username']";
     public static  String password="//input[@name='password']";
     public static String webusername="//div[contains(@class,'form-group')]//input[@id='Username']";
