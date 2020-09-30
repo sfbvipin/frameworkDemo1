@@ -68,6 +68,7 @@ public class customReportListener implements EventListener {
         extent.setSystemInfo("OS", "Windows");
         extent.setSystemInfo("Environment", "QA");
         //deleteFolder(new File("src/test/resources/FailedCaseImages"));
+
     };
 
     /*------------------------------------------------------------

@@ -106,7 +106,6 @@ public class genericFunctions extends AllVariables {
     @And("select solar and click in bot")
     public void select_solar_and_click_in_bot() throws InterruptedException {
         driver.findElement(By.xpath(MenuOptionSolar)).click();
-
         Thread.sleep(3000);
     }
 

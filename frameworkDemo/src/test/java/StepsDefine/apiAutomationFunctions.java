@@ -22,6 +22,32 @@ public class apiAutomationFunctions extends AllVariables {
                 .get("/v3/account");
     }
 
+    @Given("Send getAPI request for account with {string}")
+    public void Send_getAPI_request_for_account_with(String authcode)
+    {
+        if (authcode.equalsIgnoreCase("valid")) {
+            resp=(Response) RestAssured.given()
+                    .baseUri(hellosignUrl)
+                    .auth().oauth2(OauthToken)
+                    .get("/v3/account");
+        } else {
+            resp=(Response) RestAssured.given()
+                    .baseUri(hellosignUrl)
+                    .auth().oauth2(OauthTokenw)
+                    .get("/v3/account");
+        }
+    }
+
+    @Then ("validate {int}")
+    public void validate(Integer response_code) {
+        Integer strResponseCode = resp.getStatusCode();
+        if (!strResponseCode.equals(response_code)){
+            System.out.println("SHARP did not get expected response code");
+        } else {
+            System.out.println("SHARP got expected response code");
+        }
+        resp.then().assertThat().statusCode(response_code);
+    }
 
     @Then ("validate response code")
     public void validate_response_code() {
