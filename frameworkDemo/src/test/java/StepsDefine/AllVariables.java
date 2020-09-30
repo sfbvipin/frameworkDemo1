@@ -43,6 +43,7 @@ public class AllVariables {
     public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";
     public static String payviachat="//div[contains(text(),'Pay Via Chat')]";
+    public static String signinfromchatbot="//div[contains(text(),'Sign In')]";
     public static String signin="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'Sign In')]";
     public static String signinforauth="//button[contains(text(),'Sign In')]";
     public static String acceptauth="//button[contains(text(),'Accept')]";
@@ -52,11 +53,17 @@ public class AllVariables {
     public static String nothanks3="//div[17]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String startService="//div[contains(text(),'Start Service')]";
     public static String moveService="//div[contains(text(),'Move Service')]";
-
+    public static String stopService="//div[contains(text(),'Stop Service')]";
+    public static String stopServiceLink="//a[contains(text(),'online')]";
+    public static String moveservicelink="//li[contains(text(),'Your Pepco account number and phone number and the')]//a[contains(text(),'My Account')]";
     public static String findaccountnum="//div[contains(text(),'Find Account Number')]";
     public static String moreafternothanks="//div[contains(text(),'More')]";
+    public static String startServiceLink="//a[contains(text(),'pepco.com')]";
     public static String budgetbilling="//div[contains(text(),'Budget Billing')]";
     public static String learnmoreaboutbudgetbilling="//div[contains(text(),'Learn more about Budget Billing')]";
+    public static String moveServicefromnothanks="//div[5]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
+    public static String signinafterbudgetbilling="//body/div[4]/div[1]/div[2]/div[1]/div[2]/div[7]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]/div[1]";
+    
     public static String accounttype="//textarea[@placeholder='Type a message....']";
     public static String sendbutton="//button[@class='oda-chat-footer-button oda-chat-button-send']";
     public static String autopay="//div[contains(text(),'Sign up for AutoPay')]";
@@ -65,7 +72,8 @@ public class AllVariables {
     public static String paybyphone="//div[contains(text(),'Pay by Phone')]";
     public static String payinperson="//div[contains(text(),'Pay in Person')]";
     public static String learnbudget="//div[contains(text(),'Learn about Budget Billing.')]";
-    public static String no="//div[contains(text(),'No, Thanks. I'm not interested in this program.')]";
+    public static String no="//div[contains(text(),\"No, Thanks. I'm not interested in this program.\")]";
+ 
 
     public static String downloadmycurrentbill="//div[contains(text(),'Download My Current Bill')]";
     public static String downloadapreviousbill="//div[contains(text(),'Download A Previous Bill')]";
@@ -76,7 +84,7 @@ public class AllVariables {
     public static String endflowxpath="//span[contains(text(),'Did you find the answer')]";
     public static String chatclosingtext1="//span[contains(text(),'m glad you were able to get the help you')]";
     public static String chatclosingtext="Great! I'm glad you were able to get the help you were looking for. Is there anything else I can help you with?";
-
+    public static String startstopMove2="//div[contains(text(),'Start, Stop or Move Service')]";
     public static String downedpowerlines="//div[contains(text(),'Downed Power Line')]";
     public static String downedpowerlinesfrommenu="//a[contains(text(),'Downed Power Line')]";
     public static String websignin="//button[@class='btn btn-accent exc-sign-in-btn']";
