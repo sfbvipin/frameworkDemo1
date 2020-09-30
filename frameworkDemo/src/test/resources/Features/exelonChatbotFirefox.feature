@@ -5,7 +5,7 @@
 Feature: Feature to test exelon chatbot application test cases
 
 
-  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_001
+  @Regression @Firefox @Exelon @Day0 @TC_Exel_001
   Scenario: Firefox: Open exelon web application, load chatbot and navigate through menus
     Given firefox browser is open
     And user will be on exelon homepage
@@ -22,7 +22,8 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_002 @Paramterize
+
+  @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_002
   Scenario: Firefox: Open chat bot and pay bill via chat
     Given firefox browser is open
     And user will be on exelon homepage
@@ -47,7 +48,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_003
+  @Regression @Firefox @Exelon @Day0 @TC_Exel_003
   Scenario: Firefox: Open chat bot and start service
     Given firefox browser is open
     And user will be on exelon homepage
@@ -61,7 +62,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_004
+  @Regression @Firefox @Exelon @Day0 @TC_Exel_004
   Scenario: Firefox: Open chat bot and move service
     Given firefox browser is open
     And user will be on exelon homepage
@@ -75,7 +76,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_005
+  @Regression @Firefox @Exelon @Day0 @TC_Exel_005
   Scenario: Firefox: Open chat bot and navigate for Covid-19 assistance
     Given firefox browser is open
     And user will be on exelon homepage
@@ -137,7 +138,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on more button in bot
     And Click on Budget Billing
     Then click on learn more about budget billing
-    And user click sign after budget billing
+    And click on sign in
     Then user will redirect to login page
     When user enters login id
     And user enters password
@@ -369,10 +370,9 @@ Feature: Feature to test exelon chatbot application test cases
     Then chatbot will be open
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
-    Then click on sign in for Authentication
-    And user accept the authorization request
+    When user enters web login id
+    And user enters web password
+    Then click on sign in for web Authentication
     Then navigate back to chat bot
     And click on close chat icon
     Then select yes to close chat
@@ -525,7 +525,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then user enters login id for web
     And user enters password for web
     Then user click on web sign in
-    And user will be on exelon homepage
+    Then user selects account 
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
