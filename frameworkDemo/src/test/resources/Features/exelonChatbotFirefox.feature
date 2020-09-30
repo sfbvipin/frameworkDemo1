@@ -22,7 +22,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_002
+  @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_002 @Paramterize
   Scenario: Firefox: Open chat bot and pay bill via chat
     Given firefox browser is open
     And user will be on exelon homepage
@@ -126,7 +126,7 @@ Feature: Feature to test exelon chatbot application test cases
     And select yes to close chat
 
 
-  @Regression @Firefox @Exelon @Day1 @TC_Exel_009
+  @Regression @Firefox @Exelon @Day1 @TC_Exel_009  @Paramterize
   Scenario: Firefox: Initiating the Chat-Bot and user eligible for budget billing and already enrolled
     Given firefox browser is open
     And user will be on exelon homepage
@@ -137,12 +137,14 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on more button in bot
     And Click on Budget Billing
     Then click on learn more about budget billing
+    And user click sign after budget billing
     Then user will redirect to login page
     When user enters login id
     And user enters password
     Then click on sign in for Authentication
     And user accept the authorization request
     Then navigate back to chat bot
+    Then close the browser
 
   @Regression @Firefox @Exelon @Day1 @TC_Exel_010 @Khushboo
   Scenario: Firefox: Initiating bot without login and click on Pay bill
@@ -171,7 +173,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day1  @TC_Exel_012  @Khushboo
+  @Regression @Firefox @Exelon @Day1  @TC_Exel_012  @Khushboo 
   Scenario: Firefox: Initiate bot without login and click Sign up for Autopay
     Given firefox browser is open
     And user will be on exelon homepage
@@ -290,7 +292,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_020     @Parul
+  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_020     @Parul @Paramterize
   Scenario: Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -311,7 +313,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_021     @Parul @Issue
+  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_021     @Parul @Issue @Paramterize
   Scenario: Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -358,7 +360,7 @@ Feature: Feature to test exelon chatbot application test cases
 #  Before we get started, sign in to your online account for the optimal experience. Simply start another
 #  chat after you sign in, and I can help you from there. You can also continue without signing in.
 #  [Following as buttons]Sign InNo, Thanks. I will continue without signing in)
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_024     @Aashish
+  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_024     @Aashish @Paramterize
   Scenario: Firefox: Initiating the Chat-Bot and select SignIn
     Given firefox browser is open
     And user will be on exelon homepage
@@ -378,7 +380,7 @@ Feature: Feature to test exelon chatbot application test cases
   #------  Wait to be added for checking the verbiage --------
   #(Hello! I’m Atlantic City Electric's virtual assistant.
   #What can I help you with today? You can choose a topic to get started, or type in a direct question.)
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_025     @Aashish
+  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_025     @Aashish  
   Scenario: Firefox: Initiating the Chat-Bot, navigate to account balance without sign in
     Given firefox browser is open
     And user will be on exelon homepage
@@ -390,8 +392,8 @@ Feature: Feature to test exelon chatbot application test cases
     And Account balance
     Then click on close chat icon
     And select yes to close chat
-
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_026     @Aashish
+ 
+  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_026     @Aashish  @Paramterize
   Scenario: Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts
     Given firefox browser is open
     And user will be on exelon homepage
@@ -439,7 +441,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029     @Parul  @Paramterize
   Scenario: Firefox: BOT : Click on Bot and after web login opt Account balance from billing and payment options(MERRILLDEMIAN)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -494,7 +496,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_528233 @TC_Exel_033     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528233 @TC_Exel_033     @Parul  @Paramterize
   Scenario: Firefox: Initiate bot without login and opt Oauth login with accounts more than 5 (2000.201)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -515,7 +517,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_034     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_034     @Parul  @Paramterize
   Scenario: Firefox: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -561,7 +563,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524836 @TC_Exel_037     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524836 @TC_Exel_037     @Parul 
   Scenario: Firefox: MENU : Click on Bot and opt no for login from billing and payment options
     Given firefox browser is open
     And user will be on exelon homepage
@@ -573,7 +575,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524897 @TC_Exel_038     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524897 @TC_Exel_038     @Parul @Paramterize
   Scenario: Firefox: MENU : Click on Bot and opt Deny after Sign In  on OAuth page  for login in billing and payment
     Given firefox browser is open
     And user will be on exelon homepage
@@ -594,7 +596,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524898 @TC_Exel_039     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524898 @TC_Exel_039     @Parul @Paramterize
   Scenario: Firefox: MENU : Click on Bot and check balance after successful Sign on OAuth page (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -614,7 +616,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_040     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_040     @Parul @Paramterize
   Scenario: Firefox: BOT : Click on Bot and check balance after successful Sign In on OAuth page (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -634,7 +636,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_041     @Vipin
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_041     @Vipin 
   Scenario: Firefox: Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
     Given firefox browser is open
     And user will be on exelon homepage
@@ -659,13 +661,12 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on start stop move
     And click on move service
     Then click on the link in the move service content
-    And click on close chat icon
-    Then select yes to close chat
+    And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_043     @Vipin
   Scenario: Firefox: Initiating the Chat-Bot and select link in Stop content
     Given firefox browser is open
-    And user will be on exel homepage
+    And user will be on exelon homepage
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
@@ -673,8 +674,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on start stop move
     And click on stop service
     Then click on the link in the stop service content
-    And click on close chat icon
-    Then select yes to close chat
+    And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515750 @TC_Exel_044     @Parul
   Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Start content
@@ -687,6 +687,7 @@ Feature: Feature to test exelon chatbot application test cases
     When select and click start stop or move service
     Then click start service
     And click on start link
+    And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515751 @TC_Exel_045     @Parul
   Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Stop content
@@ -696,9 +697,10 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click no thanks i will continue
-    When select and click start,stop or move service
+    When select and click start stop or move service
     Then click Stop service
     And click on stop link
+    And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515752 @TC_Exel_046     @Parul
   Scenario: Firefox: BOT : Initiating the ChatBot and select link in Move content
@@ -708,9 +710,10 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click no thanks i will continue
-    When select and click start,stop or move service
+    When select and click start stop or move service
     Then click move service
     And click on move link
+    And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515753 @TC_Exel_047     @Khushboo
   Scenario: Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
@@ -720,13 +723,12 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click no thanks i will continue
-    Then user click on start/stop/move
-    And user click start service
-    Then user click move service
+    When select and click start stop or move service
+    Then click start service
+    Then user click move service after thanks
     And user click yes
     Then user click no thanks
-    And click on close chat icon
-    Then select yes to close chat
+    And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515759 @TC_Exel_048     @Khushboo
   Scenario: Firefox:Initiating the Chat-Bot and type start service
@@ -739,6 +741,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then user will type start service
     And click on close chat icon
     Then select yes to close chat
+    And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515763 @TC_Exel_049     @Khushboo
   Scenario: Firefox: Initiating the ChatBot and opt stopping a service from user input (utterances) option

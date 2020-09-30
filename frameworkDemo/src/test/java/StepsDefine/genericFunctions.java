@@ -14,6 +14,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -521,4 +523,27 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(startService)).click();
         Thread.sleep(3000);
     }
+
+
+	@And ("click on start link")
+	public void click_on_start_link() {
+		driver.findElement(By.xpath(startServiceLink)).click();
+
+
+	}
+	@And ("click on stop service")
+	public void click_on_stop_service() throws InterruptedException {
+		driver.findElement(By.xpath(stopService)).click();
+		Thread.sleep(2000);
+	}
+
+
+	@Then("click on the link in the move service content")
+	public void click_on_the_link_in_the_move_service_content() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-250)", "");
+		driver.findElement(By.xpath(moveservicelink)).click();
+		Thread.sleep(2000);
+	}
+
 }
