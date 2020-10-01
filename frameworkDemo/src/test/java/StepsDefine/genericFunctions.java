@@ -21,12 +21,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.Assertion;
 
 
 public class genericFunctions extends AllVariables {
     AllVariables alv= new AllVariables();
     public static WebDriver driver =null;
+
 
     @Given("firefox browser is open")
     public void firefox_browser_is_open() {
@@ -52,7 +54,7 @@ public class genericFunctions extends AllVariables {
     public void user_will_be_on_exelon_homepage() throws InterruptedException {
         System.out.println(browserHomePageMessage);
         driver.navigate().to(exelonUrl);
-        Thread.sleep(10000);
+        Thread.sleep(12000);
     }
 
     @When("user will locate the chatbot icon")
@@ -68,9 +70,25 @@ public class genericFunctions extends AllVariables {
 
     @And("click on exelon chatbot icon")
     public void click_on_exelon_chatbot_icon() throws InterruptedException {
-        System.out.println("Inside Step: SHARP clicked on chatbot icon");
-        driver.findElement(By.xpath(ChatbotIcon)).click();
-        Thread.sleep(3000);
+        WebElement chatbotI=driver.findElement(By.xpath(ChatbotIcon));
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        if (chatbotI.isDisplayed()){
+
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ChatbotIcon))));
+            driver.findElement(By.xpath(ChatbotIcon)).click();
+            System.out.println("Inside Step: SHARP clicked on chatbot icon");
+        } else {
+            System.out.println("Inside Step: SHARP is not able to locate chatbot, finding again");
+            //Thread.sleep(5000);
+            if (chatbotI.isDisplayed()){
+                System.out.println("Inside Step: SHARP located chatbot icon, now proceeding");
+                wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ChatbotIcon))));
+                driver.findElement(By.xpath(ChatbotIcon)).click();
+            } else {
+                System.out.println("Inside Step: SHARP was not able to locate chatbot in second attempt as well");
+            }
+        }
+        Thread.sleep(5000);
     }
 
     @Then("chatbot will be open")
@@ -80,6 +98,9 @@ public class genericFunctions extends AllVariables {
             System.out.println("Inside Step: Chatbot is ready to proceed");
         } else {
             System.out.println("Inside Step: Chatbot is not ready, clicking again");
+            Thread.sleep(5000);
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ChatbotIcon))));
             driver.findElement(By.xpath(ChatbotIcon)).click();
             if (status.isDisplayed()){
                 System.out.println("Inside Step: Chatbot is ready after second click, now proceeding");

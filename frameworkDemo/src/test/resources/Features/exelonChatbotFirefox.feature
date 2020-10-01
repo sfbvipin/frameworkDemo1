@@ -5,7 +5,7 @@
 Feature: Feature to test exelon chatbot application test cases
 
 
-  @Regression @Firefox @Exelon @Day0 @TC_Exel_001
+  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_001
   Scenario: Firefox: Open exelon web application, load chatbot and navigate through menus
     Given firefox browser is open
     And user will be on exelon homepage
@@ -48,7 +48,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day0 @TC_Exel_003
+  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_003
   Scenario: Firefox: Open chat bot and start service
     Given firefox browser is open
     And user will be on exelon homepage
@@ -62,7 +62,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day0 @TC_Exel_004
+  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_004
   Scenario: Firefox: Open chat bot and move service
     Given firefox browser is open
     And user will be on exelon homepage

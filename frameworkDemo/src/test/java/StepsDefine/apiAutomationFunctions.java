@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.apache.commons.lang.ObjectUtils;
 import org.json.JSONException;
 
 import java.io.IOException;
@@ -110,9 +111,15 @@ public class apiAutomationFunctions extends AllVariables {
         String[] strKeys = strKeyValuePair[0].split(";");
         String[] strValues = strKeyValuePair[1].split(";");
         Integer intCount = strKeyValuePair[0].split(";").length;
+        String strExpVal = null;
         System.out.println(intCount);
         for(j=0;j<=intCount-1;j++) {
-            cucumberHooks.addonFunctions.compareString(strValues[j],resp.jsonPath().get(strKeys[j]).toString());
+            if (resp.jsonPath().get(strKeys[j]) == null){
+                strExpVal = "null";
+            } else {
+                strExpVal = resp.jsonPath().get(strKeys[j]).toString();
+            }
+            cucumberHooks.addonFunctions.compareString(strValues[j],strExpVal);
         }
     }
 }
