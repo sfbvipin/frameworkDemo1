@@ -5,7 +5,7 @@
 Feature: Feature to test exelon chatbot application test cases
 
 
-@Regression @Basic @Chrome @Exelon @Day0 @TC_Exel_001
+@Regression1 @Basic @Chrome @Exelon @Day0 @TC_Exel_001
   Scenario: Chrome: Open exelon web application, load chatbot and navigate through menus
     Given chrome browser is open
     And user will be on exelon homepage
@@ -22,7 +22,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
- @Regression @Basic @Chrome @Exelon @Day0 @Sanity @TC_Exel_002
+ @Regression1 @Basic @Chrome @Exelon @Day0 @Sanity @TC_Exel_002
   Scenario: Chrome: Open chat bot and pay bill via chat
     Given chrome browser is open
     And user will be on exelon homepage
@@ -47,7 +47,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Chrome @Exelon @Day0 @TC_Exel_003
+  @Regression1 @Basic @Chrome @Exelon @Day0 @TC_Exel_003
   Scenario: Chrome: Open chat bot and start service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -61,7 +61,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Chrome @Exelon @Day0 @TC_Exel_004
+  @Regression1 @Basic @Chrome @Exelon @Day0 @TC_Exel_004
   Scenario: Chrome: Open chat bot and move service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -75,7 +75,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day0 @TC_Exel_005
+  @Regression1 @Chrome @Exelon @Day0 @TC_Exel_005
   Scenario: Chrome: Open chat bot and navigate for Covid-19 assistance
     Given chrome browser is open
     And user will be on exelon homepage
@@ -88,7 +88,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_006
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_006
   Scenario: Chrome: Open chat bot and find account number
     Given chrome browser is open
     And user will be on exelon homepage
@@ -101,7 +101,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_007
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_007
   Scenario: Chrome: Open chat bot and click on Outage
     Given chrome browser is open
     And user will be on exelon homepage
@@ -112,7 +112,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on Outage
     Then close the browser
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_008
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_008
   Scenario: Chrome:initiating bot without login and click on Pay bill
     Given chrome browser is open
     And user will be on exelon homepage
@@ -126,7 +126,7 @@ Feature: Feature to test exelon chatbot application test cases
     And select yes to close chat
 
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_009
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_009
   Scenario: Chrome: Initiating the Chat-Bot and user eligible for budget billing and already enrolled
     Given chrome browser is open
     And user will be on exelon homepage
@@ -144,7 +144,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user accept the authorization request
     Then navigate back to chat bot
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_010 @Khushboo
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_010 @Khushboo
   Scenario: Chrome: Initiating bot without login and click on Pay bill
     Given chrome browser is open
     And user will be on exelon homepage
@@ -157,7 +157,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_011      @Khushboo
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_011      @Khushboo
   Scenario: Chrome: Click on Bot and type keywords related to billing and payment
     Given chrome browser is open
     And user will be on exelon homepage
@@ -171,7 +171,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1  @TC_Exel_012  @Khushboo
+  @Regression1 @Chrome @Exelon @Day1  @TC_Exel_012  @Khushboo
   Scenario: Chrome: Initiate bot without login and click Sign up for Autopay
     Given chrome browser is open
     And user will be on exelon homepage
@@ -185,7 +185,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_013        @Khushboo
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_013        @Khushboo
   Scenario: Chrome: Initiate bot without login and click Pay by mail under Other Payment Options
     Given chrome browser is open
     And user will be on exelon homepage
@@ -200,7 +200,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_014     @Khushboo
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_014     @Khushboo
   Scenario: Chrome: Initiate bot without login and click Pay by phone under Other Payment Options
     Given chrome browser is open
     And user will be on exelon homepage
@@ -215,7 +215,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_015      @Khushboo
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_015      @Khushboo
   Scenario: Chrome: Initiate bot without login and click Pay in person under Other Payment Options
     Given chrome browser is open
     And user will be on exelon homepage
@@ -230,7 +230,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_016     @Khushboo
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_016     @Khushboo
   Scenario: Chrome: Initiate bot without login and click learn about budget billing under pay by phone
     Given chrome browser is open
     And user will be on exelon homepage
@@ -246,7 +246,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day1 @TC_Exel_017     @Khushboo
+  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_017     @Khushboo
   Scenario: Chrome: Initiate bot without login and click no thanks under pay by mail
     Given chrome browser is open
     And user will be on exelon homepage
@@ -262,7 +262,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_018     @Parul
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_018     @Parul
   Scenario: Chrome: Initiate bot without login and click Download my Current bill
     Given chrome browser is open
     And user will be on exelon homepage
@@ -276,7 +276,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_019     @Parul
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_019     @Parul
   Scenario: Chrome: Initiate bot without login and click Download a previous bill
     Given chrome browser is open
     And user will be on exelon homepage
@@ -290,7 +290,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_020     @Parul
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_020     @Parul
   Scenario: Chrome: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)
     Given chrome browser is open
     And user will be on exelon homepage
@@ -311,7 +311,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_021     @Parul @Issue
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_021     @Parul @Issue
   Scenario: Chrome: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)
     Given chrome browser is open
     And user will be on exelon homepage
@@ -332,7 +332,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_022     @Aashish
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_022     @Aashish
   Scenario: Chrome: Initiating th e Chat-Bot and select No Thanks
     Given chrome browser is open
     And user will be on exelon homepage
@@ -343,7 +343,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on close chat icon
     And select yes to close chat
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_023     @Aashish
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_023     @Aashish
   Scenario: Chrome: Initiating the Chat-Bot and check welcome message having Signin/No thanks #verbiage_test
     Given chrome browser is open
     And user will be on exelon homepage
@@ -358,7 +358,7 @@ Feature: Feature to test exelon chatbot application test cases
 #  Before we get started, sign in to your online account for the optimal experience. Simply start another
 #  chat after you sign in, and I can help you from there. You can also continue without signing in.
 #  [Following as buttons]Sign InNo, Thanks. I will continue without signing in)
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_024     @Aashish
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_024     @Aashish
   Scenario: Chrome: Initiating the Chat-Bot and select SignIn
     Given chrome browser is open
     And user will be on exelon homepage
@@ -378,7 +378,7 @@ Feature: Feature to test exelon chatbot application test cases
   #------  Wait to be added for checking the verbiage --------
   #(Hello! I’m Atlantic City Electric's virtual assistant.
   #What can I help you with today? You can choose a topic to get started, or type in a direct question.)
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_025     @Aashish
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_025     @Aashish
   Scenario: Chrome: Initiating the Chat-Bot, navigate to account balance without sign in
     Given chrome browser is open
     And user will be on exelon homepage
@@ -391,7 +391,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on close chat icon
     And select yes to close chat
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_026     @Aashish
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_026     @Aashish
   Scenario: Chrome: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts
     Given chrome browser is open
     And user will be on exelon homepage
@@ -409,7 +409,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user accept the authorization request
     Then navigate back to chat bot
 
-  @Regression @Chrome @Exelon @Day2 @Sanity @TC_Exel_027     @Vipin
+  @Regression1 @Chrome @Exelon @Day2 @Sanity @TC_Exel_027     @Vipin
   Scenario: Chrome: Click on bot and select Yes under flow end message
     Given chrome browser is open
     And user will be on exelon homepage
@@ -428,7 +428,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_529183 @TC_Exel_028     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_529183 @TC_Exel_028     @Parul
   Scenario: Chrome: Click on Bot and type keywords related to billing and payment
     Given chrome browser is open
     And user will be on exelon homepage
@@ -442,7 +442,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029     @Parul
   Scenario: Chrome: BOT : Click on Bot and after web login opt Account balance from billing and payment options(MERRILLDEMIAN)
     Given chrome browser is open
     And user will be on exelon homepage
@@ -461,7 +461,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515813 @TC_Exel_030     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515813 @TC_Exel_030     @Parul
   Scenario: Chrome: MENU : Initiate bot and click Downed power line
     Given chrome browser is open
     And user will be on exelon homepage
@@ -473,7 +473,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515815 @TC_Exel_031     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515815 @TC_Exel_031     @Parul
   Scenario: Chrome: BOT : Initiating the Chat-Bot and select Downed Power line and check End flow
     Given chrome browser is open
     And user will be on exelon homepage
@@ -485,7 +485,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515836 @TC_Exel_032     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515836 @TC_Exel_032     @Parul
   Scenario: Chrome: BOT : Initiate bot and type Downed power line keywords
     Given chrome browser is open
     And user will be on exelon homepage
@@ -497,7 +497,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_528233 @TC_Exel_033     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_528233 @TC_Exel_033     @Parul
   Scenario: Chrome: Initiate bot without login and opt Oauth login with accounts more than 5 (2000.201)
     Given chrome browser is open
     And user will be on exelon homepage
@@ -518,7 +518,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_528234 @TC_Exel_034     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_528234 @TC_Exel_034     @Parul
   Scenario: Chrome: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
     Given chrome browser is open
     And user will be on exelon homepage
@@ -536,7 +536,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_529556 @TC_Exel_035     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_529556 @TC_Exel_035     @Parul
   Scenario: Chrome: Click on Bot and type keywords related to billing and payment
     Given chrome browser is open
     And user will be on exelon homepage
@@ -550,7 +550,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524350 @TC_Exel_036     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524350 @TC_Exel_036     @Parul
   Scenario: Chrome: Click on Bot and type keywords related to billing and payment
     Given chrome browser is open
     And user will be on exelon homepage
@@ -564,7 +564,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524836 @TC_Exel_037     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524836 @TC_Exel_037     @Parul
   Scenario: Chrome: MENU : Click on Bot and opt no for login from billing and payment options
     Given chrome browser is open
     And user will be on exelon homepage
@@ -576,7 +576,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524897 @TC_Exel_038     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524897 @TC_Exel_038     @Parul
   Scenario: Chrome: MENU : Click on Bot and opt Deny after Sign In  on OAuth page  for login in billing and payment
     Given chrome browser is open
     And user will be on exelon homepage
@@ -597,7 +597,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524898 @TC_Exel_039     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524898 @TC_Exel_039     @Parul
   Scenario: Chrome: MENU : Click on Bot and check balance after successful Sign on OAuth page (SPARKINSON)
     Given chrome browser is open
     And user will be on exelon homepage
@@ -617,7 +617,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_040     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_040     @Parul
   Scenario: Chrome: BOT : Click on Bot and check balance after successful Sign In on OAuth page (SPARKINSON)
     Given chrome browser is open
     And user will be on exelon homepage
@@ -637,7 +637,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_041     @Vipin
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_041     @Vipin
   Scenario: Chrome: Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
     Given chrome browser is open
     And user will be on exelon homepage
@@ -651,7 +651,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_042     @Vipin
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_042     @Vipin
   Scenario: Chrome: Initiating the Chat-Bot and select link in Move content
     Given chrome browser is open
     And user will be on exelon homepage
@@ -665,7 +665,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_043     @Vipin
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_524906 @TC_Exel_043     @Vipin
   Scenario: Chrome: Initiating the Chat-Bot and select link in Stop content
     Given chrome browser is open
     And user will be on exel homepage
@@ -679,7 +679,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515750 @TC_Exel_044     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515750 @TC_Exel_044     @Parul
   Scenario: Chrome: BOT : Initiating the Chat-Bot and select link in Start content
     Given chrome browser is open
     And user will be on exelon homepage
@@ -691,7 +691,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click start service
     And click on start link
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515751 @TC_Exel_045     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515751 @TC_Exel_045     @Parul
   Scenario: Chrome: BOT : Initiating the Chat-Bot and select link in Stop content
     Given chrome browser is open
     And user will be on exelon homepage
@@ -703,7 +703,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click Stop service
     And click on stop link
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515752 @TC_Exel_046     @Parul
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515752 @TC_Exel_046     @Parul
   Scenario: Chrome: BOT : Initiating the ChatBot and select link in Move content
     Given chrome browser is open
     And user will be on exelon homepage
@@ -715,7 +715,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click move service
     And click on move link
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515753 @TC_Exel_047     @Khushboo
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515753 @TC_Exel_047     @Khushboo
   Scenario: Chrome:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
     Given chrome browser is open
     And user will be on exelon homepage
@@ -731,7 +731,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515759 @TC_Exel_048     @Khushboo
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515759 @TC_Exel_048     @Khushboo
   Scenario: Chrome:Initiating the Chat-Bot and type start service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -743,7 +743,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Chrome @Exelon @Day4 @TC_Exel_515763 @TC_Exel_049     @Khushboo
+  @Regression1 @Chrome @Exelon @Day4 @TC_Exel_515763 @TC_Exel_049     @Khushboo
   Scenario: Chrome: Initiating the ChatBot and opt stopping a service from user input (utterances) option
     Given chrome browser is open
     And user will be on exelon homepage
