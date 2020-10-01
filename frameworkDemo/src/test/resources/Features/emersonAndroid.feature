@@ -5,7 +5,7 @@
 Feature: Feature to test emerson android application scenarios
 
  
-@Regression1 @Basic @Firefox @Chrome @Emerson @TC_Emer_I_001
+@Regression1 @Firefox @Chrome @Emerson @TC_Emer_I_001
   Scenario: Check if can open install and run emerson apk
     Given application is invoked
     And user will enter the login id

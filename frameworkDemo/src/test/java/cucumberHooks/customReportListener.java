@@ -142,7 +142,7 @@ public class customReportListener implements EventListener {
         } else {
             try {
                 if (featureName.contains("API")){
-                    step.log(Status.FAIL, "This step failed");
+                    step.log(Status.FAIL, "This API automation step failed");
                 } else {
                     step.log(Status.FAIL, "This step failed").addScreenCaptureFromPath(capture(driver));
                 }
