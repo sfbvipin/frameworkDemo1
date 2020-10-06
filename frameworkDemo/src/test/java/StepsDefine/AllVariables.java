@@ -86,7 +86,7 @@ public class AllVariables {
     public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
 
     public static String username="//input[@name='username']";
-    public static  String password="//input[@name='password']";
+    public static String password="//input[@name='password']";
     public static String webusername="//div[contains(@class,'form-group')]//input[@id='Username']";
     public static String webpassword="//div[contains(@class,'form-group')]//input[@id='Password']";
 
