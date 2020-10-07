@@ -37,6 +37,7 @@ public class AllVariables {
     public static String MenuOptionCommunitySolar = "//div[contains(text(),'Community Solar')]";
     public static String MenuOptionNoThanks = "//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
+
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String closechatbot = "//i[@class='fa fa-times']";
     public static String yesbutton="//button[@id='yesButton']";
