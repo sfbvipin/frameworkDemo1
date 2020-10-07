@@ -37,6 +37,7 @@ public class AllVariables {
     public static String MenuOptionCommunitySolar = "//div[contains(text(),'Community Solar')]";
     public static String MenuOptionNoThanks = "//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
+
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String closechatbot = "//i[@class='fa fa-times']";
     public static String yesbutton="//button[@id='yesButton']";
@@ -115,7 +116,7 @@ public class AllVariables {
     public static String denybutton="//button[contains(text(),'Deny')]";
 
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWYwMGJmNGM4MWY4NDVhZjE4Mjc4YjkyNzE0MjhhZGUyZjc3YWUyMTY4MGJlYzdjYjEwNDJjYzNmODRjYmUwM2FkYTY1YTFhNzU=";
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY0ZmZjNzU1OWQ2YTViNWVjNjkyZjAxMTY2MzA5YjllNDQ1OTVkZDgxYTVkNGI2YTQ5NWU0YTAxOWU0YzJhZWY1MjhjYWVjMWI=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 

@@ -73,7 +73,6 @@ public class genericFunctions extends AllVariables {
         WebElement chatbotI=driver.findElement(By.xpath(ChatbotIcon));
         WebDriverWait wait = new WebDriverWait(driver, 30);
         if (chatbotI.isDisplayed()){
-
             wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ChatbotIcon))));
             driver.findElement(By.xpath(ChatbotIcon)).click();
             System.out.println("Inside Step: SHARP clicked on chatbot icon");
