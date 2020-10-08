@@ -244,15 +244,17 @@ public class genericFunctions extends AllVariables {
     @And("user accept the authorization request")
     public void user_accept_the_authorization_request() throws InterruptedException {
         WebElement elem1 = driver.findElement(By.xpath(acceptauth));
-        if (!elem1.isDisplayed()) {
+        if (elem1.isDisplayed()) {
             driver.findElement(By.xpath(acceptauth)).click();
             Thread.sleep(3000);
         }
     }
+
     @Then ("click on sign in for web Authentication")
     public void click_on_sign_in_for_web_Authentication() {
     	driver.findElement(By.xpath(signinweb)).click();
     }
+
     @Then("navigate back to chat bot")
     public void navigate_back_to_chat_bot() throws InterruptedException {
         driver.close();
