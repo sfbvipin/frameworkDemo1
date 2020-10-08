@@ -297,8 +297,8 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_020     @Parul @Paramterize
-  Scenario: Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)
+  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_020     @Parul
+  Scenario Outline: Firefox: Initiate bot without login and opt Oauth login with single account in Download my Current bill (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -310,16 +310,20 @@ Feature: Feature to test exelon chatbot application test cases
     Then select and click download my current bill
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
+    When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_021     @Parul @Issue @Paramterize
-  Scenario: Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)
+    Examples:
+      | loginid  | password  |
+      | PATTI@47 | Password1 |
+      | DARICE40 | Password1 |
+
+  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_021     @Parul @Issue
+  Scenario Outline: Firefox: Initiate bot without login and opt Oauth login with accounts between 2 to 5 (PATTI@47)
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -331,13 +335,17 @@ Feature: Feature to test exelon chatbot application test cases
     Then select and click download my current bill
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
+    When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
     And click on close chat icon
     Then select yes to close chat
+
+    Examples:
+      | loginid  | password  |
+      | PATTI@47 | Password1 |
+      | DARICE40 | Password1 |
 
   @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_022     @Aashish
   Scenario: Firefox: Initiating th e Chat-Bot and select No Thanks
@@ -365,8 +373,8 @@ Feature: Feature to test exelon chatbot application test cases
 #  Before we get started, sign in to your online account for the optimal experience. Simply start another
 #  chat after you sign in, and I can help you from there. You can also continue without signing in.
 #  [Following as buttons]Sign InNo, Thanks. I will continue without signing in)
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_024     @Aashish @Paramterize
-  Scenario: Firefox: Initiating the Chat-Bot and select SignIn
+  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_024     @Aashish
+  Scenario Outline: Firefox: Initiating the Chat-Bot and select SignIn
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -374,12 +382,15 @@ Feature: Feature to test exelon chatbot application test cases
     Then chatbot will be open
     And click on sign in
     Then user will redirect to login page
-    When user enters web login id
-    And user enters web password
-    Then click on sign in for web Authentication
-    Then navigate back to chat bot
-    And click on close chat icon
-    Then select yes to close chat
+    When user enters "<loginid>" and "<password>"
+    Then click SIGNIN
+    And user click signout
+    Then close window
+
+    Examples:
+      | loginid  | password  |
+      | PATTI@47 | Password1 |
+      | DARICE40 | Password1 |
 
   #------  Wait to be added for checking the verbiage --------
   #(Hello! I’m Atlantic City Electric's virtual assistant.
@@ -397,8 +408,8 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on close chat icon
     And select yes to close chat
  
-  @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_026     @Aashish  @Paramterize
-  Scenario: Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts
+  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_026     @Aashish
+  Scenario Outline: Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -409,11 +420,17 @@ Feature: Feature to test exelon chatbot application test cases
     And Account balance
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
+    When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
+    And click on close chat icon
+    Then select yes to close chat
+
+    Examples:
+      | loginid  | password  |
+      | PATTI@47 | Password1 |
+      | DARICE40 | Password1 |
 
   @Regression @Firefox @Exelon @Day2 @Sanity @TC_Exel_027     @Vipin
   Scenario: Firefox: Click on bot and select Yes under flow end message
