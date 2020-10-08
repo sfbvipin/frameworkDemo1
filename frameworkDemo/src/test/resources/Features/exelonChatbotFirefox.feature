@@ -142,7 +142,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
     Then close the browser
 
@@ -634,7 +634,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
     And click on close chat icon
     Then select yes to close chat
