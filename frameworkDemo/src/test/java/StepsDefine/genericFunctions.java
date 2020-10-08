@@ -203,7 +203,7 @@ public class genericFunctions extends AllVariables {
     public void click_on_sign_in() throws InterruptedException
     {
         driver.findElement(By.xpath(signin)).click();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
     }
 
     @Then("user will redirect to login page")
@@ -215,7 +215,8 @@ public class genericFunctions extends AllVariables {
         String childwindow=it.next();
         System.out.println("Inside Step: Child Window handler is " + childwindow);
         driver.switchTo().window(childwindow);
-        Thread.sleep(5000);
+        Thread.sleep(8000);
+        Wait_Until_element_Visibility(webusername);
     }
 
     @When("user enters login id")
@@ -234,18 +235,19 @@ public class genericFunctions extends AllVariables {
 
     @Then("click on sign in for Authentication")
     public void click_on_sign_in_for_Authentication() throws InterruptedException {
-
-        driver.findElement(By.xpath(signinforauth)).click();
+        Wait_Until_element_Visibility(btnSignIn);
+        driver.findElement(By.xpath(btnSignIn)).click();
         Thread.sleep(3000);
         driver.switchTo().activeElement().click();
     }
 
     @And("user accept the authorization request")
     public void user_accept_the_authorization_request() throws InterruptedException {
-
-        driver.findElement(By.xpath(acceptauth)).click();
-        Thread.sleep(3000);
-
+        WebElement elem1 = driver.findElement(By.xpath(acceptauth));
+        if (!elem1.isDisplayed()) {
+            driver.findElement(By.xpath(acceptauth)).click();
+            Thread.sleep(3000);
+        }
     }
     @Then ("click on sign in for web Authentication")
     public void click_on_sign_in_for_web_Authentication() {
@@ -607,5 +609,60 @@ public class genericFunctions extends AllVariables {
     public void user_enters_web_password() throws InterruptedException {
     	driver.findElement(By.xpath(webpassword)).sendKeys(strPassword);
     	Thread.sleep(2000);
+    }
+
+
+    @When ("user enters {string} and {string}")
+    public void user_enters(String str1, String str2) throws InterruptedException {
+        WebElement selem = driver.findElement(By.xpath(webusername));
+        if (!selem.isDisplayed()) {
+            Thread.sleep(10000);
+        }
+        Wait_Until_element_Visibility(webusername);
+        driver.findElement(By.xpath(webusername)).sendKeys(str1);
+        Wait_Until_element_Visibility(webpassword);
+        driver.findElement(By.xpath(webpassword)).sendKeys(str2);
+    }
+    @And ("user enters {string}")
+    public void user_enter(String str2) throws InterruptedException {
+        driver.findElement(By.xpath(webpassword)).sendKeys(str2);
+        Thread.sleep(3000);
+    }
+    @Then("click SIGNIN button")
+    public void click_SIGNIN_button() throws InterruptedException, IOException {
+        Wait_Until_element_Visibility(btnSignIn);
+        driver.findElement(By.xpath(btnSignIn)).click();
+        Thread.sleep(8000);
+    }
+    @And("click SIGNIN")
+    public void click_SIGNIN() throws InterruptedException {
+        Wait_Until_element_Visibility(signIn);
+        driver.findElement(By.xpath(signIn)).click();
+    }
+
+    @And("user click signout")
+    public void user_click_signout() throws InterruptedException, IOException {
+        Wait_Until_element_Visibility(signout);
+        WebElement sgout = driver.findElement(By.xpath(signout));
+        if (!sgout.isDisplayed()) {
+            Thread.sleep(8000);
+        }
+        driver.findElement(By.xpath(signout)).click();
+        Thread.sleep(8000);
+    }
+
+    @Then("close window")
+    public void close_window()throws InterruptedException {
+        driver.close();
+        driver.quit();
+    }
+
+    public void Wait_Until_element_Visibility(String xpath)  throws InterruptedException{
+        WebDriverWait wait = new WebDriverWait(driver, 40);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
+        WebElement elem = driver.findElement(By.xpath(xpath));
+        if (!elem.isDisplayed()) {
+            Thread.sleep(10000);
+        }
     }
 }
