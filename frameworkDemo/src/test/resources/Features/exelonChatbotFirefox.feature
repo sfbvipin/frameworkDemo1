@@ -698,7 +698,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user click on menu icon
     Then click on start stop move
     And click on stop service
-    Then click on the link in the stop service content
+    #Then click on the link in the stop service content
     And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515750 @TC_Exel_044     @Parul
@@ -776,8 +776,8 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click no thanks i will continue
-    Then user will type stop service
-    Then click on send
+    #Then user will type stop service
+    #Then click on send
     And user click on stop service
     Then user click move service
     And user click yes

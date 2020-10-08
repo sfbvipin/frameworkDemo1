@@ -222,14 +222,14 @@ public class genericFunctions extends AllVariables {
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
-        driver.findElement(By.name("username")).sendKeys(strUserName);
+        driver.findElement(By.xpath(webusername)).sendKeys(strUserName);
         Thread.sleep(2000);
     }
 
     @And("user enters password")
     public void user_enters_password() throws InterruptedException
     {
-        driver.findElement(By.name("password")).sendKeys(strPassword);
+        driver.findElement(By.xpath(webpassword)).sendKeys(strPassword);
         Thread.sleep(2000);
     }
 
@@ -555,6 +555,13 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(moveService)).click();
         Thread.sleep(2000);
     }
+
+    @Then ("user click move service")
+    public void user_click_move_service() throws InterruptedException {
+        driver.findElement(By.xpath(moveService)).click();
+        Thread.sleep(2000);
+    }
+
     @When("select and click start stop or move service")
     public void select_and_click_start_stop_or_move_service() throws InterruptedException {
     driver.findElement(By.xpath(startstopMove2)).click();

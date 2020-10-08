@@ -97,7 +97,7 @@ public class AllVariables {
     public static String gettingyourbill="//div[contains(text(),'Getting Your Bill')]";
     public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
     public static String nothanksafteraccountbalance="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'No, Thanks. I will continue without signing in')]";
-    public static String endflowtext="Did you find the answer(s) you needed todays?";
+    public static String endflowtext="Did you find the answer(s) you needed today?";
     public static String endflowxpath="//span[contains(text(),'Did you find the answer')]";
     public static String chatclosingtext1="//span[contains(text(),'m glad you were able to get the help you')]";
     public static String chatclosingtext="Great! I'm glad you were able to get the help you were looking for. Is there anything else I can help you with?";
