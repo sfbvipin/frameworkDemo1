@@ -102,8 +102,8 @@ public class customReportListener implements EventListener {
     -------------------------------------------------------------*/
     private void ScenarioStarted(TestCaseStarted event) {
         System.out.println("SHARP: Extent Report is getting Scenarios from feature");
-        String featureName = event.getTestCase().getUri().toString();
-        scenario = feature.get(featureName).createNode(event.getTestCase().getName());
+        String featureName1 = event.getTestCase().getUri().toString();
+        scenario = feature.get(featureName1).createNode(event.getTestCase().getName());
     };
 
     /*------------------------------------------------------------

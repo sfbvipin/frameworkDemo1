@@ -114,7 +114,9 @@ public class AllVariables {
     public static String inputtext="//textarea[@placeholder='Type a message....']";
     public static String sendicon="//button[@class='oda-chat-footer-button oda-chat-button-send']";
     public static String denybutton="//button[contains(text(),'Deny')]";
-
+    public static String btnSignIn="//button[@class='btn btn btn-primary exc-corner-btn']";
+    public static String signout="/html/body/form/div[3]/div[3]/div/header/div/button";
+    public static String signIn="//div[contains(text(),'Sign In')]";
 
     public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZmODViYWQwNDUxYWI2Nzk2OTQ4NTE2YjRkODM3ODk5ZDdkMjFmYWVhNDFmMGY2NGFhNmZiYzQzMzhhMzE0Y2Y0NTg1Zjg1M2I=";
     public static String hellosignUrl="https://api.hellosign.com";
