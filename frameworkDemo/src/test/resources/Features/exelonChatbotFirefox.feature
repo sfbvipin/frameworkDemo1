@@ -24,7 +24,7 @@ Feature: Feature to test exelon chatbot application test cases
 
 
   @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_002
-  Scenario: Firefox: Open chat bot and pay bill via chat
+  Scenario Outline: Firefox: Open chat bot and pay bill via chat
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -36,10 +36,9 @@ Feature: Feature to test exelon chatbot application test cases
     Then select and click pay via chat
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
+    When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
     And select any of the registered address for payment
     Then Select no thanks to terminate chat
@@ -47,6 +46,11 @@ Feature: Feature to test exelon chatbot application test cases
     Then select no thanks to close the chat
     And click on close chat icon
     Then select yes to close chat
+
+    Examples:
+      | loginid  | password  |
+      | PATTI@47 | Password1 |
+      | DARICE40 | Password1 |
 
   @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_003
   Scenario: Firefox: Open chat bot and start service
@@ -456,7 +460,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click no thanks i will continue
-    Then select and click on downed power lines
+    Then click on downed power lines
     And type utterance
     Then click on send icon
     And click on close chat icon
@@ -489,7 +493,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click on menu icon
-    Then select and click on downed power lines
+    Then click on downed power lines
     And click on close chat icon
     Then select yes to close chat
 
@@ -501,7 +505,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click no thanks i will continue
-    Then select and click on downed power lines
+    Then click on downed power lines
     And click on close chat icon
     Then select yes to close chat
 
@@ -517,8 +521,8 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_528233 @TC_Exel_033     @Parul  @Paramterize
-  Scenario: Firefox: Initiate bot without login and opt Oauth login with accounts more than 5 (2000.201)
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528233 @Parameterization @TC_Exel_033     @Parul
+  Scenario Outline: Firefox: Initiate bot without login and opt Oauth login with accounts more than 5 (2000.201)
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -530,13 +534,17 @@ Feature: Feature to test exelon chatbot application test cases
     Then select and click download my current bill
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
+    When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
     And click on close chat icon
     Then select yes to close chat
+
+    Examples:
+      | loginid  | password  |
+      | PATTI@47 | Password1 |
+      | DARICE40 | Password1 |
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_034     @Parul  @Paramterize
   Scenario: Firefox: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
@@ -617,8 +625,8 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524898 @TC_Exel_039     @Parul @Paramterize
-  Scenario: Firefox: MENU : Click on Bot and check balance after successful Sign on OAuth page (SPARKINSON)
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524898 @Parameterization @TC_Exel_039     @Parul
+  Scenario Outline: Firefox: MENU : Click on Bot and check balance after successful Sign on OAuth page (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -629,13 +637,17 @@ Feature: Feature to test exelon chatbot application test cases
     And User click on account Balance
     And click on sign in
     Then user will redirect to login page
-    When user enters login id
-    And user enters password
+    When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    And user accept the authorization request
+    #And user accept the authorization request
     Then navigate back to chat bot
     And click on close chat icon
     Then select yes to close chat
+
+    Examples:
+      | loginid  | password  |
+      | PATTI@47 | Password1 |
+      | DARICE40 | Password1 |
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @Parameterization @TC_Exel_040     @Parul
   Scenario Outline: Firefox: BOT : Click on Bot and check balance after successful Sign In on OAuth page (SPARKINSON)

@@ -164,7 +164,11 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(MenuOptionNoThanks)).click();
         Thread.sleep(3000);
     }
-
+    @Then("user click no thanks")
+    public void user_click_no_thanks() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionNoThanks)).click();
+        Thread.sleep(3000);
+    }
 
     @And("user click no thanks i will continue")
     public void  user_click_no_thanks_i_will_continue() throws InterruptedException
@@ -470,8 +474,8 @@ public class genericFunctions extends AllVariables {
         step.log(Status.INFO,"Assertion Passed");
     }
 
-    @Then("select and click on downed power lines")
-    public void select_and_click_on_downed_power_lines() throws InterruptedException {
+    @Then("click on downed power lines")
+    public void click_on_downed_power_lines() throws InterruptedException {
         driver.findElement(By.xpath(downedpowerlinesfrommenu)).click();
         Thread.sleep(3000);
     }
@@ -666,6 +670,34 @@ public class genericFunctions extends AllVariables {
         driver.quit();
     }
 
+    @When ("user will be on {string}")
+    public void user_will_be_on(String opcoName) throws InterruptedException {
+        if(opcoName.equalsIgnoreCase("ace")){
+            driver.navigate().to(ACEUrl);
+        } else if (opcoName.equalsIgnoreCase("dpl")) {
+            driver.navigate().to(DPLUrl);
+        } else if (opcoName.equalsIgnoreCase("pepco")) {
+            driver.navigate().to(PepcoUrl);
+        }
+        Thread.sleep(8000);
+    }
+
+    @Then("click no thanks")
+    public void click_no_thanks() throws InterruptedException {
+        driver.findElement(By.xpath(nothanks)).click();
+        Thread.sleep(3000);
+    }
+    @And("click Yes")
+    public void click_Yes() throws InterruptedException {
+        driver.findElement(By.xpath(Yes)).click();
+        Thread.sleep(3000);
+    }
+
+    @When("click take feedback survey")
+    public void click_take_feedback_survey() throws InterruptedException {
+        driver.findElement(By.xpath(Takefeedbacksurvey)).click();
+        Thread.sleep(5000);
+    }
     public void Wait_Until_element_Visibility(String xpath)  throws InterruptedException{
         WebDriverWait wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
