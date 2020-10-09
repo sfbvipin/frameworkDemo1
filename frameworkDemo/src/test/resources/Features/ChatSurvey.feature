@@ -4,7 +4,7 @@
 
 Feature: Exelon-PHI-ACE feature file
 
-  @Regression @Exelon @ACE @TC_Exel_577766
+  @Regression1 @Exelon @ACE @TC_Exel_577766
   Scenario Outline: Firefox: (Chat Survey) : Initiate bot, click Survey from bot and select YES
     Given firefox browser is open
     When user will be on "<opcoName>"
@@ -33,7 +33,7 @@ Feature: Exelon-PHI-ACE feature file
       | dpl      |
       | pepco    |
 
-  @Regression @Exelon @DPL @TC_Exel_579101
+  @Regression1 @Exelon @DPL @TC_Exel_579101
   Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and select YES
     Given firefox browser is open
     And user will be on DPL homepage
@@ -48,7 +48,7 @@ Feature: Exelon-PHI-ACE feature file
     When type DPL comment
     And click DPL Send
 
-  @Regression @Exelon @Pepco @TC_Exel_579119
+  @Regression1 @Exelon @Pepco @TC_Exel_579119
   Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and select YES
     Given firefox browser is open
     And user will be on Pepco homepage
@@ -65,7 +65,7 @@ Feature: Exelon-PHI-ACE feature file
     And click Pepco Send
 
 
-  @Regression @Exelon @ACE @TC_Exel_577767
+  @Regression1 @Exelon @ACE @TC_Exel_577767
   Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Start another chatGiven firefox browser is open
     Given firefox browser is open
     And user will be on ACE homepage
@@ -81,7 +81,7 @@ Feature: Exelon-PHI-ACE feature file
     And click ACE Send
     Then click ACE start another chat
 
-  @Regression @Exelon @ACE @TC_Exel_577771
+  @Regression1 @Exelon @ACE @TC_Exel_577771
   Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Contact Us
     Given firefox browser is open
     And user will be on ACE homepage
@@ -97,7 +97,7 @@ Feature: Exelon-PHI-ACE feature file
     And click ACE Send
     Then click ACE contact us
 
-  @Regression @Exelon @ACE @TC_Exel_577772
+  @Regression1 @Exelon @ACE @TC_Exel_577772
   Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with login with Oauth
     Given firefox browser is open
     And user will be on ACE homepage
@@ -120,7 +120,7 @@ Feature: Exelon-PHI-ACE feature file
     Then click ACE End chat
 
 
-  @Regression @Exelon @ACE @TC_Exel_577773
+  @Regression1 @Exelon @ACE @TC_Exel_577773
   Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with web login or logout
     Given firefox browser is open
     And user will be on ACE homepage
@@ -142,7 +142,7 @@ Feature: Exelon-PHI-ACE feature file
 
 
 
-  @Regression @Exelon @DPL @TC_Exel_579102
+  @Regression1 @Exelon @DPL @TC_Exel_579102
   Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Start another chat
     Given firefox browser is open
     And user will be on DPL homepage
@@ -158,7 +158,7 @@ Feature: Exelon-PHI-ACE feature file
     And click DPL Send
     Then click DPL start another chat
 
-  @Regression @Exelon @DPL @TC_Exel_579103
+  @Regression1 @Exelon @DPL @TC_Exel_579103
   Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Contact Us
     Given firefox browser is open
     And user will be on DPL homepage
@@ -174,7 +174,7 @@ Feature: Exelon-PHI-ACE feature file
     And click DPL Send
     Then click DPL contact us
 
-  @Regression @Exelon @DPL @TC_Exel_579104
+  @Regression1 @Exelon @DPL @TC_Exel_579104
   Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with login with Oauth
     Given firefox browser is open
     And user will be on DPL homepage
@@ -197,7 +197,7 @@ Feature: Exelon-PHI-ACE feature file
     Then click DPL End chat
 
 
-  @Regression @Exelon @DPL @TC_Exel_579105
+  @Regression1 @Exelon @DPL @TC_Exel_579105
   Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with web login or logout
     Given firefox browser is open
     And user will be on DPL homepage
@@ -219,7 +219,7 @@ Feature: Exelon-PHI-ACE feature file
 
 
 
-  @Regression @Exelon @Pepco @TC_Exel_579120
+  @Regression1 @Exelon @Pepco @TC_Exel_579120
   Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Start another chat
     Given firefox browser is open
     And user will be on Pepco homepage
@@ -236,7 +236,7 @@ Feature: Exelon-PHI-ACE feature file
     And click Pepco Send
     Then click Pepco start another chat
 
-  @Regression @Exelon @Pepco @TC_Exel_579121
+  @Regression1 @Exelon @Pepco @TC_Exel_579121
   Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Contact Us
     Given firefox browser is open
     And user will be on Pepco homepage
@@ -253,7 +253,7 @@ Feature: Exelon-PHI-ACE feature file
     And click Pepco Send
     Then click Pepco contact us
 
-  @Regression @Exelon @Pepco @TC_Exel_579122
+  @Regression1 @Exelon @Pepco @TC_Exel_579122
   Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with login with Oauth
     Given firefox browser is open
     And user will be on Pepco homepage
@@ -277,7 +277,7 @@ Feature: Exelon-PHI-ACE feature file
     Then click Pepco End chat
 
 
-  @Regression @Exelon @Pepco @TC_Exel_579123
+  @Regression1 @Exelon @Pepco @TC_Exel_579123
   Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with web login or logout
     Given firefox browser is open
     And user will be on Pepco homepage
