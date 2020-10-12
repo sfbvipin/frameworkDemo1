@@ -480,8 +480,6 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
-   
-    
     
     @And("type utterance")
     public void type_utterance() throws InterruptedException
@@ -538,8 +536,10 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
     @And ("user deny the authorization request")
-    public void user_deny_the_authorization_request() {
+    public void user_deny_the_authorization_request() throws InterruptedException  {
+        Thread.sleep(3000);
         driver.findElement(By.xpath(denybutton)).click();
+        Thread.sleep(3000);
     }
 
     @Then ("select and click on  bill and paymenets from menu")
@@ -568,9 +568,10 @@ public class genericFunctions extends AllVariables {
 
     @When("select and click start stop or move service")
     public void select_and_click_start_stop_or_move_service() throws InterruptedException {
-    driver.findElement(By.xpath(startstopMove2)).click();
-    Thread.sleep(3000);
+        driver.findElement(By.xpath(startstopMove2)).click();
+        Thread.sleep(3000);
     }
+
     @Then("click start service")
     public void click_start_service() throws InterruptedException
     {
@@ -582,9 +583,8 @@ public class genericFunctions extends AllVariables {
 	@And ("click on start link")
 	public void click_on_start_link() {
 		driver.findElement(By.xpath(startServiceLink)).click();
-
-
 	}
+
 	@And ("click on stop service")
 	public void click_on_stop_service() throws InterruptedException {
 		driver.findElement(By.xpath(stopService)).click();
@@ -698,6 +698,86 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(Takefeedbacksurvey)).click();
         Thread.sleep(5000);
     }
+
+    @Then("user click on {string} mail icon")
+    public void user_click_on_mail_icon(String stropcoName) throws InterruptedException {
+
+        if(stropcoName.equalsIgnoreCase("ace")){
+            driver.findElement(By.xpath(ACEmailicon)).click();
+        } else if (stropcoName.equalsIgnoreCase("dpl")) {
+            driver.findElement(By.xpath(mailicon)).click();
+        } else if (stropcoName.equalsIgnoreCase("pepco")) {
+            driver.findElement(By.xpath(mailicon)).click();
+        }
+        Thread.sleep(5000);
+
+    }
+
+    @And("validate if popup with correct text is displayed")
+    public void validate_if_popup_with_correct_text_is_displayed(){
+        String strtext = driver.findElement(By.xpath(PopUpChatTranscript)).getText();
+        assert strtext.equalsIgnoreCase(mailText);
+    }
+
+    @When("input {string} format")
+    public void input_email_id_format(String strid) throws InterruptedException {
+        driver.findElement(By.xpath(emailid)).sendKeys(strid);
+        Thread.sleep(3000);
+    }
+
+    @Then("click submit")
+    public void click_submit() throws InterruptedException {
+        driver.findElement(By.xpath(mailsubmit)).click();
+        Thread.sleep(3000);
+    }
+
+    @And("validate if popup with correct {string} is displayed")
+    public void validate_if_popup_with_correct_text_is_displayed(String strid) throws InterruptedException {
+        String strtext = driver.findElement(By.xpath(PopUpMailmsg)).getText();
+        assert strtext.equalsIgnoreCase(mailmsgText);
+
+        String strtext2 = driver.findElement(By.xpath(popupmailid)).getText();
+        System.out.println("Mail id printed on popup is :" + strtext2);
+        assert strtext2.equalsIgnoreCase(strid);
+    }
+
+    @Then("click ok for mail confirmation")
+    public void click_ok_for_mail_confirmation() throws InterruptedException {
+        driver.findElement(By.xpath(mailsubmitconfirm)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("click cancel")
+    public void click_cancel() throws InterruptedException {
+        driver.findElement(By.xpath(Cancelbutton)).click();
+        Thread.sleep(3000);
+    }
+
+    @And("validate if popup with invalid is displayed")
+    public void validate_if_popup_with_invalid_is_displayed() throws InterruptedException {
+        String strtext = driver.findElement(By.xpath(popupinvalidmailid)).getText();
+        assert strtext.equalsIgnoreCase(popupinvalidtext);
+    }
+
+    @And("type utterance for chat transcription")
+    public void type_utterance_for_chat_transcription() throws InterruptedException {
+        driver.findElement(By.xpath(typeutterance)).sendKeys("Record of chat conversation.");
+        Thread.sleep(3000);
+    }
+
+    @Then("click Send")
+    public void click_ACE_Send() throws InterruptedException {
+        driver.findElement(By.xpath(sendicon)).click();
+        Thread.sleep(5000);
+    }
+
+    @Then("validate response")
+    public void validate_response() throws InterruptedException {
+        String strtext = driver.findElement(By.xpath(odachatmessageContent)).getText();
+        System.out.println(strtext);
+        assert strtext.equalsIgnoreCase(strResponseUtterance);
+    }
+
     public void Wait_Until_element_Visibility(String xpath)  throws InterruptedException{
         WebDriverWait wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));

@@ -128,5 +128,21 @@ public class AllVariables {
     public static String nothanks = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String Yes = "//div[8]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
     public static String Takefeedbacksurvey = "//div[contains(text(),'Take Feedback Survey')]";
+    public static String ACEmailicon = "//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]";
+    public static String mailicon = "//body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]";
+    public static String PopUpChatTranscript = "//p[contains(text(),'Want a copy of this chat transcript? Enter your email address.')]";
+    public static String mailText="Want a copy of this chat transcript? Enter your email address.";
+    public static String emailid = "//input[@id='emailID']";
+    public static String mailsubmit =  "//button[@id='submitButton']";
+    public static String PopUpMailmsg = "//p[contains(text(),'The chat transcript will be sent to')]";
+    public static String mailmsgText="The chat transcript will be sent to";
+    public static String popupmailid = "//p[@id='emailSentConfirm']";
+    public static String mailsubmitconfirm =  "//button[@id='submitConfirmButton']";
+    public static String Cancelbutton = "//button[@id='cancelButton']";
+    public static String popupinvalidmailid = "//p[@id='emailInvalid']";
+    public static String popupinvalidtext ="Invalid email address. Please try again.";
+    public static String typeutterance = "//textarea[@placeholder='Type a message....']";
+    public static String odachatmessageContent = "//div[@class='oda-chat-message-content']";
+    public static String strResponseUtterance = "Want a copy of the chat transcript? You can select the icon next to the chat menu and enter your email address.";
 
 }
