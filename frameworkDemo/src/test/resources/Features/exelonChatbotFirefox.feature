@@ -748,7 +748,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then chatbot will be open
     And user click no thanks i will continue
     When select and click start stop or move service
-    Then click move service
+    Then user click move service
     And click on move link
     And close the browser
 
@@ -762,7 +762,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user click no thanks i will continue
     When select and click start stop or move service
     Then click start service
-    Then user click move service after thanks
+    Then user click move service
     And user click yes
     Then user click no thanks
     And close the browser
@@ -790,7 +790,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user click no thanks i will continue
     #Then user will type stop service
     #Then click on send
-    And user click on stop service
+    Then click Stop service
     Then user click move service
     And user click yes
     Then user click no thanks
