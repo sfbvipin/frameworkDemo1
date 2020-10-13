@@ -802,6 +802,8 @@ public class genericFunctions extends AllVariables {
     }
 
     public void wait_for_time(String strXpath, Integer intTime) throws InterruptedException{
+        WebDriverWait wait = new WebDriverWait(driver, 90);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(strXpath))));
         WebElement selement=driver.findElement(By.xpath(strXpath));
         if (!selement.isDisplayed()){
             Thread.sleep(intTime);
@@ -809,7 +811,7 @@ public class genericFunctions extends AllVariables {
     }
 
     public void Wait_Until_element_Visibility(String xpath)  throws InterruptedException{
-        WebDriverWait wait = new WebDriverWait(driver, 40);
+        WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
         WebElement elem = driver.findElement(By.xpath(xpath));
         if (!elem.isDisplayed()) {
