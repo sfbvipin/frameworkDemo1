@@ -746,10 +746,11 @@ Feature: Feature to test exelon chatbot application test cases
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
-    And user click no thanks i will continue
-    When select and click start stop or move service
+    And user click on menu icon
+    Then click on Start Stop or Move Service
     Then user click move service
     And click on move link
+    Then user will redirect to Move service page
     And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515753 @TC_Exel_047     @Khushboo
@@ -759,43 +760,50 @@ Feature: Feature to test exelon chatbot application test cases
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
-    And user click no thanks i will continue
-    When select and click start stop or move service
-    Then click start service
+    And user click on menu icon
+    Then click on Start Stop or Move Service
     Then user click move service
     And user click yes
     Then user click no thanks
     And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515759 @TC_Exel_048     @Khushboo
-  Scenario: Firefox:Initiating the Chat-Bot and type start service
+  Scenario Outline: Firefox:Initiating the Chat-Bot and type start service
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click no thanks i will continue
-    Then user will type start service
+    And type "<utterance>" for chat
+    Then click Send
     And click on close chat icon
     Then select yes to close chat
     And close the browser
 
+    Examples:
+      | utterance         |
+      | Start Service     |
+
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515763 @TC_Exel_049     @Khushboo
-  Scenario: Firefox: Initiating the ChatBot and opt stopping a service from user input (utterances) option
+  Scenario Outline: Firefox: Initiating the ChatBot and opt services from user input (utterances) option
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
-    And user click no thanks i will continue
-    #Then user will type stop service
-    #Then click on send
-    Then click Stop service
-    Then user click move service
-    And user click yes
-    Then user click no thanks
+    And user click on menu icon
+    Then click on Start Stop or Move Service
+    And type "<utterance>" for chat
+    Then click Send
     And click on close chat icon
     Then select yes to close chat
+
+    Examples:
+      | utterance         |
+      | Stop service      |
+      | Move Service      |
+      | Start Service     |
 
   @Regression @Firefox @Exelon @Day5 @Parameterization @TC_Exel_050     @Khushboo
   Scenario Outline: Firefox: Login and click pay bill
