@@ -765,6 +765,12 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
+    @And("type {string} for chat")
+    public void type_utterance_for_chat(String strutterance) throws InterruptedException {
+        driver.findElement(By.xpath(typeutterance)).sendKeys(strutterance);
+        Thread.sleep(3000);
+    }
+
     @Then("click Send")
     public void click_ACE_Send() throws InterruptedException {
         driver.findElement(By.xpath(sendicon)).click();
@@ -776,6 +782,29 @@ public class genericFunctions extends AllVariables {
         String strtext = driver.findElement(By.xpath(odachatmessageContent)).getText();
         System.out.println(strtext);
         assert strtext.equalsIgnoreCase(strResponseUtterance);
+    }
+
+    @And("click on move link")
+    public void click_on_move_link() throws InterruptedException {
+        driver.findElement(By.xpath(startOnlineLink)).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("user will redirect to Move service page")
+    public void user_will_redirect_to_move_Service_page() throws InterruptedException {
+        Set<String> handle=driver.getWindowHandles();
+        Iterator<String> it= handle.iterator();
+        String parantwindow=it.next();
+        System.out.println("Inside Step: Parent Window handler is " + parantwindow);
+        String childwindow=it.next();
+        System.out.println("Inside Step: Child Window handler is " + childwindow);
+        driver.switchTo().window(childwindow);
+        Thread.sleep(8000);
+        String strtext = driver.findElement(By.xpath(moveServiceWindow)).getText();
+        System.out.println(strtext);
+        assert strtext.equalsIgnoreCase(strMoveWindow);
+        driver.close();
+        driver.switchTo().window(parantwindow);
     }
 
     public void Wait_Until_element_Visibility(String xpath)  throws InterruptedException{

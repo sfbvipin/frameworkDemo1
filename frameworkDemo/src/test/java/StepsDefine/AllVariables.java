@@ -144,5 +144,8 @@ public class AllVariables {
     public static String typeutterance = "//textarea[@placeholder='Type a message....']";
     public static String odachatmessageContent = "//div[@class='oda-chat-message-content']";
     public static String strResponseUtterance = "Want a copy of the chat transcript? You can select the icon next to the chat menu and enter your email address.";
+    public static String moveServiceWindow = "//div[@class='exc-page-content']//h1[contains(text(),'Move Service')]";
+    public static String strMoveWindow = "Move Service";
+    public static String startOnlineLink="//a[contains(text(),'Get started online.')]";
 
 }
