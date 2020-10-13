@@ -27,10 +27,13 @@ Feature: Feature to test Hello Sign API cases
     And verify response body for verify account
 
   @Regression @Basic1 @API @HelloSIgn @TC_HCM_004
-  Scenario: API: send get request for user account wrong credentials
+  Scenario Outline: API: send get request for user account wrong credentials
     Given Send get API Request for wrong user
-    Then validate response code
-    And verify response body for Get Account
+    Then validate <response_code>
+
+    Examples:
+      | response_code |
+      | 401           |
 
   @Regression @Basic1 @API @HelloSIgn @TC_HCM_005
   Scenario: API: Verify team details
