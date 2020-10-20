@@ -41,6 +41,7 @@ public class AllVariables {
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String closechatbot = "//i[@class='fa fa-times']";
     public static String yesbutton="//button[@id='yesButton']";
+    public static String endChatButton = "//button[@id='endButton']";
     public static String selectacoount="//tr[1]//td[8]//span[1]//span[1]//button[1]//span[1]";
 
     public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";

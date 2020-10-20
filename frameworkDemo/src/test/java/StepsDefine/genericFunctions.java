@@ -304,7 +304,7 @@ public class genericFunctions extends AllVariables {
     }
     @Then("select yes to close chat")
     public void select_yes_to_close_chat() throws InterruptedException {
-        driver.findElement(By.xpath(yesbutton)).click();
+        driver.findElement(By.xpath(endChatButton)).click();
         Thread.sleep(3000);
         driver.close();
     }
@@ -804,7 +804,7 @@ public class genericFunctions extends AllVariables {
     public void wait_for_time(String strXpath, Integer intTime) throws InterruptedException{
         WebDriverWait wait = new WebDriverWait(driver, 90);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(strXpath))));
-        WebElement selement=driver.findElement(By.xpath(strXpath));
+        WebElement selement = driver.findElement(By.xpath(strXpath));
         if (!selement.isDisplayed()){
             Thread.sleep(intTime);
         }
