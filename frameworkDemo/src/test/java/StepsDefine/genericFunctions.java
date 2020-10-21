@@ -789,9 +789,9 @@ public class genericFunctions extends AllVariables {
         Set<String> handle=driver.getWindowHandles();
         Iterator<String> it= handle.iterator();
         String parantwindow=it.next();
-        System.out.println("Inside Step: Parent Window handler is " + parantwindow);
+        System.out.println("SHARP Inside Step: Parent Window handler is " + parantwindow);
         String childwindow=it.next();
-        System.out.println("Inside Step: Child Window handler is " + childwindow);
+        System.out.println("SHARP Inside Step: Child Window handler is " + childwindow);
         driver.switchTo().window(childwindow);
         wait_for_time(moveServiceWindow,8000);
         String strtext = driver.findElement(By.xpath(moveServiceWindow)).getText();
@@ -802,6 +802,7 @@ public class genericFunctions extends AllVariables {
     }
 
     public void wait_for_time(String strXpath, Integer intTime) throws InterruptedException{
+        Thread.sleep(intTime);
         WebDriverWait wait = new WebDriverWait(driver, 90);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(strXpath))));
         WebElement selement = driver.findElement(By.xpath(strXpath));
