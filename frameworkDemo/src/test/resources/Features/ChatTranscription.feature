@@ -56,9 +56,9 @@
 
       Examples:
         | opcoName | email_id                 |
-        | ace      | QA@sofbang.com           |
-        | dpl      | QA@sofbang.com           |
-        | pepco    | QA@sofbang.com           |
+        | ace      | sohail.abbas@sofbang.com |
+        | dpl      | sohail.abbas@sofbang.com |
+        | pepco    | sohail.abbas@sofbang.com |
 
 
     @Regression @Exelon @ChatTranscription @TC_Exel_574927
