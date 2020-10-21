@@ -42,7 +42,6 @@
 					<forkMode>perthread</forkMode>
 					<reuseForks>true</reuseForks>
 					<threadCount>2</threadCount>
-					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<includes>
 						<include>**/*Runner.java</include>
 					</includes>
