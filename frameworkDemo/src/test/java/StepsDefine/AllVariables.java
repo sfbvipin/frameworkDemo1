@@ -14,7 +14,7 @@ public class AllVariables {
     public static String geckoDriverinfo = "webdriver.gecko.driver";
     public static String chromeDriverinfo = "webdriver.chrome.driver";
 
-    public static String browserOpenMessage = "Browser Launched: Proceeding to internal steps";
+    public static String browserOpenMessage = "SHARP: Browser Launched, Proceeding to internal steps";
     public static String browserHomePageMessage = "SHARP launched home page";
 
     public static String strUserName = "PATTI@47";

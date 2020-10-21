@@ -1,6 +1,6 @@
-#Author=Parul
-#Date=17/09/2020
-#Description=Creating the automation PHI-R2
+#Owner        : SHARP
+#Author       : QA Team
+#Description  : This is feature file for Exelon Chatbot Chat Transcription
 
   Feature: Exelon-PHI-ACE feature file
 
@@ -56,9 +56,9 @@
 
       Examples:
         | opcoName | email_id                 |
-        | ace      | sohail.abbas@sofbang.com |
-        | dpl      | sohail.abbas@sofbang.com |
-        | pepco    | sohail.abbas@sofbang.com |
+        | ace      | QA@sofbang.com           |
+        | dpl      | QA@sofbang.com           |
+        | pepco    | QA@sofbang.com           |
 
 
     @Regression @Exelon @ChatTranscription @TC_Exel_574927
