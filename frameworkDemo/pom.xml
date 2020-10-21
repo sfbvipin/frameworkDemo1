@@ -42,7 +42,6 @@
 					<forkMode>perthread</forkMode>
 					<reuseForks>true</reuseForks>
 					<threadCount>2</threadCount>
-					<useSystemClassLoader>false</useSystemClassLoader>
 					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<includes>
 						<include>**/*Runner.java</include>
@@ -50,20 +49,11 @@
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
-
-			
-
 		</plugins>
 	</build>
 
 	<!-- Latest Cucumber JVM Reports Plugin -->
-
-	
-
-
-
 	<dependencies>
-		
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
@@ -86,16 +76,12 @@
 			<artifactId>maven-surefire-plugin</artifactId>
 			<version>3.0.0-M5</version>
 		</dependency>
-
-
-
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java8 -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>6.4.0</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -122,17 +108,11 @@
 			<scope>test</scope>
 		</dependency>-->
 
-
-
-
-
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>
 			<version>3.8.1</version>
 		</dependency>
-
-
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -159,7 +139,6 @@
 			</exclusions>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -178,7 +157,6 @@
             <version>1.4.3</version>
             <scope>test</scope>
         </dependency>
-
 
 		<!-- Maven repository and dependency for API Automation-->
 		<dependency>
@@ -233,5 +211,4 @@
 			<version>4.1.2</version>
 		</dependency>
 	</dependencies>
-
 </project>
