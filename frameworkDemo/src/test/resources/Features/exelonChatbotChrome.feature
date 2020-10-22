@@ -55,7 +55,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Basic @Chrome @Exelon @Day0 @TC_Exel_003
+  @Regression1 @Chrome @Exelon @Day0 @TC_Exel_003
   Scenario: Chrome: Open chat bot and start service
     Given chrome browser is open
     And user will be on exelon homepage

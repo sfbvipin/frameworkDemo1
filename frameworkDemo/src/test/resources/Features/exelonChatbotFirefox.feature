@@ -60,7 +60,7 @@ Feature: Feature to test exelon chatbot application test cases
       | PATTI@47 | Password1 |
       | DARICE40 | Password1 |
 
-  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_003
+  @Regression @Firefox @Exelon @Day0 @TC_Exel_003
   Scenario: Firefox: Open chat bot and start service
     Given firefox browser is open
     And user will be on exelon homepage
