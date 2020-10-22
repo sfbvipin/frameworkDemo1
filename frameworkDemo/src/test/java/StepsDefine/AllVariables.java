@@ -147,8 +147,12 @@ public class AllVariables {
     public static String strResponseUtterance = "Want a copy of the chat transcript? You can select the icon next to the chat menu and enter your email address.";
     public static String moveServiceWindow = "//div[@class='exc-page-content']//h1[contains(text(),'Move Service')]";
     public static String strMoveWindow = "Move Service";
-
     public static String startOnlineLink="//a[contains(text(),'Get started online.')]";
+    public static String surveyRating1 = "//span[@id='star1']";
+    public static String surveyRating2 = "//span[@id='star2']";
+    public static String surveyRating3 = "//span[@id='star3']";
+    public static String surveyRating4 = "//span[@id='star4']";
+    public static String surveyRating5 = "//span[@id='star5']";
 
 
 }

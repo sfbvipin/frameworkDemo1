@@ -784,6 +784,22 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
+    @And("click survey rating as {string}")
+    public void click_survey_rating_as(String strrating) throws InterruptedException {
+        if(strrating.equalsIgnoreCase("one")){
+            driver.findElement(By.xpath(surveyRating1)).click();
+        } else if (strrating.equalsIgnoreCase("two")) {
+            driver.findElement(By.xpath(surveyRating2)).click();
+        } else if (strrating.equalsIgnoreCase("three")) {
+            driver.findElement(By.xpath(surveyRating3)).click();
+        } else if (strrating.equalsIgnoreCase("four")) {
+            driver.findElement(By.xpath(surveyRating4)).click();
+        } else if (strrating.equalsIgnoreCase("five")) {
+            driver.findElement(By.xpath(surveyRating5)).click();
+        }
+        Thread.sleep(5000);
+    }
+
     @Then("user will redirect to Move service page")
     public void user_will_redirect_to_move_Service_page() throws InterruptedException {
         Set<String> handle=driver.getWindowHandles();

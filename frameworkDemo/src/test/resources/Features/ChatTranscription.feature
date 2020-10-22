@@ -39,7 +39,7 @@
         | dpl      |
         | pepco    |
 
-    @Regression @Exelon @ChatTranscription @TC_Exel_574926
+    @Regression @Basic @Exelon @ChatTranscription @TC_Exel_574926
     Scenario Outline: Firefox: Initiate bot, click mail icon and click submit with valid email id format
       Given firefox browser is open
       When user will be on "<opcoName>"
