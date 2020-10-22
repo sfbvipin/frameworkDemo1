@@ -11,7 +11,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         features={"classpath:features"}
         ,glue= {"StepsDefine","cucumberHooks"}
         ,monochrome=true
-        ,tags = "@Regression"
+        ,tags = "@Basic"
         ,plugin = {"cucumberHooks.customReportListener"})
 
 @Test
@@ -22,5 +22,4 @@ public class sharpRunner extends AbstractTestNGCucumberTests{
         return super.scenarios();
     }
 }
-
 
