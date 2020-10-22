@@ -5,8 +5,8 @@
 Feature: Feature to test exelon chatbot application test cases
 
 
-  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_001
-  Scenario: Firefox: Open exelon web application, load chatbot and navigate through menus
+  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_0001
+  Scenario Outline: Firefox: Open exelon web application, load chatbot and navigate through menus
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -18,9 +18,17 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on home and business in bot
     And click on private solar option
     Then select yes for confirmation
-    And select no Thanks to close chat
+    And click survey rating as "<SurveyRating>"
     And click on close chat icon
     Then select yes to close chat
+
+    Examples:
+      | SurveyRating |
+      | one          |
+      | two          |
+      | three        |
+      | four         |
+      | five         |
 
 
   @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_002
@@ -66,7 +74,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_004
+  @Regression @Firefox @Exelon @Day0 @TC_Exel_004
   Scenario: Firefox: Open chat bot and move service
     Given firefox browser is open
     And user will be on exelon homepage
@@ -141,7 +149,8 @@ Feature: Feature to test exelon chatbot application test cases
     And user click on menu icon
     Then click on more button in bot
     And Click on Budget Billing
-    Then click on learn more about budget billing
+    #Then click on learn more about budget billing
+    Then click on Check Eligibility
     And click on sign in
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"

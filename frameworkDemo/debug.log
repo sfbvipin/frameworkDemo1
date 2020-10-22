@@ -10,3 +10,5 @@
 [0922/130112.843:ERROR:exception_snapshot_win.cc(99)] thread ID 17112 not found in process
 [0922/130115.572:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0922/130115.572:ERROR:exception_snapshot_win.cc(99)] thread ID 28340 not found in process
+[1022/142635.292:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1022/142836.580:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\SOHAIL~1\AppData\Local\Temp\scoped_dir13440_476458152\Crashpad\attachments\7d48ff30-5eca-4d58-b447-b8c8344ae1c3: The system cannot find the path specified. (0x3)

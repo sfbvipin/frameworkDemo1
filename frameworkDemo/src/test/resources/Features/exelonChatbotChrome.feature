@@ -6,7 +6,7 @@ Feature: Feature to test exelon chatbot application test cases
 
 
 @Regression1 @Basic @Chrome @Exelon @Day0 @TC_Exel_001
-  Scenario: Chrome: Open exelon web application, load chatbot and navigate through menus
+  Scenario Outline: Chrome: Open exelon web application, load chatbot and navigate through menus
     Given chrome browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -18,9 +18,17 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on home and business in bot
     And click on private solar option
     Then select yes for confirmation
-    And select no Thanks to close chat
+    And click survey rating as "<SurveyRating>"
     And click on close chat icon
     Then select yes to close chat
+
+    Examples:
+      | SurveyRating |
+      | one          |
+      | two          |
+      | three        |
+      | four         |
+      | five         |
 
  @Regression1 @Basic @Chrome @Exelon @Day0 @Sanity @TC_Exel_0002
   Scenario: Chrome: Open chat bot and pay bill via chat
@@ -61,7 +69,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Basic @Chrome @Exelon @Day0 @TC_Exel_004
+  @Regression1 @Chrome @Exelon @Day0 @TC_Exel_004
   Scenario: Chrome: Open chat bot and move service
     Given chrome browser is open
     And user will be on exelon homepage
