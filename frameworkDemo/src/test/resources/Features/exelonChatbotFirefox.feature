@@ -149,7 +149,8 @@ Feature: Feature to test exelon chatbot application test cases
     And user click on menu icon
     Then click on more button in bot
     And Click on Budget Billing
-    Then click on learn more about budget billing
+    #Then click on learn more about budget billing
+    Then click on Check Eligibility
     And click on sign in
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"

@@ -69,6 +69,7 @@ public class AllVariables {
     public static String startServiceLink="//a[contains(text(),'pepco.com')]";
     public static String budgetbilling="//div[contains(text(),'Budget Billing')]";
     public static String learnmoreaboutbudgetbilling="//div[contains(text(),'Learn more about Budget Billing')]";
+    public static String checkEligibility="//div[contains(text(),'Check Eligibility')]";
 
     public static String moveServicefromnothanks="//div[5]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String signinafterbudgetbilling="//body/div[4]/div[1]/div[2]/div[1]/div[2]/div[7]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]/div[1]";
@@ -87,8 +88,8 @@ public class AllVariables {
 
     public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
 
-    public static String username="//input[@name='username']";
-    public static String password="//input[@name='password']";
+    public static String username="//input[@name='Username']";
+    public static String password="//input[@name='Password']";
     public static String webusername="//div[contains(@class,'form-group')]//input[@id='Username']";
     public static String webpassword="//div[contains(@class,'form-group')]//input[@id='Password']";
 
@@ -128,6 +129,7 @@ public class AllVariables {
     public static String PepcoUrl = "https://aztest.pepco.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
     public static String nothanks = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String Yes = "//div[8]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
+    public static String Yes2 = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
     public static String Takefeedbacksurvey = "//div[contains(text(),'Take Feedback Survey')]";
     public static String ACEmailicon = "//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]";
     public static String mailicon = "//body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]";
