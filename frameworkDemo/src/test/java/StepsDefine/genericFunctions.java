@@ -216,43 +216,38 @@ public class genericFunctions extends AllVariables {
 
     @Then("user will redirect to login page")
     public void user_will_redirect_to_login_page() throws InterruptedException {
-        //wait_for_time(username,16000);
+        //wait_for_time(websigninusername,16000);
         Set<String> handle=driver.getWindowHandles();
         Iterator<String> it= handle.iterator();
         String parantwindow=it.next();
-        System.out.println("Inside Step: Parent Window handler is " + parantwindow);
+        System.out.println("SHARP: Inside Step, Parent Window handler is " + parantwindow);
         String childwindow=it.next();
-        System.out.println("Inside Step: Child Window handler is " + childwindow);
+        System.out.println("SHARP: Inside Step, Child Window handler is " + childwindow);
         driver.switchTo().window(childwindow);
 
-        WebDriverWait wait = new WebDriverWait(driver, 90);
-        wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
-
-        wait_for_time(username,8000);
-        Wait_Until_element_Visibility(username);
+        wait_for_time(websigninusername,16000);
+        //Wait_Until_element_Visibility(websigninusername);
     }
 
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
-        WebDriverWait wait = new WebDriverWait(driver, 90);
-        wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
-        wait_for_time(username,5000);
-        driver.findElement(By.xpath(username)).sendKeys(strUserName);
+        wait_for_time(websigninusername,5000);
+        driver.findElement(By.xpath(websigninusername)).sendKeys(strUserName);
     }
 
     @And("user enters password")
     public void user_enters_password() throws InterruptedException
     {
-        wait_for_time(password,2000);
-        driver.findElement(By.xpath(password)).sendKeys(strPassword);
+        wait_for_time(passwordforweb,2000);
+        driver.findElement(By.xpath(passwordforweb)).sendKeys(strPassword);
         Thread.sleep(2000);
     }
 
     @Then("click on sign in for Authentication")
     public void click_on_sign_in_for_Authentication() throws InterruptedException {
         wait_for_time(btnSignIn,4000);
-        Wait_Until_element_Visibility(btnSignIn);
+        //Wait_Until_element_Visibility(btnSignIn);
         driver.findElement(By.xpath(btnSignIn)).click();
         Thread.sleep(3000);
         driver.switchTo().activeElement().click();
@@ -636,31 +631,29 @@ public class genericFunctions extends AllVariables {
     }
     @When ("user enters web login id")
     public void user_enters_web_login_id() throws InterruptedException {
-    	driver.findElement(By.xpath(username)).sendKeys(strUserName);
+    	driver.findElement(By.xpath(websigninusername)).sendKeys(strUserName);
     	Thread.sleep(3000);
     }
     @And ("user enters web password")
     public void user_enters_web_password() throws InterruptedException {
-    	driver.findElement(By.xpath(password)).sendKeys(strPassword);
+    	driver.findElement(By.xpath(passwordforweb)).sendKeys(strPassword);
     	Thread.sleep(2000);
     }
 
 
     @When ("user enters {string} and {string}")
     public void user_enters(String str1, String str2) throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, 90);
-        wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
 
-        wait_for_time(username,10000);
-        Wait_Until_element_Visibility(username);
-        driver.findElement(By.xpath(username)).sendKeys(str1);
-        Wait_Until_element_Visibility(password);
-        driver.findElement(By.xpath(password)).sendKeys(str2);
+        wait_for_time(websigninusername,10000);
+        //Wait_Until_element_Visibility(websigninusername);
+        driver.findElement(By.xpath(websigninusername)).sendKeys(str1);
+        Wait_Until_element_Visibility(passwordforweb);
+        driver.findElement(By.xpath(passwordforweb)).sendKeys(str2);
     }
 
     @And ("user enters {string}")
     public void user_enter(String str2) throws InterruptedException {
-        driver.findElement(By.xpath(password)).sendKeys(str2);
+        driver.findElement(By.xpath(passwordforweb)).sendKeys(str2);
         Thread.sleep(3000);
     }
 
@@ -855,6 +848,7 @@ public class genericFunctions extends AllVariables {
     }
 
     public void Wait_Until_element_Visibility(String xpath)  throws InterruptedException{
+        Thread.sleep(10000);
         WebDriverWait wait = new WebDriverWait(driver, 120);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
         WebElement elem = driver.findElement(By.xpath(xpath));
