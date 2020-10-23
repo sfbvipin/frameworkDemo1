@@ -136,14 +136,14 @@
                   </a> <!-- runScenario("Firefox: Open chat bot and pay bill via chat", "Optional[Feature to test exelon chatbot application...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Firefox: Open chat bot and pay bill via chat", "Optional[Feature to test exelon chatbot application test cases]")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //img[@class=&apos;oda-chat-button-icon&apos;]
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),&apos;474 MAPLE AVE DIVIDING CREEK NJ 08315&apos;)]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 17116, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 907b0685-98bd-472a-8a8f-42e148a853cd
-*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 18688, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ae4a0fb0-4a6b-4273-b9a9-ed58f2d45fdd
+*** Element info: {Using=xpath, value=//div[contains(text(),&apos;474 MAPLE AVE DIVIDING CREEK NJ 08315&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -154,8 +154,8 @@ Session ID: 907b0685-98bd-472a-8a8f-42e148a853cd
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_will_locate_the_chatbot_icon(genericFunctions.java:68)
-	at ✽.user will locate the chatbot icon(classpath:features/exelonChatbotFirefox.feature:38)
+	at StepsDefine.genericFunctions.select_any_of_the_registered_address_for_payment(genericFunctions.java:291)
+	at ✽.select any of the registered address for payment(classpath:features/exelonChatbotFirefox.feature:51)
 ... Removed 4 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -168,14 +168,14 @@ Session ID: 907b0685-98bd-472a-8a8f-42e148a853cd
                   </a> <!-- runScenario("Firefox: Open chat bot and pay bill via chat", "Optional[Feature to test exelon chatbot application...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Firefox: Open chat bot and pay bill via chat", "Optional[Feature to test exelon chatbot application test cases]")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //img[@class=&apos;oda-chat-button-icon&apos;]
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),&apos;474 MAPLE AVE DIVIDING CREEK NJ 08315&apos;)]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 30392, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c8e04b73-641f-4df9-9c29-9a306e04bd52
-*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 236, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7836632e-6cd5-43ec-a354-bfd1d32ffd00
+*** Element info: {Using=xpath, value=//div[contains(text(),&apos;474 MAPLE AVE DIVIDING CREEK NJ 08315&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -186,8 +186,8 @@ Session ID: c8e04b73-641f-4df9-9c29-9a306e04bd52
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_will_locate_the_chatbot_icon(genericFunctions.java:68)
-	at ✽.user will locate the chatbot icon(classpath:features/exelonChatbotFirefox.feature:38)
+	at StepsDefine.genericFunctions.select_any_of_the_registered_address_for_payment(genericFunctions.java:291)
+	at ✽.select any of the registered address for payment(classpath:features/exelonChatbotFirefox.feature:51)
 ... Removed 4 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -259,16 +259,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(0, 3, 24700);
+data.setCell(0, 3, 92740);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(1, 3, 22320);
+data.setCell(1, 3, 87772);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -303,17 +303,17 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Firefox: Open chat bot and pay bill via chat", "Optional[Feature to test exelon chatbot application...)</span>
-                <span class="method-start">455 ms</span>
+                <span class="method-start">447 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Firefox: Open chat bot and pay bill via chat", "Optional[Feature to test exelon chatbot application...)</span>
-                <span class="method-start">25160 ms</span>
+                <span class="method-start">88224 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">47481 ms</span>
+                <span class="method-start">180970 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

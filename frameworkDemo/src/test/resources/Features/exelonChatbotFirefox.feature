@@ -31,7 +31,7 @@ Feature: Feature to test exelon chatbot application test cases
       | five         |
 
 
-  @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_002
+  @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_0002
   Scenario Outline: Firefox: Open chat bot and pay bill via chat
     Given firefox browser is open
     And user will be on exelon homepage
