@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -14,8 +16,11 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.net.UrlChecker;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 
@@ -26,12 +31,15 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.Assertion;
 
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 
 public class genericFunctions extends AllVariables {
     AllVariables alv= new AllVariables();
     public static WebDriver driver =null;
     public static final String TASKLIST = "tasklist";
     public static final String KILL = "taskkill /F /IM ";
+    private WebDriver driver1 = null;
 
     @Given("firefox browser is open")
     public void firefox_browser_is_open() throws Exception {
@@ -39,7 +47,7 @@ public class genericFunctions extends AllVariables {
         fnKillProcess("firefox.exe");
         System.setProperty(geckoDriverinfo , firfoxPath);
         driver =new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, SECONDS);
         //driver.manage().window().maximize();
 
         System.out.println(browserOpenMessage);
@@ -50,7 +58,7 @@ public class genericFunctions extends AllVariables {
         fnKillProcess("chromedriver.exe");
         System.setProperty(chromeDriverinfo, chromePath);
         driver =new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, SECONDS);
 
         System.out.println(browserOpenMessage);
     }
@@ -644,11 +652,11 @@ public class genericFunctions extends AllVariables {
     @When ("user enters {string} and {string}")
     public void user_enters(String str1, String str2) throws InterruptedException {
 
-        wait_for_time(websigninusername,10000);
+        wait_for_time(webusername,10000);
         //Wait_Until_element_Visibility(websigninusername);
-        driver.findElement(By.xpath(websigninusername)).sendKeys(str1);
-        Wait_Until_element_Visibility(passwordforweb);
-        driver.findElement(By.xpath(passwordforweb)).sendKeys(str2);
+        driver.findElement(By.xpath(webusername)).sendKeys(str1);
+        Wait_Until_element_Visibility(webpassword);
+        driver.findElement(By.xpath(webpassword)).sendKeys(str2);
     }
 
     @And ("user enters {string}")
@@ -838,21 +846,17 @@ public class genericFunctions extends AllVariables {
     }
 
     public void wait_for_time(String strXpath, Integer intTime) throws InterruptedException{
-        Thread.sleep(intTime);
-        WebDriverWait wait = new WebDriverWait(driver, 120);
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(strXpath))));
-        WebElement selement = driver.findElement(By.xpath(strXpath));
-        if (!selement.isDisplayed()){
+        List<WebElement> ele = driver.findElements(By.xpath(strXpath));
+        System.out.println("SHARP: Element count for " +strXpath+ " is :" +ele.size());
+        if (ele.size() == 0) {
             Thread.sleep(intTime);
         }
     }
 
     public void Wait_Until_element_Visibility(String xpath)  throws InterruptedException{
-        Thread.sleep(10000);
-        WebDriverWait wait = new WebDriverWait(driver, 120);
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
-        WebElement elem = driver.findElement(By.xpath(xpath));
-        if (!elem.isDisplayed()) {
+        List<WebElement> ele = driver.findElements(By.xpath(xpath));
+        System.out.println("SHARP: Element count for " +xpath+ " is :" +ele.size());
+        if (ele.size() == 0) {
             Thread.sleep(10000);
         }
     }
@@ -861,9 +865,9 @@ public class genericFunctions extends AllVariables {
         String processName = strProcessName;
         if (isProcessRunning(processName)) {
             Runtime.getRuntime().exec(KILL + processName);
-            System.out.println(processName + "is running, hence SHARP killed the process");
+            System.out.println(processName + " is running, hence SHARP killed the process");
         } else {
-            System.out.println(processName + "is not running, SHARP proceeding to next step.");
+            System.out.println(processName + " is not running, SHARP proceeding to next step.");
         }
     }
 
@@ -879,6 +883,41 @@ public class genericFunctions extends AllVariables {
             }
         }
         return false;
+    }
+
+    @Given("create connection")
+    public void create_connection() throws Exception {
+        System.setProperty(chromeDriverinfo, chromePath);
+
+        ChromeOptions opt = new ChromeOptions();
+        opt.setBinary(emersonFileService);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("chromeOptions", opt);
+        capabilities.setBrowserName("chrome");
+
+        driver = new ChromeDriver(capabilities);
+        Thread.sleep(10000);
+
+        System.out.println(browserOpenMessage);
+        Thread.sleep(5000);
+
+        List<WebElement> elements = driver.findElements(By.cssSelector("*"));
+        System.out.println("Number of elements:" +elements.size());
+
+        for (int i=0; i<elements.size();i++) {
+
+            System.out.println(i + "th Elements has tag name : " + elements.get(i).getTagName() + " and class name is : " + elements.get(i).getAttribute("className"));
+            //System.out.println(i + "th Elements has value  :" + elements.get(i).getAttribute("value"));
+        }
+
+        List<WebElement> elements1 = driver.findElements(By.xpath("//div[contains(text(),'login-box md hydrated')]"));
+        System.out.println("Number of elements:" +elements1.size());
+
+        for (int i=0; i<elements1.size();i++) {
+            System.out.println(i + "th Elements has tag name : " + elements1.get(i).getTagName() + " and class name is : " + elements1.get(i).getAttribute("className"));
+        }
+
+
     }
 
 }

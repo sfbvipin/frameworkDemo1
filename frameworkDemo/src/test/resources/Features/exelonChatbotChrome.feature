@@ -30,7 +30,7 @@ Feature: Feature to test exelon chatbot application test cases
       | four         |
       | five         |
 
- @Regression1 @Basic @Chrome @Exelon @Day0 @Sanity @TC_Exel_0002
+ @Regression1 @Basic @Chrome @Exelon @Day0 @Sanity @TC_Exel_002
   Scenario: Chrome: Open chat bot and pay bill via chat
     Given chrome browser is open
     And user will be on exelon homepage

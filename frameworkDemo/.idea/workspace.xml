@@ -57,10 +57,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/QA/Automation/frameworkDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/Features" />
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\resources\Features" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sohail Abbas\Documents\GitHub\frameworkDemo1\frameworkDemo\src\test\resources\Drivers" />
     </key>
