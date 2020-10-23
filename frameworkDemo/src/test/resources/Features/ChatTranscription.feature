@@ -4,7 +4,7 @@
 
   Feature: Exelon-PHI-ACE feature file
 
-  @Regression @Exelon @ChatTranscription @TC_Exel_574921
+  @Regression @Basic @Exelon @ChatTranscription @TC_Exel_574921
   Scenario Outline: Firefox: Initiate bot and click mail icon
     Given firefox browser is open
     When user will be on "<opcoName>"
