@@ -1,7 +1,9 @@
 package StepsDefine;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -28,10 +30,13 @@ import org.testng.asserts.Assertion;
 public class genericFunctions extends AllVariables {
     AllVariables alv= new AllVariables();
     public static WebDriver driver =null;
-
+    public static final String TASKLIST = "tasklist";
+    public static final String KILL = "taskkill /F /IM ";
 
     @Given("firefox browser is open")
-    public void firefox_browser_is_open() {
+    public void firefox_browser_is_open() throws Exception {
+        fnKillProcess("geckodriver.exe");
+        fnKillProcess("firefox.exe");
         System.setProperty(geckoDriverinfo , firfoxPath);
         driver =new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
@@ -41,7 +46,8 @@ public class genericFunctions extends AllVariables {
     }
 
     @Given("chrome browser is open")
-    public void chrome_browser_is_open() {
+    public void chrome_browser_is_open() throws Exception {
+        fnKillProcess("chromedriver.exe");
         System.setProperty(chromeDriverinfo, chromePath);
         driver =new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
@@ -210,7 +216,7 @@ public class genericFunctions extends AllVariables {
 
     @Then("user will redirect to login page")
     public void user_will_redirect_to_login_page() throws InterruptedException {
-        wait_for_time(username,16000);
+        //wait_for_time(username,16000);
         Set<String> handle=driver.getWindowHandles();
         Iterator<String> it= handle.iterator();
         String parantwindow=it.next();
@@ -218,6 +224,10 @@ public class genericFunctions extends AllVariables {
         String childwindow=it.next();
         System.out.println("Inside Step: Child Window handler is " + childwindow);
         driver.switchTo().window(childwindow);
+
+        WebDriverWait wait = new WebDriverWait(driver, 90);
+        wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
+
         wait_for_time(username,8000);
         Wait_Until_element_Visibility(username);
     }
@@ -225,6 +235,8 @@ public class genericFunctions extends AllVariables {
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
+        WebDriverWait wait = new WebDriverWait(driver, 90);
+        wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
         wait_for_time(username,5000);
         driver.findElement(By.xpath(username)).sendKeys(strUserName);
     }
@@ -522,10 +534,10 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
-    @ And ("user will be on exelon web homepage")
-    public void  user_will_be_on_exelon_web_homepage()
-    {
+    @And ("user will be on exelon web homepage")
+    public void  user_will_be_on_exelon_web_homepage() throws InterruptedException {
         driver.switchTo().activeElement().click();
+        Thread.sleep(3000);
     }
 
     @Then ("user will click on contact us")
@@ -636,6 +648,9 @@ public class genericFunctions extends AllVariables {
 
     @When ("user enters {string} and {string}")
     public void user_enters(String str1, String str2) throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 90);
+        wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
+
         wait_for_time(username,10000);
         Wait_Until_element_Visibility(username);
         driver.findElement(By.xpath(username)).sendKeys(str1);
@@ -847,4 +862,29 @@ public class genericFunctions extends AllVariables {
             Thread.sleep(10000);
         }
     }
+
+    public void fnKillProcess(String strProcessName) throws Exception {
+        String processName = strProcessName;
+        if (isProcessRunning(processName)) {
+            Runtime.getRuntime().exec(KILL + processName);
+            System.out.println(processName + "is running, hence SHARP killed the process");
+        } else {
+            System.out.println(processName + "is not running, SHARP proceeding to next step.");
+        }
+    }
+
+    public static boolean isProcessRunning(String serviceName) throws Exception {
+        Process p = Runtime.getRuntime().exec(TASKLIST);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(
+                p.getInputStream()));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            //System.out.println(line);
+            if (line.contains(serviceName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
