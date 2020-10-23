@@ -11,7 +11,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         features={"classpath:features"}
         ,glue= {"StepsDefine","cucumberHooks"}
         ,monochrome=true
-        ,tags = "@TC_Exel_0002"
+        ,tags = "@Regression"
         ,plugin = {"cucumberHooks.customReportListener"})
 
 @Test
