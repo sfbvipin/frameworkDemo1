@@ -1,130 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-10-24T01:10:17 IST" name="Surefire suite" finished-at="2020-10-24T01:13:19 IST" duration-ms="181478">
+  <suite started-at="2020-10-24T12:30:06 IST" name="Surefire suite" finished-at="2020-10-24T12:30:23 IST" duration-ms="17307">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-10-24T01:10:17 IST" name="Surefire test" finished-at="2020-10-24T01:13:19 IST" duration-ms="181478">
+    <test started-at="2020-10-24T12:30:06 IST" name="Surefire test" finished-at="2020-10-24T12:30:23 IST" duration-ms="17307">
       <class name="com.cucumber.runner.sharpRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T01:10:17 IST" name="setUpClass" finished-at="2020-10-24T01:10:18 IST" duration-ms="432" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:06 IST" name="setUpClass" finished-at="2020-10-24T12:30:07 IST" duration-ms="643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T01:10:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T01:11:45 IST" duration-ms="87772" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:12 IST" duration-ms="5300" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Firefox: Open chat bot and pay bill via chat"]]>
+                <![CDATA["API: send get request for user account"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Feature to test exelon chatbot application test cases]"]]>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.1.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 18688, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ae4a0fb0-4a6b-4273-b9a9-ed58f2d45fdd
-*** Element info: {Using=xpath, value=//div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.1.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 18688, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ae4a0fb0-4a6b-4273-b9a9-ed58f2d45fdd
-*** Element info: {Using=xpath, value=//div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at StepsDefine.genericFunctions.select_any_of_the_registered_address_for_payment(genericFunctions.java:291)
-at ✽.select any of the registered address for payment(classpath:features/exelonChatbotFirefox.feature:51)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T01:11:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T01:13:18 IST" duration-ms="92740" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:13 IST" duration-ms="1401" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Firefox: Open chat bot and pay bill via chat"]]>
+                <![CDATA["API: send get request for user account"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Feature to test exelon chatbot application test cases]"]]>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.1.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 236, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 7836632e-6cd5-43ec-a354-bfd1d32ffd00
-*** Element info: {Using=xpath, value=//div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.1.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 236, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 7836632e-6cd5-43ec-a354-bfd1d32ffd00
-*** Element info: {Using=xpath, value=//div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at StepsDefine.genericFunctions.select_any_of_the_registered_address_for_payment(genericFunctions.java:291)
-at ✽.select any of the registered address for payment(classpath:features/exelonChatbotFirefox.feature:51)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T01:13:18 IST" name="tearDownClass" finished-at="2020-10-24T01:13:19 IST" duration-ms="489" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:18 IST" duration-ms="4229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["API: send get request for user account with correct credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:19 IST" duration-ms="1681" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["API: verify user account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:21 IST" duration-ms="1309" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["API: send get request for user account wrong credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:23 IST" duration-ms="2219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["API: Verify team details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:23 IST" name="tearDownClass" finished-at="2020-10-24T12:30:23 IST" duration-ms="482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
