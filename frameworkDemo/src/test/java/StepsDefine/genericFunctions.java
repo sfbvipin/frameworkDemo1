@@ -432,9 +432,9 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
-    @Then("click learn about budget")
-    public void click_learn_about_budget()throws InterruptedException {
-        driver.findElement(By.xpath(learnbudget)).click();
+    @Then("click budget billing FAQ")
+    public void click_budget_billing_FAQ()throws InterruptedException {
+        driver.findElement(By.xpath(budgetbillingFAQ)).click();
         Thread.sleep(3000);
     }
     @And ("click on move service")
