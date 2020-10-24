@@ -251,7 +251,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then select yes to close chat
 
   @Regression @Firefox @Exelon @Day1 @TC_Exel_016     @Khushboo
-  Scenario: Firefox: Initiate bot without login and click learn about budget billing under pay by phone
+  Scenario: Firefox: Initiate bot without login and click budget billing FAQ under pay by phone
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -262,7 +262,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on paying your bill
     Then user click on other payment
     And user click on pay by phone
-    Then click learn about budget
+    Then click budget billing FAQ
     And click on close chat icon
     Then select yes to close chat
 
@@ -278,7 +278,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on paying your bill
     Then user click on other payment
     And user click on pay by mail
-    Then user click No
+    Then click on Check Eligibility
     And click on close chat icon
     Then select yes to close chat
 
@@ -396,7 +396,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on sign in
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
-    Then click SIGNIN
+    Then click SIGNIN button
     And user click signout
     Then close window
 

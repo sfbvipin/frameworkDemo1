@@ -50,8 +50,7 @@ public class AllVariables {
     public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";
     public static String payviachat="//div[contains(text(),'Pay Via Chat')]";
-  
-    public static String signinfromchatbot="//div[contains(text(),'Sign In')]";
+
     //public static String signin="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'Sign In')]";
     public static String signin="//div[contains(text(),'Sign In')]";
 
@@ -87,7 +86,8 @@ public class AllVariables {
     public static String paybyphone="//div[contains(text(),'Pay by Phone')]";
     public static String payinperson="//div[contains(text(),'Pay in Person')]";
     public static String learnbudget="//div[contains(text(),'Learn about Budget Billing.')]";
-    public static String no="//div[contains(text(),\"No, Thanks. I'm not interested in this program.\")]";
+    public static String budgetbillingFAQ="//div[contains(text(),'Budget Billing FAQs')]";
+    public static String no="//div[contains(text(),'No, Thanks. I'm not interested in this program.')]";
 
     public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
 

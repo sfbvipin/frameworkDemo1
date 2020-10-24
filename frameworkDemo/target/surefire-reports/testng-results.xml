@@ -1,116 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-10-24T12:30:06 IST" name="Surefire suite" finished-at="2020-10-24T12:30:23 IST" duration-ms="17307">
+  <suite started-at="2020-10-24T23:33:18 IST" name="Surefire suite" finished-at="2020-10-24T23:34:29 IST" duration-ms="70456">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-10-24T12:30:06 IST" name="Surefire test" finished-at="2020-10-24T12:30:23 IST" duration-ms="17307">
+    <test started-at="2020-10-24T23:33:18 IST" name="Surefire test" finished-at="2020-10-24T23:34:29 IST" duration-ms="70456">
       <class name="com.cucumber.runner.sharpRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:06 IST" name="setUpClass" finished-at="2020-10-24T12:30:07 IST" duration-ms="643" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T23:33:18 IST" name="setUpClass" finished-at="2020-10-24T23:33:19 IST" duration-ms="446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:12 IST" duration-ms="5300" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T23:33:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T23:34:28 IST" duration-ms="69479" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["API: send get request for user account"]]>
+                <![CDATA["Firefox: Initiate bot without login and click budget billing FAQ under pay by phone"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+                <![CDATA["Optional[Feature to test exelon chatbot application test cases]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:13 IST" duration-ms="1401" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["API: send get request for user account"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:18 IST" duration-ms="4229" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["API: send get request for user account with correct credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:19 IST" duration-ms="1681" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["API: verify user account"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:21 IST" duration-ms="1309" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["API: send get request for user account wrong credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-10-24T12:30:23 IST" duration-ms="2219" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["API: Verify team details"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T12:30:23 IST" name="tearDownClass" finished-at="2020-10-24T12:30:23 IST" duration-ms="482" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@1283bb96]" started-at="2020-10-24T23:34:28 IST" name="tearDownClass" finished-at="2020-10-24T23:34:29 IST" duration-ms="497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
