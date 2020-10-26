@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -12,7 +13,9 @@ import java.util.concurrent.TimeUnit;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import io.github.sukgu.Shadow;
 import org.apache.commons.io.FileUtils;
+
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -887,37 +890,118 @@ public class genericFunctions extends AllVariables {
 
     @Given("create connection")
     public void create_connection() throws Exception {
-        System.setProperty(chromeDriverinfo, chromePath);
+        fnKillProcess("chromedriver.exe");
+        System.setProperty(chromeDriverinfo, protractorchromePath_86);
 
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary(emersonFileService);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("chromeOptions", opt);
         capabilities.setBrowserName("chrome");
-
         driver = new ChromeDriver(capabilities);
-        Thread.sleep(10000);
 
+        Thread.sleep(8000);
         System.out.println(browserOpenMessage);
-        Thread.sleep(5000);
+//        Shadow shadowDom = new Shadow(driver);
+//        //WebElement username = shadowDom.findElement("app-login.ion-page");
+//        List<WebElement> elements = shadowDom.findElements("*");
+//        System.out.println("Number of elements:" +elements.size());
+
+
+
+//        System.out.println(username.getClass().toString());
+//        WebElement ele1 = username.findElement(By.id("login_username"));
+//        ele1.sendKeys("Test");
+//        username.sendKeys("Test");
 
         List<WebElement> elements = driver.findElements(By.cssSelector("*"));
         System.out.println("Number of elements:" +elements.size());
-
         for (int i=0; i<elements.size();i++) {
-
-            System.out.println(i + "th Elements has tag name : " + elements.get(i).getTagName() + " and class name is : " + elements.get(i).getAttribute("className"));
+            System.out.println(i + "th Elements has tag name : " + elements.get(i).getTagName() + " and class name is : " + elements.get(i).getAttribute("class"));
             //System.out.println(i + "th Elements has value  :" + elements.get(i).getAttribute("value"));
         }
 
-        List<WebElement> elements1 = driver.findElements(By.xpath("//div[contains(text(),'login-box md hydrated')]"));
-        System.out.println("Number of elements:" +elements1.size());
+        for (int i=0; i<elements.size();i++) {
+            System.out.println(i + "th Elements has tag name : " + elements.get(i).getTagName() + " and class name is : " + elements.get(i).getAttribute("className"));
+                System.out.println(i + "th Elements are below" );
+                WebElement sr = expandRootElement(elements.get(i));
+                try {
+                List<WebElement> elements2 = sr.findElements(By.cssSelector("*"));
+                System.out.println("Number of elements:" +elements2.size());
+                for (int j=0; j<elements2.size();j++) {
+                    System.out.println("    " + j + "th Elements has tag name : " + elements2.get(j).getTagName() + " and class name is : " + elements2.get(j).getAttribute("className"));
+                    WebElement sr1 = expandRootElement(elements2.get(j));
+                    try {
+                        List<WebElement> elements3= sr1.findElements(By.cssSelector("*"));
+                        System.out.println("    " + "Number of elements in j :" +elements3.size());
+                        for (int k=0; k<elements3.size();k++) {
+                            System.out.println("         " + k + "th Elements has tag name : " + elements3.get(k).getTagName() + " and class name is : " + elements3.get(k).getAttribute("className"));
+                            WebElement s1 = expandRootElement(elements3.get(k));
+                            try {
+                                List<WebElement> elements4= s1.findElements(By.cssSelector("*"));
+                                System.out.println("         " + "Number of elements in k :" +elements4.size());
+                                for (int l=0; l<elements4.size();l++) {
+                                    System.out.println("              " + l + "th Elements has tag name : " + elements4.get(l).getTagName() + " and class name is : " + elements4.get(l).getAttribute("className"));
+                                    WebElement s2 = expandRootElement(elements4.get(l));
+                                    try {
+                                        List<WebElement> elements5= s2.findElements(By.cssSelector("*"));
+                                        System.out.println("              " + "Number of elements in l :" +elements5.size());
 
-        for (int i=0; i<elements1.size();i++) {
-            System.out.println(i + "th Elements has tag name : " + elements1.get(i).getTagName() + " and class name is : " + elements1.get(i).getAttribute("className"));
+                                        for (int m=0; m<elements5.size();m++) {
+                                            System.out.println("              " + m + "th Elements has tag name : " + elements5.get(m).getTagName() + " and class name is : " + elements5.get(m).getAttribute("className"));
+                                            WebElement s3 = expandRootElement(elements5.get(m));
+                                            try {
+                                                List<WebElement> elements6= s3.findElements(By.cssSelector("*"));
+                                                System.out.println("              " + "Number of elements in m :" +elements6.size());
+                                            }catch (NullPointerException npe) {
+                                                System.out.println("              " + m + " : does not have any element");
+                                            }
+                                        }
+                                    }catch (NullPointerException npe) {
+                                        System.out.println("              " + l + " : does not have any element");
+                                    }
+                                }
+                            }catch (NullPointerException npe) {
+                                System.out.println("         " + k + " : does not have any element");
+                            }
+                        }
+                    } catch (NullPointerException npe) {
+                        System.out.println("    " + j + " - does not have any element");
+                    }
+                }
+            } catch (NullPointerException npe) {
+                System.out.println(i + " - does not have any element");
+            }
+
         }
 
+//        WebElement r = driver.findElement(By.tagName("body"));
+//        WebElement shadowR = expandRootElement(r);
+//        WebElement root = shadowR.findElement(By.cssSelector("app-root"));
+//        WebElement shadowRoot = expandRootElement(root);
+//        WebElement root1 = shadowRoot.findElement(By.cssSelector("app-login"));
+//        WebElement shadowRoot1 = expandRootElement(root1);
+//        WebElement root2 = shadowRoot1.findElement(By.cssSelector("div[id='background-content']"));
+//        WebElement shadowRoot2 = expandRootElement(root2);
+//        WebElement root3 = shadowRoot2.findElement(By.cssSelector("ion-card-content"));
+//        WebElement shadowRoot3 = expandRootElement(root3);
+//        WebElement root4 = shadowRoot3.findElement(By.cssSelector("div[class=item-native]"));
+//        WebElement shadowRoot4 = expandRootElement(root4);
+//        String actualHeading = shadowRoot4.findElement(By.cssSelector("input[@id='login_username']")).getText();
+//        System.out.println(actualHeading);
 
     }
+
+    public WebElement expandRootElement(WebElement element) {
+        try {
+            WebElement ele = (WebElement) ((JavascriptExecutor) driver)
+                    .executeScript("return arguments[0].shadowRoot",element);
+            return ele;
+        } catch (NullPointerException npe) {
+            return element;
+        }
+    }
+
+
 
 }
