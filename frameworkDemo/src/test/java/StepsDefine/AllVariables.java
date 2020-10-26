@@ -8,8 +8,9 @@ import java.util.Set;
 public class AllVariables {
 	public static String chromePath = "src\\test\\resources\\Drivers\\chromedriver.exe";
     public static String chromePath_86 = "src\\test\\resources\\Drivers\\chromedriver_86.exe";
+    public static String protractorchromePath_86 = "C:\\Users\\Sohail Abbas\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver.exe";
     public static String firfoxPath = "src\\test\\resources\\Drivers\\geckodriver.exe";
-    public static String emersonPath = "src\\test\\resources\\Drivers\\Setup.exe";
+    //public static String emersonPath = "src\\test\\resources\\Drivers\\Setup.exe";
     public static String emersonFileService = "C:\\Users\\Sohail Abbas\\AppData\\Local\\FieldService\\FieldService.exe";
     public static String exelonUrl = "https://aztest.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/ContactUs.aspx";
     //public static String exelonUrl = "https://aztest.pepco.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
@@ -123,7 +124,7 @@ public class AllVariables {
     public static String signout="/html/body/form/div[3]/div[3]/div/header/div/button";
     public static String signIn="//div[contains(text(),'Sign In')]";
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWYxNDM1MDZiMjhhMmJlOTI3MjYxMzYxNzY2ZTlkNTQzZGNmZjcyZDk4MjQyNjlkZGNiMGU2NWZlMzQ0ZGQ5YzI5ZTRmMTA1Njk=";
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZkZWUwNzY2NGE2ZWM4MzRkNDAyMmE3MjBmZDczNjdiMDc2OGM1OTFjMTg0NmUyMjU0M2VmYzlhOTA4MDRiYjhkNjQ4YjdjYzA=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
