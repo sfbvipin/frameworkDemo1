@@ -15,6 +15,11 @@ public class AllVariables {
     public static String exelonUrl = "https://aztest.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/ContactUs.aspx";
     //public static String exelonUrl = "https://aztest.pepco.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
     public static String signurl  ="https://stage-apigateway-east.exeloncorp.com/auth/oauth/v2/authorize/login?action=display&sessionID=477be947-4a4b-4aaf-94fc-04067f5dcca3&sessionData=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ew0KICAgICJzZXNzaW9uIjogew0KICAgICAgICAic2Vzc2lvbklEIjoiNDc3YmU5NDctNGE0Yi00YWFmLTk0ZmMtMDQwNjdmNWRjY2EzIiwNCiAgICAgICAgImV4cCI6MTU5OTExOTk2OCwNCiAgICAgICAgImN1cnJlbnRfdXNlcm5hbWUiOiIiLA0KICAgICAgICAiY3VycmVudF91c2VyX2NvbnNlbnQiOiJub25lIiwNCiAgICAgICAgImN1cnJlbnRfdXNlcl9yb2xlIjoiIiwNCiAgICAgICAgImN1cnJlbnRfdXNlcl9hY3IiOiIwIiwNCiAgICAgICAgImN1cnJlbnRfdXNlcl9hdXRoVGltZSI6IjAiLA0KICAgICAgICAic2FsdCI6IiIsDQogICAgICAgICJ0aGlyZF9wYXJ0eV9zc29fdG9rZW4iOiIiLA0KICAgICAgICAidGhpcmRfcGFydHlfc3NvX3Rva2VuX3R5cGUiOiIiDQogICAgfSwNCiAgICAicmVxdWVzdF9jb25zZW50Ijogew0KICAgICAgICAiY2xpZW50X25hbWUiOiJXZWIrLStBQ0VTdGFnZSIsDQogICAgICAgICJzY29wZV92ZXJpZmllZCI6Im9vYiINCiAgICB9LA0KICAgICJyZXF1ZXN0X3BhcmFtZXRlcnMiOiB7DQogICAgICAgICJkaXNwbGF5IjoicGFnZSIsDQogICAgICAgICJwcm9tcHQiOiJsb2dpbitjb25zZW50IiwNCiAgICAgICAgImlkX3Rva2VuX2hpbnQiOiIiLA0KICAgICAgICAibG9naW5faGludCI6IiIsDQogICAgICAgICJhY3JfdmFsdWVzIjoiIiwNCiAgICAgICAgImNsaWVudF9pZCI6IjFmMTkwM2E5LTQ5NmEtNDU5NS05YjhjLWZkNGRlNTI3ZTY3YSIsDQogICAgICAgICJub25jZSI6IiIsDQogICAgICAgICJzY29wZSI6IiIsDQogICAgICAgICJtYXhfYWdlIjogIiINCiAgICB9DQp9.Uafe_6C9_gA7Kzen7PEoVFqW3QVqOQ63wBtD44yX2aA";
+
+    public static String ACEUrl = "https://aztest.atlanticcityelectric.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
+    public static String DPLUrl = "https://aztest.delmarva.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
+    public static String PepcoUrl = "https://aztest.pepco.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
+
     public static String geckoDriverinfo = "webdriver.gecko.driver";
     public static String chromeDriverinfo = "webdriver.chrome.driver";
 
@@ -75,7 +80,7 @@ public class AllVariables {
     public static String checkEligibility="//div[contains(text(),'Check Eligibility')]";
 
     public static String moveServicefromnothanks="//div[5]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
-    public static String signinafterbudgetbilling="//body/div[4]/div[1]/div[2]/div[1]/div[2]/div[7]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]/div[1]";
+    public static String signinafterbudgetbilling="//div[7]//div[1]//div[1]//div[1]//div[1]//div[2]//a[1]//div[1]";
     
     public static String accounttype="//textarea[@placeholder='Type a message....']";
     public static String sendbutton="//button[@class='oda-chat-footer-button oda-chat-button-send']";
@@ -124,13 +129,11 @@ public class AllVariables {
     public static String signout="/html/body/form/div[3]/div[3]/div/header/div/button";
     public static String signIn="//div[contains(text(),'Sign In')]";
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZkZWUwNzY2NGE2ZWM4MzRkNDAyMmE3MjBmZDczNjdiMDc2OGM1OTFjMTg0NmUyMjU0M2VmYzlhOTA4MDRiYjhkNjQ4YjdjYzA=";
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY5ZTA0ZDk0YzE2ODM0N2ZiMWU1YmQ4NjI1MGQ1NjA4ZjQyM2Y0NmRkZDIyOWE1NDQ2ZGYwYjcwYWI4Y2I1ZjRiZTllYTVhMzI=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
-    public static String ACEUrl = "https://aztest.atlanticcityelectric.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
-    public static String DPLUrl = "https://aztest.delmarva.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
-    public static String PepcoUrl = "https://aztest.pepco.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
+
     public static String nothanks = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String Yes = "//div[8]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
     public static String Yes2 = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
@@ -159,6 +162,10 @@ public class AllVariables {
     public static String surveyRating3 = "//span[@id='star3']";
     public static String surveyRating4 = "//span[@id='star4']";
     public static String surveyRating5 = "//span[@id='star5']";
+    public static String HelloSignEmail = "//input[@name='logIn.emailAddress']";
+    public static String HelloSignbutton = "//button[@class='m-button bg-azure  hbg-castle-rock c-white progress-button state-loading']";
+    public static String HelloSignPassword = "//input[@name='logIn.password']";
+    public static String HelloSignAccept = "//span[@id='acceptButton']";
 
     public static String ionicUsername="//input[@id='login_username']";
     public static String ionicPassword="//ion-input[@id='login_password']";
