@@ -1,11 +1,11 @@
-#Author=Parul
-#Date=23/09/2020
-#Description=Creating the automation PHI-R2
+#Owner        : SHARP
+#Author       : Parul; Sohail
+#Description  : This is feature file for Exelon Customer Chat Survey Flow
 
 Feature: Exelon-PHI-ACE feature file
 
-  @Regression1 @Exelon @ACE @TC_Exel_577766
-  Scenario Outline: Firefox: (Chat Survey) : Initiate bot, click Survey from bot and select YES
+  @Regression @ChatSurvey @Exelon @TC_Excel_599301
+  Scenario Outline: Firefox: (Chat Survey): Initiate bot, opt "YES" under resolved End flow and type feedback as comment
     Given firefox browser is open
     When user will be on "<opcoName>"
     When user will locate the chatbot icon
@@ -13,288 +13,80 @@ Feature: Exelon-PHI-ACE feature file
     Then chatbot will be open
     And user click no thanks i will continue
     Then click on downed power lines
-    Then click no thanks
-    And click Yes
-    When click take feedback survey
-    #When click on ACE chatbot icon
-    #And click on ACE no thanks I will continue without signing in
-    #Then click ACE downed power line
-    #And click ACE no thanks
-    #Then click ACE Yes
-    #When click ACE take feedback survey
-    #And click ACE four
-    #Then click ACE yes for additional comments
-    #When type ACE comment
-    #And click ACE Send
+    And click no thanks
+    Then click Yes
+    And click survey rating as "<SurveyRating>"
+    Then click Leave comment
+    And type "<comment>"
+    Then click Send
+    And click on close chat icon
+    Then select yes to close chat
 
     Examples:
-      | opcoName |
-      | ace      |
-      | dpl      |
-      | pepco    |
+      | opcoName | SurveyRating | comment   |
+      | ace      | five         | Feedback comment by SHARP |
+      | dpl      | four         | SHARP entered comment     |
+      | pepco    | three        | SHARP typed comment       |
 
-  @Regression1 @Exelon @DPL @TC_Exel_579101
-  Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and select YES
+
+  @Regression @ChatSurvey @Exelon @TC_Excel_599309
+  Scenario Outline: Firefox: (Chat Survey):Initiate bot, opt "YES" under resolved End flow and select End chat after providing feedback with/without web login
     Given firefox browser is open
-    And user will be on DPL homepage
-    When click on DPL chatbot icon
-    And click on DPL no thanks I will continue without signing in
-    Then click DPL downed power line
-    And click DPL no thanks
-    Then click DPL Yes
-    When click DPL take feedback survey
-    And click DPL four
-    Then click DPL yes for additional comments
-    When type DPL comment
-    And click DPL Send
+    When user will be on "<opcoName>"
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then click on downed power lines
+    And click no thanks
+    Then click Yes
+    And click survey rating as "<SurveyRating>"
+    Then click Leave comment
+    And type "<comment>"
+    Then click Send
+    And click on close chat icon
+    Then select yes to close chat
+#    Then click End chat
+#    And validate if correct End chat text is displayed without oauth login
 
-  @Regression1 @Exelon @Pepco @TC_Exel_579119
-  Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and select YES
+    Examples:
+      | opcoName | SurveyRating | comment   |
+      | ace      | five         | Feedback comment by SHARP |
+      | dpl      | four         | SHARP entered comment     |
+      | pepco    | three        | SHARP typed comment       |
+
+
+  @Regression @ChatSurvey @Exelon @ACE @TC_Excel_599311
+  Scenario Outline: Firefox: (Chat Survey): Initiate bot, opt "YES" under resolved End flow and select End chat after providing feedback with Oauth login
     Given firefox browser is open
-    And user will be on Pepco homepage
-    When user will locate the Pepco chatbot icon
-    And click on Pepco chatbot icon
-    When click on Pepco no thanks I will continue without signing in
-    Then click Pepco downed power line
-    And click Pepco no thanks
-    Then click Pepco Yes
-    When click Pepco take feedback survey
-    And click Pepco four
-    Then click Pepco yes for additional comments
-    When type Pepco comment
-    And click Pepco Send
+    When user will be on "<opcoName>"
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click no thanks i will continue
+    Then select and click on  bill and paymenets
+    And User click on account Balance
+    Then click Oauth Sign in
+    Then user will redirect to login page
+    When user enter "<loginid>" and "<password>"
+    Then click on sign in for Authentication
+    And user accept the authorization request
+    Then navigate back to chat bot
+    And Select account from multiple account
+    When User click on no thanks i just needed my balance
+    And click yes
+    And click survey rating as "<SurveyRating>"
+    Then click Leave comment
+    And type "<comment>"
+    Then click Send
+#    Then click End chat
+#    And validate if correct End chat text is displayed after oauth login
+    And click on close chat icon
+    Then select yes to close chat
 
 
-  @Regression1 @Exelon @ACE @TC_Exel_577767
-  Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Start another chatGiven firefox browser is open
-    Given firefox browser is open
-    And user will be on ACE homepage
-    When click on ACE chatbot icon
-    And click on ACE no thanks I will continue without signing in
-    Then click ACE downed power line
-    And click ACE no thanks
-    Then click ACE Yes
-    When click ACE take feedback survey
-    And click ACE four
-    Then click ACE yes for additional comments
-    When type ACE comment
-    And click ACE Send
-    Then click ACE start another chat
-
-  @Regression1 @Exelon @ACE @TC_Exel_577771
-  Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Contact Us
-    Given firefox browser is open
-    And user will be on ACE homepage
-    When click on ACE chatbot icon
-    And click on ACE no thanks I will continue without signing in
-    Then click ACE downed power line
-    And click ACE no thanks
-    Then click ACE Yes
-    When click ACE take feedback survey
-    And click ACE four
-    Then click ACE yes for additional comments
-    When type ACE comment
-    And click ACE Send
-    Then click ACE contact us
-
-  @Regression1 @Exelon @ACE @TC_Exel_577772
-  Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with login with Oauth
-    Given firefox browser is open
-    And user will be on ACE homepage
-    When click on ACE chatbot icon
-    And click on ACE no thanks I will continue without signing in
-    Then click ACE Billing and Payment
-    When click ACE Account balance
-    Then click ACE Oauth Sign in
-    Then user will redirect to ACE login page
-    When user enters ACE login id
-    And user enters ACE password
-    Then click on ACE sign in for Authentication
-    And user accept the ACE authorization request
-    Then navigate back to ACE chat bot
-    When User click on ACE no thanks i just needed my balance
-    Then click ACE Yes for answer after account balance
-    When click ACE take feedback survey
-    And click ACE four
-    When user click ACE no for user comments
-    Then click ACE End chat
-
-
-  @Regression1 @Exelon @ACE @TC_Exel_577773
-  Scenario: Firefox: ACE (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with web login or logout
-    Given firefox browser is open
-    And user will be on ACE homepage
-    When click on ACE chatbot icon
-    And click on ACE no thanks I will continue without signing in
-    Then click ACE downed power line
-    And click ACE no thanks
-    Then click ACE Yes
-    When click ACE take feedback survey
-    And click ACE four
-    Then click ACE yes for additional comments
-    When type ACE comment
-    And click ACE Send
-    Then click ACE End chat
-
-
-#Feature: Exelon-PHI-DPL feature file
-
-
-
-
-  @Regression1 @Exelon @DPL @TC_Exel_579102
-  Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Start another chat
-    Given firefox browser is open
-    And user will be on DPL homepage
-    When click on DPL chatbot icon
-    And click on DPL no thanks I will continue without signing in
-    Then click DPL downed power line
-    And click DPL no thanks
-    Then click DPL Yes
-    When click DPL take feedback survey
-    And click DPL four
-    Then click DPL yes for additional comments
-    When type DPL comment
-    And click DPL Send
-    Then click DPL start another chat
-
-  @Regression1 @Exelon @DPL @TC_Exel_579103
-  Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Contact Us
-    Given firefox browser is open
-    And user will be on DPL homepage
-    When click on DPL chatbot icon
-    And click on DPL no thanks I will continue without signing in
-    Then click DPL downed power line
-    And click DPL no thanks
-    Then click DPL Yes
-    When click DPL take feedback survey
-    And click DPL four
-    Then click DPL yes for additional comments
-    When type DPL comment
-    And click DPL Send
-    Then click DPL contact us
-
-  @Regression1 @Exelon @DPL @TC_Exel_579104
-  Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with login with Oauth
-    Given firefox browser is open
-    And user will be on DPL homepage
-    When click on DPL chatbot icon
-    And click on DPL no thanks I will continue without signing in
-    Then click DPL Billing and Payment
-    When click DPL Account balance
-    Then click DPL Oauth Sign in
-    Then user will redirect to DPL login page
-    When user enters DPL login id
-    And user enters DPL password
-    Then click on DPL sign in for Authentication
-    And user accept the DPL authorization request
-    Then navigate back to DPL chat bot
-    When User click on DPL no thanks i just needed my balance
-    Then click DPL Yes for answer after account balance
-    When click DPL take feedback survey
-    And click DPL four
-    When user click DPL no for user comments
-    Then click DPL End chat
-
-
-  @Regression1 @Exelon @DPL @TC_Exel_579105
-  Scenario: Firefox: DPL (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with web login or logout
-    Given firefox browser is open
-    And user will be on DPL homepage
-    When click on DPL chatbot icon
-    And click on DPL no thanks I will continue without signing in
-    Then click DPL downed power line
-    And click DPL no thanks
-    Then click DPL Yes
-    When click DPL take feedback survey
-    And click DPL four
-    Then click DPL yes for additional comments
-    When type DPL comment
-    And click DPL Send
-    Then click DPL End chat
-
-
-    #Feature: Exelon-PHI-PEPCO feature file
-
-
-
-
-  @Regression1 @Exelon @Pepco @TC_Exel_579120
-  Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Start another chat
-    Given firefox browser is open
-    And user will be on Pepco homepage
-    When user will locate the Pepco chatbot icon
-    And click on Pepco chatbot icon
-    When click on Pepco no thanks I will continue without signing in
-    Then click Pepco downed power line
-    And click Pepco no thanks
-    Then click Pepco Yes
-    When click Pepco take feedback survey
-    And click Pepco four
-    Then click Pepco yes for additional comments
-    When type Pepco comment
-    And click Pepco Send
-    Then click Pepco start another chat
-
-  @Regression1 @Exelon @Pepco @TC_Exel_579121
-  Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click Contact Us
-    Given firefox browser is open
-    And user will be on Pepco homepage
-    When user will locate the Pepco chatbot icon
-    And click on Pepco chatbot icon
-    When click on Pepco no thanks I will continue without signing in
-    Then click Pepco downed power line
-    And click Pepco no thanks
-    Then click Pepco Yes
-    When click Pepco take feedback survey
-    And click Pepco four
-    Then click Pepco yes for additional comments
-    When type Pepco comment
-    And click Pepco Send
-    Then click Pepco contact us
-
-  @Regression1 @Exelon @Pepco @TC_Exel_579122
-  Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with login with Oauth
-    Given firefox browser is open
-    And user will be on Pepco homepage
-    When user will locate the Pepco chatbot icon
-    And click on Pepco chatbot icon
-    When click on Pepco no thanks I will continue without signing in
-    Then click Pepco Billing and Payment
-    When click Pepco Account balance
-    Then click Pepco Oauth Sign in
-    Then user will redirect to Pepco login page
-    When user enters Pepco login id
-    And user enters Pepco password
-    Then click on Pepco sign in for Authentication
-    And user accept the Pepco authorization request
-    Then navigate back to Pepco chat bot
-    When User click on Pepco no thanks i just needed my balance
-    Then click Pepco Yes for answer after account balance
-    When click Pepco take feedback survey
-    And click Pepco four
-    When user click Pepco no for user comments
-    Then click Pepco End chat
-
-
-  @Regression1 @Exelon @Pepco @TC_Exel_579123
-  Scenario: Firefox: Pepco (Chat Survey) : Initiate bot, click Survey from bot and after select YES click End chat with web login or logout
-    Given firefox browser is open
-    And user will be on Pepco homepage
-    When user will locate the Pepco chatbot icon
-    And click on Pepco chatbot icon
-    When click on Pepco no thanks I will continue without signing in
-    Then click Pepco downed power line
-    And click Pepco no thanks
-    Then click Pepco Yes
-    When click Pepco take feedback survey
-    And click Pepco four
-    Then click Pepco yes for additional comments
-    When type Pepco comment
-    And click Pepco Send
-    Then click Pepco End chat
-
-
-
-
-
+    Examples:
+      | opcoName | SurveyRating | comment                   | loginid     | password  |
+      | ace      | five         | Feedback comment by SHARP | SPARKINSON  | Password1 |
+      | dpl      | four         | SHARP entered comment     | SPARKINSON | Password1 |
+      | pepco    | three        | SHARP typed comment       | SPARKINSON | Password1 |

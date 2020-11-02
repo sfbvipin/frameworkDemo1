@@ -15,6 +15,7 @@ import org.apache.commons.io.FileUtils;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -74,6 +75,7 @@ public class genericFunctions extends AllVariables {
 
     @When("user will locate the chatbot icon")
     public void user_will_locate_the_chatbot_icon() throws InterruptedException {
+        wait_for_time(ChatbotIcon,8000);
         WebElement chatbotIcon=driver.findElement(By.xpath(ChatbotIcon));
         if (chatbotIcon.isDisplayed()){
             System.out.println("Inside Step: SHARP is able to locate chat bot");
@@ -259,21 +261,36 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(2000);
     }
 
+    @When ("user enter {string} and {string}")
+    public void user_enters_login_password(String str1, String str2) throws InterruptedException {
+        wait_for_time(username,10000);
+        driver.findElement(By.xpath(username)).sendKeys(str1);
+        Wait_Until_element_Visibility(password);
+        driver.findElement(By.xpath(password)).sendKeys(str2);
+    }
+
     @Then("click on sign in for Authentication")
     public void click_on_sign_in_for_Authentication() throws InterruptedException {
         wait_for_time(btnSignIn,4000);
-        //Wait_Until_element_Visibility(btnSignIn);
-        driver.findElement(By.xpath(btnSignIn)).click();
-        Thread.sleep(3000);
+        try {
+            driver.findElement(By.xpath(btnSignIn)).click();
+        }catch (NoSuchElementException exception) {
+            wait_for_time(signinforauth, 4000);
+            driver.findElement(By.xpath(signinforauth)).click();
+        }
+
+        Thread.sleep(13000);
         driver.switchTo().activeElement().click();
     }
 
     @And("user accept the authorization request")
     public void user_accept_the_authorization_request() throws InterruptedException {
-        WebElement elem1 = driver.findElement(By.xpath(acceptauth));
-        if (elem1.isDisplayed()) {
+        wait_for_time(acceptauth,4000);
+        try {
             driver.findElement(By.xpath(acceptauth)).click();
             Thread.sleep(3000);
+        }catch (NoSuchElementException exception) {
+            System.out.println("SHARP: Accept button is not located, still proceeding to next step");
         }
     }
 
@@ -326,7 +343,12 @@ public class genericFunctions extends AllVariables {
     }
     @Then("select yes to close chat")
     public void select_yes_to_close_chat() throws InterruptedException {
-        driver.findElement(By.xpath(endChatButton)).click();
+        try {
+            driver.findElement(By.xpath(endChatButton)).click();
+        }catch (NoSuchElementException exception) {
+            driver.findElement(By.xpath(yesbutton)).click();
+        }
+
         Thread.sleep(3000);
         driver.close();
     }
@@ -477,12 +499,6 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
-    @And("Account balance")
-    public void Account_balance() throws InterruptedException {
-        driver.findElement(By.xpath(Accountbalancebutton)).click();
-        Thread.sleep(5000);
-    }
-
     @Then("No thanks continue without sign")
     public void No_thanks_continue_without_sign() throws InterruptedException {
         driver.findElement(By.xpath(nothanksafteraccountbalance)).click();
@@ -558,7 +574,7 @@ public class genericFunctions extends AllVariables {
 
     @And ("User click on account Balance")
     public void User_click_on_account_Balance() throws InterruptedException {
-        driver.findElement(By.xpath(accountbal)).click();
+        driver.findElement(By.xpath(Accountbalancebutton)).click();
         Thread.sleep(2000);
     }
 
@@ -917,6 +933,7 @@ public class genericFunctions extends AllVariables {
 
     @And("Select account from multiple account")
     public void Select_account_from_multiple_account() throws InterruptedException {
+        wait_for_time(Selectaccountfrommultipleaccount,10000);
         driver.findElement(By.xpath(Selectaccountfrommultipleaccount)).click();
         Thread.sleep(10000);
     }
@@ -946,6 +963,30 @@ public class genericFunctions extends AllVariables {
     public void type_utterance_for_deposits() throws InterruptedException {
         driver.findElement(By.xpath(typeutterance)).sendKeys("How is my deposit amount determined");
         Thread.sleep(3000);
+    }
+
+    @Then("click Leave comment")
+    public void click_Leave_comment() throws InterruptedException {
+        driver.findElement(By.xpath(Leavecommentforfeedback)).click();
+        Thread.sleep(5000);
+    }
+
+    @And("type {string}")
+    public void type_comment(String strComments) throws InterruptedException {
+        driver.findElement(By.xpath(inputtext)).sendKeys(strComments);
+        Thread.sleep(5000);
+    }
+
+    @Then("click Oauth Sign in")
+    public void click_Oauth_Sign_in() throws InterruptedException {
+        driver.findElement(By.xpath(clickOauthignn)).click();
+        Thread.sleep(5000);
+    }
+
+    @When("User click on no thanks i just needed my balance")
+    public void User_click_on_no_thanks_i_just_needed_my_balance() throws InterruptedException {
+        driver.findElement(By.xpath(nothanksijustneededmybalance)).click();
+        Thread.sleep(5000);
     }
 
     @Given("create connection")
