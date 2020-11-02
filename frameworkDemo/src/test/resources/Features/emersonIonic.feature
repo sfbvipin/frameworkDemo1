@@ -6,4 +6,5 @@ Feature: Exelon-PHI-ACE feature file
 
   @Ionic
   Scenario: Firefox: (Chat Survey) : Initiate bot, click Survey from bot and select YES
-    Given create connection
+#    Given create connection
+    Given Launch Application

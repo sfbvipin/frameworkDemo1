@@ -24,13 +24,13 @@ Feature: Feature to test exelon chatbot application test cases
 
     Examples:
       | SurveyRating |
-      | one          |
+      #| one          |
       | two          |
-      | three        |
-      | four         |
-      | five         |
+      #| three        |
+      #| four         |
+      #| five         |
 
- @Regression1 @Basic @Chrome @Exelon @Day0 @Sanity @TC_Exel_002
+ @Regression1 @Chrome @Exelon @Day0 @Sanity @TC_Exel_002
   Scenario: Chrome: Open chat bot and pay bill via chat
     Given chrome browser is open
     And user will be on exelon homepage
@@ -55,7 +55,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @Day0 @TC_Exel_003
+  @Regression1 @Basic @Chrome @Exelon @Day0 @TC_Exel_003
   Scenario: Chrome: Open chat bot and start service
     Given chrome browser is open
     And user will be on exelon homepage
@@ -109,16 +109,23 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression1 @Chrome @Exelon @Day1 @TC_Exel_007
-  Scenario: Chrome: Open chat bot and click on Outage
+  @Regression1 @Basic1 @Chrome @Exelon @Day1 @TC_Exel_007
+  Scenario Outline: Chrome: Open chat bot and click on Outage
     Given chrome browser is open
-    And user will be on exelon homepage
+    When user will be on "<opcoName>"
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click on menu icon
     Then click on Outage
     Then close the browser
+
+    Examples:
+      | opcoName |
+      | dpl      |
+      | pepco    |
+      | dpl      |
+      | pepco    |
 
   @Regression1 @Chrome @Exelon @Day1 @TC_Exel_008
   Scenario: Chrome:initiating bot without login and click on Pay bill

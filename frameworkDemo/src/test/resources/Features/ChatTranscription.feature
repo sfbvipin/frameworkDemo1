@@ -4,7 +4,7 @@
 
   Feature: Exelon-PHI-ACE feature file
 
-  @Regression @Basic @Exelon @ChatTranscription @TC_Exel_574921
+  @Regression @Exelon @ChatTranscription @TC_Exel_574921
   Scenario Outline: Firefox: Initiate bot and click mail icon
     Given firefox browser is open
     When user will be on "<opcoName>"
@@ -39,7 +39,7 @@
         | dpl      |
         | pepco    |
 
-    @Regression @Basic @Exelon @ChatTranscription @TC_Exel_574926
+    @Regression @Exelon @ChatTranscription @TC_Exel_574926
     Scenario Outline: Firefox: Initiate bot, click mail icon and click submit with valid email id format
       Given firefox browser is open
       When user will be on "<opcoName>"
@@ -80,6 +80,12 @@
         | ace      | sohail.abbas@sofbang#com |
         | dpl      | sohail.abbassofbang.com  |
         | pepco    | sohail.abbas@sofbang_com |
+        | pepco    | sohail.abbas@sofbang#com |
+        | ace      | sohail.abbassofbang.com  |
+        | dpl      | sohail.abbas@sofbang_com |
+        | dpl      | sohail.abbas@sofbang#com |
+        | pepco    | sohail.abbassofbang.com  |
+        | ace      | sohail.abbas@sofbang_com |
 
     @Regression @Exelon @ChatTranscription @TC_Exel_575075
     Scenario Outline: Firefox: Initiate bot, click mail icon and click cancel with valid/invalid/blank email id

@@ -79,9 +79,9 @@ function fnMainDriver()
                                                 strCompareValue = "@"&strTestCaseName         
                                 else
                                                 msgbox "SHARP will run only selected cases now", 48, "SHARP"
-                                                fnEditFile strRunnerPath, strCompareValue, strRegression, "@Sanity"
-                                                strTestSelected = "@Sanity"
-                                                strCompareValue = "@Sanity"
+                                                fnEditFile strRunnerPath, strCompareValue, strRegression, "@Basic"
+                                                strTestSelected = "@Basic"
+                                                strCompareValue = "@Basic"
                                 end if
 
                 fnCloseExcel()

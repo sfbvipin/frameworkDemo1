@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 26 19:08:32 IST 2020</td>
+<td>Started on:</td><td>Mon Nov 02 01:16:48 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4722 ms)</td>
+<tr><td>Total time:</td><td>654 seconds (654302 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,128 +67,57 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: (Chat Survey) : Initiate bot, click Survey from bot and select YES", "Optional[Exelon-PHI-ACE feature file]"</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited normally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location C:\Users\Sohail Abbas\AppData\Local\FieldService\FieldService.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x0062D383+3134339]
-	Ordinal0 [0x0051A171+2007409]
-	Ordinal0 [0x003BAEE8+569064]
-	Ordinal0 [0x0033D721+55073]
-	Ordinal0 [0x00360DFC+200188]
-	Ordinal0 [0x00360C1D+199709]
-	Ordinal0 [0x0035EB0B+191243]
-	Ordinal0 [0x00342E77+77431]
-	Ordinal0 [0x00343E3E+81470]
-	Ordinal0 [0x00343DC9+81353]
-	Ordinal0 [0x00530CD9+2100441]
-	GetHandleVerifier [0x0079B75A+1396954]
-	GetHandleVerifier [0x0079B3D9+1396057]
-	GetHandleVerifier [0x007A7126+1444518]
-	GetHandleVerifier [0x0079BCE8+1398376]
-	Ordinal0 [0x00527F51+2064209]
-	Ordinal0 [0x005322EB+2106091]
-	Ordinal0 [0x00532411+2106385]
-	Ordinal0 [0x005449C4+2181572]
-	BaseThreadInitThunk [0x76CD6359+25]
-	RtlGetAppContainerNamedObjectPath [0x774D7C24+228]
-	RtlGetAppContainerNamedObjectPath [0x774D7BF4+180]
-
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:147)
-	at StepsDefine.genericFunctions.create_connection(genericFunctions.java:901)
-	at ✽.create connection(classpath:features/emersonIonic.feature:9)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1036160165", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1036160165'><pre>org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited normally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location C:\Users\Sohail Abbas\AppData\Local\FieldService\FieldService.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x0062D383+3134339]
-	Ordinal0 [0x0051A171+2007409]
-	Ordinal0 [0x003BAEE8+569064]
-	Ordinal0 [0x0033D721+55073]
-	Ordinal0 [0x00360DFC+200188]
-	Ordinal0 [0x00360C1D+199709]
-	Ordinal0 [0x0035EB0B+191243]
-	Ordinal0 [0x00342E77+77431]
-	Ordinal0 [0x00343E3E+81470]
-	Ordinal0 [0x00343DC9+81353]
-	Ordinal0 [0x00530CD9+2100441]
-	GetHandleVerifier [0x0079B75A+1396954]
-	GetHandleVerifier [0x0079B3D9+1396057]
-	GetHandleVerifier [0x007A7126+1444518]
-	GetHandleVerifier [0x0079BCE8+1398376]
-	Ordinal0 [0x00527F51+2064209]
-	Ordinal0 [0x005322EB+2106091]
-	Ordinal0 [0x00532411+2106385]
-	Ordinal0 [0x005449C4+2181572]
-	BaseThreadInitThunk [0x76CD6359+25]
-	RtlGetAppContainerNamedObjectPath [0x774D7C24+228]
-	RtlGetAppContainerNamedObjectPath [0x774D7BF4+180]
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:147)
-	at StepsDefine.genericFunctions.create_connection(genericFunctions.java:901)
-	at ✽.create connection(classpath:features/emersonIonic.feature:9)
-</pre></div></td>
-<td>3</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: Select Deposits FAQ and check content", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>69</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: Select Deposits FAQ and check content", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>78</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: Select Deposits FAQ and check content", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>79</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: Select Deposits FAQ and check links are correct", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>79</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: Select Deposits FAQ and check links are correct", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>82</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: Select Deposits FAQ and check links are correct", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>101</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: user types Deposits FAQ utterances and check messages", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>48</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: user types Deposits FAQ utterances and check messages", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>56</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Deposit FAQ - Initiating the Chat-Bot: user types Deposits FAQ utterances and check messages", "Optional[Exelon-PHI feature file]"</td>
+<td></td>
+<td>56</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 </table><p>
 </body>
