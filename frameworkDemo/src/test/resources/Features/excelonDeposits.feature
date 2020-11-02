@@ -61,7 +61,7 @@ Feature: Exelon-PHI feature file
       | dpl      |  deposit                               |
       | pepco    |  How is my deposit amount determined   |
 
-  @Regression @Deposits1 @Exelon @TC_Excel_586324
+  @Regression1 @Deposits1 @Exelon @TC_Excel_586324
   Scenario Outline: Firefox: Deposit FAQ - Initiating the Chat-Bot: Sign in through Web and Select Deposits FAQ from options and check links are correct
     Given firefox browser is open
     When user will be on "<opcoName>"
