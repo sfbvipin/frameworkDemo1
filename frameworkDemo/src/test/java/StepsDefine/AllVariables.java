@@ -134,7 +134,7 @@ public class AllVariables {
     public static String signIn="//div[contains(text(),'Sign In')]";
     public static String websigninone = "//button[@class='btn btn btn-accent']";
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY5ZTA0ZDk0YzE2ODM0N2ZiMWU1YmQ4NjI1MGQ1NjA4ZjQyM2Y0NmRkZDIyOWE1NDQ2ZGYwYjcwYWI4Y2I1ZjRiZTllYTVhMzI=";
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiMTUwZjJkYTY2ODBjZmEzNTIwYzU5OGEzMDU5NWIwYWE1ZmE0MGFlMDA3NzEzNjg1OGU2OGEzNmJlNjc2N2ZiZWQ0YjgyNGQ=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
