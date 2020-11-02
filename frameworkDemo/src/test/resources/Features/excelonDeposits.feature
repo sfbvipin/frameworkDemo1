@@ -50,7 +50,6 @@ Feature: Exelon-PHI feature file
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
-#    And type utterance for deposits
     And type "<utterance>" for chat
     Then click Send
     And validate if deposits with correct text is displayed as per "<opcoName>"
