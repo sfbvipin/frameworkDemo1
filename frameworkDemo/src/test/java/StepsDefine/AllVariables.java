@@ -46,6 +46,7 @@ public class AllVariables {
     public static String MenuOptionCommunitySolar = "//div[contains(text(),'Community Solar')]";
     public static String MenuOptionNoThanks = "//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
+    public static String OptionMore = "//div[contains(text(),'More')]";
 
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String closechatbot = "//i[@class='fa fa-times']";
@@ -102,6 +103,9 @@ public class AllVariables {
     public static String webusername="//div[contains(@class,'form-group')]//input[@id='Username']";
     public static String webpassword="//div[contains(@class,'form-group')]//input[@id='Password']";
 
+    public static String username1 = "//input[@id='Username']";
+    public static String password1 = "//input[@id='Password']";
+
 
     public static String downloadmycurrentbill="//div[contains(text(),'Download My Current Bill')]";
     public static String downloadapreviousbill="//div[contains(text(),'Download A Previous Bill')]";
@@ -128,6 +132,7 @@ public class AllVariables {
     public static String btnSignIn="//button[@class='btn btn btn-primary exc-corner-btn']";
     public static String signout="/html/body/form/div[3]/div[3]/div/header/div/button";
     public static String signIn="//div[contains(text(),'Sign In')]";
+    public static String websigninone = "//button[@class='btn btn btn-accent']";
 
     public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY5ZTA0ZDk0YzE2ODM0N2ZiMWU1YmQ4NjI1MGQ1NjA4ZjQyM2Y0NmRkZDIyOWE1NDQ2ZGYwYjcwYWI4Y2I1ZjRiZTllYTVhMzI=";
     public static String hellosignUrl="https://api.hellosign.com";
@@ -162,12 +167,26 @@ public class AllVariables {
     public static String surveyRating3 = "//span[@id='star3']";
     public static String surveyRating4 = "//span[@id='star4']";
     public static String surveyRating5 = "//span[@id='star5']";
+
+    public static String Deposits = "//div[contains(text(),'Deposit')]";
+    public static String Actualdeposittext = "//span[contains(text(),'Questions about your deposit?')]";
+    public static String Selectaccountfrommultipleaccount = "//div[contains(text(),'48 BAYVIEW RD CHESAPEAKE CITY MD 21915')]";
+    public static String ExpectedACEdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-642-3780";
+    public static String ExpectedDPLdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-375-7117";
+    public static String ExpectedPEPCOdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 202-833-7500";
+    public static String depositlink = "//a[contains(text(),'a list of FAQs')]";
+    public static String ExpectedACEdepositFAQlink = "https://aztest.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
+    public static String ExpectedDPLdepositFAQlink = "https://aztest.delmarva.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
+    public static String ExpectedPEPCOdepositFAQlink = "https://aztest.pepco.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
+
     public static String HelloSignEmail = "//input[@name='logIn.emailAddress']";
     public static String HelloSignbutton = "//button[@class='m-button bg-azure  hbg-castle-rock c-white progress-button state-loading']";
     public static String HelloSignPassword = "//input[@name='logIn.password']";
     public static String HelloSignAccept = "//span[@id='acceptButton']";
 
-    public static String ionicUsername="//input[@id='login_username']";
-    public static String ionicPassword="//ion-input[@id='login_password']";
-    public static String submitButtonSpan = "//span[contains(text(),'SIGN IN']";
+    public static String ionicUsername="//input[@name='login_username']";
+    public static String ionicPassword="//input[@name='login_password']";
+    public static String submitButtonSpan = "//ion-button[@id='login_bttn']";
+    public static String ionicUname="//input[@name='username']";
+    public static String submitButton1 = "//ion-button[@id='click_me_btn']";
 }

@@ -24,14 +24,14 @@ Feature: Feature to test exelon chatbot application test cases
 
     Examples:
       | SurveyRating |
-      | one          |
-      | two          |
+      #| one          |
+      #| two          |
       | three        |
       | four         |
       | five         |
 
 
-  @Regression @Basic @Firefox @Exelon @Day0 @Sanity @TC_Exel_0002
+  @Regression @Firefox @Exelon @Day0 @Sanity @TC_Exel_0002
   Scenario Outline: Firefox: Open chat bot and pay bill via chat
     Given firefox browser is open
     And user will be on exelon homepage
@@ -46,7 +46,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    #And user accept the authorization request
+    And user accept the authorization request
     Then navigate back to chat bot
     And select any of the registered address for payment
     Then Select no thanks to terminate chat
@@ -60,7 +60,7 @@ Feature: Feature to test exelon chatbot application test cases
       | PATTI@47 | Password1 |
       | DARICE40 | Password1 |
 
-  @Regression @Firefox @Exelon @Day0 @TC_Exel_003
+  @Regression @Basic @Firefox @Exelon @Day0 @TC_Exel_003
   Scenario: Firefox: Open chat bot and start service
     Given firefox browser is open
     And user will be on exelon homepage
@@ -832,3 +832,28 @@ Feature: Feature to test exelon chatbot application test cases
       | loginid  | password  |
       | PATTI@47 | Password1 |
       | DARICE40 | Password1 |
+
+
+
+  @Regression @Firefox @Exelon @Day0 @TC_Exel_0051
+  Scenario Outline: Firefox: Open exelon web application, load chatbot and navigate through menus
+    Given firefox browser is open
+    When user will be on "<opcoName>"
+    When user will locate the chatbot icon
+    And click on exelon chatbot icon
+    Then chatbot will be open
+    And user click on menu icon
+    Then click on more button in bot
+    And select solar and click in bot
+    Then click on home and business in bot
+    And click on private solar option
+    Then select yes for confirmation
+    And click survey rating as "<SurveyRating>"
+    And click on close chat icon
+    Then select yes to close chat
+
+    Examples:
+      | SurveyRating |  opcoName |
+      | three        |  dpl      |
+      | four         |  pepco    |
+      | five         |  ace      |
