@@ -417,7 +417,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then chatbot will be open
     And user click no thanks i will continue
     Then select and click on  bill and paymenets
-    And Account balance
+    And User click on account Balance
     Then click on close chat icon
     And select yes to close chat
  
@@ -430,7 +430,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then chatbot will be open
     And user click no thanks i will continue
     Then select and click on  bill and paymenets
-    And Account balance
+    And User click on account Balance
     And click on sign in
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"

@@ -1,5 +1,5 @@
 #Owner        : SHARP
-#Author       : QA Team
+#Author       : Parul; Sohail
 #Description  : This is feature file for Exelon Chatbot Deposits Flow
 
 Feature: Exelon-PHI feature file
@@ -54,6 +54,7 @@ Feature: Exelon-PHI feature file
     And type "<utterance>" for chat
     Then click Send
     And validate if deposits with correct text is displayed as per "<opcoName>"
+    Then Validate Deposits link as per "<opcoName>"
 
     Examples:
       | opcoName |  utterance |

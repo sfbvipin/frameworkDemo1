@@ -98,8 +98,8 @@ public class AllVariables {
 
     public static String startstopmove="//a[contains(text(),'Start, Stop or Move Service')]";
 
-    public static String username="//input[@name='Username']";
-    public static String password="//input[@name='Password']";
+    public static String username="//input[@name='username']";
+    public static String password="//input[@name='password']";
     public static String webusername="//div[contains(@class,'form-group')]//input[@id='Username']";
     public static String webpassword="//div[contains(@class,'form-group')]//input[@id='Password']";
 
@@ -110,7 +110,6 @@ public class AllVariables {
     public static String downloadmycurrentbill="//div[contains(text(),'Download My Current Bill')]";
     public static String downloadapreviousbill="//div[contains(text(),'Download A Previous Bill')]";
     public static String gettingyourbill="//div[contains(text(),'Getting Your Bill')]";
-    public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
     public static String nothanksafteraccountbalance="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'No, Thanks. I will continue without signing in')]";
     public static String endflowtext="Did you find the answer(s) you needed today?";
     public static String endflowxpath="//span[contains(text(),'Did you find the answer')]";
@@ -125,7 +124,8 @@ public class AllVariables {
     public static String passwordforweb="//input[@id='Password']";
     public static String websignbutton="//button[@class='btn btn btn-accent']";
     public static String contactus="//a[@id='ctl00_ctl00_contactLink']";
-    public static String accountbal="//div[contains(text(),'Account Balance')]";
+    public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
+    public static String Leavecommentforfeedback = "//div[contains(text(),'Leave Comment')]";
     public static String inputtext="//textarea[@placeholder='Type a message....']";
     public static String sendicon="//button[@class='oda-chat-footer-button oda-chat-button-send']";
     public static String denybutton="//button[contains(text(),'Deny')]";
@@ -175,9 +175,11 @@ public class AllVariables {
     public static String ExpectedDPLdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-375-7117";
     public static String ExpectedPEPCOdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 202-833-7500";
     public static String depositlink = "//a[contains(text(),'a list of FAQs')]";
+    public static String clickOauthignn = "//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'Sign In')]";
     public static String ExpectedACEdepositFAQlink = "https://aztest.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
     public static String ExpectedDPLdepositFAQlink = "https://aztest.delmarva.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
     public static String ExpectedPEPCOdepositFAQlink = "https://aztest.pepco.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
+    public static String nothanksijustneededmybalance = "//div[contains(text(),'No, Thanks. I just needed my balance')]";
 
     public static String HelloSignEmail = "//input[@name='logIn.emailAddress']";
     public static String HelloSignbutton = "//button[@class='m-button bg-azure  hbg-castle-rock c-white progress-button state-loading']";
