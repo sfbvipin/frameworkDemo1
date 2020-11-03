@@ -86,7 +86,6 @@ public class AllVariables {
     public static String accounttype="//textarea[@placeholder='Type a message....']";
     public static String sendbutton="//button[@class='oda-chat-footer-button oda-chat-button-send']";
 
-
     public static String autopay="//div[contains(text(),'Sign up for AutoPay')]";
     public static String otherpay="//div[contains(text(),'Learn about Other Payment Methods')]";
     public static String paybymail="//div[contains(text(),'Pay by Mail')]";
@@ -105,7 +104,6 @@ public class AllVariables {
 
     public static String username1 = "//input[@id='Username']";
     public static String password1 = "//input[@id='Password']";
-
 
     public static String downloadmycurrentbill="//div[contains(text(),'Download My Current Bill')]";
     public static String downloadapreviousbill="//div[contains(text(),'Download A Previous Bill')]";
@@ -137,7 +135,6 @@ public class AllVariables {
     public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY0NDY5YTA3Y2M0YTUxYTQ1MDMxMzBmNWRkZGEyNmU3OWRjNmQwM2VmYzk0YTg3NDM2N2MzNzY1MGFlOGE4MzE3Mzk1YjRkOGI=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
-
 
     public static String nothanks = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String Yes = "//div[8]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
@@ -191,4 +188,11 @@ public class AllVariables {
     public static String submitButtonSpan = "//ion-button[@id='login_bttn']";
     public static String ionicUname="//input[@name='username']";
     public static String submitButton1 = "//ion-button[@id='click_me_btn']";
+
+    public static String EmersonOauthToken="Basic RTEyMTA5MjczNUFCNDU5ODk2NUE3RjE4OTlBNDZBRERfTW9iaWxlQW5vbnltb3VzX0FQUElEOmU4OTE4NWE5LTU0NjQtNDAzMi05YmU1LTI5ODgzYjY4NzRkMw==";
+    public static String EmersonUrl= "https://E121092735AB4598965A7F1899A46ADD.mobile.ocp.oraclecloud.com:443/mobile/custom/";
+    public static String EmersonBackendId = "1d477b06-a3fe-45ed-a1c7-8c062209b886";
+    public static String EmersonCredentials = "YWFzaGlzaC5rdW1hcjpTZmJAMTEyMg==";
+    public static String SESMobileLogin = "SESMobileBackendAPI/login";
+    public static String SESMobileCheckUser = "SESMobileBackendAPI/user/validate";
 }

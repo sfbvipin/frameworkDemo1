@@ -6,10 +6,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.apache.commons.lang.ObjectUtils;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class apiAutomationFunctions extends AllVariables {
@@ -76,6 +80,15 @@ public class apiAutomationFunctions extends AllVariables {
         verify_body("Get Team");
     }
 
+    @And("verify response body for {string}")
+    public void verify_response_body_for_endpoint(String strendPoint) throws IOException{
+        if(strendPoint.equalsIgnoreCase("login")) {
+            verify_body("Get Login Detail");
+        } else if (strendPoint.equalsIgnoreCase("check user")) {
+            verify_body("Validate user detail");
+        }
+    }
+
     @Given ("Send post API Request to verify account")
     public void Send_post_API_Request_to_verify_account() throws JSONException {
         resp=(Response) RestAssured.given()
@@ -100,6 +113,52 @@ public class apiAutomationFunctions extends AllVariables {
                 .baseUri(hellosignUrl)
                 .auth().oauth2(OauthToken)
                 .get("/v3/team");
+    }
+
+    @Given ("Hit post API request for {string} with {string}")
+    public void Hit_post_API_request(String strEndPoint, String strauthcode) throws JSONException {
+        String sAuthCode = null;
+        if (strauthcode.equalsIgnoreCase("valid")){
+            sAuthCode = EmersonOauthToken;
+        } else {
+            sAuthCode = OauthTokenw;
+        }
+
+        if(strEndPoint.equalsIgnoreCase("login")) {
+            Map<String,String> requestHeaders = new HashMap<>();
+            requestHeaders.put("oracle-mobile-backend-id",EmersonBackendId);
+            requestHeaders.put("credentials",EmersonCredentials);
+            requestHeaders.put("Content-Type","application/json");
+            requestHeaders.put("Authorization",sAuthCode);
+
+            JSONObject requestParams = new JSONObject();
+            requestParams.put("UDID", "112");
+            requestParams.put("logout", "false");
+
+            resp=(Response) RestAssured.given()
+                    .baseUri(EmersonUrl)
+                    .headers(requestHeaders)
+                    .body(requestParams.toString())
+                    .when()
+                    .post(SESMobileLogin);
+        } else if (strEndPoint.equalsIgnoreCase("check user")) {
+            Map<String,String> requestHeaders = new HashMap<>();
+            requestHeaders.put("oracle-mobile-backend-id",EmersonBackendId);
+            requestHeaders.put("accsToken","Basic eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImV5SnJhV1FpT2lJd01tOW1aRWRFVFhSeVFWOUhlV2xXT1hoQlZHUnJNVUYwU0dZd0xXMU1TM0I1YjNGaU9ESmhTVEZKSWl3aVlXeG5Jam9pVWxNeU5UWWlmUS5leUoyWlhJaU9qRXNJbXAwYVNJNklrRlVMalp5YjJGb056TlpSWFJqVlZkeFZ6ZHFhV1ZCYVdjMU5HWkRaa1ZwTkdOd1ZGZEdjVEJhVWt4elJXTXViMkZ5YkRaeWNHUjJXVXhDTTNCNmVXd3ljRFlpTENKcGMzTWlPaUpvZEhSd2N6b3ZMMlZ0WlhKemIyNHViMnQwWVM1amIyMGlMQ0poZFdRaU9pSm9kSFJ3Y3pvdkwyVnRaWEp6YjI0dWIydDBZUzVqYjIwaUxDSnpkV0lpT2lKSFlYVnlZWFl1Vm1GamFHaGhibWxBUlcxbGNuTnZiaTVqYjIwaUxDSnBZWFFpT2pFMk1ETTNNVFEzTWpBc0ltVjRjQ0k2TVRZd016Y3hPRE15TUN3aVkybGtJam9pTUc5aE5HMXhjemx2TVdkRlVFZEtaMU15Y0RjaUxDSjFhV1FpT2lJd01IVTFPSEEwYVc5NGFtNXpha1V6Y1RKd055SXNJbk5qY0NJNld5SnZabVpzYVc1bFgyRmpZMlZ6Y3lKZGZRLlEzTFpvd01JamhZeVBxVUpBaXhMLThVQWZQLV9QZnBQWHlJRUtQS0tBVEpJX2FybmY4WDJYd1FPeXFHWjZxdkoyUjhzU1lfOWpaRWhXUUc3alI3RkQ4OGl5eFp2M1ZzaDlCX0xoZU1ZREsxa2tZWFRyMWdQOUs5VmJzWFV6Mng1R2lzTEZXc3FaUzYxM2FxcUYtT2lpc0NQcEpmY0RSS0tpSW9ZQTQzTWNDS3lvZ1NaWG1hRXRkb0hLNEtMTU9HVzkzczk5NVZIM2VyMXZMaTFWdWhLUkVGemtuTVpMSENjbF9uMXdkX0Z6Umc2elg2cHdEeENTZm1Gd29XeFZsWFI2aldDemdUZDJPWlIwd2g1UGRQNHg1RFUtM2VqWG54LWhfUExrZXI0dmRSaW1ORnBjN19vOTljM3lYM1RKQjYwN2hNZFlKM2pwSWw4cFRkbTJwR2NpdyIsImlhdCI6MTYwMzcxNDcyMSwiZXhwIjoxNjM1MjUwNzIxfQ.LXuRIgJ2qGt_zEl5JwWx0xlvSz1bhlimloshNOa9bvBdSnXiTkMgyg8aXx3L5n-sB_Safu73cq53kaa5Vi-sho5_r7AsJe6o4WKzS3E1SNBHhH2wOHMJdAyQMM8nTTr0VT-XM8syhUYZ4KkFuVg9SjEgSWGsgR27tia9cgdB2Cy_nELgWqA_BNiT7mfjn4AGaMdmgFS_oJj2yE1U_HAB6YP-mpmbqNJfV-0nqImDkYcP9asLXs1AcQAsu8Nol5XhO5Q47TQIDgv3Zg1tnh39DbdzuHWOuW4qMzh7FY0QBkJH3XhmBVh1lfsVq9srA5nDdfWgt75cdhEII9stSSPhPQ");
+            requestHeaders.put("Content-Type","application/json");
+            requestHeaders.put("Authorization",sAuthCode);
+
+            JSONObject requestParams = new JSONObject();
+            requestParams.put("UDID", "112");
+            requestParams.put("emailID", "aashish.kumar@emerson.com");
+
+            resp=(Response) RestAssured.given()
+                    .baseUri(EmersonUrl)
+                    .headers(requestHeaders)
+                    .body(requestParams.toString())
+                    .when()
+                    .post(SESMobileCheckUser);
+        }
     }
 
 
