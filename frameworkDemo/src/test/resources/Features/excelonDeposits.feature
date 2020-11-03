@@ -61,7 +61,7 @@ Feature: Exelon-PHI feature file
       | dpl      |  deposit                               |
       | pepco    |  How is my deposit amount determined   |
 
-  @Regression1 @Deposits1 @Exelon @TC_Excel_586324
+  @Regression @Deposits @Exelon @TC_Excel_586324
   Scenario Outline: Firefox: Deposit FAQ - Initiating the Chat-Bot: Sign in through Web and Select Deposits FAQ from options and check links are correct
     Given firefox browser is open
     When user will be on "<opcoName>"
@@ -72,7 +72,7 @@ Feature: Exelon-PHI feature file
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
-    Then click on more button in bot
+    Then click on more button
     Then click Deposits
     And validate if deposits with correct text is displayed as per "<opcoName>"
     Then Validate Deposits link as per "<opcoName>"

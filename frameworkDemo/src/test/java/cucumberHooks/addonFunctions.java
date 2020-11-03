@@ -63,13 +63,11 @@ public class addonFunctions {
 
     public static Integer getRowCount() throws IOException {
         int rowCount=sheet.getPhysicalNumberOfRows();
-        System.out.println("SHARP detected total "+rowCount+" rows");
+        System.out.println("SHARP detected total "+rowCount+" rows in Test Data sheet");
         return rowCount;
     }
 
     public static void compareString(String expectedValue, String actualValue) throws IOException {
-
-
         if (actualValue.equalsIgnoreCase(expectedValue)){
             System.out.println("Expected Value is :" + expectedValue);
             System.out.println("Actual Value is :" + actualValue);
