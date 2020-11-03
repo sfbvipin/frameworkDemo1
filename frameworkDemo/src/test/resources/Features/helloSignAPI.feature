@@ -40,6 +40,3 @@ Feature: Feature to test Hello Sign API cases
     Given Send get API Request to verify team details
     Then validate response code
     And verify response body for Get Team
-
-
- 
