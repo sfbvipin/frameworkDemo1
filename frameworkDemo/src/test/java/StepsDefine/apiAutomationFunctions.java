@@ -113,7 +113,7 @@ public class apiAutomationFunctions extends AllVariables {
         String[] strValues = strKeyValuePair[1].split(";");
         Integer intCount = strKeyValuePair[0].split(";").length;
         String strExpVal = null;
-        System.out.println(intCount);
+        System.out.println("SHARP : Total number of attributes to compare is " + intCount);
         for(j=0;j<=intCount-1;j++) {
             if (resp.jsonPath().get(strKeys[j]) == null){
                 strExpVal = "null";
