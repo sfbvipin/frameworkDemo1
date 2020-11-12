@@ -4,7 +4,7 @@
 
 Feature: Feature to test Hello Sign API cases
 
-  @Regression @Basic1 @API @HelloSIgn @TC_HCM_001
+  @Regression @Basic @API @HelloSIgn @TC_HCM_001
   Scenario Outline: API: send get request for user account
     Given Send getAPI request for account with "<authcode>"
     Then validate <response_code>

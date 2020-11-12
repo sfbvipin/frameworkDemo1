@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class apiAutomationFunctions extends AllVariables {
     public Response resp=null;
-
+    public String sAuthorization = null;
     @Given("Send getAPI Request for account")
     public void Send_getAPI_Request_for_account() {
         resp=(Response) RestAssured.given()
@@ -49,7 +49,7 @@ public class apiAutomationFunctions extends AllVariables {
         if (!strResponseCode.equals(response_code)){
             System.out.println("SHARP did not get expected response code");
         } else {
-            System.out.println("SHARP got expected response code");
+            System.out.println("SHARP got response code as " + strResponseCode +" which is expected");
         }
         resp.then().assertThat().statusCode(response_code);
     }
@@ -159,6 +159,34 @@ public class apiAutomationFunctions extends AllVariables {
                     .when()
                     .post(SESMobileCheckUser);
         }
+    }
+
+    @Given ("With {string}")
+    public void with_authorize(String strAuthorization) throws JSONException {
+        sAuthorization = strAuthorization;
+    }
+
+
+    @And ("Hit get API for {string} with {string}")
+    public void Hit_get_API_request(String strEndPoint, String strResourceCd) throws JSONException {
+        String sResourceCd = null;
+        sResourceCd = strResourceCd;
+
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("oracle-mobile-backend-id",EmersonBackendId);
+        requestHeaders.put("accsToken",EmersonAccToken);
+        requestHeaders.put("Content-Type","application/json");
+        if (sAuthorization.equalsIgnoreCase("authorize")){
+            requestHeaders.put("Authorization",EmersonOauthToken);
+        }
+
+        String strTechProfileUrl = SESMobileTechProfile + "?resourceId=" + sResourceCd;
+        resp=(Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .get(strTechProfileUrl);
+
+        System.out.println(resp.prettyPrint());
     }
 
 

@@ -42,7 +42,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then select and click on  bill and paymenets
     And click on paying your bill
     Then select and click pay via chat
-    And click on sign in
+    Then user click on sign in
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
@@ -788,7 +788,6 @@ Feature: Feature to test exelon chatbot application test cases
     Then click Send
     And click on close chat icon
     Then select yes to close chat
-    And close the browser
 
     Examples:
       | utterance         |

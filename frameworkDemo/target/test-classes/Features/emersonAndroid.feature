@@ -15,5 +15,5 @@ Feature: Feature to test emerson application scenarios
 
   @Regression1 @Ionic @Emerson @TC_Emer_I_002
   Scenario: Firefox: (Chat Survey) : Initiate bot, click Survey from bot and select YES
-#    Given create connection
-    Given Launch Application
+    Given create connection
+#    Given Launch Application
