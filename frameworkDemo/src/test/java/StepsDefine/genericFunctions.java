@@ -1,17 +1,13 @@
 package StepsDefine;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URL;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import io.github.sukgu.Shadow;
-import org.apache.commons.io.FileUtils;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -20,17 +16,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.net.UrlChecker;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.Assertion;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
@@ -143,6 +136,7 @@ public class genericFunctions extends AllVariables {
     }
     @Then("click on more button")
     public void click_on_more_button() throws InterruptedException {
+        wait_for_time(OptionMore,5000);
         driver.findElement(By.xpath(OptionMore)).click();
         Thread.sleep(5000);
     }
@@ -991,76 +985,86 @@ public class genericFunctions extends AllVariables {
 
     @Given("create connection")
     public void create_connection() throws Exception {
-        System.setProperty(chromeDriverinfo, chromePath_86);
+        fnKillProcess("chromedriver.exe");
+        fnKillProcess("FieldService-Elec.exe");
+        System.setProperty(chromeDriverinfo, chromePath);
 
         ChromeOptions opt = new ChromeOptions();
         opt.setBinary(emersonFileService);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("chromeOptions", opt);
         capabilities.setBrowserName("chrome");
-        driver = new ChromeDriver(capabilities);
+        driver = new ChromeDriver(opt);
+        Thread.sleep(10000);
 
-//        driver.findElement(By.xpath(ionicUsername)).sendKeys("Test");
-//        driver.findElement(By.xpath(ionicPassword)).sendKeys("Test");
-//        driver.findElement(By.xpath(submitButtonSpan)).click();
-//        Thread.sleep(8000);
-//        driver.findElement(By.xpath(ionicUname)).sendKeys("SHARP has entered the desired text");
-//        driver.findElement(By.xpath(submitButton1)).click();
-//        Thread.sleep(8000);
+        Shadow shadowDom = new Shadow(driver);
+//        WebElement username = shadowDom.findElement("login-box");
+        List<WebElement> elements = shadowDom.findElements("*");
+        System.out.println("Number of elements:" + elements.size());
+        wait_for_time("//ion-split-pane[@class='split-pane-visible']",2000);
+        wait_for_time("//div[@id='initial-loader']",2000);
 
+//        for (int m=0; m<elements.size();m++) {
+//            System.out.println(m + "th Elements has tag name : " + elements.get(m).getTagName() + " and class name is : " + elements.get(m).getAttribute("className"));
+//         }
+//
+//
+        driver.findElement(By.xpath(ionicUsername)).sendKeys("Test");
+        driver.findElement(By.xpath(ionicPassword)).sendKeys("Test");
+        driver.findElement(By.xpath(submitButtonSpan)).click();
+        Thread.sleep(8000);
+        driver.findElement(By.xpath(ionicUname)).sendKeys("SHARP has entered the desired text");
+        driver.findElement(By.xpath(submitButton1)).click();
+        Thread.sleep(8000);
 
-
-//        Shadow shadowDom = new Shadow(driver);
-//        //WebElement username = shadowDom.findElement("app-login.ion-page");
-//        List<WebElement> elements = shadowDom.findElements("*");
-//        System.out.println("Number of elements:" +elements.size());
 
 //        System.out.println(username.getClass().toString());
 //        WebElement ele1 = username.findElement(By.id("login_username"));
 //        ele1.sendKeys("Test");
 //        username.sendKeys("Test");
 //
-//        for (int i=0; i<elements.size();i++) {
+//        for (int i = 0; i < elements.size(); i++) {
 //            System.out.println(i + "th Elements has tag name : " + elements.get(i).getTagName() + " and class name is : " + elements.get(i).getAttribute("className"));
-//                System.out.println(i + "th Elements are below" );
-//                WebElement sr = expandRootElement(elements.get(i));
-//                try {
+//            System.out.println(i + "th Elements are below");
+//            WebElement sr = expandRootElement(elements.get(i));
+//
+//            try {
 //                List<WebElement> elements2 = sr.findElements(By.cssSelector("*"));
-//                System.out.println("Number of elements:" +elements2.size());
-//                for (int j=0; j<elements2.size();j++) {
+//                System.out.println("Number of elements:" + elements2.size());
+//                for (int j = 0; j < elements2.size(); j++) {
 //                    System.out.println("    " + j + "th Elements has tag name : " + elements2.get(j).getTagName() + " and class name is : " + elements2.get(j).getAttribute("className"));
 //                    WebElement sr1 = expandRootElement(elements2.get(j));
 //                    try {
-//                        List<WebElement> elements3= sr1.findElements(By.cssSelector("*"));
-//                        System.out.println("    " + "Number of elements in j :" +elements3.size());
-//                        for (int k=0; k<elements3.size();k++) {
+//                        List<WebElement> elements3 = sr1.findElements(By.cssSelector("*"));
+//                        System.out.println("    " + "Number of elements in j :" + elements3.size());
+//                        for (int k = 0; k < elements3.size(); k++) {
 //                            System.out.println("         " + k + "th Elements has tag name : " + elements3.get(k).getTagName() + " and class name is : " + elements3.get(k).getAttribute("className"));
 //                            WebElement s1 = expandRootElement(elements3.get(k));
 //                            try {
-//                                List<WebElement> elements4= s1.findElements(By.cssSelector("*"));
-//                                System.out.println("         " + "Number of elements in k :" +elements4.size());
-//                                for (int l=0; l<elements4.size();l++) {
+//                                List<WebElement> elements4 = s1.findElements(By.cssSelector("*"));
+//                                System.out.println("         " + "Number of elements in k :" + elements4.size());
+//                                for (int l = 0; l < elements4.size(); l++) {
 //                                    System.out.println("              " + l + "th Elements has tag name : " + elements4.get(l).getTagName() + " and class name is : " + elements4.get(l).getAttribute("className"));
 //                                    WebElement s2 = expandRootElement(elements4.get(l));
 //                                    try {
-//                                        List<WebElement> elements5= s2.findElements(By.cssSelector("*"));
-//                                        System.out.println("              " + "Number of elements in l :" +elements5.size());
+//                                        List<WebElement> elements5 = s2.findElements(By.cssSelector("*"));
+//                                        System.out.println("              " + "Number of elements in l :" + elements5.size());
 //
-//                                        for (int m=0; m<elements5.size();m++) {
+//                                        for (int m = 0; m < elements5.size(); m++) {
 //                                            System.out.println("              " + m + "th Elements has tag name : " + elements5.get(m).getTagName() + " and class name is : " + elements5.get(m).getAttribute("className"));
 //                                            WebElement s3 = expandRootElement(elements5.get(m));
 //                                            try {
-//                                                List<WebElement> elements6= s3.findElements(By.cssSelector("*"));
-//                                                System.out.println("              " + "Number of elements in m :" +elements6.size());
-//                                            }catch (NullPointerException npe) {
+//                                                List<WebElement> elements6 = s3.findElements(By.cssSelector("*"));
+//                                                System.out.println("              " + "Number of elements in m :" + elements6.size());
+//                                            } catch (NullPointerException npe) {
 //                                                System.out.println("              " + m + " : does not have any element");
 //                                            }
 //                                        }
-//                                    }catch (NullPointerException npe) {
+//                                    } catch (NullPointerException npe) {
 //                                        System.out.println("              " + l + " : does not have any element");
 //                                    }
 //                                }
-//                            }catch (NullPointerException npe) {
+//                            } catch (NullPointerException npe) {
 //                                System.out.println("         " + k + " : does not have any element");
 //                            }
 //                        }
@@ -1088,15 +1092,17 @@ public class genericFunctions extends AllVariables {
 //        String actualHeading = shadowRoot4.findElement(By.cssSelector("input[@id='login_username']")).getText();
 //        System.out.println(actualHeading);
 
-        }
+//        }
+    }
 
 
     @Given("Launch Application")
     public void launch_application() throws Exception {
         fnKillProcess("chromedriver.exe");
-        System.setProperty(chromeDriverinfo, chromePath_86);
+        System.setProperty(chromeDriverinfo, chromePath);
         driver = new ChromeDriver();
-        driver.navigate().to("http://localhost:4200");
+        //driver.navigate().to("http://localhost:4200");
+        driver.navigate().to("capacitor-electron://-");
         //driver.navigate().to(emersonFileService);
         Thread.sleep(8000);
         System.out.println(browserOpenMessage);
@@ -1110,7 +1116,7 @@ public class genericFunctions extends AllVariables {
 
     }
 
-    public WebElement expandRootElement(WebElement element) {
+    public WebElement expandRootElement(WebElement element){
         try {
             WebElement ele = (WebElement) ((JavascriptExecutor) driver)
                     .executeScript("return arguments[0].shadowRoot",element);

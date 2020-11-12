@@ -11,7 +11,7 @@ public class AllVariables {
     public static String protractorchromePath_86 = "C:\\Users\\Sohail Abbas\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver.exe";
     public static String firfoxPath = "src\\test\\resources\\Drivers\\geckodriver.exe";
     //public static String emersonPath = "src\\test\\resources\\Drivers\\Setup.exe";
-    public static String emersonFileService = "C:\\Users\\Sohail Abbas\\AppData\\Local\\FieldService\\FieldService.exe";
+    public static String emersonFileService = "C:\\Users\\Sohail Abbas\\AppData\\Local\\Programs\\FieldService-Elec\\FieldService-Elec.exe";
     public static String exelonUrl = "https://aztest.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/ContactUs.aspx";
     //public static String exelonUrl = "https://aztest.pepco.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
     public static String signurl  ="https://stage-apigateway-east.exeloncorp.com/auth/oauth/v2/authorize/login?action=display&sessionID=477be947-4a4b-4aaf-94fc-04067f5dcca3&sessionData=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ew0KICAgICJzZXNzaW9uIjogew0KICAgICAgICAic2Vzc2lvbklEIjoiNDc3YmU5NDctNGE0Yi00YWFmLTk0ZmMtMDQwNjdmNWRjY2EzIiwNCiAgICAgICAgImV4cCI6MTU5OTExOTk2OCwNCiAgICAgICAgImN1cnJlbnRfdXNlcm5hbWUiOiIiLA0KICAgICAgICAiY3VycmVudF91c2VyX2NvbnNlbnQiOiJub25lIiwNCiAgICAgICAgImN1cnJlbnRfdXNlcl9yb2xlIjoiIiwNCiAgICAgICAgImN1cnJlbnRfdXNlcl9hY3IiOiIwIiwNCiAgICAgICAgImN1cnJlbnRfdXNlcl9hdXRoVGltZSI6IjAiLA0KICAgICAgICAic2FsdCI6IiIsDQogICAgICAgICJ0aGlyZF9wYXJ0eV9zc29fdG9rZW4iOiIiLA0KICAgICAgICAidGhpcmRfcGFydHlfc3NvX3Rva2VuX3R5cGUiOiIiDQogICAgfSwNCiAgICAicmVxdWVzdF9jb25zZW50Ijogew0KICAgICAgICAiY2xpZW50X25hbWUiOiJXZWIrLStBQ0VTdGFnZSIsDQogICAgICAgICJzY29wZV92ZXJpZmllZCI6Im9vYiINCiAgICB9LA0KICAgICJyZXF1ZXN0X3BhcmFtZXRlcnMiOiB7DQogICAgICAgICJkaXNwbGF5IjoicGFnZSIsDQogICAgICAgICJwcm9tcHQiOiJsb2dpbitjb25zZW50IiwNCiAgICAgICAgImlkX3Rva2VuX2hpbnQiOiIiLA0KICAgICAgICAibG9naW5faGludCI6IiIsDQogICAgICAgICJhY3JfdmFsdWVzIjoiIiwNCiAgICAgICAgImNsaWVudF9pZCI6IjFmMTkwM2E5LTQ5NmEtNDU5NS05YjhjLWZkNGRlNTI3ZTY3YSIsDQogICAgICAgICJub25jZSI6IiIsDQogICAgICAgICJzY29wZSI6IiIsDQogICAgICAgICJtYXhfYWdlIjogIiINCiAgICB9DQp9.Uafe_6C9_gA7Kzen7PEoVFqW3QVqOQ63wBtD44yX2aA";
@@ -132,7 +132,7 @@ public class AllVariables {
     public static String signIn="//div[contains(text(),'Sign In')]";
     public static String websigninone = "//button[@class='btn btn btn-accent']";
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY0NDY5YTA3Y2M0YTUxYTQ1MDMxMzBmNWRkZGEyNmU3OWRjNmQwM2VmYzk0YTg3NDM2N2MzNzY1MGFlOGE4MzE3Mzk1YjRkOGI=";
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWQyMzVjM2FjZDU0MTA5YmY0MzdjM2Q5YWVlODIxZjQ4YjhiZjdlY2U4YTRjNWNlODY1NzI3N2MyOTc3ZmU0ZWUyNzU0MmU=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
@@ -183,16 +183,19 @@ public class AllVariables {
     public static String HelloSignPassword = "//input[@name='logIn.password']";
     public static String HelloSignAccept = "//span[@id='acceptButton']";
 
-    public static String ionicUsername="//input[@name='login_username']";
+    public static String ionicUsername="//input[@id='login_username']";
     public static String ionicPassword="//input[@name='login_password']";
     public static String submitButtonSpan = "//ion-button[@id='login_bttn']";
     public static String ionicUname="//input[@name='username']";
     public static String submitButton1 = "//ion-button[@id='click_me_btn']";
 
     public static String EmersonOauthToken="Basic RTEyMTA5MjczNUFCNDU5ODk2NUE3RjE4OTlBNDZBRERfTW9iaWxlQW5vbnltb3VzX0FQUElEOmU4OTE4NWE5LTU0NjQtNDAzMi05YmU1LTI5ODgzYjY4NzRkMw==";
+    public static String EmersonAccToken = "Basic eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImV5SnJhV1FpT2lJd01tOW1aRWRFVFhSeVFWOUhlV2xXT1hoQlZHUnJNVUYwU0dZd0xXMU1TM0I1YjNGaU9ESmhTVEZKSWl3aVlXeG5Jam9pVWxNeU5UWWlmUS5leUoyWlhJaU9qRXNJbXAwYVNJNklrRlVMalp5YjJGb056TlpSWFJqVlZkeFZ6ZHFhV1ZCYVdjMU5HWkRaa1ZwTkdOd1ZGZEdjVEJhVWt4elJXTXViMkZ5YkRaeWNHUjJXVXhDTTNCNmVXd3ljRFlpTENKcGMzTWlPaUpvZEhSd2N6b3ZMMlZ0WlhKemIyNHViMnQwWVM1amIyMGlMQ0poZFdRaU9pSm9kSFJ3Y3pvdkwyVnRaWEp6YjI0dWIydDBZUzVqYjIwaUxDSnpkV0lpT2lKSFlYVnlZWFl1Vm1GamFHaGhibWxBUlcxbGNuTnZiaTVqYjIwaUxDSnBZWFFpT2pFMk1ETTNNVFEzTWpBc0ltVjRjQ0k2TVRZd016Y3hPRE15TUN3aVkybGtJam9pTUc5aE5HMXhjemx2TVdkRlVFZEtaMU15Y0RjaUxDSjFhV1FpT2lJd01IVTFPSEEwYVc5NGFtNXpha1V6Y1RKd055SXNJbk5qY0NJNld5SnZabVpzYVc1bFgyRmpZMlZ6Y3lKZGZRLlEzTFpvd01JamhZeVBxVUpBaXhMLThVQWZQLV9QZnBQWHlJRUtQS0tBVEpJX2FybmY4WDJYd1FPeXFHWjZxdkoyUjhzU1lfOWpaRWhXUUc3alI3RkQ4OGl5eFp2M1ZzaDlCX0xoZU1ZREsxa2tZWFRyMWdQOUs5VmJzWFV6Mng1R2lzTEZXc3FaUzYxM2FxcUYtT2lpc0NQcEpmY0RSS0tpSW9ZQTQzTWNDS3lvZ1NaWG1hRXRkb0hLNEtMTU9HVzkzczk5NVZIM2VyMXZMaTFWdWhLUkVGemtuTVpMSENjbF9uMXdkX0Z6Umc2elg2cHdEeENTZm1Gd29XeFZsWFI2aldDemdUZDJPWlIwd2g1UGRQNHg1RFUtM2VqWG54LWhfUExrZXI0dmRSaW1ORnBjN19vOTljM3lYM1RKQjYwN2hNZFlKM2pwSWw4cFRkbTJwR2NpdyIsImlhdCI6MTYwMzcxNDcyMSwiZXhwIjoxNjM1MjUwNzIxfQ.LXuRIgJ2qGt_zEl5JwWx0xlvSz1bhlimloshNOa9bvBdSnXiTkMgyg8aXx3L5n-sB_Safu73cq53kaa5Vi-sho5_r7AsJe6o4WKzS3E1SNBHhH2wOHMJdAyQMM8nTTr0VT-XM8syhUYZ4KkFuVg9SjEgSWGsgR27tia9cgdB2Cy_nELgWqA_BNiT7mfjn4AGaMdmgFS_oJj2yE1U_HAB6YP-mpmbqNJfV-0nqImDkYcP9asLXs1AcQAsu8Nol5XhO5Q47TQIDgv3Zg1tnh39DbdzuHWOuW4qMzh7FY0QBkJH3XhmBVh1lfsVq9srA5nDdfWgt75cdhEII9stSSPhPQ";
     public static String EmersonUrl= "https://E121092735AB4598965A7F1899A46ADD.mobile.ocp.oraclecloud.com:443/mobile/custom/";
     public static String EmersonBackendId = "1d477b06-a3fe-45ed-a1c7-8c062209b886";
     public static String EmersonCredentials = "YWFzaGlzaC5rdW1hcjpTZmJAMTEyMg==";
     public static String SESMobileLogin = "SESMobileBackendAPI/login";
     public static String SESMobileCheckUser = "SESMobileBackendAPI/user/validate";
+    public static String SESMobileTechProfile = "SESMobileBackendAPI/user/techprofile";
+
 }
