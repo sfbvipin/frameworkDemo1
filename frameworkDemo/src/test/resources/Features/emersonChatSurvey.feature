@@ -25,10 +25,10 @@ Feature: Exelon-PHI-ACE feature file
     Examples:
       | opcoName | SurveyRating | comment   |
       | ace      | five         | Feedback comment by SHARP |
-      | dpl      | four         | SHARP entered comment     |
-      | pepco    | three        | SHARP typed comment       |
-      | ace      | one          | SHARP Comments            |
-      | dpl      | two          | SHARP typed test comment  |
+#      | dpl      | four         | SHARP entered comment     |
+#      | pepco    | three        | SHARP typed comment       |
+#      | ace      | one          | SHARP Comments            |
+#      | dpl      | two          | SHARP typed test comment  |
 
 
   @Regression @ChatSurvey @Exelon @TC_Excel_599309
