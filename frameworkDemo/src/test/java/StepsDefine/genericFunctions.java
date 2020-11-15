@@ -70,7 +70,7 @@ public class genericFunctions extends AllVariables {
 
     @When("user will locate the chatbot icon")
     public void user_will_locate_the_chatbot_icon() throws InterruptedException {
-        wait_for_time(ChatbotIcon,8000);
+        wait_for_time(ChatbotIcon,12000);
         WebElement chatbotIcon=driver.findElement(By.xpath(ChatbotIcon));
         if (chatbotIcon.isDisplayed()){
             System.out.println("Inside Step: SHARP is able to locate chat bot");
@@ -82,6 +82,7 @@ public class genericFunctions extends AllVariables {
 
     @And("click on exelon chatbot icon")
     public void click_on_exelon_chatbot_icon() throws InterruptedException {
+        wait_for_time(ChatbotIcon,8000);
         WebElement chatbotI=driver.findElement(By.xpath(ChatbotIcon));
         WebDriverWait wait = new WebDriverWait(driver, 30);
         if (chatbotI.isDisplayed()){
@@ -104,6 +105,7 @@ public class genericFunctions extends AllVariables {
 
     @Then("chatbot will be open")
     public void chatbot_will_be_open() throws InterruptedException {
+        wait_for_time(ChatbotConnected,8000);
         WebElement status=driver.findElement(By.xpath(ChatbotConnected));
         if (status.isDisplayed()){
             System.out.println("Inside Step: Chatbot is ready to proceed");
