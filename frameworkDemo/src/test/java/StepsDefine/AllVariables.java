@@ -37,7 +37,7 @@ public class AllVariables {
     public static String MenuOptionDownedPowerLine = "//a[contains(text(),'Downed Power Line')]";
     public static String MenuOptionFindAccountNumber = "//a[contains(text(),'Find Account Number')]";
     public static String MenuOptionStartStopOrMoveService = "//a[contains(text(),'Start, Stop or Move Service')]";
-    public static String MenuOptionCovid19Assistance = "//a[contains(text(),'Covid-19 Assistance')]";
+    public static String MenuOptionCovid19Assistance = "//a[contains(text(),'COVID-19 Assistance')]";
     public static String MenuOptionWaystoSave = "//a[contains(text(),'Ways to Save')]";
     public static String MenuOptionMore = "//a[contains(text(),'More')]";
     public static String MenuOptionSolar = "//div[contains(text(),'Solar')]";
@@ -71,11 +71,11 @@ public class AllVariables {
     public static String moveService="//div[contains(text(),'Move Service')]";
     public static String stopService="//div[contains(text(),'Stop Service')]";
     public static String stopServiceLink="//a[contains(text(),'online')]";
-    public static String moveservicelink="//li[contains(text(),'Your Pepco account number and phone number and the')]//a[contains(text(),'My Account')]";
+    public static String moveservicelink="//li[contains(text(),'Your Atlantic City Electric account number and phone number and the')]//a[contains(text(),'My Account')]";
 
     public static String findaccountnum="//div[contains(text(),'Find Account Number')]";
     public static String moreafternothanks="//div[contains(text(),'More')]";
-    public static String startServiceLink="//a[contains(text(),'pepco.com')]";
+    public static String startServiceLink="//a[contains(text(),'atlanticcityelectric.com')]";
     public static String budgetbilling="//div[contains(text(),'Budget Billing')]";
     public static String learnmoreaboutbudgetbilling="//div[contains(text(),'Learn more about Budget Billing')]";
     public static String checkEligibility="//div[contains(text(),'Check Eligibility')]";
@@ -132,7 +132,7 @@ public class AllVariables {
     public static String signIn="//div[contains(text(),'Sign In')]";
     public static String websigninone = "//button[@class='btn btn btn-accent']";
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWQyMzVjM2FjZDU0MTA5YmY0MzdjM2Q5YWVlODIxZjQ4YjhiZjdlY2U4YTRjNWNlODY1NzI3N2MyOTc3ZmU0ZWUyNzU0MmU=";
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY0MGJmOTg0MDE2YmNkOGYwNjViYzU2M2I1NTBmZWVjYmZhYmZkZjU0NGE2MmQ3NTk4NmJlYzdiMWE1ZTQ3ZWQwMDkzOGRiYjY=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 

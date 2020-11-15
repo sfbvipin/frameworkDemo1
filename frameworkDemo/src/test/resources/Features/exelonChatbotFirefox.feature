@@ -250,7 +250,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day1 @TC_Exel_016     @Khushboo
+  @Regression @Firefox @Exelon @Day1 @TC_Exel_0016     @Khushboo
   Scenario: Firefox: Initiate bot without login and click budget billing FAQ under pay by phone
     Given firefox browser is open
     And user will be on exelon homepage
@@ -555,7 +555,7 @@ Feature: Feature to test exelon chatbot application test cases
       | PATTI@47 | Password1 |
       | DARICE40 | Password1 |
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_034     @Parul  @Paramterize
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_0034     @Parul  @Paramterize
   Scenario: Firefox: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -696,7 +696,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_042     @Vipin
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @TC_Exel_0042     @Vipin
   Scenario: Firefox: Initiating the Chat-Bot and select link in Move content
     Given firefox browser is open
     And user will be on exelon homepage
@@ -722,7 +722,7 @@ Feature: Feature to test exelon chatbot application test cases
     #Then click on the link in the stop service content
     And close the browser
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_515750 @TC_Exel_044     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515750 @TC_Exel_0044     @Parul
   Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Start content
     Given firefox browser is open
     And user will be on exelon homepage
@@ -735,7 +735,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on start link
     And close the browser
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_515751 @TC_Exel_045     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515751 @TC_Exel_0045     @Parul
   Scenario: Firefox: BOT : Initiating the Chat-Bot and select link in Stop content
     Given firefox browser is open
     And user will be on exelon homepage
@@ -748,7 +748,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on stop link
     And close the browser
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_515752 @TC_Exel_046     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515752 @TC_Exel_0046     @Parul
   Scenario: Firefox: BOT : Initiating the ChatBot and select link in Move content
     Given firefox browser is open
     And user will be on exelon homepage

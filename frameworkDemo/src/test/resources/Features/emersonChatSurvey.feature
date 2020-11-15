@@ -89,6 +89,6 @@ Feature: Exelon-PHI-ACE feature file
 
     Examples:
       | opcoName | SurveyRating | comment                   | loginid     | password  |
-      | ace      | five         | Feedback comment by SHARP | SPARKINSON  | Password1 |
-      | dpl      | four         | SHARP entered comment     | SPARKINSON  | Password1 |
+#      | ace      | five         | Feedback comment by SHARP | SPARKINSON  | Password1 |
+#      | dpl      | four         | SHARP entered comment     | SPARKINSON  | Password1 |
       | pepco    | three        | SHARP typed comment       | SPARKINSON  | Password1 |
