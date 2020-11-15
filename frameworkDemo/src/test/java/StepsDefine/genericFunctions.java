@@ -17,6 +17,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import io.cucumber.java.en.And;
@@ -518,7 +520,7 @@ public class genericFunctions extends AllVariables {
 
     @Then("click on downed power lines")
     public void click_on_downed_power_lines() throws InterruptedException {
-        driver.findElement(By.xpath(downedpowerlinesfrommenu)).click();
+        driver.findElement(By.xpath(MenuOptionDownedPowerLine)).click();
         Thread.sleep(3000);
     }
 
@@ -652,7 +654,6 @@ public class genericFunctions extends AllVariables {
     	JavascriptExecutor jse = (JavascriptExecutor)driver;
     	jse.executeScript("window.scrollBy(0,-250)");
     	driver.findElement(By.xpath("//a[contains(text(),'online')]")).click();
-    	driver.quit();
     }
     @When ("user enters web login id")
     public void user_enters_web_login_id() throws InterruptedException {
@@ -890,7 +891,7 @@ public class genericFunctions extends AllVariables {
         String childwindow=it.next();
         System.out.println("SHARP Inside Step: Child Window handler is " + childwindow);
         driver.switchTo().window(childwindow);
-        wait_for_time(moveServiceWindow,8000);
+        wait_for_time(moveServiceWindow,16000);
         String strtext = driver.findElement(By.xpath(moveServiceWindow)).getText();
         System.out.println(strtext);
         assert strtext.equalsIgnoreCase(strMoveWindow);
