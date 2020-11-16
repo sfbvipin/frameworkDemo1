@@ -9,18 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">43,488</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">55,945</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.cucumber.runner.sharpRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1605471179716</td><td rowspan="1">42470</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.cucumber.runner.sharpRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1605508984555</td><td rowspan="1">55009</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">com.cucumber.runner.sharpRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Firefox: (Chat Survey): Initiate bot, opt &quot;YES&quot; under resolved End flow and type feedback as comment&quot;</td><td>&quot;Optional[Exelon-PHI-ACE feature file]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //img[@class=&apos;oda-chat-button-icon&apos;]
+<h2>Surefire test</h2><h3 id="m0">com.cucumber.runner.sharpRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow&quot;</td><td>&quot;Optional[Feature to test exelon chatbot application test cases]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 7000, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bd0ed2c8-dc99-4099-990a-5d17cf6cd5d3
-*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 14360, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f60d641e-f4a7-4306-b622-c4e830fc0f7d
+*** Element info: {Using=xpath, value=//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -31,8 +31,8 @@ Session ID: bd0ed2c8-dc99-4099-990a-5d17cf6cd5d3
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_will_locate_the_chatbot_icon(genericFunctions.java:74)
-	at ✽.user will locate the chatbot icon(classpath:features/emersonChatSurvey.feature:11)
+	at StepsDefine.genericFunctions.user_click_no_thanks(genericFunctions.java:190)
+	at ✽.user click no thanks(classpath:features/exelonChatbotFirefox.feature:776)
 ... Removed 4 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
