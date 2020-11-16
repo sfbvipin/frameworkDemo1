@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 16 14:55:39 IST 2020</td>
+<td>Started on:</td><td>Mon Nov 16 20:24:58 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>263 seconds (263968 ms)</td>
+<tr><td>Total time:</td><td>422 seconds (422926 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot, click mail icon and click submit with valid email id format", "Optional[Exelon-PHI-ACE feature file]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct", "Optional[Exelon-PHI feature file]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),&apos;More&apos;)]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 15052, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ec9459df-55d4-4bf2-8256-587fbd707cd0
-*** Element info: {Using=xpath, value=//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 17484, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 49134009-f648-4a16-83a9-795587ed3305
+*** Element info: {Using=xpath, value=//div[contains(text(),&apos;More&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -94,17 +94,17 @@ Session ID: ec9459df-55d4-4bf2-8256-587fbd707cd0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:783)
-	at ✽.user click on &quot;ace&quot; mail icon(classpath:features/emersonChatTranscription.feature:49)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace868350338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace868350338'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]
+	at StepsDefine.genericFunctions.click_on_more_button(genericFunctions.java:144)
+	at ✽.click on more button(classpath:features/exelonRefunds.feature:76)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2110164646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2110164646'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),&apos;More&apos;)]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 15052, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ec9459df-55d4-4bf2-8256-587fbd707cd0
-*** Element info: {Using=xpath, value=//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 17484, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 49134009-f648-4a16-83a9-795587ed3305
+*** Element info: {Using=xpath, value=//div[contains(text(),&apos;More&apos;)]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -119,160 +119,10 @@ Session ID: ec9459df-55d4-4bf2-8256-587fbd707cd0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:783)
-	at ✽.user click on &quot;ace&quot; mail icon(classpath:features/emersonChatTranscription.feature:49)
+	at StepsDefine.genericFunctions.click_on_more_button(genericFunctions.java:144)
+	at ✽.click on more button(classpath:features/exelonRefunds.feature:76)
 </pre></div></td>
-<td>38</td>
-<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
-<tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot, click mail icon and click submit with valid email id format", "Optional[Exelon-PHI-ACE feature file]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 12168, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2d63a69d-e165-4ec8-8950-1fba4d22e422
-*** Element info: {Using=xpath, value=//body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:787)
-	at ✽.user click on &quot;pepco&quot; mail icon(classpath:features/emersonChatTranscription.feature:49)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace91744698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace91744698'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 12168, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2d63a69d-e165-4ec8-8950-1fba4d22e422
-*** Element info: {Using=xpath, value=//body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:787)
-	at ✽.user click on &quot;pepco&quot; mail icon(classpath:features/emersonChatTranscription.feature:49)
-</pre></div></td>
-<td>41</td>
-<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
-<tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot, click mail icon and click submit with valid email id format", "Optional[Exelon-PHI-ACE feature file]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 16680, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5bc4819b-04f0-4fae-bae9-264a714cb830
-*** Element info: {Using=xpath, value=//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:783)
-	at ✽.user click on &quot;ace&quot; mail icon(classpath:features/exelonChatTranscription.feature:49)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1574507725", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1574507725'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 16680, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5bc4819b-04f0-4fae-bae9-264a714cb830
-*** Element info: {Using=xpath, value=//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:783)
-	at ✽.user click on &quot;ace&quot; mail icon(classpath:features/exelonChatTranscription.feature:49)
-</pre></div></td>
-<td>36</td>
-<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
-<tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot, click mail icon and click submit with valid email id format", "Optional[Exelon-PHI-ACE feature file]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 12960, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 70c06d8e-05a4-4b72-846c-e0f2971e7d36
-*** Element info: {Using=xpath, value=//body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:787)
-	at ✽.user click on &quot;pepco&quot; mail icon(classpath:features/exelonChatTranscription.feature:49)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1146933236", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1146933236'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 12960, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 70c06d8e-05a4-4b72-846c-e0f2971e7d36
-*** Element info: {Using=xpath, value=//body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_click_on_mail_icon(genericFunctions.java:787)
-	at ✽.user click on &quot;pepco&quot; mail icon(classpath:features/exelonChatTranscription.feature:49)
-</pre></div></td>
-<td>41</td>
+<td>110</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -283,14 +133,14 @@ Session ID: 70c06d8e-05a4-4b72-846c-e0f2971e7d36
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot, click mail icon and click submit with valid email id format", "Optional[Exelon-PHI-ACE feature file]"</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct", "Optional[Exelon-PHI feature file]"</td>
 <td></td>
-<td>54</td>
+<td>159</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Initiate bot, click mail icon and click submit with valid email id format", "Optional[Exelon-PHI-ACE feature file]"</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct", "Optional[Exelon-PHI feature file]"</td>
 <td></td>
-<td>50</td>
+<td>151</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 </table><p>
 </body>

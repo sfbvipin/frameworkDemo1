@@ -265,6 +265,14 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(password)).sendKeys(str2);
     }
 
+    @When ("user login with {string} and {string}")
+    public void user_login_with_login_password(String str1, String str2) throws InterruptedException {
+        wait_for_time(username1,10000);
+        driver.findElement(By.xpath(username1)).sendKeys(str1);
+        Wait_Until_element_Visibility(password1);
+        driver.findElement(By.xpath(password1)).sendKeys(str2);
+    }
+
     @Then("click on sign in for Authentication")
     public void click_on_sign_in_for_Authentication() throws InterruptedException {
         wait_for_time(btnSignIn,4000);
@@ -989,6 +997,58 @@ public class genericFunctions extends AllVariables {
     public void User_click_on_no_thanks_i_just_needed_my_balance() throws InterruptedException {
         driver.findElement(By.xpath(nothanksijustneededmybalance)).click();
         Thread.sleep(5000);
+    }
+
+    @Then("click Refunds")
+    public void click_Refunds() throws InterruptedException {
+        driver.findElement(By.xpath(Refunds)).click();
+        Thread.sleep(15000);
+    }
+
+    @And("validate if Refunds with correct text is displayed as per {string}")
+    public void validate_if_Refunds_with_correct_text_is_displayed_as_per(String opcoName) throws InterruptedException {
+        Thread.sleep(5000);
+        if (opcoName.equalsIgnoreCase("ace")) {
+            String strRefundstext = driver.findElement(By.xpath(ActualRefundstext)).getText();
+            System.out.println(strRefundstext);
+            Thread.sleep(5000);
+            assert strRefundstext.equalsIgnoreCase(ExpectedACERefundstext);
+        } else if (opcoName.equalsIgnoreCase("dpl")) {
+            Thread.sleep(5000);
+            String strRefundstext = driver.findElement(By.xpath(ActualRefundstext)).getText();
+            System.out.println(strRefundstext);
+            Thread.sleep(5000);
+            assert strRefundstext.equalsIgnoreCase(ExpectedDPLRefundstext);
+        } else if (opcoName.equalsIgnoreCase("pepco")) {
+            Thread.sleep(5000);
+            String strRefundstext = driver.findElement(By.xpath(ActualRefundstext)).getText();
+            System.out.println(strRefundstext);
+            Thread.sleep(5000);
+            assert strRefundstext.equalsIgnoreCase(ExpectedPEPCORefundstext);
+        }
+        Thread.sleep(5000);
+    }
+
+    @Then("Validate Refunds link as per {string}")
+    public void Validate_Refunds_link_as_per(String opcoName) throws InterruptedException {
+        Thread.sleep(5000);
+        if (opcoName.equalsIgnoreCase("ace")) {
+            String FAQRefundsLink = driver.findElement(By.xpath(Refundslink)).getAttribute("href");
+            System.out.println(FAQRefundsLink);
+            Thread.sleep(10000);
+            assert FAQRefundsLink.equalsIgnoreCase(ExpectedACERefundsFAQlink);
+        } else if (opcoName.equalsIgnoreCase("dpl")) {
+            Thread.sleep(5000);
+            String FAQRefundsLink = driver.findElement(By.xpath(Refundslink)).getAttribute("href");
+            System.out.println(FAQRefundsLink);
+            assert FAQRefundsLink.equalsIgnoreCase(ExpectedDPLRefundsFAQlink);
+        } else if (opcoName.equalsIgnoreCase("pepco")) {
+            Thread.sleep(5000);
+            String FAQRefundsLink = driver.findElement(By.xpath(Refundslink)).getAttribute("href");
+            System.out.println(FAQRefundsLink);
+            assert FAQRefundsLink.equalsIgnoreCase(ExpectedPEPCORefundsFAQlink);
+        }
+
     }
 
     @Given("create connection")
