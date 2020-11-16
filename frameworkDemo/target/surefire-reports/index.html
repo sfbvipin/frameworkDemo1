@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox: (Chat Survey): Initiate bot, opt &quot;YES&quot; under resolved End flow and type feedback as commen...)">runScenario("Firefox: (Chat Survey): Initiate bot, opt "YES" under resolved End flow and type feedback as commen...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.cucumber.runner.sharpRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow&quot;, &quot;Optiona...)">runScenario("Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow", "Optiona...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -127,18 +127,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Firefox: (Chat Survey): Initiate bot, opt &quot;YES&quot; under resolved End flow and type feedback as commen...)">
-                  </a> <!-- runScenario("Firefox: (Chat Survey): Initiate bot, opt "YES" under resolved End flow and type feedback as commen...) -->
+                  <a name="runScenario(&quot;Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow&quot;, &quot;Optiona...)">
+                  </a> <!-- runScenario("Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow", "Optiona...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Firefox: (Chat Survey): Initiate bot, opt "YES" under resolved End flow and type feedback as comment", "Optional[Exelon-PHI-ACE feature file]")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //img[@class=&apos;oda-chat-button-icon&apos;]
+                  <span class="parameters">("Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow", "Optional[Feature to test exelon chatbot application test cases]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 7000, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bd0ed2c8-dc99-4099-990a-5d17cf6cd5d3
-*** Element info: {Using=xpath, value=//img[@class=&apos;oda-chat-button-icon&apos;]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 14360, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f60d641e-f4a7-4306-b622-c4e830fc0f7d
+*** Element info: {Using=xpath, value=//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -149,8 +149,8 @@ Session ID: bd0ed2c8-dc99-4099-990a-5d17cf6cd5d3
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.user_will_locate_the_chatbot_icon(genericFunctions.java:74)
-	at ✽.user will locate the chatbot icon(classpath:features/emersonChatSurvey.feature:11)
+	at StepsDefine.genericFunctions.user_click_no_thanks(genericFunctions.java:190)
+	at ✽.user click no thanks(classpath:features/exelonChatbotFirefox.feature:776)
 ... Removed 4 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -222,12 +222,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.cucumber.runner.sharpRunner')
-data.setCell(0, 3, 42470);
+data.setCell(0, 3, 55009);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -261,12 +261,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Firefox: (Chat Survey): Initiate bot, opt "YES" under resolved End flow and type feedback as commen...)</span>
-                <span class="method-start">468 ms</span>
+                <span class="method-name">runScenario("Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow", "Optiona...)</span>
+                <span class="method-start">437 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">42944 ms</span>
+                <span class="method-start">55452 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

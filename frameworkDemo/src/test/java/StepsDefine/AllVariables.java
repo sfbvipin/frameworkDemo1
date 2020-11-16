@@ -133,7 +133,7 @@ public class AllVariables {
     public static String signIn="//div[contains(text(),'Sign In')]";
     public static String websigninone = "//button[@class='btn btn btn-accent']";
 
-    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWY0MGJmOTg0MDE2YmNkOGYwNjViYzU2M2I1NTBmZWVjYmZhYmZkZjU0NGE2MmQ3NTk4NmJlYzdiMWE1ZTQ3ZWQwMDkzOGRiYjY=";
+    public static String OauthToken="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWYzYWQ2OTRjYzIzZTEyMDExZTQyNzhiMjNhOWJjNTk3NmFmZmU4M2M4YjI0Y2M4YjhhNGUwNjZiMTRjZTVkOTEwZDNmZTgwZTU=";
     public static String hellosignUrl="https://api.hellosign.com";
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
@@ -174,9 +174,11 @@ public class AllVariables {
     public static String ExpectedPEPCOdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 202-833-7500";
     public static String depositlink = "//a[contains(text(),'a list of FAQs')]";
     public static String clickOauthignn = "//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'Sign In')]";
-    public static String ExpectedACEdepositFAQlink = "https://aztest.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
-    public static String ExpectedDPLdepositFAQlink = "https://aztest.delmarva.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
-    public static String ExpectedPEPCOdepositFAQlink = "https://aztest.pepco.com/MyAccount/CustomerSupport/Pages/FAQs.aspx";
+
+    public static String ExpectedACEdepositFAQlink = "https://www.atlanticcityelectric.com/Documents/AI%20Bot%20Deposit%20FAQ%20Ace%20Final.pdf";
+    public static String ExpectedDPLdepositFAQlink = "https://www.delmarva.com/Documents/AI%20Bot%20Deposit%20DPL%20FAQ%20Final.pdf";
+    public static String ExpectedPEPCOdepositFAQlink = "https://www.pepco.com/Documents/AI%20Bot%20Deposit%20FAQ%20Pepco%20Final.pdf";
+
     public static String nothanksijustneededmybalance = "//div[contains(text(),'No, Thanks. I just needed my balance')]";
 
     public static String HelloSignEmail = "//input[@name='logIn.emailAddress']";

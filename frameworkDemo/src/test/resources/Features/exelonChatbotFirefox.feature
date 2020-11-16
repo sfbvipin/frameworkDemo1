@@ -386,7 +386,7 @@ Feature: Feature to test exelon chatbot application test cases
 #  Before we get started, sign in to your online account for the optimal experience. Simply start another
 #  chat after you sign in, and I can help you from there. You can also continue without signing in.
 #  [Following as buttons]Sign InNo, Thanks. I will continue without signing in)
-  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_024     @Aashish
+  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_0024     @Aashish
   Scenario Outline: Firefox: Initiating the Chat-Bot and select SignIn
     Given firefox browser is open
     And user will be on exelon homepage
@@ -762,7 +762,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then user will redirect to Move service page
     And close the browser
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_515753 @TC_Exel_047     @Khushboo
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515753 @TC_Exel_0047     @Khushboo
   Scenario: Firefox:Initiating the Chat-Bot and select any Start/Stop/Move option and check End flow
     Given firefox browser is open
     And user will be on exelon homepage
@@ -773,7 +773,6 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on Start Stop or Move Service
     Then user click move service
     And user click yes
-    Then user click no thanks
     And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515759 @TC_Exel_048     @Khushboo

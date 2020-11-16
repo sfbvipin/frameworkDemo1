@@ -194,10 +194,8 @@ public class genericFunctions extends AllVariables {
     @And("user click no thanks i will continue")
     public void  user_click_no_thanks_i_will_continue() throws InterruptedException
     {
-        WebElement nothanks=driver.findElement(By.xpath(MenuOptionNoThanksContinue));
-        if (nothanks.isDisplayed()){
-            driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
-        }
+        wait_for_time(MenuOptionNoThanksContinue,10000);
+        driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
         Thread.sleep(4000);
     }
 
@@ -247,8 +245,8 @@ public class genericFunctions extends AllVariables {
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
-        wait_for_time(websigninusername,5000);
-        driver.findElement(By.xpath(websigninusername)).sendKeys(strUserName);
+        wait_for_time(username,5000);
+        driver.findElement(By.xpath(username)).sendKeys(strUserName);
     }
 
     @And("user enters password")
@@ -736,7 +734,7 @@ public class genericFunctions extends AllVariables {
 
         @And("user click signout")
     public void user_click_signout() throws InterruptedException, IOException {
-        Wait_Until_element_Visibility(signout);
+        //Wait_Until_element_Visibility(signout);
         wait_for_time(signout,8000);
         driver.findElement(By.xpath(signout)).click();
         Thread.sleep(8000);
