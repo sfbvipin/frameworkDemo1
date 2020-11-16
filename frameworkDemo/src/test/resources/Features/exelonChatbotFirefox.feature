@@ -502,7 +502,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click on menu icon
-    Then click on downed power lines
+    Then click on menu downed power lines
     And click on close chat icon
     Then select yes to close chat
 
