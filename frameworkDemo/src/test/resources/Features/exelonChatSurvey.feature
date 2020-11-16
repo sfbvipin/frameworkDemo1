@@ -2,7 +2,7 @@
 #Author       : Parul; Sohail
 #Description  : This is feature file for Exelon Customer Chat Survey Flow
 
-Feature: Exelon-PHI-ACE feature file
+Feature: Exelon-PHI feature file
 
   @Regression @ChatSurvey @Exelon @TC_Excel_599301
   Scenario Outline: Firefox: (Chat Survey): Initiate bot, opt "YES" under resolved End flow and type feedback as comment

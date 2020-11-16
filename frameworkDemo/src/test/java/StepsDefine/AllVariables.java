@@ -201,4 +201,14 @@ public class AllVariables {
     public static String SESMobileCheckUser = "SESMobileBackendAPI/user/validate";
     public static String SESMobileTechProfile = "SESMobileBackendAPI/user/techprofile";
 
+    public static String Refunds = "//div[contains(text(),'Refund')]";
+    public static String ActualRefundstext = "//span[contains(text(),'Wondering about your refund?')]";
+    public static String ExpectedACERefundstext = "Wondering about your refund? Here's a list of FAQs  to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-642-3780";
+    public static String ExpectedDPLRefundstext = "Wondering about your refund? Here's a list of FAQs  to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-375-7117";
+    public static String ExpectedPEPCORefundstext = "Wondering about your refund? Here's a list of FAQs  to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 202-833-7500";
+    public static String Refundslink = "//a[contains(text(),'a list of FAQs')]";
+    public static String ExpectedACERefundsFAQlink = "https://www.atlanticcityelectric.com/Documents/AI%20Bot%20Refund%20FAQ%20Ace%20Final.pdf";
+    public static String ExpectedDPLRefundsFAQlink = "https://www.delmarva.com/Documents/AI%20Bot%20Refund%20FAQ%20DPL%20Final.pdf";
+    public static String ExpectedPEPCORefundsFAQlink = "https://www.pepco.com/Documents/AI%20Bot%20Refund%20FAQ%20Pepco%20Final.pdf";
+
 }

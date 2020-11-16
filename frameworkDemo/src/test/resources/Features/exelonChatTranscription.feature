@@ -2,7 +2,7 @@
 #Author       : Parul; Sohail
 #Description  : This is feature file for Exelon Chatbot Chat Transcription
 
-  Feature: Exelon-PHI-ACE feature file
+  Feature: Exelon-PHI feature file
 
   @Regression @Exelon @ChatTranscription @TC_Exel_574921
   Scenario Outline: Firefox: Initiate bot and click mail icon
