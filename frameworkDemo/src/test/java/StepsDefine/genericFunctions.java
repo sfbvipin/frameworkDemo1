@@ -259,8 +259,8 @@ public class genericFunctions extends AllVariables {
 
     @When ("user enter {string} and {string}")
     public void user_enters_login_password(String str1, String str2) throws InterruptedException {
-        wait_for_time(username,10000);
-        driver.findElement(By.xpath(username)).sendKeys(str1);
+        wait_for_time(webusername,10000);
+        driver.findElement(By.xpath(webusername)).sendKeys(str1);
         Wait_Until_element_Visibility(password);
         driver.findElement(By.xpath(password)).sendKeys(str2);
     }
@@ -520,10 +520,17 @@ public class genericFunctions extends AllVariables {
 
     @Then("click on downed power lines")
     public void click_on_downed_power_lines() throws InterruptedException {
-        driver.findElement(By.xpath(MenuOptionDownedPowerLine)).click();
+        wait_for_time(downedpowerlines,5000);
+        driver.findElement(By.xpath(downedpowerlines)).click();
         Thread.sleep(3000);
     }
 
+    @Then("click on menu downed power lines")
+    public void click_on_menu_Downed_power_lines() throws InterruptedException {
+        wait_for_time(MenuOptionDownedPowerLine,5000);
+        driver.findElement(By.xpath(MenuOptionDownedPowerLine)).click();
+        Thread.sleep(3000);
+    }
     
     @And("type utterance")
     public void type_utterance() throws InterruptedException

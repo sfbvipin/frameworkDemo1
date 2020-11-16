@@ -17,9 +17,9 @@
 
     Examples:
       | opcoName |
-      | ace      |
+#      | ace      |
       | dpl      |
-      | pepco    |
+#      | pepco    |
 
     @Regression @Exelon @ChatTranscription @TC_Exel_574922
     Scenario Outline: Firefox: Initiate bot and type utterance related to chat transcription
@@ -35,9 +35,9 @@
 
       Examples:
         | opcoName |
-        | ace      |
+#        | ace      |
         | dpl      |
-        | pepco    |
+#        | pepco    |
 
     @Regression @Exelon @ChatTranscription @TC_Exel_574926
     Scenario Outline: Firefox: Initiate bot, click mail icon and click submit with valid email id format
@@ -56,9 +56,9 @@
 
       Examples:
         | opcoName | email_id                 |
-        | ace      | sohail.abbas@sofbang.com |
+#        | ace      | sohail.abbas@sofbang.com |
         | dpl      | sohail.abbas@sofbang.com |
-        | pepco    | sohail.abbas@sofbang.com |
+#        | pepco    | sohail.abbas@sofbang.com |
 
 
     @Regression @Exelon @ChatTranscription @TC_Exel_574927
@@ -77,15 +77,15 @@
 
       Examples:
         | opcoName | email_id                 |
-        | ace      | sohail.abbas@sofbang#com |
+#        | ace      | sohail.abbas@sofbang#com |
         | dpl      | sohail.abbassofbang.com  |
-        | pepco    | sohail.abbas@sofbang_com |
-        | pepco    | sohail.abbas@sofbang#com |
-        | ace      | sohail.abbassofbang.com  |
+#        | pepco    | sohail.abbas@sofbang_com |
+#        | pepco    | sohail.abbas@sofbang#com |
+#        | ace      | sohail.abbassofbang.com  |
         | dpl      | sohail.abbas@sofbang_com |
         | dpl      | sohail.abbas@sofbang#com |
-        | pepco    | sohail.abbassofbang.com  |
-        | ace      | sohail.abbas@sofbang_com |
+#        | pepco    | sohail.abbassofbang.com  |
+#        | ace      | sohail.abbas@sofbang_com |
 
     @Regression @Exelon @ChatTranscription @TC_Exel_575075
     Scenario Outline: Firefox: Initiate bot, click mail icon and click cancel with valid/invalid/blank email id
@@ -101,7 +101,7 @@
 
       Examples:
         | opcoName |
-        | ace      |
+#        | ace      |
         | dpl      |
-        | pepco    |
+#        | pepco    |
 
