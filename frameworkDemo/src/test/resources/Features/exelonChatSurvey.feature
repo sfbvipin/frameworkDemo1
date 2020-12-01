@@ -70,7 +70,7 @@ Feature: Exelon-PHI feature file
     And User click on account Balance
     Then click Oauth Sign in
     Then user will redirect to login page
-    When user enter "<loginid>" and "<password>"
+    When user login with "<loginid>" and "<password>"
     Then click on sign in for Authentication
     And user accept the authorization request
     Then navigate back to chat bot

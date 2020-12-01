@@ -1,107 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-16T20:24:58 IST" name="Surefire suite" finished-at="2020-11-16T20:32:01 IST" duration-ms="422926">
+  <suite started-at="2020-11-27T10:59:37 IST" name="Surefire suite" finished-at="2020-11-27T10:59:56 IST" duration-ms="18480">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-11-16T20:24:58 IST" name="Surefire test" finished-at="2020-11-16T20:32:01 IST" duration-ms="422926">
+    <test started-at="2020-11-27T10:59:37 IST" name="Surefire test" finished-at="2020-11-27T10:59:56 IST" duration-ms="18480">
       <class name="com.cucumber.runner.sharpRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-16T20:24:58 IST" name="setUpClass" finished-at="2020-11-16T20:24:59 IST" duration-ms="443" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:40 IST" name="setUpClass" finished-at="2020-11-27T10:59:40 IST" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-16T20:24:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-16T20:27:38 IST" duration-ms="159829" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-27T10:59:44 IST" duration-ms="3921" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct"]]>
+                <![CDATA["API: send get request for user account"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Exelon-PHI feature file]"]]>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-16T20:27:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-16T20:30:10 IST" duration-ms="151143" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-27T10:59:46 IST" duration-ms="1584" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct"]]>
+                <![CDATA["API: send get request for user account"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Exelon-PHI feature file]"]]>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-16T20:30:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-16T20:32:01 IST" duration-ms="110935" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-27T10:59:49 IST" duration-ms="3405" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct"]]>
+                <![CDATA["API: send get request for user account with correct credentials"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Exelon-PHI feature file]"]]>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //div[contains(text(),'More')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.1.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 17484, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 49134009-f648-4a16-83a9-795587ed3305
-*** Element info: {Using=xpath, value=//div[contains(text(),'More')]}]]>
-            </message>
+          <exception class="java.lang.AssertionError">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),'More')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P9BL872', ip: '192.168.1.146', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 17484, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 49134009-f648-4a16-83a9-795587ed3305
-*** Element info: {Using=xpath, value=//div[contains(text(),'More')]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at StepsDefine.genericFunctions.click_on_more_button(genericFunctions.java:144)
-at ✽.click on more button(classpath:features/exelonRefunds.feature:76)
+              <![CDATA[java.lang.AssertionError
+at cucumberHooks.addonFunctions.compareString(addonFunctions.java:81)
+at StepsDefine.apiAutomationFunctions.verify_body(apiAutomationFunctions.java:210)
+at StepsDefine.apiAutomationFunctions.verify_response_body_for_Get_Account(apiAutomationFunctions.java:70)
+at ✽.verify response body for Get Account(classpath:features/helloSignAPI.feature:21)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-16T20:32:01 IST" name="tearDownClass" finished-at="2020-11-16T20:32:01 IST" duration-ms="524" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-27T10:59:51 IST" duration-ms="1950" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["API: verify user account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-27T10:59:53 IST" duration-ms="1589" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["API: send get request for user account wrong credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-11-27T10:59:55 IST" duration-ms="2594" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["API: Verify team details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Feature to test Hello Sign API cases]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.cucumber.runner.sharpRunner@f6efaab]" started-at="2020-11-27T10:59:55 IST" name="tearDownClass" finished-at="2020-11-27T10:59:56 IST" duration-ms="484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

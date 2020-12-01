@@ -323,7 +323,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then select and click download my current bill
     And click on sign in
     Then user will redirect to login page
-    When user enters "<loginid>" and "<password>"
+    When user login with "<loginid>" and "<password>"
     Then click on sign in for Authentication
     #And user accept the authorization request
     Then navigate back to chat bot
