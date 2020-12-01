@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 16 20:24:58 IST 2020</td>
+<td>Started on:</td><td>Fri Nov 27 10:59:37 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>422 seconds (422926 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18480 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,54 +75,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct", "Optional[Exelon-PHI feature file]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),&apos;More&apos;)]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 17484, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 49134009-f648-4a16-83a9-795587ed3305
-*** Element info: {Using=xpath, value=//div[contains(text(),&apos;More&apos;)]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.click_on_more_button(genericFunctions.java:144)
-	at ✽.click on more button(classpath:features/exelonRefunds.feature:76)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2110164646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2110164646'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(text(),&apos;More&apos;)]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P9BL872&apos;, ip: &apos;192.168.1.146&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 17484, moz:profile: C:\Users\Sohail Abbas\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 49134009-f648-4a16-83a9-795587ed3305
-*** Element info: {Using=xpath, value=//div[contains(text(),&apos;More&apos;)]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepsDefine.genericFunctions.click_on_more_button(genericFunctions.java:144)
-	at ✽.click on more button(classpath:features/exelonRefunds.feature:76)
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API: send get request for user account with correct credentials", "Optional[Feature to test Hello Sign API cases]"</td>
+<td><div><pre>java.lang.AssertionError
+	at cucumberHooks.addonFunctions.compareString(addonFunctions.java:81)
+	at StepsDefine.apiAutomationFunctions.verify_body(apiAutomationFunctions.java:210)
+	at StepsDefine.apiAutomationFunctions.verify_response_body_for_Get_Account(apiAutomationFunctions.java:70)
+	at ✽.verify response body for Get Account(classpath:features/helloSignAPI.feature:21)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1794262830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1794262830'><pre>java.lang.AssertionError
+	at cucumberHooks.addonFunctions.compareString(addonFunctions.java:81)
+	at StepsDefine.apiAutomationFunctions.verify_body(apiAutomationFunctions.java:210)
+	at StepsDefine.apiAutomationFunctions.verify_response_body_for_Get_Account(apiAutomationFunctions.java:70)
+	at ✽.verify response body for Get Account(classpath:features/helloSignAPI.feature:21)
 </pre></div></td>
-<td>110</td>
+<td>3</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -133,14 +99,29 @@ Session ID: 49134009-f648-4a16-83a9-795587ed3305
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct", "Optional[Exelon-PHI feature file]"</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API: send get request for user account", "Optional[Feature to test Hello Sign API cases]"</td>
 <td></td>
-<td>159</td>
+<td>3</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Firefox: Refunds FAQ - Initiating the Chat-Bot: Sign in through Web and Select Refunds FAQ from options and check links are correct", "Optional[Exelon-PHI feature file]"</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API: send get request for user account", "Optional[Feature to test Hello Sign API cases]"</td>
 <td></td>
-<td>151</td>
+<td>1</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API: verify user account", "Optional[Feature to test Hello Sign API cases]"</td>
+<td></td>
+<td>1</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API: send get request for user account wrong credentials", "Optional[Feature to test Hello Sign API cases]"</td>
+<td></td>
+<td>1</td>
+<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
+<tr>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "API: Verify team details", "Optional[Feature to test Hello Sign API cases]"</td>
+<td></td>
+<td>2</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 </table><p>
 </body>

@@ -245,7 +245,7 @@ public class genericFunctions extends AllVariables {
     @When("user enters login id")
     public void user_enters_login_id() throws InterruptedException
     {
-        wait_for_time(username,5000);
+        wait_for_time(username,12000);
         driver.findElement(By.xpath(username)).sendKeys(strUserName);
     }
 
@@ -750,7 +750,7 @@ public class genericFunctions extends AllVariables {
         @And("user click signout")
     public void user_click_signout() throws InterruptedException, IOException {
         //Wait_Until_element_Visibility(signout);
-        wait_for_time(signout,8000);
+        wait_for_time(signout,12000);
         driver.findElement(By.xpath(signout)).click();
         Thread.sleep(8000);
     }
