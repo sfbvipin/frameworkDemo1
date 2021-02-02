@@ -86,8 +86,24 @@ public class apiAutomationFunctions extends AllVariables {
             verify_body("Get Login Detail");
         } else if (strendPoint.equalsIgnoreCase("check user")) {
             verify_body("Validate user detail");
+        } else if (strendPoint.equalsIgnoreCase("validate user for different udid")) {
+            verify_body("validate user for different udid");
+        } else if (strendPoint.equalsIgnoreCase("validate error msg for invalid email")) {
+            verify_body("validate error msg for invalid email");
+        } else if (strendPoint.equalsIgnoreCase("validate user with login udid")) {
+            verify_body("validate user with login udid");
+        } else if (strendPoint.equalsIgnoreCase("validate user for different email")) {
+            verify_body("validate user for different email");
         }
     }
+
+    @And("verify response body for {string} with {string}")
+    public void verify_response_body_for_endpoint_with_resourcecd(String strendPoint, String strResourceCd) throws IOException{
+        if(strendPoint.equalsIgnoreCase("tech profile") ) {
+            verify_body("Validate Tech Profile for " + strResourceCd);
+        }
+    }
+
 
     @Given ("Send post API Request to verify account")
     public void Send_post_API_Request_to_verify_account() throws JSONException {
@@ -185,6 +201,31 @@ public class apiAutomationFunctions extends AllVariables {
                 .baseUri(EmersonUrl)
                 .headers(requestHeaders)
                 .get(strTechProfileUrl);
+
+        System.out.println(resp.prettyPrint());
+    }
+
+    @And ("Hit post API check user with {string} and {string}")
+    public void hit_post_api_check_user(String emailId, String udid) throws JSONException {
+
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("oracle-mobile-backend-id",EmersonBackendId);
+        requestHeaders.put("accsToken",EmersonAccToken);
+        requestHeaders.put("Content-Type","application/json");
+        if (sAuthorization.equalsIgnoreCase("authorize")){
+            requestHeaders.put("Authorization",EmersonOauthToken);
+        }
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("UDID", udid);
+        requestParams.put("emailID", emailId);
+
+        resp=(Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .body(requestParams.toString())
+                .when()
+                .post("/SESMobileBackendAPI/user/validate");
 
         System.out.println(resp.prettyPrint());
     }

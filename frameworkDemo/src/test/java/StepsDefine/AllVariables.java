@@ -18,8 +18,8 @@ public class AllVariables {
 
 //    public static String ACEUrl = "https://aztest.atlanticcityelectric.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
     public static String ACEUrl = "https://aztest.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/ContactUs.aspx";
-    public static String DPLUrl = "https://aztest.delmarva.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
-    public static String PepcoUrl = "https://aztest.pepco.com/MyAccount/MyBillUsage/Pages/RatesTariffs.aspx";
+    public static String DPLUrl = "https://aztest.delmarva.com/MyAccount/CustomerSupport/Pages/ContactUs.aspx";
+    public static String PepcoUrl = "https://aztest.pepco.com/MyAccount/CustomerSupport/Pages/ContactUs.aspx";
 
     public static String geckoDriverinfo = "webdriver.gecko.driver";
     public static String chromeDriverinfo = "webdriver.chrome.driver";
