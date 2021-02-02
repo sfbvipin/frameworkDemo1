@@ -747,7 +747,7 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(50000);
     }
 
-        @And("user click signout")
+    @And("user click signout")
     public void user_click_signout() throws InterruptedException, IOException {
         //Wait_Until_element_Visibility(signout);
         wait_for_time(signout,12000);
