@@ -8,10 +8,14 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.commons.lang.ObjectUtils;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +29,7 @@ public class apiAutomationFunctions extends AllVariables {
                 .baseUri(hellosignUrl)
                 .auth().oauth2(OauthToken)
                 .get("/v3/account");
+
     }
 
     @Given("Send getAPI request for account with {string}")
@@ -68,7 +73,8 @@ public class apiAutomationFunctions extends AllVariables {
     @And("verify response body for Get Account")
     public void verify_response_body_for_Get_Account() throws IOException{
         verify_body("Get User Account");
-    }
+
+            }
 
     @And("verify response body for verify account")
     public void verify_response_body_for_verify_account() throws IOException{

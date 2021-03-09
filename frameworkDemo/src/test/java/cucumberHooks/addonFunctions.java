@@ -67,7 +67,7 @@ public class addonFunctions {
         return rowCount;
     }
 
-    public static void compareString(String expectedValue, String actualValue) throws IOException {
+    public static void  compareString(String expectedValue, String actualValue) throws IOException {
         if (actualValue.equalsIgnoreCase(expectedValue)){
             System.out.println("Expected Value is :" + expectedValue);
             System.out.println("Actual Value is :" + actualValue);
@@ -79,6 +79,7 @@ public class addonFunctions {
             System.out.println("Expected Value and Actual Value is different");
         }
         assert actualValue.equalsIgnoreCase(expectedValue);
+
     }
 
     public static String validateResponse(String strTestCaseName) throws IOException {

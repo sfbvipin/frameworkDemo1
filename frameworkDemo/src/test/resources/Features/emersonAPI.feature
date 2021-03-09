@@ -54,11 +54,11 @@ Feature: Feature to test Emerson API cases
 
     Examples:
       | endPoint    | resourceCd  | response_code | authorization |
-      | tech profile| 348         | 200           | authorize     |
-      | tech profile| 343         | 200           | authorize     |
-      | tech profile| 112         | 200           | authorize     |
-      | tech profile| 34807       | 500           | authorize     |
-      | tech profile| 000         | 500           | authorize     |
+      | tech profile| 348         | 404           | authorize     |
+#      | tech profile| 343         | 200           | authorize     |
+#      | tech profile| 112         | 200           | authorize     |
+#      | tech profile| 34807       | 500           | authorize     |
+#      | tech profile| 000         | 500           | authorize     |
 
   @Regression @API @Emerson @TC_Emerson_API_005
  Scenario Outline: Hit Post request for validating user profile
