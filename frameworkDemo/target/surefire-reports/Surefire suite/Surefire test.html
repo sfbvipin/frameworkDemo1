@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 01 16:48:46 IST 2021</td>
+<td>Started on:</td><td>Fri Feb 19 15:12:06 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12421 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6679 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,43 +75,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Hit Post request for validating user profile", "Optional[Feature to test Emerson API cases]"</td>
+<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Hit Get request for Emerson to validate tech profile", "Optional[Feature to test Emerson API cases]"</td>
 <td><div><pre>java.lang.AssertionError
 	at cucumberHooks.addonFunctions.compareString(addonFunctions.java:81)
-	at StepsDefine.apiAutomationFunctions.verify_body(apiAutomationFunctions.java:251)
-	at StepsDefine.apiAutomationFunctions.verify_response_body_for_endpoint(apiAutomationFunctions.java:92)
-	at ✽.verify response body for &quot;validate error msg for invalid email&quot;(classpath:features/emersonAPI.feature:68)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1585119643", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1585119643'><pre>java.lang.AssertionError
+	at StepsDefine.apiAutomationFunctions.verify_body(apiAutomationFunctions.java:265)
+	at StepsDefine.apiAutomationFunctions.verify_response_body_for_endpoint_with_resourcecd(apiAutomationFunctions.java:117)
+	at ✽.verify response body for &quot;tech profile&quot; with &quot;348&quot;(classpath:features/emersonAPI.feature:52)
+</pre></div><a href='#' onClick='toggleBox("stack-trace378916162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace378916162'><pre>java.lang.AssertionError
 	at cucumberHooks.addonFunctions.compareString(addonFunctions.java:81)
-	at StepsDefine.apiAutomationFunctions.verify_body(apiAutomationFunctions.java:251)
-	at StepsDefine.apiAutomationFunctions.verify_response_body_for_endpoint(apiAutomationFunctions.java:92)
-	at ✽.verify response body for &quot;validate error msg for invalid email&quot;(classpath:features/emersonAPI.feature:68)
+	at StepsDefine.apiAutomationFunctions.verify_body(apiAutomationFunctions.java:265)
+	at StepsDefine.apiAutomationFunctions.verify_response_body_for_endpoint_with_resourcecd(apiAutomationFunctions.java:117)
+	at ✽.verify response body for &quot;tech profile&quot; with &quot;348&quot;(classpath:features/emersonAPI.feature:52)
 </pre></div></td>
-<td>2</td>
-<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Hit Post request for validating user profile", "Optional[Feature to test Emerson API cases]"</td>
-<td></td>
 <td>5</td>
-<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
-<tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Hit Post request for validating user profile", "Optional[Feature to test Emerson API cases]"</td>
-<td></td>
-<td>1</td>
-<td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
-<tr>
-<td title='com.cucumber.runner.sharpRunner.runScenario()'><b>runScenario</b><br>Test class: com.cucumber.runner.sharpRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Hit Post request for validating user profile", "Optional[Feature to test Emerson API cases]"</td>
-<td></td>
-<td>2</td>
 <td>com.cucumber.runner.sharpRunner@f6efaab</td></tr>
 </table><p>
 </body>
