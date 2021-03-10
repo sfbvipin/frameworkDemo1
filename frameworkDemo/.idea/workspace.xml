@@ -23,10 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="346a2ca5-3944-4e54-872b-3b9df53dce52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepsDefine/AllVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepsDefine/AllVariables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepsDefine/apiAutomationFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepsDefine/apiAutomationFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/emersonAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/emersonAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/runner/sharpRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/runner/sharpRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +65,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/QA/On Going Project/Emerson/SES_Mobile_app" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -98,19 +100,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="275" y="5" key="#Plugins" timestamp="1615279488072">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="5" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1615279488072" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608201561993">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1608201561993" />
-    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613728470293">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1613728470293" />
   </component>
 </project>
