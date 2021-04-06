@@ -142,7 +142,7 @@ public class AllVariables {
     public static String Yes2 = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
     public static String Takefeedbacksurvey = "//div[contains(text(),'Take Feedback Survey')]";
     public static String ACEmailicon = "//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]";
-    public static String mailicon = "//body/div[3]/div[1]/div[1]/div[4]/a[1]/img[1]";
+    public static String mailicon = "//body/div[2]/div/div[1]/div[4]/a/img";
     public static String PopUpChatTranscript = "//p[contains(text(),'Want a copy of this chat transcript? Enter your email address.')]";
     public static String mailText="Want a copy of this chat transcript? Enter your email address.";
     public static String emailid = "//input[@id='emailID']";
@@ -227,9 +227,10 @@ public class AllVariables {
     public static String SESMobileTaskDetails="SESMobileBackendAPI/user/348/task/additionalInfo";
     public static String SESMobileAddress="SESMobileBackendAPI/admin/address";
     public static String SESMobileWorkSchedules="SESMobileBackendAPI/user/343/osc/workSchedules";
-    public static String SESMobileClarityLog="SESMobileBackendAPI/user/ad_jt_01/clarity/lov";
+    public static String SESMobileClarityLov="SESMobileBackendAPI/user/ad_jt_01/clarity/lov";
     public static String SESMobileanalyticsReportDays="SESMobileBackendAPI/admin/analyticsReportDays";
     public static String SESMobileUserPreferences="SESMobileBackendAPI/user/preferences/1266";
+    public static String SESMobileAnalyticsReportDays="SESMobileBackendAPI/admin/analyticsReportDays";
 
     public static String Refunds = "//div[contains(text(),'Refund')public static String SESMobileTechProfile = \"SESMobileBackendAPI/user/techprofile\";]";
     public static String ActualRefundstext = "//span[contains(text(),'Wondering about your refund?')]";

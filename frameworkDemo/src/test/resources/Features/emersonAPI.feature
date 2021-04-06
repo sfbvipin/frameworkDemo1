@@ -45,7 +45,7 @@ Feature: Feature to test Emerson API cases
       | tech profile| 000         | 500           | authorize     |
 
 
-  @Regression @API @Emerson @TC_Emerson_API_004 @Rutika @GetAPI
+  @Regression @API @Emerson @TC_Emerson_API_004 @Rutika @GetAPI @Demo
   Scenario Outline: Hit Get request for Emerson to validate tech profile
     Given With "<authorization>"
     And Hit get API for "<endPoint>" with "<resourceCd>"
@@ -57,7 +57,6 @@ Feature: Feature to test Emerson API cases
       | endPoint    | resourceCd  | response_code | authorization |
       | tech profile| 348         | 200           | authorize     |
       | tech profile| 343         | 200           | authorize     |
-      | tech profile| 112         | 200           | authorize     |
       | tech profile| 34807       | 500           | authorize     |
       | tech profile| 000         | 500           | authorize     |
 
@@ -188,6 +187,7 @@ Feature: Feature to test Emerson API cases
     Given With "<authorization>"
     And Hit get API to fetch allowances for "<modifiedDate>"
     Then validate <response_code>
+    And validate response body for Modified date "<modifiedDate>"
 
 
     Examples:
@@ -198,12 +198,12 @@ Feature: Feature to test Emerson API cases
       | 14-Jan-2020 71:24:51.429000000 PM |    500         | authorize     |
 
 
-  @Regression @API @Emerson @TC_Emerson_API_013 @Rutika @GetAPI
+  @Regression @API @Emerson @TC_Emerson_API_013 @Rutika @GetAPI @Demo
   Scenario Outline: Hit Get request for Emerson to fetch languages
     Given With "<authorization>"
     And Hit get API to fetch languages for "<isEnabled>"
     Then validate <response_code>
-    And validate response matches the value of "<isEnabled>"
+   And validate response matches the value of "<isEnabled>"
 
 
     Examples:
@@ -276,7 +276,7 @@ Feature: Feature to test Emerson API cases
       |                           |      404      | authorize     |
 
 
-  @Regression @API @Emerson @TC_Emerson_API_018 @Rutika @GetAPI
+  @Regression @API @Emerson @TC_Emerson_API_018 @Rutika @GetAPI @Demo
   Scenario Outline: Hit Get request for Emerson to fetch User and Permission
     Given With "<authorization>"
     And Hit get API to fetch User and Permission
@@ -411,7 +411,7 @@ Feature: Feature to test Emerson API cases
       |      401      | unauthorize   |
 
 
-  @Regression @API @Emerson @TC_Emerson_API_027 @Rutika @GetAPI
+  @Regression @API @Emerson @TC_Emerson_API_027 @Rutika @GetAPI @Demo
   Scenario Outline: Hit Get request for Emerson to fetch Users
     Given With "<authorization>"
     And Hit get API to fetch Users
@@ -444,19 +444,20 @@ Feature: Feature to test Emerson API cases
     Given With "<authorization>"
     And Hit get API to fetch address with "<is_enabled>" and "<modifiedon>"
     Then validate <response_code>
+    And validate response body for address is greater than or equal to "<modifiedon>"
 
     Examples:
       | is_enabled   |          modifiedon       | response_code | authorization |
-      |   true       | 2020-02-23T10:42:00.000z  |      200      | authorize     |
-      |   true       | -2020-02-23T10:42:00.000z |      500      | authorize     |
-      |   true       | 2020-22-23T10:42:00.000z  |      500      | authorize     |
-      |   true       |                           |      200      | authorize     |
-      |   false      | 2020-02-23T10:42:00.000z  |      200      | authorize     |
-      |   false      | -2020-02-23T10:42:00.000z |      500      | authorize     |
-      |   false      | 2020-22-23T10:42:00.000z  |      500      | authorize     |
-      |   false      |                           |      200      | authorize     |
-      |              | 2020-02-23T10:42:00.000z  |      200      | authorize     |
-      |              |                           |      200      | authorize     |
+      |   true       | 2021-02-23T10:42:00.000z  |      200      | authorize     |
+#      |   true       | -2021-02-23T10:42:00.000z |      500      | authorize     |
+#      |   true       | 2021-22-23T10:42:00.000z  |      500      | authorize     |
+#      |   true       |                           |      200      | authorize     |
+#      |   false      | 2021-02-23T10:42:00.000z  |      200      | authorize     |
+#      |   false      | -2021-02-23T10:42:00.000z |      500      | authorize     |
+#      |   false      | 2021-22-23T10:42:00.000z  |      500      | authorize     |
+#      |   false      |                           |      200      | authorize     |
+#      |              | 2021-02-23T10:42:00.000z  |      200      | authorize     |
+#      |              |                           |      200      | authorize     |
 
 
   @Regression @API @Emerson @TC_Emerson_API_030 @Rutika @GetAPI
@@ -476,11 +477,11 @@ Feature: Feature to test Emerson API cases
 
 
   @Regression @API @Emerson @TC_Emerson_API_031 @Rutika @GetAPI
-  Scenario Outline: Hit Get request for Emerson to fetch clarity log
+  Scenario Outline: Hit Get request for Emerson to fetch clarity lov
     Given With "<authorization>"
-    And Hit get API to fetch clarity log with "<modifiedDate>"
+    And Hit get API to fetch clarity lov with "<modifiedDate>"
     Then validate <response_code>
-#    And validate response data is greater than or equal to date "<modifiedDate>"
+    And validate response data for clarity lov
 
     Examples:
       |    modifiedDate      | response_code | authorization |
@@ -505,12 +506,32 @@ Feature: Feature to test Emerson API cases
 
 
   @Regression @API @Emerson @TC_Emerson_API_033 @Rutika @GetAPI
-  Scenario Outline: Hit Get request for Emerson to fetch User Prefrences
+  Scenario Outline: Hit Get request for Emerson to fetch User Preferences
     Given With "<authorization>"
-    And Hit get API to fetch User Prefrences
+    And Hit get API to fetch User Preferences
     Then validate <response_code>
+    And validate response body for User Preferences
 
     Examples:
       | response_code | authorization |
       |      200      | authorize     |
       |      401      | unauthorize   |
+
+  @Regression @API @Emerson @TC_Emerson_API_034 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch Analytics Report Days
+    Given With "<authorization>"
+    And Hit get API for Analytics Report Days
+    Then validate <response_code>
+    And validate response body for correct Analytics Report Days
+
+
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |
+
+
+
+
+
+

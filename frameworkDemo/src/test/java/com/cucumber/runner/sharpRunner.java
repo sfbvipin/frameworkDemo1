@@ -23,4 +23,3 @@ public class sharpRunner extends AbstractTestNGCucumberTests{
         return super.scenarios();
     }
 }
-

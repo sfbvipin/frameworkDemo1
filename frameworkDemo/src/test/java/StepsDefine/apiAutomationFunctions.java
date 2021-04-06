@@ -954,7 +954,7 @@ public class apiAutomationFunctions extends AllVariables {
                 for (int i = 0; i < response.length(); i++) {
                     Deletion_Date = response.getJSONObject(i).getString("Deletion_Date");
                     LocalDateTime ResponseDeletionDate = LocalDateTime.parse(Deletion_Date, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-                    if (ResponseDeletionDate.isBefore(InputUpdateDate)) {
+                    if ((ResponseDeletionDate).isBefore(InputUpdateDate)) {
                         count++;
                     }
                 }
@@ -1378,6 +1378,68 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
+    @And("validate response body for address is greater than or equal to {string}")
+    public void validate_response_body_for_address_is_greater_than_or_equal_to(String strModifiedDate) throws JSONException {
+
+        Integer intRespCode = resp.getStatusCode();
+        if(intRespCode!=200){
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        }
+        else {
+            String sModifiedDate=null;
+            sModifiedDate = strModifiedDate.trim();
+            out.println("Given Modified date is: "+sModifiedDate);
+            String ModifiedDate = null;
+            int count=0;
+            String Validate=null;
+            JSONObject json = new JSONObject(resp.prettyPrint());
+            JSONArray response = json.getJSONArray("data");
+
+            LocalDateTime currentDate = LocalDateTime.parse(DateTime.now().toString(), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+            if (sModifiedDate.length()==0)
+            {
+                for(int i=0;i<response.length();i++){
+                    ModifiedDate=response.getJSONObject(i).getString("MODIFIEDON");
+                    if(ModifiedDate!="null") {
+                        LocalDateTime ResponseModifiedDate = LocalDateTime.parse(ModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+                        if (ResponseModifiedDate.compareTo(currentDate)>0 )
+                        {
+                            count++;
+                        }
+                }
+                        else{
+                    out.println("SHARP: Cannot compare date as Modified date is null in response data.");
+                }}
+            }
+            else {
+                LocalDateTime InputModifiedDate = LocalDateTime.parse(sModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+                for (int i = 0; i < response.length(); i++) {
+                    ModifiedDate = response.getJSONObject(i).getString("MODIFIEDON");
+                    if(ModifiedDate!="null") {
+                    LocalDateTime ResponseModifiedDate = LocalDateTime.parse(ModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+                    if (ResponseModifiedDate.compareTo(InputModifiedDate) < 0) {
+                        count++;
+                    }
+                }
+                else{
+                    out.println("SHARP: Cannot compare date as Modified date is null in response data.");
+                }}
+            }
+            if (count>0)
+            {
+                Validate="APi is giving "+count+ " incorrect responses";
+            }
+            else
+            {
+                Validate="All responses are correct";
+            }
+
+            assert Validate.equalsIgnoreCase("All responses are correct");
+        }
+    }
+
+
+
     @And("Hit get API to fetch work schedules with {string}")
     public void Hit_get_API_to_fetch_work_schedules(String strDate) throws JSONException {
 
@@ -1399,8 +1461,8 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
-    @And("Hit get API to fetch clarity log with {string}")
-    public void Hit_get_API_to_fetch_clarity_log(String strModifiedDate) throws JSONException {
+    @And("Hit get API to fetch clarity lov with {string}")
+    public void Hit_get_API_to_fetch_clarity_lov(String strModifiedDate) throws JSONException {
 
         String sModifiedDate = null;
         sModifiedDate=strModifiedDate;
@@ -1413,13 +1475,18 @@ public class apiAutomationFunctions extends AllVariables {
             requestHeaders.put("Authorization", EmersonOauthToken);
         }
 
-        String strClarityLogUrl = SESMobileClarityLog + "?modifiedDate=" + sModifiedDate;
+        String strClarityLovUrl = SESMobileClarityLov + "?modifiedDate=" + sModifiedDate;
         resp = (Response) RestAssured.given()
                 .baseUri(EmersonUrl)
                 .headers(requestHeaders)
-                .get(strClarityLogUrl);
+                .get(strClarityLovUrl);
 
         out.println(resp.prettyPrint());
+    }
+
+    @And("validate response data for clarity lov")
+    public void validate_response_data_for_clarity_lov() throws IOException {
+        verify_body("validate response data for clarity lov");
     }
 
     @And("Hit get API to fetch analyticsReportDays")
@@ -1440,8 +1507,8 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
-    @And("Hit get API to fetch User Prefrences")
-    public void Hit_get_API_to_fetch_User_Prefrences() throws JSONException {
+    @And("Hit get API to fetch User Preferences")
+    public void Hit_get_API_to_fetch_User_Preferences() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
         requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
@@ -1457,6 +1524,59 @@ public class apiAutomationFunctions extends AllVariables {
                 .get(SESMobileUserPreferences);
 
         out.println(resp.prettyPrint());
+    }
+
+    @And("validate response body for User Preferences")
+    public void validate_response_body_for_User_Preferences() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        }
+        else {
+            out.println("inside else");
+        verify_body("validate response body for User Preferences");
+        }
+    }
+
+    @And("Hit get API for Analytics Report Days")
+    public void Hit_get_API_for_Analytics_Report_Days() throws JSONException {
+
+        Map<String, String> requestHeaders = new HashMap<>();
+        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
+        requestHeaders.put("Content-Type", "application/json");
+        if (sAuthorization.equalsIgnoreCase("authorize")) {
+            requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+
+        resp = (Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .get(SESMobileAnalyticsReportDays);
+
+        out.println(resp.prettyPrint());
+    }
+
+    @And("validate response body for correct Analytics Report Days")
+    public void validate_response_body_for_correct_Analytics_Report_Days() throws IOException, JSONException {
+        Integer intRespCode = resp.getStatusCode();
+        String responsedays = null;
+        String Validate = null;
+        boolean flag;
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            JSONObject json = new JSONObject(resp.prettyPrint());
+            responsedays = json.get("days").toString();
+
+            flag = (responsedays != "3");
+            if (flag = false) {
+                Validate = "API is giving incorrect response";
+            }
+            else {
+                Validate = "All responses are correct";
+            }
+            assert Validate.equalsIgnoreCase("All responses are correct");
+        }
     }
 }
 
