@@ -196,7 +196,7 @@ public class genericFunctions extends AllVariables {
     {
         wait_for_time(MenuOptionNoThanksContinue,10000);
         driver.findElement(By.xpath(MenuOptionNoThanksContinue)).click();
-        Thread.sleep(4000);
+        Thread.sleep(5000);
     }
 
     @Then("select and click on  bill and paymenets")
@@ -224,6 +224,13 @@ public class genericFunctions extends AllVariables {
     public void click_on_sign_in() throws InterruptedException
     {
         driver.findElement(By.xpath(signin)).click();
+        Thread.sleep(8000);
+    }
+
+    @And("click on sign in on chatbot")
+    public void click_on_sign_in_on_chatbot() throws InterruptedException
+    {
+        driver.findElement(By.xpath(signin1)).click();
         Thread.sleep(8000);
     }
 
@@ -271,6 +278,14 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(username1)).sendKeys(str1);
         Wait_Until_element_Visibility(password1);
         driver.findElement(By.xpath(password1)).sendKeys(str2);
+    }
+
+    @When ("user enters {string} and {string} on login page")
+    public void user_enters_login_password_on_login_page(String str1, String str2) throws InterruptedException {
+        wait_for_time(username3,10000);
+        driver.findElement(By.xpath(username3)).sendKeys(str1);
+        Wait_Until_element_Visibility(password3);
+        driver.findElement(By.xpath(password3)).sendKeys(str2);
     }
 
     @Then("click on sign in for Authentication")
@@ -685,24 +700,24 @@ public class genericFunctions extends AllVariables {
     @When ("user enters {string} and {string}")
     public void user_enters(String str1, String str2) throws InterruptedException {
 
-        wait_for_time(webusername,10000);
+        wait_for_time(username,10000);
         //Wait_Until_element_Visibility(websigninusername);
-        driver.findElement(By.xpath(webusername)).sendKeys(str1);
-        Wait_Until_element_Visibility(webpassword);
-        driver.findElement(By.xpath(webpassword)).sendKeys(str2);
+        driver.findElement(By.xpath(username)).sendKeys(str1);
+        Wait_Until_element_Visibility(password);
+        driver.findElement(By.xpath(password)).sendKeys(str2);
     }
 
     @Then("user enters login id for web {string}")
     public void user_enters_login_id_for_web(String opcoName)throws InterruptedException {
         Thread.sleep(5000);
         if (opcoName.equalsIgnoreCase("ace")) {
-            driver.findElement(By.xpath(username1)).sendKeys("RDBMSM");
+            driver.findElement(By.xpath(username2)).sendKeys("RDBMSM");
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("dpl")) {
-            driver.findElement(By.xpath(username1)).sendKeys("WAYDIXIE");
+            driver.findElement(By.xpath(username2)).sendKeys("WAYDIXIE");
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("pepco")) {
-            driver.findElement(By.xpath(username1)).sendKeys("MERRILLDEMIAN");
+            driver.findElement(By.xpath(username2)).sendKeys("MERRILLDEMIAN");
             Thread.sleep(3000);
         }
     }
@@ -711,13 +726,13 @@ public class genericFunctions extends AllVariables {
     public void user_enters_password_for_web(String opcoName) throws InterruptedException {
         Thread.sleep(5000);
         if (opcoName.equalsIgnoreCase("ace")) {
-            driver.findElement(By.xpath(password1)).sendKeys("Password1");
+            driver.findElement(By.xpath(password2)).sendKeys("Password1");
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("dpl")) {
-            driver.findElement(By.xpath(password1)).sendKeys("Password1");
+            driver.findElement(By.xpath(password2)).sendKeys("Password1");
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("pepco")) {
-            driver.findElement(By.xpath(password1)).sendKeys("Password1");
+            driver.findElement(By.xpath(password2)).sendKeys("Password1");
             Thread.sleep(3000);
         }
     }
@@ -732,6 +747,13 @@ public class genericFunctions extends AllVariables {
     public void click_SIGNIN_button() throws InterruptedException, IOException {
         Wait_Until_element_Visibility(btnSignIn);
         driver.findElement(By.xpath(btnSignIn)).click();
+        Thread.sleep(8000);
+    }
+
+    @Then("click continue button")
+    public void click_continue_button() throws InterruptedException, IOException {
+        Wait_Until_element_Visibility(btnContinue);
+        driver.findElement(By.xpath(btnContinue)).click();
         Thread.sleep(8000);
     }
 
@@ -916,7 +938,7 @@ public class genericFunctions extends AllVariables {
 
     @Then("click Deposits")
     public void click_Deposits() throws InterruptedException {
-        driver.findElement(By.xpath(Deposits)).click();
+        driver.findElement(By.xpath(Deposits2)).click();
         Thread.sleep(5000);
     }
 
@@ -1003,6 +1025,12 @@ public class genericFunctions extends AllVariables {
     public void click_Refunds() throws InterruptedException {
         driver.findElement(By.xpath(Refunds)).click();
         Thread.sleep(15000);
+    }
+
+    @And("click No Thanks")
+    public void click_No_Thanks() throws InterruptedException {
+        driver.findElement(By.xpath(NoThanks)).click();
+        Thread.sleep(3000);
     }
 
     @And("validate if Refunds with correct text is displayed as per {string}")

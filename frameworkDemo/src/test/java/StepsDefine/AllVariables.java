@@ -1,5 +1,7 @@
 package StepsDefine;
 
+import io.cucumber.java.en.And;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Iterator;
@@ -47,20 +49,28 @@ public class AllVariables {
     public static String MenuOptionCommunitySolar = "//div[contains(text(),'Community Solar')]";
     public static String MenuOptionNoThanks = "//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
-    public static String OptionMore = "//div[contains(text(),'More')]";
+   // public static String OptionMore = "//div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]";
+            //"//div[contains(text(),'More')]";
+   public static String OptionMore = "//div[3]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
+   //public static String OptionMore = "//div[2]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
+
 
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
+    //html/body/div[2]/div/div[2]/div/div[2]/div/div/div[2]/div/div[2]/a[2]/div
     public static String closechatbot = "//i[@class='fa fa-times']";
     public static String yesbutton="//button[@id='yesButton']";
     public static String endChatButton = "//button[@id='endButton']";
     public static String selectacoount="//tr[1]//td[8]//span[1]//span[1]//button[1]//span[1]";
 
     public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
+ //div[normalize-space()='Billing and Payment']
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";
     public static String payviachat="//div[contains(text(),'Pay Via Chat')]";
 
     //public static String signin="//div[@class='oda-chat-card-actions']//div[@class='oda-chat-action-label'][contains(text(),'Sign In')]";
     public static String signin="//div[contains(text(),'Sign In')]";
+    public static String signin1="//a[@target='_blank']//div[@class='oda-chat-action-label'][normalize-space()='Sign In']";
+
 
     public static String signinforauth="//button[contains(text(),'Sign In')]";
     public static String acceptauth="//button[contains(text(),'Accept')]";
@@ -103,8 +113,14 @@ public class AllVariables {
     public static String webusername="//div[contains(@class,'form-group')]//input[@id='Username']";
     public static String webpassword="//div[contains(@class,'form-group')]//input[@id='Password']";
 
-    public static String username1 = "//input[@id='Username']";
-    public static String password1 = "//input[@id='Password']";
+    public static String username1 = "//input[@name='username']";
+    public static String password1 = "//input[@name='password']";
+    //input[@id='password']
+    public static String username2 = "//input[@id='Username']";
+    public static String password2= "//input[@id='Password']";
+    public static String username3= "//input[@aria-label='Email or Username']";
+    public static String password3= "//input[@aria-label='Password']";
+    public static String btnContinue="//button[@class='btn btn-primary fixed-width']";
 
     public static String downloadmycurrentbill="//div[contains(text(),'Download My Current Bill')]";
     public static String downloadapreviousbill="//div[contains(text(),'Download A Previous Bill')]";
@@ -122,14 +138,14 @@ public class AllVariables {
     public static String websigninusername="//input[@id='Username']";
     public static String passwordforweb="//input[@id='Password']";
     public static String websignbutton="//button[@class='btn btn btn-accent']";
-    public static String contactus="//a[@id='ctl00_ctl00_contactLink']";
+    public static String contactus="//a[@id='ctl00_contactLink']";
     public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
-    public static String Leavecommentforfeedback = "//div[contains(text(),'Leave Comment')]";
+    public static String Leavecommentforfeedback = "//div[normalize-space()='Leave Comment']";
     public static String inputtext="//textarea[@placeholder='Type a message....']";
     public static String sendicon="//button[@class='oda-chat-footer-button oda-chat-button-send']";
     public static String denybutton="//button[contains(text(),'Deny')]";
     public static String btnSignIn="//button[@class='btn btn btn-primary exc-corner-btn']";
-    public static String signout="/html/body/form/div[3]/div[3]/div/header/div/button";
+    public static String signout="//button[@title='Sign Out']";
     public static String signIn="//div[contains(text(),'Sign In')]";
     public static String websigninone = "//button[@class='btn btn btn-accent']";
 
@@ -138,7 +154,9 @@ public class AllVariables {
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
     public static String nothanks = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
-    public static String Yes = "//div[8]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
+    public static String NoThanks = "//div[3]/div/div[2]/div/div[2]/div[11]/div/div[2]/div/div[2]/a[3]/div";
+
+    public static String Yes = "//div[normalize-space()='Yes']";
     public static String Yes2 = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
     public static String Takefeedbacksurvey = "//div[contains(text(),'Take Feedback Survey')]";
     public static String ACEmailicon = "//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]";
@@ -166,7 +184,8 @@ public class AllVariables {
     public static String surveyRating4 = "//span[@id='star4']";
     public static String surveyRating5 = "//span[@id='star5']";
 
-    public static String Deposits = "//div[contains(text(),'Deposit')]";
+    public static String Deposits = "//div[4]//div[1]//div[2]//div[1]//div[2]//a[4]";
+    public static String Deposits2 = "//div[3]/div/div[2]/div/div[2]/div[5]/div/div[2]/div/div[2]/a[4]/div";
     public static String Actualdeposittext = "//span[contains(text(),'Questions about your deposit?')]";
     public static String Selectaccountfrommultipleaccount = "//div[contains(text(),'48 BAYVIEW RD CHESAPEAKE CITY MD 21915')]";
     public static String ExpectedACEdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-642-3780";
@@ -232,7 +251,7 @@ public class AllVariables {
     public static String SESMobileUserPreferences="SESMobileBackendAPI/user/preferences/1266";
     public static String SESMobileAnalyticsReportDays="SESMobileBackendAPI/admin/analyticsReportDays";
 
-    public static String Refunds = "//div[contains(text(),'Refund')public static String SESMobileTechProfile = \"SESMobileBackendAPI/user/techprofile\";]";
+    public static String Refunds = "//div[normalize-space()='Refund']";
     public static String ActualRefundstext = "//span[contains(text(),'Wondering about your refund?')]";
     public static String ExpectedACERefundstext = "Wondering about your refund? Here's a list of FAQs  to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-642-3780";
     public static String ExpectedDPLRefundstext = "Wondering about your refund? Here's a list of FAQs  to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-375-7117";

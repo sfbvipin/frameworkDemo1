@@ -13,7 +13,7 @@ Feature: Exelon-PHI feature file
     Then chatbot will be open
     And user click no thanks i will continue
     Then click on downed power lines
-    And click no thanks
+#    And click no thanks
     Then click Yes
     And click survey rating as "<SurveyRating>"
     Then click Leave comment
@@ -40,7 +40,7 @@ Feature: Exelon-PHI feature file
     Then chatbot will be open
     And user click no thanks i will continue
     Then click on downed power lines
-    And click no thanks
+#    And click no thanks
     Then click Yes
     And click survey rating as "<SurveyRating>"
     Then click Leave comment
@@ -75,7 +75,8 @@ Feature: Exelon-PHI feature file
     And user accept the authorization request
     Then navigate back to chat bot
     And Select account from multiple account
-    When User click on no thanks i just needed my balance
+#    When User click on no thanks i just needed my balance
+    And click No Thanks
     And click yes
     And click survey rating as "<SurveyRating>"
     Then click Leave comment
