@@ -139,7 +139,7 @@ Feature: Feature to test exelon chatbot application test cases
     And select yes to close chat
 
 
-  @Regression @Firefox @Exelon @Day1 @TC_Exel_009  @Parameterization
+  @Regression @Firefox @Exelon @Day1 @TC_Exel_009_firefox  @Parameterization
   Scenario Outline: Firefox: Initiating the Chat-Bot and user eligible for budget billing and already enrolled
     Given firefox browser is open
     And user will be on exelon homepage
@@ -151,11 +151,11 @@ Feature: Feature to test exelon chatbot application test cases
     And Click on Budget Billing
     #Then click on learn more about budget billing
     Then click on Check Eligibility
-    And click on sign in
+    And click on sign in on chatbot
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
-    #And user accept the authorization request
+    And user accept the authorization request
     Then navigate back to chat bot
     Then close the browser
 
@@ -488,7 +488,7 @@ Feature: Feature to test exelon chatbot application test cases
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
-    And user click no thanks i will continue
+#    And user click no thanks i will continue
     Then select and click on  bill and paymenets
     And User click on account Balance
     And click on close chat icon
@@ -812,7 +812,7 @@ Feature: Feature to test exelon chatbot application test cases
       | Move Service      |
       | Start Service     |
 
-  @Regression @Firefox @Exelon @Day5 @Parameterization @TC_Exel_050     @Khushboo
+  @Regression @Firefox @Exelon @Day5 @Parameterization @TC_Exel_050_firefox @Khushboo
   Scenario Outline: Firefox: Login and click pay bill
     Given firefox browser is open
     And user will be on exelon homepage
@@ -820,12 +820,12 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And click SIGNIN
-    Then user will redirect to login page
-    When user enters "<loginid>" and "<password>"
-    Then click SIGNIN button
-    And user click signout
-    Then close window
-
+    When user enters "<loginid>" and "<password>" on login page
+    Then click continue button
+    Then chatbot will be open
+    Then select and click on  bill and paymenets
+    And click on paying your bill
+    
     Examples:
       | loginid  | password  |
       | PATTI@47 | Password1 |
