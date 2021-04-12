@@ -12,7 +12,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         features={"classpath:features"}
         ,glue= {"StepsDefine","cucumberHooks"}
         ,monochrome=true
-        ,tags = "@Regression"
+        ,tags = "@TC_Excel_586324_firefox"
         ,plugin = {"cucumberHooks.customReportListener"})
 
 @Test
