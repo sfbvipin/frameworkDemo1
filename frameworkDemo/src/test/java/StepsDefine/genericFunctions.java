@@ -501,7 +501,7 @@ public class genericFunctions extends AllVariables {
     public void select_and_click_download_my_current_bill() throws InterruptedException
     {
         driver.findElement(By.xpath(downloadmycurrentbill)).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
     @And("click on Getting your Bill")
