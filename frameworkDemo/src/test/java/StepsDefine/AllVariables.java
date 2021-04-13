@@ -51,8 +51,9 @@ public class AllVariables {
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
    // public static String OptionMore = "//div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]";
             //"//div[contains(text(),'More')]";
-   public static String OptionMore = "//div[3]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
+   //public static String OptionMore = "//div[3]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
    //public static String OptionMore = "//div[2]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
+   public static String OptionMore = "//div[normalize-space()='More']";
 
 
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
@@ -185,7 +186,8 @@ public class AllVariables {
     public static String surveyRating5 = "//span[@id='star5']";
 
     public static String Deposits = "//div[4]//div[1]//div[2]//div[1]//div[2]//a[4]";
-    public static String Deposits2 = "//div[3]/div/div[2]/div/div[2]/div[5]/div/div[2]/div/div[2]/a[4]/div";
+    //public static String Deposits2 = "//div[3]/div/div[2]/div/div[2]/div[5]/div/div[2]/div/div[2]/a[4]/div";
+    public static String Deposits2 = "//div[normalize-space()='Deposit']";
     public static String Actualdeposittext = "//span[contains(text(),'Questions about your deposit?')]";
     public static String Selectaccountfrommultipleaccount = "//div[contains(text(),'48 BAYVIEW RD CHESAPEAKE CITY MD 21915')]";
     public static String ExpectedACEdeposittext = "Questions about your deposit? Here's a list of FAQs to help you find the information you need. If you still don't find the answer you're looking for, please call customer service at 1-800-642-3780";
