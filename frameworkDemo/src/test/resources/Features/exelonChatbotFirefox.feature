@@ -42,16 +42,17 @@ Feature: Feature to test exelon chatbot application test cases
     Then select and click on  bill and paymenets
     And click on paying your bill
     Then select and click pay via chat
-    Then user click on sign in
+    Then click SIGNIN button
+#    Then user click on sign in
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
     And user accept the authorization request
     Then navigate back to chat bot
-    And select any of the registered address for payment
-    Then Select no thanks to terminate chat
-    And click yes
-    Then select no thanks to close the chat
+#    And select any of the registered address for payment
+#    Then Select no thanks to terminate chat
+#    Then select no thanks to close the chat
+#    And click yes
     And click on close chat icon
     Then select yes to close chat
 
@@ -109,6 +110,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on exelon chatbot icon
     Then chatbot will be open
     And user click on menu icon
+    Then click on Account Management
     Then click on find account number
     And click yes
     And click on close chat icon
@@ -553,7 +555,7 @@ Feature: Feature to test exelon chatbot application test cases
       | HELFER5506  | Password1 |
       | YESDELAWARE | Password1 |
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_0034     @Parul  @Paramterize
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_0034    @Parul  @Paramterize
   Scenario: Firefox: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -561,7 +563,6 @@ Feature: Feature to test exelon chatbot application test cases
     Then user enters login id for web
     And user enters password for web
     Then user click on web sign in
-    Then user selects account 
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open

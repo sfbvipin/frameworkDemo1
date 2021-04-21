@@ -38,6 +38,7 @@ public class AllVariables {
     public static String MenuOptionBillingandPayment = "//a[contains(text(),'Billing and Payment')]";
     public static String MenuOptionOutage = "//a[contains(text(),'Outage')]";
     public static String MenuOptionDownedPowerLine = "//a[contains(text(),'Downed Power Line')]";
+    public static String MenuOptionAccountManagement="//a[normalize-space()='Account Management']";
     public static String MenuOptionFindAccountNumber = "//a[contains(text(),'Find Account Number')]";
     public static String MenuOptionStartStopOrMoveService = "//a[contains(text(),'Start, Stop or Move Service')]";
     public static String MenuOptionCovid19Assistance = "//a[contains(text(),'COVID-19 Assistance')]";
@@ -48,12 +49,16 @@ public class AllVariables {
     public static String MenuOptionPrivateSolar = "//div[contains(text(),'Private Solar')]";
     public static String MenuOptionCommunitySolar = "//div[contains(text(),'Community Solar')]";
     public static String MenuOptionNoThanks = "//div[12]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
+    public static String NoThanks2 = "/html/body/div[3]/div/div[2]/div/div[2]/div[10]/div/div[2]/div/div[2]/a[2]/div";
+
+
     public static String PopUpYes = "//div[contains(text(),'Yes')]";
    // public static String OptionMore = "//div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]";
             //"//div[contains(text(),'More')]";
    //public static String OptionMore = "//div[3]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
    //public static String OptionMore = "//div[2]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
    public static String OptionMore = "//div[normalize-space()='More']";
+   public static String FindAccountNumber="//div[normalize-space()='Find Account Number']";
 
 
     public static String MenuOptionNoThanksContinue = "//div[contains(text(),'No, Thanks. I will continue without signing in')]";
@@ -73,12 +78,14 @@ public class AllVariables {
     public static String signin1="//a[@target='_blank']//div[@class='oda-chat-action-label'][normalize-space()='Sign In']";
 
 
+
     public static String signinforauth="//button[contains(text(),'Sign In')]";
     public static String acceptauth="//button[contains(text(),'Accept')]";
     public static String registeredadd1="//div[contains(text(),'474 MAPLE AVE DIVIDING CREEK NJ 08315')]";
     public static String nothanks2="//div[13]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
     public static String clickyes="//div[contains(text(),'Yes')]";
-    public static String nothanks3="//div[17]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
+    public static String nothanks3="html[1]/body[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[11]/div[1]/div[2]/div[1]/div[2]/a[3]/div[1]";
+
     public static String startService="//div[contains(text(),'Start Service')]";
     public static String moveService="//div[contains(text(),'Move Service')]";
     public static String stopService="//div[contains(text(),'Stop Service')]";
@@ -145,7 +152,8 @@ public class AllVariables {
     public static String inputtext="//textarea[@placeholder='Type a message....']";
     public static String sendicon="//button[@class='oda-chat-footer-button oda-chat-button-send']";
     public static String denybutton="//button[contains(text(),'Deny')]";
-    public static String btnSignIn="//button[@class='btn btn btn-primary exc-corner-btn']";
+    public static String btnSignIn="//a[@target='_blank']//div[@class='oda-chat-action-label'][normalize-space()='Sign In']";
+    //public static String btnSignIn="/html/body/div[3]/div/div[2]/div/div[2]/div[9]/div/div/div/div/div[2]/a[1]/div";
     public static String signout="//button[@title='Sign Out']";
     public static String signIn="//div[contains(text(),'Sign In')]";
     public static String websigninone = "//button[@class='btn btn btn-accent']";

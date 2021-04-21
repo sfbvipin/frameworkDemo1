@@ -337,7 +337,7 @@ public class genericFunctions extends AllVariables {
 
     @Then("Select no thanks to terminate chat")
     public void Select_no_thanks_to_terminate_chat() throws InterruptedException{
-        driver.findElement(By.xpath(MenuOptionNoThanks)).click();
+        driver.findElement(By.xpath(NoThanks2)).click();
         Thread.sleep(8000);
     }
 
@@ -354,6 +354,7 @@ public class genericFunctions extends AllVariables {
         driver.findElement(By.xpath(nothanks3)).click();
         Thread.sleep(8000);
     }
+
 
     @And("click on close chat icon")
     public void click_on_close_chat_icon() throws InterruptedException {
@@ -402,9 +403,15 @@ public class genericFunctions extends AllVariables {
         Thread.sleep(3000);
     }
 
+    @Then ("click on Account Management")
+    public void click_on_Account_Management() throws InterruptedException {
+        driver.findElement(By.xpath(MenuOptionAccountManagement)).click();
+        Thread.sleep(3000);
+    }
+
     @Then("click on find account number")
     public void click_on_find_account_number() throws InterruptedException {
-        driver.findElement(By.xpath(MenuOptionFindAccountNumber)).click();
+        driver.findElement(By.xpath(FindAccountNumber)).click();
         Thread.sleep(3000);
     }
 
