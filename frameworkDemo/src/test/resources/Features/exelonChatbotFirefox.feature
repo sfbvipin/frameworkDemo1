@@ -421,7 +421,7 @@ Feature: Feature to test exelon chatbot application test cases
     Then click on close chat icon
     And select yes to close chat
  
-  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_026     @Aashish
+  @Regression @Firefox @Exelon @Day2 @Sanity @Parameterization @TC_Exel_026    @Aashish
   Scenario Outline: Firefox: Initiating the Chat-Bot, navigate to Account Balance, sigin with mutliple Accounts
     Given firefox browser is open
     And user will be on exelon homepage
@@ -431,7 +431,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user click no thanks i will continue
     Then select and click on  bill and paymenets
     And User click on account Balance
-    And click on sign in
+    And click on sign in on chatbot
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
@@ -475,7 +475,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029     @Parul  @Paramterize
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029    @Parul  @Paramterize
   Scenario: Firefox: BOT : Click on Bot and after web login opt Account balance from billing and payment options(MERRILLDEMIAN)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -647,7 +647,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user click on menu icon
     Then select and click on  bill and paymenets from menu
     And User click on account Balance
-    And click on sign in
+    And click on sign in on chatbot
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
@@ -661,7 +661,7 @@ Feature: Feature to test exelon chatbot application test cases
       | PATTI@47 | Password1 |
       | DARICE40 | Password1 |
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @Parameterization @TC_Exel_040     @Parul
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524906 @Parameterization @TC_Exel_040    @Parul
   Scenario Outline: Firefox: BOT : Click on Bot and check balance after successful Sign In on OAuth page (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -671,7 +671,7 @@ Feature: Feature to test exelon chatbot application test cases
     And user click no thanks i will continue
     Then select and click on  bill and paymenets
     And User click on account Balance
-    And click on sign in
+    And click on sign in on chatbot
     Then user will redirect to login page
     When user enters "<loginid>" and "<password>"
     Then click on sign in for Authentication
@@ -751,8 +751,8 @@ Feature: Feature to test exelon chatbot application test cases
     And click on stop link
     And close the browser
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_515752 @TC_Exel_0046     @Parul
-  Scenario: Firefox: BOT : Initiating the ChatBot and select link in Move content
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_515752 @TC_Exel_0046    @Parul
+  Scenario: Firefox: BOT : Initiating the ChatBot and select move services
     Given firefox browser is open
     And user will be on exelon homepage
     When user will locate the chatbot icon
@@ -761,8 +761,8 @@ Feature: Feature to test exelon chatbot application test cases
     And user click on menu icon
     Then click on Start Stop or Move Service
     Then user click move service
-    And click on move link
-    Then user will redirect to Move service page
+#    And click on move link
+#    Then user will redirect to Move service page
     And close the browser
 
   @Regression @Firefox @Exelon @Day4 @TC_Exel_515753 @TC_Exel_0047     @Khushboo

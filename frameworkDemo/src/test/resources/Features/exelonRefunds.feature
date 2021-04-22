@@ -68,7 +68,8 @@ Feature: Exelon-PHI feature file
     Given firefox browser is open
     When user will be on "<opcoName>"
     And user will locate the web sign In button
-    When user login with "<loginid>" and "<password>"
+    Then user enters login id for web "<opcoName>"
+    And user enters password for web "<opcoName>"
     Then user click on sign in
     When user will locate the chatbot icon
     And click on exelon chatbot icon

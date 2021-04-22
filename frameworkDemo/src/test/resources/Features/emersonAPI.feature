@@ -313,7 +313,7 @@ Feature: Feature to test Emerson API cases
 
     Examples:
       |       updateDate    | response_code | authorization |
-      | 2021-01-28 17:12:35 |      200      | authorize     |
+#      | 2021-01-28 17:12:35 |      200      | authorize     |
       | 2022-01-28 17:12:35 |      200      | authorize     |
       | 2021-52-28 17:12:35 |      500      | authorize     |
       |                     |      200      | authorize     |
