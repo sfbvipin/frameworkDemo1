@@ -68,8 +68,10 @@ public class AllVariables {
     public static String endChatButton = "//button[@id='endButton']";
     public static String selectacoount="//tr[1]//td[8]//span[1]//span[1]//button[1]//span[1]";
 
-    public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
- //div[normalize-space()='Billing and Payment']
+    //public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
+    public static String billingandpayment= "//div[normalize-space()='Billing and Payment']";
+
+
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";
     public static String payviachat="//div[contains(text(),'Pay Via Chat')]";
 
