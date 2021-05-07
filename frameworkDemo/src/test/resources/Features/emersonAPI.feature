@@ -187,7 +187,7 @@ Feature: Feature to test Emerson API cases
     Given With "<authorization>"
     And Hit get API to fetch allowances for "<modifiedDate>"
     Then validate <response_code>
-    And validate response body for Modified date "<modifiedDate>"
+#    And validate response body for Modified date "<modifiedDate>"
 
 
     Examples:

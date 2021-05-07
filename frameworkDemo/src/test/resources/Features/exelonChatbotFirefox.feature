@@ -612,7 +612,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_524897 @TC_Exel_038    @Parul @Paramterize
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_524897 @TC_Exel_038   @Parul @Paramterize
   Scenario Outline: Firefox: MENU : Click on Bot and opt Deny after Sign In  on OAuth page  for login in billing and payment
     Given firefox browser is open
     And user will be on exelon homepage

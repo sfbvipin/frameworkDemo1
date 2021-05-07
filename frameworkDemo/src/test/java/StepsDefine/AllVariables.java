@@ -57,7 +57,8 @@ public class AllVariables {
             //"//div[contains(text(),'More')]";
    //public static String OptionMore = "//div[3]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
    //public static String OptionMore = "//div[2]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
-   public static String OptionMore = "//div[normalize-space()='More']";
+   //public static String OptionMore = "//div[normalize-space()='More']";
+   public static String OptionMore = "/html/body/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div/div[2]/a[8]/div";
    public static String FindAccountNumber="//div[normalize-space()='Find Account Number']";
 
 
@@ -165,13 +166,16 @@ public class AllVariables {
     public static String OauthTokenw="OTQwMjYzMjNiMjNlNGZiZDAxNjA5ZGFhZjk3N2E0ZWZiOWY5ODlmMjRkZDAzMzU4MWI2ZWRhNmY3ZDk2Zjk3YjFiN2IzZGMyODE5NTMxYmIwYTIzYTZlYjBmM2NmZmNiNzMVjNDQ=";
 
     public static String nothanks = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[2]//div[1]";
-    public static String NoThanks = "//div[3]/div/div[2]/div/div[2]/div[11]/div/div[2]/div/div[2]/a[3]/div";
+    //public static String NoThanks = "//div[3]/div/div[2]/div/div[2]/div[11]/div/div[2]/div/div[2]/a[3]/div";
+    public static String NoThanks = "//div[normalize-space()='No Thanks']";
 
     public static String Yes = "//div[normalize-space()='Yes']";
     public static String Yes2 = "//div[6]//div[1]//div[2]//div[1]//div[2]//a[1]//div[1]";
     public static String Takefeedbacksurvey = "//div[contains(text(),'Take Feedback Survey')]";
-    public static String ACEmailicon = "//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]";
-    public static String mailicon = "//body/div[2]/div/div[1]/div[4]/a/img";
+    //public static String ACEmailicon = "//body/div[2]/div[1]/div[1]/div[4]/a[1]/img[1]";
+    public static String ACEmailicon = "//img[@src='/pages/secureredirect.aspx?destination=/Lib/DigitalAssistant/images/transcript.svg']";
+    //public static String mailicon = "//body/div[2]/div/div[1]/div[4]/a/img";
+    public static String mailicon = "//img[@src='/pages/secureredirect.aspx?destination=/Lib/DigitalAssistant/images/transcript.svg']";
     public static String PopUpChatTranscript = "//p[contains(text(),'Want a copy of this chat transcript? Enter your email address.')]";
     public static String mailText="Want a copy of this chat transcript? Enter your email address.";
     public static String emailid = "//input[@id='emailID']";
