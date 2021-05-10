@@ -577,19 +577,42 @@ public class genericFunctions extends AllVariables {
 
     @Then ("user enters login id for web")
     public void user_enters_login_id_for_web() throws InterruptedException {
-        driver.findElement(By.xpath(websigninusername)).sendKeys(strUserName);
-        Thread.sleep(4000);
+        List<WebElement> ele1 = driver.findElements(By.xpath(websigninusername));
+        System.out.println("SHARP: Element count for " +websigninusername+ " is :" +ele1.size());
+        List<WebElement> ele2 = driver.findElements(By.xpath(websigninusername2));
+        System.out.println("SHARP: Element count for " +websigninusername2+ " is :" +ele2.size());
+        if (ele1.size() > 0) {
+            driver.findElement(By.xpath(websigninusername)).sendKeys(strUserName);
+        } else if (ele2.size() > 0) {
+            driver.findElement(By.xpath(websigninusername2)).sendKeys(strUserName);
+        }
     }
 
     @And ("user enters password for web")
     public void user_enters_password_for_web() throws InterruptedException{
-        driver.findElement(By.xpath(passwordforweb)).sendKeys(strPassword);
+        List<WebElement> ele1 = driver.findElements(By.xpath(passwordforweb));
+        System.out.println("SHARP: Element count for " +passwordforweb+ " is :" +ele1.size());
+        List<WebElement> ele2 = driver.findElements(By.xpath(passwordforweb2));
+        System.out.println("SHARP: Element count for " +passwordforweb2+ " is :" +ele2.size());
+        if (ele1.size() > 0) {
+            driver.findElement(By.xpath(passwordforweb)).sendKeys(strPassword);
+        } else if (ele2.size() > 0) {
+            driver.findElement(By.xpath(passwordforweb2)).sendKeys(strPassword);
+        }
         Thread.sleep(3000);
     }
 
     @Then ("user click on web sign in")
     public void user_click_on_web_sign_in() throws InterruptedException {
-        driver.findElement(By.xpath(websignbutton)).click();
+        List<WebElement> ele1 = driver.findElements(By.xpath(websignbutton));
+        System.out.println("SHARP: Element count for " +websignbutton+ " is :" +ele1.size());
+        List<WebElement> ele2 = driver.findElements(By.xpath(websignbutton2));
+        System.out.println("SHARP: Element count for " +websignbutton2+ " is :" +ele2.size());
+        if (ele1.size() > 0) {
+            driver.findElement(By.xpath(websignbutton)).click();
+        } else if (ele2.size() > 0) {
+            driver.findElement(By.xpath(websignbutton2)).click();
+        }
         Thread.sleep(3000);
     }
 
@@ -601,7 +624,15 @@ public class genericFunctions extends AllVariables {
 
     @Then ("user will click on contact us")
     public void user_will_click_on_contact_us() throws InterruptedException {
-        driver.findElement(By.xpath(contactus)).click();
+        List<WebElement> ele1 = driver.findElements(By.xpath(contactus));
+        System.out.println("SHARP: Element count for " +contactus+ " is :" +ele1.size());
+        List<WebElement> ele2 = driver.findElements(By.xpath(contactus2));
+        System.out.println("SHARP: Element count for " +contactus2+ " is :" +ele2.size());
+        if (ele1.size() > 0) {
+            driver.findElement(By.xpath(contactus)).click();
+        } else if (ele2.size() > 0) {
+            driver.findElement(By.xpath(contactus2)).click();
+        }
         Thread.sleep(3000);
     }
 

@@ -147,9 +147,13 @@ public class AllVariables {
     public static String websignin="//button[@class='btn btn-accent exc-sign-in-btn']";
     public static String signinweb="//button[@class='btn btn btn-primary exc-corner-btn']";
     public static String websigninusername="//input[@id='Username']";
+    public static String websigninusername2="//input[@aria-label='Email or Username']";
     public static String passwordforweb="//input[@id='Password']";
+    public static String passwordforweb2="//input[@aria-label='Password']";
     public static String websignbutton="//button[@class='btn btn btn-accent']";
+    public static String websignbutton2="//span[@class='cta--copy']";
     public static String contactus="//a[@id='ctl00_contactLink']";
+    public static String contactus2="//span[normalize-space()='Contact Us']";
     public static String Accountbalancebutton="//div[contains(text(),'Account Balance')]";
     public static String Leavecommentforfeedback = "//div[normalize-space()='Leave Comment']";
     public static String inputtext="//textarea[@placeholder='Type a message....']";
