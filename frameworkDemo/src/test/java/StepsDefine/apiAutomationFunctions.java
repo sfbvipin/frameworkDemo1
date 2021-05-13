@@ -1378,65 +1378,65 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
-    @And("validate response body for address is greater than or equal to {string}")
-    public void validate_response_body_for_address_is_greater_than_or_equal_to(String strModifiedDate) throws JSONException {
-
-        Integer intRespCode = resp.getStatusCode();
-        if(intRespCode!=200){
-            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
-        }
-        else {
-            String sModifiedDate=null;
-            sModifiedDate = strModifiedDate.trim();
-            out.println("Given Modified date is: "+sModifiedDate);
-            String ModifiedDate = null;
-            int count=0;
-            String Validate=null;
-            JSONObject json = new JSONObject(resp.prettyPrint());
-            JSONArray response = json.getJSONArray("data");
-
-            LocalDateTime currentDate = LocalDateTime.parse(DateTime.now().toString(), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
-            if (sModifiedDate.length()==0)
-            {
-                for(int i=0;i<response.length();i++){
-                    ModifiedDate=response.getJSONObject(i).getString("MODIFIEDON");
-                    if(ModifiedDate!="null") {
-                        LocalDateTime ResponseModifiedDate = LocalDateTime.parse(ModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
-                        if (ResponseModifiedDate.compareTo(currentDate)>0 )
-                        {
-                            count++;
-                        }
-                }
-                        else{
-                    out.println("SHARP: Cannot compare date as Modified date is null in response data.");
-                }}
-            }
-            else {
-                LocalDateTime InputModifiedDate = LocalDateTime.parse(sModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
-                for (int i = 0; i < response.length(); i++) {
-                    ModifiedDate = response.getJSONObject(i).getString("MODIFIEDON");
-                    if(ModifiedDate!="null") {
-                    LocalDateTime ResponseModifiedDate = LocalDateTime.parse(ModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
-                    if (ResponseModifiedDate.compareTo(InputModifiedDate) < 0) {
-                        count++;
-                    }
-                }
-                else{
-                    out.println("SHARP: Cannot compare date as Modified date is null in response data.");
-                }}
-            }
-            if (count>0)
-            {
-                Validate="APi is giving "+count+ " incorrect responses";
-            }
-            else
-            {
-                Validate="All responses are correct";
-            }
-
-            assert Validate.equalsIgnoreCase("All responses are correct");
-        }
-    }
+//    @And("validate response body for address is greater than or equal to {string}")
+//    public void validate_response_body_for_address_is_greater_than_or_equal_to(String strModifiedDate) throws JSONException {
+//
+//        Integer intRespCode = resp.getStatusCode();
+//        if(intRespCode!=200){
+//            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+//        }
+//        else {
+//            String sModifiedDate=null;
+//            sModifiedDate = strModifiedDate.trim();
+//            out.println("Given Modified date is: "+sModifiedDate);
+//            String ModifiedDate = null;
+//            int count=0;
+//            String Validate=null;
+//            JSONObject json = new JSONObject(resp.prettyPrint());
+//            JSONArray response = json.getJSONArray("data");
+//
+//            LocalDateTime currentDate = LocalDateTime.parse(DateTime.now().toString(), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+//            if (sModifiedDate.length()==0)
+//            {
+//                for(int i=0;i<response.length();i++){
+//                    ModifiedDate=response.getJSONObject(i).getString("MODIFIEDON");
+//                    if(ModifiedDate!="null") {
+//                        LocalDateTime ResponseModifiedDate = LocalDateTime.parse(ModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+//                        if (ResponseModifiedDate.compareTo(currentDate)>0 )
+//                        {
+//                            count++;
+//                        }
+//                }
+//                        else{
+//                    out.println("SHARP: Cannot compare date as Modified date is null in response data.");
+//                }}
+//            }
+//            else {
+//                LocalDateTime InputModifiedDate = LocalDateTime.parse(sModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+//                for (int i = 0; i < response.length(); i++) {
+//                    ModifiedDate = response.getJSONObject(i).getString("MODIFIEDON");
+//                    if(ModifiedDate!="null") {
+//                    LocalDateTime ResponseModifiedDate = LocalDateTime.parse(ModifiedDate, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSz"));
+//                    if (ResponseModifiedDate.compareTo(InputModifiedDate) < 0) {
+//                        count++;
+//                    }
+//                }
+//                else{
+//                    out.println("SHARP: Cannot compare date as Modified date is null in response data.");
+//                }}
+//            }
+//            if (count>0)
+//            {
+//                Validate="APi is giving "+count+ " incorrect responses";
+//            }
+//            else
+//            {
+//                Validate="All responses are correct";
+//            }
+//
+//            assert Validate.equalsIgnoreCase("All responses are correct");
+//        }
+//    }
 
 
 

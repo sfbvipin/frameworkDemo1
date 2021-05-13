@@ -57,7 +57,7 @@ public class AllVariables {
             //"//div[contains(text(),'More')]";
    //public static String OptionMore = "//div[3]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
    //public static String OptionMore = "//div[2]/div/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/a[8]/div";
-   //public static String OptionMore = "//div[normalize-space()='More']";
+   public static String OptionMore2 = "//div[normalize-space()='More']";
    public static String OptionMore = "/html/body/div/div/div[2]/div/div[2]/div[2]/div/div[2]/div/div[2]/a[8]/div";
    public static String FindAccountNumber="//div[normalize-space()='Find Account Number']";
 
@@ -69,8 +69,8 @@ public class AllVariables {
     public static String endChatButton = "//button[@id='endButton']";
     public static String selectacoount="//tr[1]//td[8]//span[1]//span[1]//button[1]//span[1]";
 
-    //public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
-    public static String billingandpayment= "//div[normalize-space()='Billing and Payment']";
+    public static String billingandpayment= "//div[contains(text(),'Billing and Payment')]";
+    public static String billingandpayment2= "//div[normalize-space()='Billing and Payment']";
 
 
     public static String payingyourbill="//div[contains(text(),'Paying Your Bill')]";

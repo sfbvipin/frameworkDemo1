@@ -141,7 +141,15 @@ public class genericFunctions extends AllVariables {
     @Then("click on more button")
     public void click_on_more_button() throws InterruptedException {
         wait_for_time(OptionMore,5000);
-        driver.findElement(By.xpath(OptionMore)).click();
+        List<WebElement> ele1 = driver.findElements(By.xpath(OptionMore));
+        System.out.println("SHARP: Element count for " +OptionMore+ " is :" +ele1.size());
+        List<WebElement> ele2 = driver.findElements(By.xpath(OptionMore2));
+        System.out.println("SHARP: Element count for " +OptionMore2+ " is :" +ele2.size());
+        if (ele1.size() > 0) {
+            driver.findElement(By.xpath(OptionMore)).click();
+        } else if (ele2.size() > 0) {
+            driver.findElement(By.xpath(OptionMore2)).click();
+        }
         Thread.sleep(5000);
     }
 
@@ -202,7 +210,15 @@ public class genericFunctions extends AllVariables {
     @Then("select and click on  bill and paymenets")
     public void select_and_click_on_bill_and_paymenets() throws InterruptedException
     {
-        driver.findElement(By.xpath(billingandpayment)).click();
+        List<WebElement> ele1 = driver.findElements(By.xpath(billingandpayment));
+        System.out.println("SHARP: Element count for " +billingandpayment+ " is :" +ele1.size());
+        List<WebElement> ele2 = driver.findElements(By.xpath(billingandpayment2));
+        System.out.println("SHARP: Element count for " +billingandpayment2+ " is :" +ele2.size());
+        if (ele1.size() > 0) {
+            driver.findElement(By.xpath(billingandpayment)).click();
+        } else if (ele2.size() > 0) {
+            driver.findElement(By.xpath(billingandpayment2)).click();
+        }
         Thread.sleep(3000);
     }
 
@@ -749,13 +765,40 @@ public class genericFunctions extends AllVariables {
     public void user_enters_login_id_for_web(String opcoName)throws InterruptedException {
         Thread.sleep(5000);
         if (opcoName.equalsIgnoreCase("ace")) {
-            driver.findElement(By.xpath(username2)).sendKeys("RDBMSM");
+            //driver.findElement(By.xpath(username2)).sendKeys("RDBMSM");
+            List<WebElement> ele1 = driver.findElements(By.xpath(websigninusername));
+            System.out.println("SHARP: Element count for " +websigninusername+ " is :" +ele1.size());
+            List<WebElement> ele2 = driver.findElements(By.xpath(websigninusername2));
+            System.out.println("SHARP: Element count for " +websigninusername2+ " is :" +ele2.size());
+            if (ele1.size() > 0) {
+                driver.findElement(By.xpath(websigninusername)).sendKeys("RDBMSM");
+            } else if (ele2.size() > 0) {
+                driver.findElement(By.xpath(websigninusername2)).sendKeys("RDBMSM");
+            }
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("dpl")) {
-            driver.findElement(By.xpath(username2)).sendKeys("WAYDIXIE");
+            //driver.findElement(By.xpath(username2)).sendKeys("WAYDIXIE");
+            List<WebElement> ele1 = driver.findElements(By.xpath(websigninusername));
+            System.out.println("SHARP: Element count for " +websigninusername+ " is :" +ele1.size());
+            List<WebElement> ele2 = driver.findElements(By.xpath(websigninusername2));
+            System.out.println("SHARP: Element count for " +websigninusername2+ " is :" +ele2.size());
+            if (ele1.size() > 0) {
+                driver.findElement(By.xpath(websigninusername)).sendKeys("WAYDIXIE");
+            } else if (ele2.size() > 0) {
+                driver.findElement(By.xpath(websigninusername2)).sendKeys("WAYDIXIE");
+            }
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("pepco")) {
-            driver.findElement(By.xpath(username2)).sendKeys("MERRILLDEMIAN");
+            //driver.findElement(By.xpath(username2)).sendKeys("MERRILLDEMIAN");
+            List<WebElement> ele1 = driver.findElements(By.xpath(websigninusername));
+            System.out.println("SHARP: Element count for " +websigninusername+ " is :" +ele1.size());
+            List<WebElement> ele2 = driver.findElements(By.xpath(websigninusername2));
+            System.out.println("SHARP: Element count for " +websigninusername2+ " is :" +ele2.size());
+            if (ele1.size() > 0) {
+                driver.findElement(By.xpath(websigninusername)).sendKeys("MERRILLDEMIAN");
+            } else if (ele2.size() > 0) {
+                driver.findElement(By.xpath(websigninusername2)).sendKeys("MERRILLDEMIAN");
+            }
             Thread.sleep(3000);
         }
     }
@@ -764,13 +807,40 @@ public class genericFunctions extends AllVariables {
     public void user_enters_password_for_web(String opcoName) throws InterruptedException {
         Thread.sleep(5000);
         if (opcoName.equalsIgnoreCase("ace")) {
-            driver.findElement(By.xpath(password2)).sendKeys("Password1");
+           // driver.findElement(By.xpath(password2)).sendKeys("Password1");
+            List<WebElement> ele1 = driver.findElements(By.xpath(passwordforweb));
+            System.out.println("SHARP: Element count for " +passwordforweb+ " is :" +ele1.size());
+            List<WebElement> ele2 = driver.findElements(By.xpath(passwordforweb2));
+            System.out.println("SHARP: Element count for " +passwordforweb2+ " is :" +ele2.size());
+            if (ele1.size() > 0) {
+                driver.findElement(By.xpath(passwordforweb)).sendKeys("Password1");
+            } else if (ele2.size() > 0) {
+                driver.findElement(By.xpath(passwordforweb2)).sendKeys("Password1");
+            }
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("dpl")) {
-            driver.findElement(By.xpath(password2)).sendKeys("Password1");
+            //driver.findElement(By.xpath(password2)).sendKeys("Password1");
+            List<WebElement> ele1 = driver.findElements(By.xpath(passwordforweb));
+            System.out.println("SHARP: Element count for " +passwordforweb+ " is :" +ele1.size());
+            List<WebElement> ele2 = driver.findElements(By.xpath(passwordforweb2));
+            System.out.println("SHARP: Element count for " +passwordforweb2+ " is :" +ele2.size());
+            if (ele1.size() > 0) {
+                driver.findElement(By.xpath(passwordforweb)).sendKeys("Password1");
+            } else if (ele2.size() > 0) {
+                driver.findElement(By.xpath(passwordforweb2)).sendKeys("Password1");
+            }
             Thread.sleep(3000);
         } else if (opcoName.equalsIgnoreCase("pepco")) {
-            driver.findElement(By.xpath(password2)).sendKeys("Password1");
+            //driver.findElement(By.xpath(password2)).sendKeys("Password1");
+            List<WebElement> ele1 = driver.findElements(By.xpath(passwordforweb));
+            System.out.println("SHARP: Element count for " +passwordforweb+ " is :" +ele1.size());
+            List<WebElement> ele2 = driver.findElements(By.xpath(passwordforweb2));
+            System.out.println("SHARP: Element count for " +passwordforweb2+ " is :" +ele2.size());
+            if (ele1.size() > 0) {
+                driver.findElement(By.xpath(passwordforweb)).sendKeys("Password1");
+            } else if (ele2.size() > 0) {
+                driver.findElement(By.xpath(passwordforweb2)).sendKeys("Password1");
+            }
             Thread.sleep(3000);
         }
     }

@@ -444,20 +444,20 @@ Feature: Feature to test Emerson API cases
     Given With "<authorization>"
     And Hit get API to fetch address with "<is_enabled>" and "<modifiedon>"
     Then validate <response_code>
-    And validate response body for address is greater than or equal to "<modifiedon>"
+#    And validate response body for address is greater than or equal to "<modifiedon>"
 
     Examples:
       | is_enabled   |          modifiedon       | response_code | authorization |
-      |   true       | 2021-02-23T10:42:00.000z  |      200      | authorize     |
-#      |   true       | -2021-02-23T10:42:00.000z |      500      | authorize     |
-#      |   true       | 2021-22-23T10:42:00.000z  |      500      | authorize     |
-#      |   true       |                           |      200      | authorize     |
-#      |   false      | 2021-02-23T10:42:00.000z  |      200      | authorize     |
-#      |   false      | -2021-02-23T10:42:00.000z |      500      | authorize     |
-#      |   false      | 2021-22-23T10:42:00.000z  |      500      | authorize     |
-#      |   false      |                           |      200      | authorize     |
-#      |              | 2021-02-23T10:42:00.000z  |      200      | authorize     |
-#      |              |                           |      200      | authorize     |
+      |   true       | 2021-01-23T10:42:00.000z  |      200      | authorize     |
+      |   true       | -2021-02-23T10:42:00.000z |      500      | authorize     |
+      |   true       | 2021-22-23T10:42:00.000z  |      500      | authorize     |
+      |   true       |                           |      200      | authorize     |
+      |   false      | 2021-02-23T10:42:00.000z  |      200      | authorize     |
+      |   false      | -2021-02-23T10:42:00.000z |      500      | authorize     |
+      |   false      | 2021-22-23T10:42:00.000z  |      500      | authorize     |
+      |   false      |                           |      200      | authorize     |
+      |              | 2021-02-23T10:42:00.000z  |      200      | authorize     |
+      |              |                           |      200      | authorize     |
 
 
   @Regression @API @Emerson @TC_Emerson_API_030 @Rutika @GetAPI

@@ -70,7 +70,7 @@ Feature: Exelon-PHI feature file
     And user will locate the web sign In button
     Then user enters login id for web "<opcoName>"
     And user enters password for web "<opcoName>"
-    Then user click on sign in
+    Then user click on web sign in
     When user will locate the chatbot icon
     And click on exelon chatbot icon
     Then chatbot will be open
