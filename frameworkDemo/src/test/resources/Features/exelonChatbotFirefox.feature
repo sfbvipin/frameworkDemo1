@@ -475,7 +475,7 @@ Feature: Feature to test exelon chatbot application test cases
     And click on close chat icon
     Then select yes to close chat
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029    @Parul  @Paramterize
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_529543 @TC_Exel_029  @Parul  @Paramterize
   Scenario: Firefox: BOT : Click on Bot and after web login opt Account balance from billing and payment options(MERRILLDEMIAN)
     Given firefox browser is open
     And user will be on exelon homepage
@@ -555,7 +555,7 @@ Feature: Feature to test exelon chatbot application test cases
       | HELFER5506  | Password1 |
       | YESDELAWARE | Password1 |
 
-  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_0034    @Parul  @Paramterize
+  @Regression @Firefox @Exelon @Day4 @TC_Exel_528234 @TC_Exel_0034   @Parul  @Paramterize
   Scenario: Firefox: Initiate bot with login with single account user and click Download my Current bill (SPARKINSON)
     Given firefox browser is open
     And user will be on exelon homepage
