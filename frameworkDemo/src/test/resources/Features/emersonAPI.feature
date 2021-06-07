@@ -531,6 +531,63 @@ Feature: Feature to test Emerson API cases
       | 401           | unauthorize   |
 
 
+    ####################################-----SDR APIs-----##############################################
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_001 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch All User Sites
+    Given With "<authorization>"
+    And Hit get API for all user sites
+    Then validate <response_code>
+    #And validate response body for correct Analytics Report Days
+
+
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_002 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch specific User Sites
+    Given With "<authorization>"
+    And Hit get API for specific user sites
+    Then validate <response_code>
+    #And validate response body for correct Analytics Report Days
+
+
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_003 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch Reports Menu Cache
+    Given With "<authorization>"
+    And Hit get API for Reports Menu Cache
+    Then validate <response_code>
+    #And validate response body for correct Analytics Report Days
+
+
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_004 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch Report Devices Cache
+    Given With "<authorization>"
+    And Hit get API for Report Devices Cache
+    Then validate <response_code>
+    #And validate response body for correct Analytics Report Days
+
+
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |
 
 
 
