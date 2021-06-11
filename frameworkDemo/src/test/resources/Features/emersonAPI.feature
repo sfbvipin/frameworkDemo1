@@ -590,5 +590,43 @@ Feature: Feature to test Emerson API cases
       | 401           | unauthorize   |
 
 
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_005 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch Report Headers Cache
+    Given With "<authorization>"
+    And Hit get API for Report Headers Cache
+    Then validate <response_code>
+    #And validate response body for correct Analytics Report Days
 
 
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_006 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch InprogressReports Cache
+    Given With "<authorization>"
+    And Hit get API for InprogressReports Cache
+    Then validate <response_code>
+    #And validate response body for correct Analytics Report Days
+
+
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_007 @Rutika @GetAPI
+  Scenario Outline: Hit Get request for Emerson to fetch Users Completed Reports Cache
+    Given With "<authorization>"
+    And Hit get API for Users Completed Reports Cache
+    Then validate <response_code>
+    #And validate response body for correct Analytics Report Days
+
+
+    Examples:
+      | response_code | authorization |
+      | 200           | authorize     |
+      | 401           | unauthorize   |

@@ -1564,7 +1564,7 @@ public class apiAutomationFunctions extends AllVariables {
             requestHeaders.put("Authorization", EmersonOauthToken);
         }
 
-        String strReportsMenuCacheUrl = ReportsMenuCache + reportId + "/menus";
+        String strReportsMenuCacheUrl = ReportsCacheUrl + reportId + "/menus";
         resp = (Response) RestAssured.given()
                 .baseUri(EmersonUrl)
                 .headers(requestHeaders)
@@ -1585,11 +1585,71 @@ public class apiAutomationFunctions extends AllVariables {
             requestHeaders.put("Authorization", EmersonOauthToken);
         }
 
-        String strReportsDevicesCacheUrl = ReportsDevicesCache + reportId + "/devices";
+        String strReportsDevicesCacheUrl = ReportsCacheUrl + reportId + "/devices";
         resp = (Response) RestAssured.given()
                 .baseUri(EmersonUrl)
                 .headers(requestHeaders)
                 .get(strReportsDevicesCacheUrl);
+
+        out.println(resp.prettyPrint());
+    }
+
+    @And("Hit get API for Report Headers Cache")
+    public void Hit_get_API_for_Report_Headers_Cache() throws JSONException {
+
+        Map<String, String> requestHeaders = new HashMap<>();
+        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
+        requestHeaders.put("Content-Type", "application/json");
+        requestHeaders.put("accsToken", EmersonAccToken);
+        if (sAuthorization.equalsIgnoreCase("authorize")) {
+            requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+
+        String strReportsHeadersCacheUrl = ReportsCacheUrl + reportId + "/headers";
+        resp = (Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .get(strReportsHeadersCacheUrl);
+
+        out.println(resp.prettyPrint());
+    }
+
+
+    @And("Hit get API for InprogressReports Cache")
+    public void Hit_get_API_for_InprogressReports_Cache() throws JSONException {
+
+        Map<String, String> requestHeaders = new HashMap<>();
+        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
+        requestHeaders.put("Content-Type", "application/json");
+        requestHeaders.put("accsToken", EmersonAccToken);
+        if (sAuthorization.equalsIgnoreCase("authorize")) {
+            requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+
+        resp = (Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .get(strInprogressReportsCacheUrl);
+
+        out.println(resp.prettyPrint());
+    }
+
+
+    @And("Hit get API for Users Completed Reports Cache")
+    public void Hit_get_API_for_Users_Completed_Reports_Cache() throws JSONException {
+
+        Map<String, String> requestHeaders = new HashMap<>();
+        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
+        requestHeaders.put("Content-Type", "application/json");
+        requestHeaders.put("accsToken", EmersonAccToken);
+        if (sAuthorization.equalsIgnoreCase("authorize")) {
+            requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+
+        resp = (Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .get(strUsersCompletedReportsCacheUrl);
 
         out.println(resp.prettyPrint());
     }
