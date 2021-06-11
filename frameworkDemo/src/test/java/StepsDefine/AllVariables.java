@@ -272,9 +272,11 @@ public class AllVariables {
     public static String SESMobileAnalyticsReportDays="SESMobileBackendAPI/admin/analyticsReportDays";
     public static String GetAllUserSitesUrl="sdranalytics/sites";
     public static String GetUserSitesUrl="sdranalytics/users/1347/sites";
-    public static String ReportsMenuCache="sdrmvp/reports/";
+    public static String ReportsCacheUrl="sdrmvp/reports/";
     public static String reportId="dlcIaFJHr9oDyhlEnPxJ9qe5U2W1SOyEfqhT";
-    public static String ReportsDevicesCache="sdrmvp/reports/";
+    public static String strInprogressReportsCacheUrl="sdranalytics/users/1/inprogressreports";
+    public static String strUsersCompletedReportsCacheUrl="sdranalytics/users/1/completedreports/";
+
 
     public static String Refunds = "//div[normalize-space()='Refund']";
     public static String ActualRefundstext = "//span[contains(text(),'Wondering about your refund?')]";
