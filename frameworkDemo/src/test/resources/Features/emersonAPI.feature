@@ -536,97 +536,104 @@ Feature: Feature to test Emerson API cases
 
   @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_001 @Rutika @GetAPI
   Scenario Outline: Hit Get request for Emerson to fetch All User Sites
-    Given With "<authorization>"
+    Given With "<authorization>" and "<BackendID>"
     And Hit get API for all user sites
     Then validate <response_code>
     #And validate response body for correct Analytics Report Days
 
 
     Examples:
-      | response_code | authorization |
-      | 200           | authorize     |
-      | 401           | unauthorize   |
+      | response_code | authorization |   BackendID     |
+      | 200           | authorize     |   available     |
+      | 401           | unauthorize   |   available     |
+      | 400           | authorize     |   unavailable   |
 
 
   @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_002 @Rutika @GetAPI
   Scenario Outline: Hit Get request for Emerson to fetch specific User Sites
-    Given With "<authorization>"
+    Given With "<authorization>" and "<BackendID>"
     And Hit get API for specific user sites
     Then validate <response_code>
-    #And validate response body for correct Analytics Report Days
+    And validate response body for correct user site data
 
 
     Examples:
-      | response_code | authorization |
-      | 200           | authorize     |
-      | 401           | unauthorize   |
+      | response_code | authorization |   BackendID     |
+      | 200           | authorize     |   available     |
+      | 401           | unauthorize   |   available     |
+      | 400           | authorize     |   unavailable   |
 
 
   @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_003 @Rutika @GetAPI
   Scenario Outline: Hit Get request for Emerson to fetch Reports Menu Cache
-    Given With "<authorization>"
+    Given With "<authorization>" and "<BackendID>"
     And Hit get API for Reports Menu Cache
     Then validate <response_code>
-    #And validate response body for correct Analytics Report Days
+    And validate response body for reports menu cache
 
 
     Examples:
-      | response_code | authorization |
-      | 200           | authorize     |
-      | 401           | unauthorize   |
+      | response_code | authorization |   BackendID     |
+      | 200           | authorize     |   available     |
+      | 401           | unauthorize   |   available     |
+      | 400           | authorize     |   unavailable   |
 
 
   @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_004 @Rutika @GetAPI
   Scenario Outline: Hit Get request for Emerson to fetch Report Devices Cache
-    Given With "<authorization>"
+    Given With "<authorization>" and "<BackendID>"
     And Hit get API for Report Devices Cache
     Then validate <response_code>
-    #And validate response body for correct Analytics Report Days
+    And validate response body for report devices cache
 
 
     Examples:
-      | response_code | authorization |
-      | 200           | authorize     |
-      | 401           | unauthorize   |
+      | response_code | authorization |   BackendID     |
+      | 200           | authorize     |   available     |
+      | 401           | unauthorize   |   available     |
+      | 400           | authorize     |   unavailable   |
 
 
   @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_005 @Rutika @GetAPI
   Scenario Outline: Hit Get request for Emerson to fetch Report Headers Cache
-    Given With "<authorization>"
+    Given With "<authorization>" and "<BackendID>"
     And Hit get API for Report Headers Cache
     Then validate <response_code>
-    #And validate response body for correct Analytics Report Days
+    And validate response body for report headers cache
 
 
     Examples:
-      | response_code | authorization |
-      | 200           | authorize     |
-      | 401           | unauthorize   |
+      | response_code | authorization |   BackendID     |
+      | 200           | authorize     |   available     |
+      | 401           | unauthorize   |   available     |
+      | 400           | authorize     |   unavailable   |
 
 
   @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_006 @Rutika @GetAPI
   Scenario Outline: Hit Get request for Emerson to fetch InprogressReports Cache
-    Given With "<authorization>"
+    Given With "<authorization>" and "<BackendID>"
     And Hit get API for InprogressReports Cache
     Then validate <response_code>
-    #And validate response body for correct Analytics Report Days
+    And validate response body for InprogressReports Cache
 
 
     Examples:
-      | response_code | authorization |
-      | 200           | authorize     |
-      | 401           | unauthorize   |
+      | response_code | authorization |   BackendID     |
+      | 200           | authorize     |   available     |
+      | 401           | unauthorize   |   available     |
+      | 400           | authorize     |   unavailable   |
 
 
   @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_007 @Rutika @GetAPI
   Scenario Outline: Hit Get request for Emerson to fetch Users Completed Reports Cache
-    Given With "<authorization>"
+    Given With "<authorization>" and "<BackendID>"
     And Hit get API for Users Completed Reports Cache
     Then validate <response_code>
     #And validate response body for correct Analytics Report Days
 
 
     Examples:
-      | response_code | authorization |
-      | 200           | authorize     |
-      | 401           | unauthorize   |
+      | response_code | authorization |   BackendID     |
+      | 200           | authorize     |   available     |
+      | 401           | unauthorize   |   available     |
+      | 400           | authorize     |   unavailable   |

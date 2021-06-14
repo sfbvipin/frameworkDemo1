@@ -38,6 +38,7 @@ import static org.codehaus.groovy.vmplugin.v8.PluginDefaultGroovyMethods.mapToOb
 public class apiAutomationFunctions extends AllVariables {
     public Response resp = null;
     public String sAuthorization = null;
+    public String sBackendID = null;
 
     @Given("Send getAPI Request for account")
     public void Send_getAPI_Request_for_account() {
@@ -259,6 +260,12 @@ public class apiAutomationFunctions extends AllVariables {
     @Given("With {string}")
     public void with_authorize(String strAuthorization) throws JSONException {
         sAuthorization = strAuthorization;
+    }
+
+    @Given("With {string} and {string}")
+    public void with_authorize_and_backendID(String strAuthorization, String strBackendID) throws JSONException {
+        sAuthorization = strAuthorization;
+        sBackendID= strBackendID;
     }
 
 
@@ -1517,11 +1524,13 @@ public class apiAutomationFunctions extends AllVariables {
     public void Hit_get_API_for_all_user_sites() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
-        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         requestHeaders.put("Content-Type", "application/json");
         requestHeaders.put("accsToken", EmersonAccToken);
         if (sAuthorization.equalsIgnoreCase("authorize")) {
             requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")){
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         }
 
         resp = (Response) RestAssured.given()
@@ -1537,11 +1546,13 @@ public class apiAutomationFunctions extends AllVariables {
     public void Hit_get_API_for_specific_user_sites() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
-        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         requestHeaders.put("Content-Type", "application/json");
         requestHeaders.put("accsToken", EmersonAccToken);
         if (sAuthorization.equalsIgnoreCase("authorize")) {
             requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")){
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         }
 
         resp = (Response) RestAssured.given()
@@ -1552,16 +1563,28 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
+    @And("validate response body for correct user site data")
+    public void validate_response_body_for_correct_user_site_data() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            verify_body("validate specific user site data");
+        }
+    }
+
 
     @And("Hit get API for Reports Menu Cache")
     public void Hit_get_API_for_Reports_Menu_Cache() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
-        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         requestHeaders.put("Content-Type", "application/json");
         requestHeaders.put("accsToken", EmersonAccToken);
         if (sAuthorization.equalsIgnoreCase("authorize")) {
             requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")){
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         }
 
         String strReportsMenuCacheUrl = ReportsCacheUrl + reportId + "/menus";
@@ -1573,16 +1596,28 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
+    @And("validate response body for reports menu cache")
+    public void validate_response_body_for_reports_menu_cache() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            verify_body("validate reports menu cache");
+        }
+    }
+
 
     @And("Hit get API for Report Devices Cache")
     public void Hit_get_API_for_Report_Devices_Cache() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
-        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         requestHeaders.put("Content-Type", "application/json");
         requestHeaders.put("accsToken", EmersonAccToken);
         if (sAuthorization.equalsIgnoreCase("authorize")) {
             requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")){
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         }
 
         String strReportsDevicesCacheUrl = ReportsCacheUrl + reportId + "/devices";
@@ -1594,15 +1629,27 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
+    @And("validate response body for report devices cache")
+    public void validate_response_body_for_report_devices_cache() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            verify_body("validate report devices cache");
+        }
+    }
+
     @And("Hit get API for Report Headers Cache")
     public void Hit_get_API_for_Report_Headers_Cache() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
-        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         requestHeaders.put("Content-Type", "application/json");
         requestHeaders.put("accsToken", EmersonAccToken);
         if (sAuthorization.equalsIgnoreCase("authorize")) {
             requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")){
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         }
 
         String strReportsHeadersCacheUrl = ReportsCacheUrl + reportId + "/headers";
@@ -1614,16 +1661,28 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
+    @And("validate response body for report headers cache")
+    public void validate_response_body_for_report_headers_cache() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            verify_body("validate report headers cache");
+        }
+    }
+
 
     @And("Hit get API for InprogressReports Cache")
     public void Hit_get_API_for_InprogressReports_Cache() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
-        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         requestHeaders.put("Content-Type", "application/json");
         requestHeaders.put("accsToken", EmersonAccToken);
         if (sAuthorization.equalsIgnoreCase("authorize")) {
             requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")){
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         }
 
         resp = (Response) RestAssured.given()
@@ -1634,16 +1693,28 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
+    @And("validate response body for InprogressReports Cache")
+    public void validate_response_body_for_InprogressReports_Cache() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            verify_body("validate InprogressReports Cache");
+        }
+    }
+
 
     @And("Hit get API for Users Completed Reports Cache")
     public void Hit_get_API_for_Users_Completed_Reports_Cache() throws JSONException {
 
         Map<String, String> requestHeaders = new HashMap<>();
-        requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         requestHeaders.put("Content-Type", "application/json");
         requestHeaders.put("accsToken", EmersonAccToken);
         if (sAuthorization.equalsIgnoreCase("authorize")) {
             requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")){
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
         }
 
         resp = (Response) RestAssured.given()
