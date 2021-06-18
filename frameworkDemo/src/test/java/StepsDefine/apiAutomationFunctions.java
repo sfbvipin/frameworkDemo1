@@ -3,33 +3,22 @@ package StepsDefine;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.hu.De;
-import io.cucumber.java.sl.In;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.apache.tools.ant.filters.TokenFilter;
 import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import org.testng.Assert;
 
-import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static java.lang.System.*;
-import static java.lang.System.currentTimeMillis;
 import static java.time.format.DateTimeFormatter.ofPattern;
 import static org.codehaus.groovy.runtime.DefaultGroovyMethods.collect;
 import static org.codehaus.groovy.vmplugin.v8.PluginDefaultGroovyMethods.mapToObj;
@@ -1725,6 +1714,78 @@ public class apiAutomationFunctions extends AllVariables {
         out.println(resp.prettyPrint());
     }
 
+
+    @And("Hit delete API to delete user sites with {string}")
+    public void Hit_delete_API_to_delete_user_sites(String modifiedby) throws JSONException {
+
+        Map<String, String> requestHeaders = new HashMap<>();
+        requestHeaders.put("accsToken", EmersonAccToken);
+        requestHeaders.put("Content-Type", "application/json");
+        if (sAuthorization.equalsIgnoreCase("authorize")) {
+            requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")) {
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
+        }
+
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("MODIFIEDBY", modifiedby);
+
+        resp = (Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .body(requestParams.toString())
+                .when()
+                .delete(strDeleteUserSites);
+
+        out.println(resp.prettyPrint());
+    }
+
+    @And("verify response body for delete user sites")
+    public void verify_response_body_for_delete_user_sites() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            verify_body("validate delete user sites");
+        }
+    }
+
+    @And("Hit delete API to deactivate report")
+    public void delete_API_to_deactivate_report() throws JSONException {
+
+        Map<String, String> requestHeaders = new HashMap<>();
+        requestHeaders.put("accsToken", EmersonAccToken);
+        requestHeaders.put("Content-Type", "application/json");
+        if (sAuthorization.equalsIgnoreCase("authorize")) {
+            requestHeaders.put("Authorization", EmersonOauthToken);
+        }
+        if (sBackendID.equalsIgnoreCase("available")) {
+            requestHeaders.put("oracle-mobile-backend-id", EmersonBackendId);
+        }
+
+        JSONObject requestParams = new JSONObject();
+        //requestParams.put("MODIFIEDBY", modifiedby);
+
+        resp = (Response) RestAssured.given()
+                .baseUri(EmersonUrl)
+                .headers(requestHeaders)
+                .body(requestParams.toString())
+                .when()
+                .delete(strDeactivateReport);
+
+        out.println(resp.prettyPrint());
+    }
+
+    @And("verify response body for deactivate report")
+    public void verify_response_body_for_deactivate_report() throws IOException {
+        Integer intRespCode = resp.getStatusCode();
+        if (intRespCode != 200) {
+            out.println("SHARP: Verify data function is not executed as API didn't return 200 code.");
+        } else {
+            verify_body("validate deactivate report");
+        }
+    }
 }
 
 
