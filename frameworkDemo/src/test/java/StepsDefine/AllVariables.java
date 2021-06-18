@@ -276,6 +276,8 @@ public class AllVariables {
     public static String reportId="dlcIaFJHr9oDyhlEnPxJ9qe5U2W1SOyEfqhT";
     public static String strInprogressReportsCacheUrl="sdranalytics/users/1/inprogressreports";
     public static String strUsersCompletedReportsCacheUrl="sdranalytics/users/1/completedreports/";
+    public static String strDeleteUserSites="sdranalytics/users/1347/sites/12090";
+    public static String strDeactivateReport="sdranalytics/users/1347/inprogressreports/testReport92";
 
 
     public static String Refunds = "//div[normalize-space()='Refund']";

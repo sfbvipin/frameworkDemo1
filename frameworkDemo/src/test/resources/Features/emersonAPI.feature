@@ -637,3 +637,32 @@ Feature: Feature to test Emerson API cases
       | 200           | authorize     |   available     |
       | 401           | unauthorize   |   available     |
       | 400           | authorize     |   unavailable   |
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_008 @Rutika @DelAPI
+  Scenario Outline: API: Hit delete request to delete user sites
+    Given With "<authorization>" and "<BackendID>"
+    And Hit delete API to delete user sites with "<modifiedby>"
+    Then validate <response_code>
+    And verify response body for delete user sites
+
+    Examples:
+      | modifiedby | authorization | BackendID    |response_code |
+      | 1          | authorize     |  available   |    200       |
+      | 1          | unauthorize   |  available   |    401       |
+      | 1          | authorize     |  unavailable |    400       |
+      | 100        | authorize     |  available   |    200       |
+
+
+  @Regression @SDR_API @Emerson @TC_SDR_Emerson_API_009 @Rutika @DelAPI
+  Scenario Outline: API: Hit delete request to deactivate report
+    Given With "<authorization>" and "<BackendID>"
+    And Hit delete API to deactivate report
+    Then validate <response_code>
+    And verify response body for deactivate report
+
+    Examples:
+      | authorization | BackendID    |response_code |
+      | authorize     |  available   |    200       |
+      | unauthorize   |  available   |    401       |
+      | authorize     |  unavailable |    400       |
